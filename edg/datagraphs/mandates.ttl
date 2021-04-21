@@ -1,0 +1,65 @@
+# baseURI: https://linked.data.gov.au/dataset/fsdf/mandates
+# imports: http://purl.org/dc/terms/
+# imports: https://linked.data.gov.au/def/fsdf
+# prefix: fsdf-mandates
+
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix fsdf: <https://linked.data.gov.au/def/fsdf#> .
+@prefix jurisdictions: <https://linked.data.gov.au/dataset/fsdf/jurisdictions/> .
+@prefix mandates: <https://linked.data.gov.au/dataset/fsdf/mandates/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://linked.data.gov.au/def/fsdf-mandates>
+  a owl:Ontology ;
+  skos:prefLabel "FSDF Mandates"@en;
+  skos:definition "This Data Graph contains instances of the class Mandate, as defined by the [FSDF Ontology](https://linked.data.gov.au/def/fsdf)."@en;
+  owl:imports dcterms: ;
+  owl:imports <https://linked.data.gov.au/def/fsdf> ;
+.
+mandates:clp-1994
+  a fsdf:Mandate owl:NamedIndividual ;
+  dcterms:description "A Bill to establish a system of integrated management and protection for catchments, to establish a framework for controlling noxious weeds and pest animals, to repeal the Soil Conservation and Land Utilization Act 1958 and the Vermin and Noxious Weeds Act 1958, to amend various other Acts and for other purposes."@en ;
+  dcterms:title "Catchment and Land Protection Act 1994"@en ;
+  skos:scopeNote "Repeals the Soil Conservation and Land Utilization Act 1958"@en ;
+  dcterms:source "http://www.austlii.edu.au/cgi-bin/viewdoc/au/legis/vic/consol_act/calpa1994267/notes.html"^^xsd:anyURI ;
+  fsdf:responsibleAuthority jurisdictions:vic ;
+.
+mandates:alra-1976
+  a fsdf:Mandate owl:NamedIndividual ;
+  dcterms:description "This Act may be cited as the Aboriginal Land Rights (Northern Territory) Act 1976"@en ;
+  dcterms:title "Aboriginal Land Rights (Northern Territory) Act 1976"@en ;
+  dcterms:source "http://www.austlii.edu.au/au/legis/cth/consol_act/alrta1976444/"^^xsd:anyURI ;
+  fsdf:responsibleAuthority jurisdictions:nt ;
+.
+mandates:asa-1995
+  a fsdf:Mandate owl:NamedIndividual ;
+  dcterms:description """1)  AA has the following functions:
+ (a)  providing services and facilities:
+          (i)  for the purpose of Australia or another country giving effect to the Chicago convention; or
+         (ii)  for the purpose of Australia or another country giving effect to another international agreement relating to the safety, regularity or efficiency of air navigation; or
+        (iii)  otherwise for purposes relating to the safety, regularity or efficiency of air navigation, whether in or outside Australia;
+ (b)  promoting and fostering civil aviation, whether in or outside Australia;
+ (c)  cooperating with the Australian Transport Safety Bureau in relation to investigations under the Transport Safety Investigation Act 2003 that relate to aircraft;
+ (d)  carrying out activities to protect the environment from the effects of, and the effects associated with, the operation of:
+          (i)  Commonwealth jurisdiction aircraft, whether in or outside Australia; or
+         (ii)  other aircraft outside Australia;
+ (e)  any functions prescribed by regulations in relation to the effects of, and effects associated with, the operation of:
+          (i)  Commonwealth jurisdiction aircraft, whether in or outside Australia; or
+         (ii)  other aircraft outside Australia;
+ (f)  any functions conferred on AA under the Air Navigation Act 1920 or the Aviation Transport Security Act 2004;
+ (g)  any other functions prescribed by the regulations, being functions relating to any of the matters referred to in this subsection;
+ (h)  providing consultancy services and management services relating to any of the matters referred to in this subsection;
+ (i)  any functions incidental to any of the above functions;
+ (j)  providing services and facilities, whether or not related to aviation, for a purpose other than one that is mentioned or implied in any of paragraphs (a) to (i), if doing so:
+          (i)  is within the executive or legislative powers of the Commonwealth; and
+         (ii)  utilises AA’s spare capacity; and
+        (iii)  maintains or improves the technical skills of AA’s employees; and
+         (iv)  does not impede AA’s capacity to perform its other functions."""@en ;
+  dcterms:title "Air Services Act 1995"@en ;
+  dcterms:source "https://www.legislation.gov.au/Details/C2016C00769"^^xsd:anyURI ;
+  fsdf:responsibleAuthority jurisdictions:nt ;
+.
