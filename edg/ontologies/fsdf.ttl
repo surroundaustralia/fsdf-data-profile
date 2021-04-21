@@ -7,6 +7,8 @@
 @prefix : <https://linked.data.gov.au/def/fsdf#> .
 @prefix dbo: <http://dbpedia.org/ontology/> .
 @prefix dct: <http://purl.org/dc/terms/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix jurisdictions: <https://linked.data.gov.au/dataset/fsdf/jurisdictions/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -16,11 +18,14 @@
 @prefix vann: <http://purl.org/vocab/vann/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-dct:hasPart
+dcterms:hasPart
   a owl:ObjectProperty ;
 .
 owl:sameAs
   a owl:ObjectProperty ;
+.
+<http://www.w3.org/ns/dcat#Resource>
+  rdfs:subClassOf prov:Entity ;
 .
 <https://link.fsdf.org.au/fsdf-dataset/australian-statistical-geographical-standard-boundaries>
   a owl:NamedIndividual ;
@@ -34,27 +39,27 @@ owl:sameAs
 <https://linked.data.gov.au/dataset/asgs>
   a owl:NamedIndividual ;
   a :Dataset ;
-  dct:hasPart <https://linked.data.gov.au/def/asgs#MeshBlock> ;
-  dct:hasPart <https://linked.data.gov.au/def/asgs#State> ;
+  dcterms:hasPart <https://linked.data.gov.au/def/asgs#MeshBlock> ;
+  dcterms:hasPart <https://linked.data.gov.au/def/asgs#State> ;
   rdfs:label "Australian Statistical Geographical Standard Boundaries" ;
   owl:sameAs <https://link.fsdf.org.au/fsdf-dataset/australian-statistical-geographical-standard-boundaries> ;
 .
 <https://linked.data.gov.au/dataset/geofabric-catchments>
   a owl:NamedIndividual ;
   a :Dataset ;
-  dct:hasPart <https://linked.data.gov.au/def/geofabric#Catchment> ;
-  dct:hasPart <https://linked.data.gov.au/def/geofabric#Waterbody> ;
+  dcterms:hasPart <https://linked.data.gov.au/def/geofabric#Catchment> ;
+  dcterms:hasPart <https://linked.data.gov.au/def/geofabric#Waterbody> ;
   rdfs:label "Catchment Boundaries" ;
   owl:sameAs <https://link.fsdf.org.au/fsdf-dataset/catchment-boundaries> ;
 .
 <https://linked.data.gov.au/dataset/gnaf>
   a owl:NamedIndividual ;
   a :Dataset ;
-  dct:hasPart <https://linked.data.gov.au/def/gnaf#Address> ;
-  dct:hasPart <https://linked.data.gov.au/def/gnaf#GeocodedPoint> ;
-  dct:hasPart <https://linked.data.gov.au/def/gnaf#Locality> ;
-  dct:hasPart <https://linked.data.gov.au/def/gnaf#MeshBlockMatch> ;
-  dct:hasPart <https://linked.data.gov.au/def/gnaf#StreetLocality> ;
+  dcterms:hasPart <https://linked.data.gov.au/def/gnaf#Address> ;
+  dcterms:hasPart <https://linked.data.gov.au/def/gnaf#GeocodedPoint> ;
+  dcterms:hasPart <https://linked.data.gov.au/def/gnaf#Locality> ;
+  dcterms:hasPart <https://linked.data.gov.au/def/gnaf#MeshBlockMatch> ;
+  dcterms:hasPart <https://linked.data.gov.au/def/gnaf#StreetLocality> ;
   rdfs:label "Geocoded National Address File" ;
   owl:sameAs <https://link.fsdf.org.au/fsdf-dataset/geocoded-national-address-file> ;
 .
@@ -72,11 +77,11 @@ owl:sameAs
 .
 <https://linked.data.gov.au/def/fsdf>
   a owl:Ontology ;
-  dct:created "2018-03-07"^^xsd:date ;
-  dct:creator <http://orcid.org/0000-0002-8742-7730> ;
-  dct:creator <https://linked.data.gov.au/org/ga> ;
-  dct:modified "2021-04-21" ;
-  dct:publisher <https://linked.data.gov.au/org/anzlic> ;
+  dcterms:created "2018-03-07"^^xsd:date ;
+  dcterms:creator <http://orcid.org/0000-0002-8742-7730> ;
+  dcterms:creator <https://linked.data.gov.au/org/ga> ;
+  dcterms:modified "2021-04-21" ;
+  dcterms:publisher <https://linked.data.gov.au/org/anzlic> ;
   vann:preferredNamespacePrefix "fsdf" ;
   rdfs:label "FSDF ontology" ;
   owl:imports <http://www.w3.org/2004/02/skos/core> ;
@@ -103,6 +108,7 @@ owl:sameAs
 :Jurisdiction
   a owl:Class ;
   rdfs:label "Jurisdiction"@en ;
+  rdfs:subClassOf dcterms:Jurisdiction ;
   rdfs:subClassOf prov:Agent ;
   owl:disjointWith :Agency ;
   skos:definition "A Jurisdiction is a Government Organization that has authority within a domain. The specific domains considered by the FSDF Programme are the Australian Commonwealth (Federal), Australian States and Territories and the Commercial sector."@en ;
@@ -131,6 +137,22 @@ owl:sameAs
   rdfs:range :Agency ;
   skos:definition "A Agency that is subject to the instructions of this Mandate"@en ;
   skos:prefLabel "affects Agency"@en ;
+.
+:hasCustodian
+  rdfs:domain :Dataset ;
+  rdfs:range :Agency ;
+  rdfs:subPropertyOf dcterms:publisher ;
+  rdfs:subPropertyOf prov:agent ;
+  skos:definition "The Agency that manages this Dataset"@en ;
+  skos:prefLabel "has custodian"@en ;
+.
+:hasJurisdiction
+  a owl:ObjectProperty ;
+  rdfs:range :Jurisdiction ;
+  rdfs:subPropertyOf dcterms:publisher ;
+  rdfs:subPropertyOf prov:agent ;
+  skos:definition "The Jurisdiction responsible for this object"@en ;
+  skos:prefLabel "has jurisdiction"@en ;
 .
 :responsibleAuthority
   a owl:ObjectProperty ;
