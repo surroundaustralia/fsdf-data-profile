@@ -1,6 +1,6 @@
 # baseURI: https://data.surroundaustralia.com/manifest/fsdf/register
 # imports: https://data.surroundaustralia.com/def/standards-baseline
-
+# imports: https://data.surroundaustralia.com/manifest/lockg/register
 
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix edgx: <http://topbraid.org/crosswalk#> .
@@ -19,33 +19,9 @@
   swa:defaultNamespace "https://data.surroundaustralia.com/manifest/fsdf/register/"^^xsd:anyURI ;
   teamwork:newInstancesUserCannotModifyURI false ;
   rdfs:comment "This Manifest contains a list of all the assets within the FSDF Project"@en ;
-  rdfs:label "FSDF Knowledg Graph Manifest"@en ;
+  rdfs:label "FSDF Knowledge Graph Manifest"@en ;
   owl:imports <https://data.surroundaustralia.com/def/standards-baseline> ;
-  sopbl:purpose "The FSDF KG Product"@en ;
   owl:imports <https://data.surroundaustralia.com/manifest/lockg/register> ;
-.
-
-register:ont
-  a sopbl:ManagedGraph ;
-  dcterms:provenance "Built for the FSDF Project"@en ;
-  rdfs:comment "This copy of the FSDF Ontology is unchanged from the source but changes may occur to improve the dataset"@en ;
-  rdfs:label "FSDF Ontology"@en ;
-  sopbl:edgType <http://teamwork.topbraidlive.org/ontologyprojects#ProjectType> ;
-  sopbl:localCopyPath "ontologies/fsdf.ttl" ;
-  sopbl:module "FSDF" ;
-  sopbl:proxy "https://linked.data.gov.au/def/fsdf"^^xsd:anyURI ;
-  sopbl:purpose "The FSDF KG Product"@en ;
-  sopbl:repository "https://github.com/GeoscienceAustralia/fsdf-ont"^^xsd:anyURI ;
-.
-register:themes
-  a sopbl:ManagedGraph ;
-  dcterms:provenance "Authoratitive version, generated here from non-RDF source data"@en ;
-  rdfs:comment "The FSDF Themes vocabulary, as extracted from the LINK website"@en ;
-  rdfs:label "FSDF Themes"@en ;
-  sopbl:edgType <http://evn.topbraidlive.org/evnprojects#ProjectType> ;
-  sopbl:localCopyPath "taxonomies/themes.ttl" ;
-  sopbl:module "FSDF" ;
-  sopbl:proxy "https://linked.data.gov.au/def/fsdf-themes"^^xsd:anyURI ;
   sopbl:purpose "The FSDF KG Product"@en ;
 .
 register:jurisdictions
@@ -74,4 +50,27 @@ register:mandates
   sopbl:module "FSDF" ;
   sopbl:proxy "https://linked.data.gov.au/def/fsdf/mandates"^^xsd:anyURI ;
   sopbl:purpose "The GovKG Product"@en ;
+.
+register:ont
+  a sopbl:ManagedGraph ;
+  dcterms:provenance "Built for the FSDF Project"@en ;
+  rdfs:comment "This copy of the FSDF Ontology is unchanged from the source but changes may occur to improve the dataset"@en ;
+  rdfs:label "FSDF Ontology"@en ;
+  sopbl:edgType <http://teamwork.topbraidlive.org/ontologyprojects#ProjectType> ;
+  sopbl:localCopyPath "ontologies/fsdf.ttl" ;
+  sopbl:module "FSDF" ;
+  sopbl:proxy "https://linked.data.gov.au/def/fsdf"^^xsd:anyURI ;
+  sopbl:purpose "The FSDF KG Product"@en ;
+  sopbl:repository "https://github.com/GeoscienceAustralia/fsdf-ont"^^xsd:anyURI ;
+.
+register:themes
+  a sopbl:ManagedGraph ;
+  dcterms:provenance "Authoratitive version, generated here from non-RDF source data"@en ;
+  rdfs:comment "The FSDF Themes vocabulary, as extracted from the LINK website"@en ;
+  rdfs:label "FSDF Themes"@en ;
+  sopbl:edgType <http://evn.topbraidlive.org/evnprojects#ProjectType> ;
+  sopbl:localCopyPath "taxonomies/themes.ttl" ;
+  sopbl:module "FSDF" ;
+  sopbl:proxy "https://linked.data.gov.au/def/fsdf-themes"^^xsd:anyURI ;
+  sopbl:purpose "The FSDF KG Product"@en ;
 .
