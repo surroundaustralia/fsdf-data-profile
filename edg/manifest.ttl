@@ -43,7 +43,7 @@ register:themes
   rdfs:comment "The FSDF Themes vocabulary, as extracted from the LINK website"@en ;
   rdfs:label "FSDF Themes"@en ;
   sopbl:edgType <http://evn.topbraidlive.org/evnprojects#ProjectType> ;
-  sopbl:localCopyPath "taxonomies/fsdf-themes.ttl" ;
+  sopbl:localCopyPath "taxonomies/themes.ttl" ;
   sopbl:module "FSDF" ;
   sopbl:proxy "https://linked.data.gov.au/def/fsdf-themes"^^xsd:anyURI ;
   sopbl:purpose "The FSDF KG Product"@en ;
