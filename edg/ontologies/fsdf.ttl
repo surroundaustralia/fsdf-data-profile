@@ -97,7 +97,7 @@ owl:sameAs
   a owl:Class ;
   rdfs:subClassOf prov:Agent ;
   skos:definition "An FSDF Agency is a Government Organisation that is involved with the FSDF Programme"@en ;
-  skos:prefLabel "Agnecy"@en ;
+  skos:prefLabel "Agency"@en ;
 .
 :Dataset
   a owl:Class ;
