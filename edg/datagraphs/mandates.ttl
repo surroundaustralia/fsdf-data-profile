@@ -1,7 +1,6 @@
 # baseURI: https://linked.data.gov.au/dataset/fsdf/mandates
-# imports: http://purl.org/dc/terms/
 # imports: https://linked.data.gov.au/def/fsdf
-# prefix: fsdf-mandates
+# prefix: mandates
 
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix fsdf: <https://linked.data.gov.au/def/fsdf#> .

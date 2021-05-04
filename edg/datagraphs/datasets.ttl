@@ -1,46 +1,50 @@
 # baseURI: https://linked.data.gov.au/dataset/fsdf/datasets
+# imports: https://linked.data.gov.au/def/fsdf
 # prefix: datasets
 
+@prefix agencies: <https://linked.data.gov.au/dataset/fsdf/agencies/> .
+@prefix datasets: <https://linked.data.gov.au/dataset/fsdf/datasets/> .
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix fsdf: <https://linked.data.gov.au/def/fsdf#> .
-@prefix datasets: <https://linked.data.gov.au/dataset/fsdf/datasets/> .
+@prefix jurisdictions: <https://linked.data.gov.au/dataset/fsdf/jurisdictions/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix themes: <https://linked.data.gov.au/def/fsdf-themes/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://linked.data.gov.au/dataset/fsdf/datasets>
   a owl:Ontology ;
   skos:prefLabel "FSDF Datasets"@en;
   skos:definition "This Data Graph contains instances of the class Dataset, as defined by the [FSDF Ontology](https://linked.data.gov.au/def/fsdf)"@en;
-  owl:imports dcterms: ;
   owl:imports <https://linked.data.gov.au/def/fsdf> ;
 .
 datasets:native-title-determination-outcomes-data
   a fsdf:Dataset , owl:NamedIndividual ;
   dcterms:title "Native Title Determination Outcomes Data"@en ;
   dcterms:description "Determination area showing categorisation of the existence or otherwise of native title for portions of the area. The native title outcomes depicted include: Native Title exists (exclusive), Native Title exists (non-exclusive), Native Title does not exist and Native Title extinguished. The areas shown according to this classification are based on the best information available to the Tribunal at the date of determination, and should be considered indicative only. The Tribunal is not able to map all native title outcome areas included in determinations."@en ;
-  dcat:theme theme:native-title-boundaries ;
+  dcat:theme themes:native-title-boundaries ;
   fsdf:hasCustodian agencies:national-native-title-tribunal ;
   fsdf:hasJurisdiction jurisdictions:commonwealth ;
   prov:wasDerivedFrom
   	datasets:act-blocks ,
-  	datasets:nsw-digital-cadastral-database
-  	datasets:nt-cadastre
-  	datasets:qld-digital-cadastral-database-dcdb
-  	datasets:parcel-cadastre
-  	datasets:list-cadastral-parcels
-  	datasets:vic-vicmap-property-datatset
-  	datasets:wa-cadastre-cadastre-polygons
+  	datasets:nsw-digital-cadastral-database ,
+  	datasets:nt-cadastre ,
+  	datasets:qld-digital-cadastral-database-dcdb ,
+  	datasets:parcel-cadastre ,
+  	datasets:list-cadastral-parcels ,
+  	datasets:vic-vicmap-property-datatset ,
+  	datasets:wa-cadastre-cadastre-polygons ;
 .
 
 datasets:native-title-determination-outcomes
   a fsdf:Dataset , owl:NamedIndividual ;
   dcterms:title "Native Title Determination Outcomes"@en ;
   dcterms:description "Determination area showing categorisation of the existence or otherwise of native title for portions of the area. The native title outcomes depicted include: Native Title exists (exclusive), Native Title exists (non-exclusive), Native Title does not exist and Native Title extinguished. The areas shown according to this classification are based on the best information available to the Tribunal at the date of determination, and should be considered indicative only. The Tribunal is not able to map all native title outcome areas included in determinations."@en ;
-  dcat:theme theme:land-parcel-and-property ;
+  dcat:theme themes:land-parcel-and-property ;
   fsdf:hasCustodian agencies:national-native-title-tribunal ;
   fsdf:hasJurisdiction jurisdictions:commonwealth ;  
   prov:wasDerivedFrom datasets:native-title-determination-outcomes-data ;

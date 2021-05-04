@@ -22,6 +22,20 @@
   owl:imports <https://data.surroundaustralia.com/def/standards-baseline> ;
   sopbl:purpose "The FSDF KG Product"@en ;
 .
+register:agencies
+  a sopbl:ManagedGraph ;
+  dcterms:provenance "Authoratitive version, generated here from non-RDF source data"@en ;
+  teamwork:rootClass owl:Thing ;
+  rdfs:comment "The list of FSDF Agencies instances, as extracted from the LINK website"@en ;
+  rdfs:label "FSDF Agencies"@en ;
+  sopbl:edgType <http://teamwork.topbraidlive.org/datagraph/datagraphprojects#ProjectType> ;
+  sopbl:include "https://data.surroundaustralia.com/platform/shapes/pref2rdfslabel" ;
+  sopbl:include "https://data.surroundaustralia.com/platform/shapes/sdoname2rdfslabel" ;
+  sopbl:localCopyPath "datagraphs/agencies.ttl" ;
+  sopbl:module "FSDF" ;
+  sopbl:proxy "https://linked.data.gov.au/def/fsdf/agencies"^^xsd:anyURI ;
+  sopbl:purpose "The GovKG Product"@en ;
+.
 register:datasets
   a sopbl:ManagedGraph ;
   dcterms:provenance "Authoratitive version, generated here from non-RDF source data"@en ;
@@ -29,6 +43,7 @@ register:datasets
   rdfs:comment "The list of FSDF Dataset instances, as extracted from the LINK website"@en ;
   rdfs:label "FSDF Datasets"@en ;
   sopbl:edgType <http://teamwork.topbraidlive.org/datagraph/datagraphprojects#ProjectType> ;
+  sopbl:include "https://data.surroundaustralia.com/platform/shapes/pref2rdfslabel" ;
   sopbl:localCopyPath "datagraphs/datasets.ttl" ;
   sopbl:module "FSDF" ;
   sopbl:proxy "https://linked.data.gov.au/def/fsdf/datasets"^^xsd:anyURI ;
@@ -41,6 +56,7 @@ register:jurisdictions
   rdfs:comment "The list of FSDF Jurisdiction instances, as extracted from the LINK website"@en ;
   rdfs:label "FSDF Jurisdictions"@en ;
   sopbl:edgType <http://teamwork.topbraidlive.org/datagraph/datagraphprojects#ProjectType> ;
+  sopbl:include "https://data.surroundaustralia.com/platform/shapes/pref2rdfslabel" ;
   sopbl:localCopyPath "datagraphs/jurisdictions.ttl" ;
   sopbl:module "FSDF" ;
   sopbl:proxy "https://linked.data.gov.au/def/fsdf/jurisdictions"^^xsd:anyURI ;
@@ -53,6 +69,7 @@ register:mandates
   rdfs:comment "The list of FSDF Mandate instances, as extracted from the LINK website"@en ;
   rdfs:label "FSDF Mandates"@en ;
   sopbl:edgType <http://teamwork.topbraidlive.org/datagraph/datagraphprojects#ProjectType> ;
+  sopbl:include "https://data.surroundaustralia.com/platform/shapes/pref2rdfslabel" ;
   sopbl:include "https://linked.data.gov.au/def/fsdf/jurisdictions" ;
   sopbl:localCopyPath "datagraphs/mandates.ttl" ;
   sopbl:module "FSDF" ;
