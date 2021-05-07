@@ -2,7 +2,7 @@
 # prefix: fsdf
 
 @prefix : <https://linked.data.gov.au/def/fsdf#> .
-@prefix dbo: <http://dbpedia.org/ontology/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix jurisdictions: <https://linked.data.gov.au/dataset/fsdf/jurisdictions/> .
@@ -26,10 +26,6 @@
   dcterms:publisher <https://linked.data.gov.au/org/anzlic> ;
   vann:preferredNamespacePrefix "fsdf" ;
   rdfs:label "FSDF ontology" ;
-  owl:imports <http://www.w3.org/2004/02/skos/core> ;
-  owl:imports <http://www.w3.org/ns/dcat> ;
-  owl:imports <http://www.w3.org/ns/prov-o> ;
-  owl:imports <https://linked.data.gov.au/def/loci> ;
   owl:versionIRI <https://linked.data.gov.au/def/fsdf/1.1> ;
   owl:versionInfo "1.0"@en ;
   owl:versionInfo "This 1.0 is an early version of the ontology but is a great departure from the 0.5 version that was published in 2018. This version concentrates on defining the FSDF concepts, not listing all of the FSDF datasets which are listed in a separate data graph within the overall FSDF Knolwedge Graph"@en ;
@@ -37,19 +33,19 @@
 .
 :Agency
   a owl:Class ;
-  rdfs:subClassOf prov:Agent ;
+  rdfs:subClassOf prov:Agent , sdo:Organization ;
   skos:definition "An FSDF Agency is a Government Organisation that is involved with the FSDF Programme"@en ;
   skos:prefLabel "Agency"@en ;
 .
 :Dataset
   a owl:Class ;
-  rdfs:subClassOf loci:Dataset ;
-  rdfs:subClassOf owl:Thing ;
+  rdfs:subClassOf loci:Dataset , prov:Entity ;
   skos:definition "An FSDF Dataset is a Loc-I Dataset, that is a dataset of spatial data following the Location Index (Loc-I) protocols. An FDSF Dataset has additional requirements on it for its use within the FSDF Programme, for example, the dataset must be classified according to the FSDF Themes vocabulary and must have various agents (organisations) of relevance to the dataset, such as crator and owner, recorded."@en ;
   skos:prefLabel "Dataset"@en ;
 .
 :Jurisdiction
   a owl:Class ;
+  rdfs:subClassOf prov:Agent , sdo:Organization ;
   rdfs:label "Jurisdiction"@en ;
   rdfs:subClassOf dcterms:Jurisdiction ;
   rdfs:subClassOf prov:Agent ;
@@ -59,9 +55,7 @@
 .
 :Mandate
   a owl:Class ;
-  rdfs:subClassOf <http://www.w3.org/ns/dcat#Resource> ;
-  rdfs:subClassOf prov:Entity ;
-  rdfs:subClassOf owl:Thing ;
+  rdfs:subClassOf dcat:Resource , prov:Entity ;
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:cardinality "1"^^xsd:nonNegativeInteger ;

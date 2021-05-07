@@ -17,8 +17,8 @@
   a owl:Ontology ;
   swa:defaultNamespace "https://data.surroundaustralia.com/manifest/fsdf/register/"^^xsd:anyURI ;
   teamwork:newInstancesUserCannotModifyURI false ;
-  rdfs:comment "This Manifest contains a list of all the assets within the FSDF Project"@en ;
-  rdfs:label "FSDF Knowledge Graph Manifest"@en ;
+  rdfs:comment "This Manifest contains a list of all the assets within the FSDF KG"@en ;
+  rdfs:label "FSDF KG"@en ;
   owl:imports <https://data.surroundaustralia.com/def/standards-baseline> ;
   sopbl:purpose "The FSDF KG Product"@en ;
 .
@@ -29,8 +29,8 @@ register:agencies
   rdfs:comment "The list of FSDF Agencies instances, as extracted from the LINK website"@en ;
   rdfs:label "FSDF Agencies"@en ;
   sopbl:edgType <http://teamwork.topbraidlive.org/datagraph/datagraphprojects#ProjectType> ;
-  sopbl:include "https://data.surroundaustralia.com/platform/shapes/pref2rdfslabel" ;
-  sopbl:include "https://data.surroundaustralia.com/platform/shapes/sdoname2rdfslabel" ;
+  sopbl:include "https://data.surroundaustralia.com/platform/shapes/classbasics"^^xsd:anyURI ;
+  sopbl:include "https://data.surroundaustralia.com/platform/shapes/sdoname2rdfslabel"^^xsd:anyURI ;
   sopbl:localCopyPath "datagraphs/agencies.ttl" ;
   sopbl:module "FSDF" ;
   sopbl:proxy "https://linked.data.gov.au/def/fsdf/agencies"^^xsd:anyURI ;
@@ -43,7 +43,8 @@ register:datasets
   rdfs:comment "The list of FSDF Dataset instances, as extracted from the LINK website"@en ;
   rdfs:label "FSDF Datasets"@en ;
   sopbl:edgType <http://teamwork.topbraidlive.org/datagraph/datagraphprojects#ProjectType> ;
-  sopbl:include "https://data.surroundaustralia.com/platform/shapes/pref2rdfslabel" ;
+  sopbl:include "https://data.surroundaustralia.com/platform/shapes/classbasics"^^xsd:anyURI ;
+  sopbl:include "https://data.surroundaustralia.com/platform/shapes/title2label"^^xsd:anyURI ;
   sopbl:localCopyPath "datagraphs/datasets.ttl" ;
   sopbl:module "FSDF" ;
   sopbl:proxy "https://linked.data.gov.au/def/fsdf/datasets"^^xsd:anyURI ;
@@ -56,7 +57,8 @@ register:jurisdictions
   rdfs:comment "The list of FSDF Jurisdiction instances, as extracted from the LINK website"@en ;
   rdfs:label "FSDF Jurisdictions"@en ;
   sopbl:edgType <http://teamwork.topbraidlive.org/datagraph/datagraphprojects#ProjectType> ;
-  sopbl:include "https://data.surroundaustralia.com/platform/shapes/pref2rdfslabel" ;
+  sopbl:include "https://data.surroundaustralia.com/platform/shapes/classbasics"^^xsd:anyURI ;
+  sopbl:include "https://data.surroundaustralia.com/platform/shapes/sdoname2rdfslabel"^^xsd:anyURI ;
   sopbl:localCopyPath "datagraphs/jurisdictions.ttl" ;
   sopbl:module "FSDF" ;
   sopbl:proxy "https://linked.data.gov.au/def/fsdf/jurisdictions"^^xsd:anyURI ;
@@ -69,8 +71,9 @@ register:mandates
   rdfs:comment "The list of FSDF Mandate instances, as extracted from the LINK website"@en ;
   rdfs:label "FSDF Mandates"@en ;
   sopbl:edgType <http://teamwork.topbraidlive.org/datagraph/datagraphprojects#ProjectType> ;
-  sopbl:include "https://data.surroundaustralia.com/platform/shapes/pref2rdfslabel" ;
-  sopbl:include "https://linked.data.gov.au/def/fsdf/jurisdictions" ;
+  sopbl:include "https://data.surroundaustralia.com/platform/shapes/classbasics"^^xsd:anyURI ;
+  sopbl:include "https://data.surroundaustralia.com/platform/shapes/pref2rdfslabel"^^xsd:anyURI ;
+  sopbl:include "https://linked.data.gov.au/def/fsdf/jurisdictions"^^xsd:anyURI ;
   sopbl:localCopyPath "datagraphs/mandates.ttl" ;
   sopbl:module "FSDF" ;
   sopbl:proxy "https://linked.data.gov.au/def/fsdf/mandates"^^xsd:anyURI ;
@@ -82,6 +85,7 @@ register:ont
   rdfs:comment "This copy of the FSDF Ontology is unchanged from the source but changes may occur to improve the dataset"@en ;
   rdfs:label "FSDF Ontology"@en ;
   sopbl:edgType <http://teamwork.topbraidlive.org/ontologyprojects#ProjectType> ;
+  sopbl:include "https://data.surroundaustralia.com/platform/shapes/pref2rdfslabel"^^xsd:anyURI ;
   sopbl:localCopyPath "ontologies/fsdf.ttl" ;
   sopbl:module "FSDF" ;
   sopbl:proxy "https://linked.data.gov.au/def/fsdf"^^xsd:anyURI ;

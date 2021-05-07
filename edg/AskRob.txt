@@ -1,0 +1,14 @@
+1. FSDF Ontology
+	- http://localhost:8083/tbl/fsdf_ontology_5.editor
+	- why do definitions not show?
+		- how can I load a new shape: comment-from-definition.ttl
+		
+2. Why can't I purge old NIs?
+	- http://localhost:8083/tbl/fsdf_agencies_3.editor#http:%2F%2Fwww.w3.org%2Fns%2Fdcat%23Dataset
+	
+	
+3. Why can't I purge old Manifest name?
+	- http://localhost:8083/tbl/swp?_viewClass=teamwork%3AProjectPage&projectGraph=urn%3Ax-evn-master%3Afsdf_knowledg_graph_manifest#tabs-OntologyRegistrationProjectTab
+	
+4. Why do things rearrange in the blue tables when laoded?
+	- http://localhost:8083/tbl/swp?_viewClass=teamwork%3AProjectPage&projectGraph=urn%3Ax-evn-master%3Afsdf_knowledg_graph_manifest#tabs-OntologyRegistrationProjectTab

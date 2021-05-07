@@ -19,7 +19,7 @@
   owl:imports <https://linked.data.gov.au/def/fsdf> ;
 .
 agencies:national-native-title-tribunal
-  a fsdf:Agency , sdo:Organization ;
+  a fsdf:Agency , owl:NamedIndividual ;
   sdo:name "National Native Title Tribunal"@en ;
   sdo:description """The National Native Title Tribunal (‘the Tribunal’) is an independent agency established by the Native Title Act 1993 (Cth) (‘the Act’).
 The Tribunal comprises a President and Members, who are appointed by the Governor General under the Act to make decisions, conduct inquiries, reviews and mediations, and assist various parties with native title applications, and Indigenous land use agreements (‘ILUAs’).
