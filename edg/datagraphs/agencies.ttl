@@ -19,7 +19,7 @@
   owl:imports <https://linked.data.gov.au/def/fsdf> ;
 .
 agencies:national-native-title-tribunal
-  a fsdf:Agency , owl:NamedIndividual ;
+  a fsdf:Agency ;
   sdo:name "National Native Title Tribunal"@en ;
   sdo:description """The National Native Title Tribunal (‘the Tribunal’) is an independent agency established by the Native Title Act 1993 (Cth) (‘the Act’).
 The Tribunal comprises a President and Members, who are appointed by the Governor General under the Act to make decisions, conduct inquiries, reviews and mediations, and assist various parties with native title applications, and Indigenous land use agreements (‘ILUAs’).
@@ -27,5 +27,20 @@ The Tribunal comprises a President and Members, who are appointed by the Governo
 The Tribunal is supported by the Native Title Registrar, also appointed by the Governor General. Together, the statutory office-holders of the Tribunal, (the President, Members and the Registrar), each have separate and specific functions and responsibilities to perform under the Act."""@en ;
   fsdf:hasJurisdiction jurisdictions:commonwealth ;
   sdo:url "http://www.nntt.gov.au"^^xsd:anyURI ;
-  sdo:telphone " 1800 640 501" ;
+  sdo:telphone "1800 640 501" ;
 .
+
+agencies:aad
+  a fsdf:Agency ;
+  sdo:name "Australian Antarctic Division"@en ;
+  sdo:description """The Australian Antarctic Division, based in Hobart, Tasmania, is a Division of the of the Australian Government’s Department of the Environment and Energy.
+
+The Division is responsible for the "Advancement of Australia’s strategic, scientific, environmental and economic interests in the Antarctic by protecting, administering and researching the region" (Outcome 3 of the Department's Strategic Plan 2014–2018).
+
+We do this by leading, coordinating and delivering the Australian Antarctic Program – a program that reflects our strong national connection to Antarctica and our national Antarctic interests."""@en ;
+  sdo:url "http://www.antarctica.gov.au"^^xsd:anyURI ;
+  sdo:telephone "03 6232 3209";
+.
+  
+  
+  

@@ -33,29 +33,28 @@
 .
 :Agency
   a owl:Class ;
-  rdfs:subClassOf prov:Agent , sdo:Organization ;
+  rdfs:subClassOf owl:Thing , prov:Agent , sdo:Organization ;
   skos:definition "An FSDF Agency is a Government Organisation that is involved with the FSDF Programme"@en ;
   skos:prefLabel "Agency"@en ;
 .
 :Dataset
   a owl:Class ;
-  rdfs:subClassOf loci:Dataset , prov:Entity ;
+  rdfs:subClassOf owl:Thing , loci:Dataset , prov:Entity ;
   skos:definition "An FSDF Dataset is a Loc-I Dataset, that is a dataset of spatial data following the Location Index (Loc-I) protocols. An FDSF Dataset has additional requirements on it for its use within the FSDF Programme, for example, the dataset must be classified according to the FSDF Themes vocabulary and must have various agents (organisations) of relevance to the dataset, such as crator and owner, recorded."@en ;
   skos:prefLabel "Dataset"@en ;
 .
 :Jurisdiction
   a owl:Class ;
-  rdfs:subClassOf prov:Agent , sdo:Organization ;
+  rdfs:subClassOf owl:Thing , prov:Agent , sdo:Organization ;
   rdfs:label "Jurisdiction"@en ;
   rdfs:subClassOf dcterms:Jurisdiction ;
   rdfs:subClassOf prov:Agent ;
-  rdfs:subClassOf owl:Thing ;
   owl:disjointWith :Agency ;
   skos:definition "A Jurisdiction is a Government Organization that has authority within a domain. The specific domains considered by the FSDF Programme are the Australian Commonwealth (Federal), Australian States and Territories and the Commercial sector."@en ;
 .
 :Mandate
   a owl:Class ;
-  rdfs:subClassOf dcat:Resource , prov:Entity ;
+  rdfs:subClassOf owl:Thing , dcat:Resource , prov:Entity ;
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:cardinality "1"^^xsd:nonNegativeInteger ;
@@ -66,7 +65,7 @@
 .
 :Theme
   a owl:Class ;
-  rdfs:subClassOf skos:Concept ;
+  rdfs:subClassOf owl:Thing , skos:Concept ;
   skos:definition "An FSDF Theme is a SKOS Concept, that is a taxonomy classification class of object, used by the FSDF Programme to organise FSDF Datasets"@en ;
   skos:prefLabel "Theme"@en ;
 .
@@ -104,4 +103,20 @@
         ) ;
     ] ;
   skos:prefLabel "responsible authority" ;
+.
+
+:hasOperationalStatus 
+  a owl:ObjectProperty ;
+  rdfs:domain loci:Feature ;
+  rdfs:range skos:Concept ;
+  skos:definition "The mode of physical operation of the feature"@en ;
+  skos:prefLabel "has operational status"@en ;
+.
+
+:featureObservation
+  a owl:ObjectProperty ;
+  rdfs:domain loci:Feature ;
+  rdfs:range sosa:ObservableProperty ;
+  skos:definition "The mode of physical operation of the feature"@en ;
+  skos:prefLabel "has operational status"@en ;
 .

@@ -17,7 +17,7 @@
   a owl:Ontology ;
   swa:defaultNamespace "https://data.surroundaustralia.com/manifest/fsdf/register/"^^xsd:anyURI ;
   teamwork:newInstancesUserCannotModifyURI false ;
-  rdfs:comment "This Manifest contains a list of all the assets within the FSDF KG"@en ;
+  rdfs:comment "This Manifest contains a list of all the assets within the FSDF KG" ;
   rdfs:label "FSDF KG"@en ;
   owl:imports <https://data.surroundaustralia.com/def/standards-baseline> ;
   sopbl:purpose "The FSDF KG Product"@en ;
@@ -29,8 +29,7 @@ register:agencies
   rdfs:comment "The list of FSDF Agencies instances, as extracted from the LINK website"@en ;
   rdfs:label "FSDF Agencies"@en ;
   sopbl:edgType <http://teamwork.topbraidlive.org/datagraph/datagraphprojects#ProjectType> ;
-  sopbl:include "https://data.surroundaustralia.com/platform/shapes/classbasics"^^xsd:anyURI ;
-  sopbl:include "https://data.surroundaustralia.com/platform/shapes/sdoname2rdfslabel"^^xsd:anyURI ;
+  sopbl:include "https://data.surroundaustralia.com/platform/shapes/label-from-name"^^xsd:anyURI ;
   sopbl:localCopyPath "datagraphs/agencies.ttl" ;
   sopbl:module "FSDF" ;
   sopbl:proxy "https://linked.data.gov.au/def/fsdf/agencies"^^xsd:anyURI ;
@@ -43,8 +42,7 @@ register:datasets
   rdfs:comment "The list of FSDF Dataset instances, as extracted from the LINK website"@en ;
   rdfs:label "FSDF Datasets"@en ;
   sopbl:edgType <http://teamwork.topbraidlive.org/datagraph/datagraphprojects#ProjectType> ;
-  sopbl:include "https://data.surroundaustralia.com/platform/shapes/classbasics"^^xsd:anyURI ;
-  sopbl:include "https://data.surroundaustralia.com/platform/shapes/title2label"^^xsd:anyURI ;
+  sopbl:include "https://data.surroundaustralia.com/platform/shapes/label-from-title"^^xsd:anyURI ;
   sopbl:localCopyPath "datagraphs/datasets.ttl" ;
   sopbl:module "FSDF" ;
   sopbl:proxy "https://linked.data.gov.au/def/fsdf/datasets"^^xsd:anyURI ;
@@ -57,8 +55,7 @@ register:jurisdictions
   rdfs:comment "The list of FSDF Jurisdiction instances, as extracted from the LINK website"@en ;
   rdfs:label "FSDF Jurisdictions"@en ;
   sopbl:edgType <http://teamwork.topbraidlive.org/datagraph/datagraphprojects#ProjectType> ;
-  sopbl:include "https://data.surroundaustralia.com/platform/shapes/classbasics"^^xsd:anyURI ;
-  sopbl:include "https://data.surroundaustralia.com/platform/shapes/sdoname2rdfslabel"^^xsd:anyURI ;
+  sopbl:include "https://data.surroundaustralia.com/platform/shapes/label-from-name"^^xsd:anyURI ;
   sopbl:localCopyPath "datagraphs/jurisdictions.ttl" ;
   sopbl:module "FSDF" ;
   sopbl:proxy "https://linked.data.gov.au/def/fsdf/jurisdictions"^^xsd:anyURI ;
@@ -71,8 +68,7 @@ register:mandates
   rdfs:comment "The list of FSDF Mandate instances, as extracted from the LINK website"@en ;
   rdfs:label "FSDF Mandates"@en ;
   sopbl:edgType <http://teamwork.topbraidlive.org/datagraph/datagraphprojects#ProjectType> ;
-  sopbl:include "https://data.surroundaustralia.com/platform/shapes/classbasics"^^xsd:anyURI ;
-  sopbl:include "https://data.surroundaustralia.com/platform/shapes/pref2rdfslabel"^^xsd:anyURI ;
+  sopbl:include "https://data.surroundaustralia.com/platform/shapes/label-from-pref"^^xsd:anyURI ;
   sopbl:include "https://linked.data.gov.au/def/fsdf/jurisdictions"^^xsd:anyURI ;
   sopbl:localCopyPath "datagraphs/mandates.ttl" ;
   sopbl:module "FSDF" ;
@@ -85,7 +81,7 @@ register:ont
   rdfs:comment "This copy of the FSDF Ontology is unchanged from the source but changes may occur to improve the dataset"@en ;
   rdfs:label "FSDF Ontology"@en ;
   sopbl:edgType <http://teamwork.topbraidlive.org/ontologyprojects#ProjectType> ;
-  sopbl:include "https://data.surroundaustralia.com/platform/shapes/pref2rdfslabel"^^xsd:anyURI ;
+  sopbl:include "https://data.surroundaustralia.com/platform/shapes/label-from-pref"^^xsd:anyURI ;
   sopbl:localCopyPath "ontologies/fsdf.ttl" ;
   sopbl:module "FSDF" ;
   sopbl:proxy "https://linked.data.gov.au/def/fsdf"^^xsd:anyURI ;
@@ -100,6 +96,17 @@ register:themes
   sopbl:edgType <http://evn.topbraidlive.org/evnprojects#ProjectType> ;
   sopbl:localCopyPath "taxonomies/themes.ttl" ;
   sopbl:module "FSDF" ;
-  sopbl:proxy "https://linked.data.gov.au/def/fsdf-themes"^^xsd:anyURI ;
+  sopbl:proxy "https://linked.data.gov.au/def/fsdf/themes"^^xsd:anyURI ;
+  sopbl:purpose "The FSDF KG Product"@en ;
+.
+register:themes-physical-infrastructure
+  a sopbl:ManagedGraph ;
+  dcterms:provenance "Authoratitive version, generated here from non-RDF source data"@en ;
+  rdfs:comment "The FSDF Themes - Physical Infrastructure vocabulary, as created for the Loc-I DR Project"@en ;
+  rdfs:label "FSDF Themes - Physical Infrastructure"@en ;
+  sopbl:edgType <http://evn.topbraidlive.org/evnprojects#ProjectType> ;
+  sopbl:localCopyPath "taxonomies/themes-physical-infrastructure.ttl" ;
+  sopbl:module "FSDF" ;
+  sopbl:proxy "https://linked.data.gov.au/def/fsdf/themes/physical-infrastructure-cs"^^xsd:anyURI ;
   sopbl:purpose "The FSDF KG Product"@en ;
 .
