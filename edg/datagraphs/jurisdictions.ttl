@@ -18,77 +18,77 @@
   owl:imports <https://linked.data.gov.au/def/fsdf> ;
 .
 jurisdictions:commonwealth
-  a fsdf:Jurisdiction , owl:NamedIndividual ;
+  a fsdf:Jurisdiction ;
   dcterms:title "Commonwealth of Australia"@en ;
   dcterms:description "The Commonwealth Government of Australia, as a Government Entity with a mandate to define laws for Australia"@en ;
 .
 jurisdictions:act
-  a fsdf:Jurisdiction , owl:NamedIndividual ;
+  a fsdf:Jurisdiction ;
   dcterms:title "Australian Capital Territory"@en ;
   dcterms:description "The Government of ACT, as a Government Entity with a mandate to define laws for the Territory of ACT"@en ;
 .
 jurisdictions:nsw
-  a fsdf:Jurisdiction , owl:NamedIndividual ;
+  a fsdf:Jurisdiction ;
   dcterms:title "New South Wales"@en ;
   dcterms:description "The Government of NSW, as a Government Entity with a mandate to define laws for the State of NSW"@en ;
 .
 jurisdictions:nt
-  a fsdf:Jurisdiction , owl:NamedIndividual ;
+  a fsdf:Jurisdiction ;
   dcterms:title "Northern Territory"@en ;
   dcterms:description "The Government of NT, as a Government Entity with a mandate to define laws for the Territory of NT"@en ;
 .
 jurisdictions:qld
-  a fsdf:Jurisdiction , owl:NamedIndividual ;
+  a fsdf:Jurisdiction ;
   dcterms:title "Queensland"@en ;
   dcterms:description "The Government of Queensland, as a Government Entity with a mandate to define laws for the Territory of Queensland"@en ;
 .
 jurisdictions:sa
-  a fsdf:Jurisdiction , owl:NamedIndividual ;
+  a fsdf:Jurisdiction ;
   dcterms:title "South Australia"@en ;
   dcterms:description "The Government of SA, as a Government Entity with a mandate to define laws for the State of SA"@en ;
 .
 jurisdictions:tas
-  a fsdf:Jurisdiction , owl:NamedIndividual ;
+  a fsdf:Jurisdiction ;
   dcterms:title "Tasmania"@en ;
   dcterms:description "The Government of Tasmania, as a Government Entity with a mandate to define laws for the State of Tasmania"@en ;
 .
 jurisdictions:vic
-  a fsdf:Jurisdiction , owl:NamedIndividual ;
+  a fsdf:Jurisdiction ;
   dcterms:title "Victoria"@en ;
   dcterms:description "The Government of Victoria, as a Government Entity with a mandate to define laws for the State of Victoria"@en ;
 .
 jurisdictions:wa
-  a fsdf:Jurisdiction , owl:NamedIndividual ;
+  a fsdf:Jurisdiction ;
   dcterms:title "Western Australia"@en ;
   dcterms:description "The Government of WA, as a Government Entity with a mandate to define laws for the State of WA"@en ;
 .
 
 jurisdictions:abs
-  a fsdf:Jurisdiction , owl:NamedIndividual ;
+  a fsdf:Jurisdiction ;
   dcterms:title "Australian Bureau of Statistics"@en ;
   dcterms:description "Australian Bureau of Statistics, the Australian Commonwealth Agency"@en ;
 .
 
 jurisdictions:amsa
-  a fsdf:Jurisdiction , owl:NamedIndividual ;
+  a fsdf:Jurisdiction ;
   dcterms:title "Australian Maritime Safety Authority"@en ;
   dcterms:description "Australian Maritime Safety Authority, the Australian Commonwealth Agency"@en ;
 .
 
 jurisdictions:airservices
-  a fsdf:Jurisdiction , owl:NamedIndividual ;
+  a fsdf:Jurisdiction ;
   dcterms:title "Airservices Australia"@en ;
   dcterms:description "Airservices Australia, the Australian Commonwealth Agency"@en ;
 .
 
 jurisdictions:dee
-  a fsdf:Jurisdiction , owl:NamedIndividual ;
+  a fsdf:Jurisdiction ;
   dcterms:title "Department of the Environment and Energy"@en ;
   dcterms:description "Department of the Environment and Energy, the Australian Commonwealth Agency"@en ;
 .
 
 jurisdictions:imo
-  a fsdf:Jurisdiction , owl:NamedIndividual ;
+  a fsdf:Jurisdiction ;
   dcterms:title "International Maritime Organization"@en ;
   dcterms:description "International Agency"@en ;
 .

@@ -20,7 +20,7 @@
   owl:imports <https://linked.data.gov.au/def/fsdf> ;
 .
 mandates:clp-1994
-  a fsdf:Mandate , owl:NamedIndividual ;
+  a fsdf:Mandate ;
   dcterms:description "A Bill to establish a system of integrated management and protection for catchments, to establish a framework for controlling noxious weeds and pest animals, to repeal the Soil Conservation and Land Utilization Act 1958 and the Vermin and Noxious Weeds Act 1958, to amend various other Acts and for other purposes."@en ;
   dcterms:title "Catchment and Land Protection Act 1994"@en ;
   skos:scopeNote "Repeals the Soil Conservation and Land Utilization Act 1958"@en ;
@@ -28,14 +28,14 @@ mandates:clp-1994
   fsdf:responsibleAuthority jurisdictions:vic ;
 .
 mandates:alra-1976
-  a fsdf:Mandate , owl:NamedIndividual ;
+  a fsdf:Mandate ;
   dcterms:description "This Act may be cited as the Aboriginal Land Rights (Northern Territory) Act 1976"@en ;
   dcterms:title "Aboriginal Land Rights (Northern Territory) Act 1976"@en ;
   dcterms:source "http://www.austlii.edu.au/au/legis/cth/consol_act/alrta1976444/"^^xsd:anyURI ;
   fsdf:responsibleAuthority jurisdictions:nt ;
 .
 mandates:asa-1995
-  a fsdf:Mandate , owl:NamedIndividual ;
+  a fsdf:Mandate ;
   dcterms:description """1)  AA has the following functions:
  (a)  providing services and facilities:
           (i)  for the purpose of Australia or another country giving effect to the Chicago convention; or

@@ -23,7 +23,7 @@
   owl:imports <https://linked.data.gov.au/def/fsdf> ;
 .
 datasets:native-title-determination-outcomes-data
-  a fsdf:Dataset , owl:NamedIndividual ;
+  a fsdf:Dataset ;
   dcterms:title "Native Title Determination Outcomes Data"@en ;
   dcterms:description "Determination area showing categorisation of the existence or otherwise of native title for portions of the area. The native title outcomes depicted include: Native Title exists (exclusive), Native Title exists (non-exclusive), Native Title does not exist and Native Title extinguished. The areas shown according to this classification are based on the best information available to the Tribunal at the date of determination, and should be considered indicative only. The Tribunal is not able to map all native title outcome areas included in determinations."@en ;
   dcat:theme themes:native-title-boundaries ;
@@ -41,7 +41,7 @@ datasets:native-title-determination-outcomes-data
 .
 
 datasets:native-title-determination-outcomes
-  a fsdf:Dataset , owl:NamedIndividual ;
+  a fsdf:Dataset ;
   dcterms:title "Native Title Determination Outcomes"@en ;
   dcterms:description "Determination area showing categorisation of the existence or otherwise of native title for portions of the area. The native title outcomes depicted include: Native Title exists (exclusive), Native Title exists (non-exclusive), Native Title does not exist and Native Title extinguished. The areas shown according to this classification are based on the best information available to the Tribunal at the date of determination, and should be considered indicative only. The Tribunal is not able to map all native title outcome areas included in determinations."@en ;
   dcat:theme themes:land-parcel-and-property ;

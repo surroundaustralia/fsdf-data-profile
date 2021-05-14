@@ -1,0 +1,52 @@
+# baseURI: https://linked.data.gov.au/def/fsdf.shapes
+# imports: http://datashapes.org/dash
+# imports: http://datashapes.org/owl2shacl
+# imports: https://linked.data.gov.au/def/fsdf
+
+@prefix fsdf: <https://linked.data.gov.au/def/fsdf#> .
+@prefix fsdfsh: <https://linked.data.gov.au/def/fsdf.shapes#> .
+@prefix dash: <http://datashapes.org/dash#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix ra: <https://linked.data.gov.au/def/fsdf#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sdo: <https://schema.org/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+
+<https://linked.data.gov.au/def/fsdf.shapes>
+  a owl:Ontology ;
+  owl:imports <http://datashapes.org/dash> ;
+  owl:imports <http://datashapes.org/owl2shacl> ;
+  owl:imports <https://linked.data.gov.au/def/fsdf> ;
+.
+
+fsdf:Agency
+  a sh:NodeShape ;
+  dash:viewer dash:DetailsViewer ;
+  rdfs:subClassOf owl:Thing ;
+  sh:property fsdf:definition ;
+  sh:property fsdf:type ;
+.
+
+fsdfsh:type
+  a sh:PropertyShape ;
+  sh:path rdf:type ;
+  sh:maxCount 1 ;
+  sh:minCount 1 ;
+  sh:name "Type" ;
+  sh:nodeKind sh:IRI ;
+.
+    
+fsdfsh:definition
+  a sh:PropertyShape ;
+  sh:path skos:definition ;
+  sh:maxCount 1 ;
+  sh:minCount 1 ;
+  sh:name "Text" ;
+.
