@@ -122,3 +122,29 @@ fsdf:featureObservation
   skos:definition "The mode of physical operation of the feature"@en ;
   skos:prefLabel "has operational status"@en ;
 .
+
+fsdf:hasSpatialConfidence
+  a owl:DatatypeProperty ;
+  rdfs:domain loci:Feature ;
+  rdfs:range xsd:float ;
+  skos:definition "??????"@en ;
+  skos:prefLabel "has spatial confidence"@en ;
+.
+
+fsdf:hasOperationalStatus
+  a owl:ObjectProperty ;
+  rdfs:domain loci:Feature ;
+  rdfs:range skos:Concept ;
+  skos:definition "??????"@en ;
+  skos:prefLabel "has operational status"@en ;
+.
+
+fsdf:hasState 
+  a owl:ObjectProperty ;
+  rdfs:domain loci:Feature ;
+  rdfs:range asgs:StateOrTerritory ;
+  skos:definition "The State or Territory that this Feature is within"@en ;
+  skos:prefLabel "has state"@en ;
+.  
+	
+	

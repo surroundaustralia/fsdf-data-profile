@@ -30,7 +30,7 @@ register:agencies
   rdfs:label "FSDF Agencies"@en ;
   sopbl:edgType <http://teamwork.topbraidlive.org/datagraph/datagraphprojects#ProjectType> ;
   sopbl:include "https://data.surroundaustralia.com/platform/shapes/comment-from"^^xsd:anyURI ;
-  sopbl:include "https://data.surroundaustralia.com/platform/shapes/label-from-pref"^^xsd:anyURI ;
+  sopbl:include "https://data.surroundaustralia.com/platform/shapes/label-from"^^xsd:anyURI ;
   sopbl:include "https://linked.data.gov.au/def/fsdf"^^xsd:anyURI ;
   sopbl:localCopyPath "datagraphs/agencies.ttl" ;
   sopbl:module "FSDF" ;
@@ -45,7 +45,7 @@ register:datasets
   rdfs:label "FSDF Datasets"@en ;
   sopbl:edgType <http://teamwork.topbraidlive.org/datagraph/datagraphprojects#ProjectType> ;
   sopbl:include "https://data.surroundaustralia.com/platform/shapes/comment-from"^^xsd:anyURI ;
-  sopbl:include "https://data.surroundaustralia.com/platform/shapes/label-from-pref"^^xsd:anyURI ;
+  sopbl:include "https://data.surroundaustralia.com/platform/shapes/label-from"^^xsd:anyURI ;
   sopbl:include "https://linked.data.gov.au/def/fsdf"^^xsd:anyURI ;
   sopbl:localCopyPath "datagraphs/datasets.ttl" ;
   sopbl:module "FSDF" ;
@@ -60,7 +60,7 @@ register:jurisdictions
   rdfs:label "FSDF Jurisdictions"@en ;
   sopbl:edgType <http://teamwork.topbraidlive.org/datagraph/datagraphprojects#ProjectType> ;
   sopbl:include "https://data.surroundaustralia.com/platform/shapes/comment-from"^^xsd:anyURI ;
-  sopbl:include "https://data.surroundaustralia.com/platform/shapes/label-from-pref"^^xsd:anyURI ;
+  sopbl:include "https://data.surroundaustralia.com/platform/shapes/label-from"^^xsd:anyURI ;
   sopbl:include "https://linked.data.gov.au/def/fsdf"^^xsd:anyURI ;
   sopbl:localCopyPath "datagraphs/jurisdictions.ttl" ;
   sopbl:module "FSDF" ;
@@ -75,7 +75,7 @@ register:mandates
   rdfs:label "FSDF Mandates"@en ;
   sopbl:edgType <http://teamwork.topbraidlive.org/datagraph/datagraphprojects#ProjectType> ;
   sopbl:include "https://data.surroundaustralia.com/platform/shapes/comment-from"^^xsd:anyURI ;
-  sopbl:include "https://data.surroundaustralia.com/platform/shapes/label-from-pref"^^xsd:anyURI ;
+  sopbl:include "https://data.surroundaustralia.com/platform/shapes/label-from"^^xsd:anyURI ;
   sopbl:include "https://linked.data.gov.au/def/fsdf"^^xsd:anyURI ;
   sopbl:include "https://linked.data.gov.au/def/fsdf/jurisdictions"^^xsd:anyURI ;
   sopbl:localCopyPath "datagraphs/mandates.ttl" ;
@@ -90,7 +90,7 @@ register:ont
   rdfs:label "FSDF Ontology"@en ;
   sopbl:edgType <http://teamwork.topbraidlive.org/ontologyprojects#ProjectType> ;
   sopbl:include "https://data.surroundaustralia.com/platform/shapes/comment-from"^^xsd:anyURI ;
-  sopbl:include "https://data.surroundaustralia.com/platform/shapes/label-from-pref"^^xsd:anyURI ;
+  sopbl:include "https://data.surroundaustralia.com/platform/shapes/label-from"^^xsd:anyURI ;
   sopbl:localCopyPath "ontologies/fsdf.ttl" ;
   sopbl:module "FSDF" ;
   sopbl:proxy "https://linked.data.gov.au/def/fsdf"^^xsd:anyURI ;
