@@ -83,7 +83,6 @@ agencies:mitez
 agencies:enet
   a fsdf:Agency ;
   sdo:name "ElectraNet"@en ;
-  sdo:alternateName ""@en ;
 .
 
 agencies:ntuc
@@ -99,7 +98,6 @@ agencies:wp
 agencies:pwc
   a fsdf:Agency ;
   sdo:name "Power and Water Corporation"@en ;
-  sdo:alternateName ""@en ;
 .
 
 agencies:ie
@@ -110,13 +108,11 @@ agencies:ie
 agencies:hp
   a fsdf:Agency ;
   sdo:name "Horizon Power"@en ;
-  sdo:description "Runs the North West Interconnected System Website"
 .
 
 agencies:tg
   a fsdf:Agency ;
   sdo:name "TransGrid"@en ;
-  sdo:alternateName ""@en ;
 .
 
 agencies:ve
@@ -147,11 +143,9 @@ agencies:nswlapi
 agencies:stargroup
   a fsdf:Agency ;
   sdo:name "Star Group"@en ;
-  sdo:description "Published the City West Cable Tunnel Submissions Report" ;
 .
 
 agencies:ergon
   a fsdf:Agency ;
   sdo:name "Ergon"@en ;
-  sdo:description "Published the Cloncurry Non-Network Options Report"@en ;
 .
