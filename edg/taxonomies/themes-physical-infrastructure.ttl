@@ -159,6 +159,18 @@ themes:low-voltage-power-line
     dcterms:provenance "Defined in the Loc-I DR project to classify spatial features" ;
 .
 
+
+themes:low-voltage-power-line-overhead
+    a skos:Concept ;
+    skos:prefLabel "Overhead Low Voltage Power Line"@en ;
+    skos:definition "Low Voltage Power Lines that are overhead (above ground)"@en ;
+    rdfs:isDefinedBy cs: ;
+    skos:broader themes:low-voltage-power-line ;
+    skos:inScheme cs: ;
+    skos:topConceptOf cs: ;
+    dcterms:provenance "Defined in the Loc-I DR project to classify spatial features" ;
+.
+
 themes:substation-infrastructure
     a skos:Concept ;
     skos:prefLabel "Substation Infrastructure"@en ;

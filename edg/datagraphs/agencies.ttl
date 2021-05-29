@@ -58,5 +58,94 @@ agencies:aemo
   sdo:alternateName "AEMO"@en ;
 .
 
-  
-  
+agencies:wapc
+  a fsdf:Agency ;
+  sdo:name "West Australian Planning Commission"@en ;
+  sdo:alternateName "WAPC"@en ;
+.
+
+agencies:rt
+  a fsdf:Agency ;
+  sdo:name "Rio Tinto"@en ;
+.
+
+agencies:ee
+  a fsdf:Agency ;
+  sdo:name "Essential Energy"@en ;
+.
+
+agencies:mitez
+  a fsdf:Agency ;
+  sdo:name "Mount Isa to Townsville Economic Development Zone"@en ;
+  sdo:alternateName "MITEZ"@en ;
+.
+
+agencies:enet
+  a fsdf:Agency ;
+  sdo:name "ElectraNet"@en ;
+.
+
+agencies:ntuc
+  a fsdf:Agency ;
+  sdo:name "Northern Territory Utilities Commission"@en ;
+.
+
+agencies:wp
+  a fsdf:Agency ;
+  sdo:name "Western Power"@en ;
+.
+
+agencies:pwc
+  a fsdf:Agency ;
+  sdo:name "Power and Water Corporation"@en ;
+.
+
+agencies:ie
+  a fsdf:Agency ;
+  sdo:name "Integral Energy"@en ;
+
+.
+agencies:hp
+  a fsdf:Agency ;
+  sdo:name "Horizon Power"@en ;
+.
+
+agencies:tg
+  a fsdf:Agency ;
+  sdo:name "TransGrid"@en ;
+.
+
+agencies:ve
+  a fsdf:Agency ;
+  sdo:name "Verve Energy"@en ;
+.
+
+agencies:ewi
+  a fsdf:Agency ;
+  sdo:name "Esri World Imagery"@en ;
+.
+
+agencies:actewagl
+  a fsdf:Agency ;
+  sdo:name "ActewAGL"@en ;
+.
+
+agencies:lg
+  a fsdf:Agency ;
+  sdo:name "Landgate"@en ;
+.
+
+agencies:nswlapi
+  a fsdf:Agency ;
+  sdo:name "NSW Land and Property Information"@en ;
+.
+
+agencies:stargroup
+  a fsdf:Agency ;
+  sdo:name "Star Group"@en ;
+.
+
+agencies:ergon
+  a fsdf:Agency ;
+  sdo:name "Ergon"@en ;
+.
