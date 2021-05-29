@@ -49,3 +49,11 @@ fsdfsh:definition
   sh:minCount 1 ;
   sh:name "Text" ;
 .
+
+fsdfsh:definition
+  a sh:PropertyShape ;
+  sh:path skos:example ;
+  sh:maxCount 1 ;
+  sh:minCount 1 ;
+  sh:name "Text" ;
+.
