@@ -51,3 +51,11 @@ opstatus:decommissioned
     skos:inScheme cs: ;
     skos:topConceptOf cs: ;
 .
+opstatus:proposed
+    a skos:Concept ;
+    skos:prefLabel "Proposed"@en ;
+    skos:definition "The Feature is proposed"@en ;
+    rdfs:isDefinedBy cs: ;
+    skos:inScheme cs: ;
+    skos:topConceptOf cs: ;
+.
