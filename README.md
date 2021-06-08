@@ -50,8 +50,8 @@ This sort of query requires data from the Population KG to be "reapportioned" to
 # KG Elements
 The machine-readable listing of this KG's elements can be found in its manifest, see `edg/manifest.ttl`. The main KG elements are:
 
-* [FSDF Ontology]()
-    * this imports the [FSDF common elements ontology]()
+* [FSDF Ontology](https://raw.githack.com/surroundaustralia/fsdf-kg/master/docs/fsdf.html)
+    * this imports the [FSDF common elements ontology](https://raw.githack.com/GeoscienceAustralia/FSDF/master/common.html)
 * multiple taxonomies
     * see `edg/taxonomies`
         * Ground Relations

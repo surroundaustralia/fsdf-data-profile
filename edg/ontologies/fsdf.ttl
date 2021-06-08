@@ -40,6 +40,7 @@ This contology contains a number of classes relevant to dataset description, man
 It also contains taxonomies (vocabularies) used to categorise datasets and sub-dataset elements. The main taxonomy is the "FSDF Themes" and there are many specialised sub-taxonomies for elements within it, such as "FSDF Themes - Physcial Infrastructure".
 
 Also provided here are common properties for FSDF datasets and their contents, such as `hasGroundRelation` (relates an infrastructure Feature to the earth's surface) as well as taxonomies for many of these proerties' values."""@en ;  
+  sdo:codeRepository "https://github.com/surroundaustralia/fsdf-kg"^^xsd:anyURI ;
 .
 
 <https://linked.data.gov.au/org/surround>
