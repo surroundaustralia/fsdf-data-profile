@@ -181,3 +181,14 @@ themes:substation-infrastructure
     skos:topConceptOf cs: ;
     dcterms:provenance "Defined in the Loc-I DR project to classify spatial features" ;
 .
+
+themes:renewable
+    a skos:Concept ;
+    skos:prefLabel "Renewable"@en ;
+    skos:definition "A renewable energy source"@en ;
+    rdfs:isDefinedBy cs: ;
+    skos:broader themes:physical-infrastructure ;
+    skos:inScheme cs: ;
+    skos:topConceptOf cs: ;
+    dcterms:provenance "Defined in the Loc-I DR project to classify spatial features" ;
+.

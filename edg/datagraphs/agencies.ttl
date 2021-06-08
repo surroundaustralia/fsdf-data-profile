@@ -6,6 +6,7 @@
 @prefix fsdf: <https://linked.data.gov.au/def/fsdf#> .
 @prefix jurisdictions: <https://linked.data.gov.au/dataset/fsdf/jurisdictions> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sdo: <https://schema.org/> .
@@ -148,4 +149,17 @@ agencies:stargroup
 agencies:ergon
   a fsdf:Agency ;
   sdo:name "Ergon"@en ;
+.
+
+agencies:hydro-tasmania
+  a fsdf:Agency ;
+  sdo:name "Hydro Tasmania"@en ;
+  sdo:url ""^^xsd:anyURI ;
+.
+
+agencies:ga:
+  a fsdf:Agency ;
+  sdo:name "Geoscience Australia" ;
+  sdo:url "https://www.ga.gov.au"^^xsd:anyURI ;
+  reg:register <https://linked.data.gov.au/org/> ;
 .

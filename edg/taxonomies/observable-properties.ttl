@@ -22,13 +22,33 @@ cs:
     skos:definition "This vocabulary lists physical properties of Features that may be observed to gain measurements of capacities of the Feature" ;
     owl:versionInfo "1.0"^^xsd:string ;
     skos:hasTopConcept
-    	obsp:ratedVoltage ;
+    	obsp:ratedVoltage ,
+        obsp:population ,
+        obsp:populationChange ;
 .
 
 obsp:ratedVoltage
     a skos:Concept ;
     skos:prefLabel "Rated Voltage"@en ;
     skos:definition "The voltage that the Feature is rated to carry or operate at"@en ;
+    rdfs:isDefinedBy cs: ;
+    skos:inScheme cs: ;
+    skos:topConceptOf cs: ;
+.
+
+obsp:population
+    a skos:Concept ;
+    skos:prefLabel "Population"@en ;
+    skos:definition "The total count of people for a given Feature"@en ;
+    rdfs:isDefinedBy cs: ;
+    skos:inScheme cs: ;
+    skos:topConceptOf cs: ;
+.
+
+obsp:populationChange
+    a skos:Concept ;
+    skos:prefLabel "Population Change"@en ;
+    skos:definition "The change in population for a given Feature and a given teporal interval"@en ;
     rdfs:isDefinedBy cs: ;
     skos:inScheme cs: ;
     skos:topConceptOf cs: ;

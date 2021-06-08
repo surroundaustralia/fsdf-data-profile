@@ -1,5 +1,4 @@
 # baseURI: https://linked.data.gov.au/def/fsdf
-# imports: https://linked.data.gov.au/def/loci
 # prefix: fsdf
 
 @prefix fsdf: <https://linked.data.gov.au/def/fsdf#> .
@@ -7,8 +6,8 @@
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix jurisdictions: <https://linked.data.gov.au/dataset/fsdf/jurisdictions/> .
-@prefix loci: <https://linked.data.gov.au/def/loci#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -35,7 +34,6 @@
   owl:versionInfo "1.0"@en ;
   owl:versionInfo "This 1.0 is an early version of the ontology but is a great departure from the 0.5 version that was published in 2018. This version concentrates on defining the FSDF concepts, not listing all of the FSDF datasets which are listed in a separate data graph within the overall FSDF Knolwedge Graph"@en ;
   skos:definition "An ontology describing the Calsses of concepts relevant to the [ANZLIC - The Spatial  Information Council](https://www.anzlic.gov.au)'s' Foundation Spatial Data Framework (FSDF) project which is \"a common reference for the assembly and maintenance of Australian and New Zealand foundation level spatial data\""@en ;  
-  owl:imports <https://linked.data.gov.au/def/loci> ;
 .
 
 prov:Agent
@@ -60,7 +58,7 @@ fsdf:Agency
 .
 fsdf:Dataset
   a owl:Class ;
-  rdfs:subClassOf owl:Thing , loci:Dataset , prov:Entity ;
+  rdfs:subClassOf owl:Thing , prov:Entity ;
   skos:definition "An FSDF Dataset is a Loc-I Dataset, that is a dataset of spatial data following the Location Index (Loc-I) protocols. An FDSF Dataset has additional requirements on it for its use within the FSDF Programme, for example, the dataset must be classified according to the FSDF Themes vocabulary and must have various agents (organisations) of relevance to the dataset, such as crator and owner, recorded."@en ;
   skos:prefLabel "Dataset"@en ;
 .
@@ -128,7 +126,7 @@ fsdf:hasResponsibleAuthority
 
 fsdf:hasOperationalStatus 
   a owl:ObjectProperty ;
-  rdfs:domain loci:Feature ;
+  rdfs:domain geo:Feature ;
   rdfs:range skos:Concept ;
   skos:definition "The mode of physical operation of the feature"@en ;
   skos:prefLabel "has operational status"@en ;
@@ -136,7 +134,7 @@ fsdf:hasOperationalStatus
 
 fsdf:featureObservation
   a owl:ObjectProperty ;
-  rdfs:domain loci:Feature ;
+  rdfs:domain geo:Feature ;
   rdfs:range sosa:ObservableProperty ;
   skos:definition "The mode of physical operation of the feature"@en ;
   skos:prefLabel "has operational status"@en ;
@@ -144,27 +142,43 @@ fsdf:featureObservation
 
 fsdf:hasSpatialConfidence
   a owl:DatatypeProperty ;
-  rdfs:domain loci:Feature ;
+  rdfs:domain geo:Feature ;
   rdfs:range xsd:float ;
   skos:definition "??????"@en ;
   skos:prefLabel "has spatial confidence"@en ;
 .
 
-fsdf:hasOperationalStatus
-  a owl:ObjectProperty ;
-  rdfs:domain loci:Feature ;
-  rdfs:range skos:Concept ;
-  skos:definition "??????"@en ;
-  skos:prefLabel "has operational status"@en ;
-.
 
 fsdf:hasState 
   a owl:ObjectProperty ;
-  rdfs:domain loci:Feature ;
+  rdfs:domain geo:Feature ;
   rdfs:range asgs:StateOrTerritory ;
   skos:definition "The State or Territory that this Feature is within"@en ;
   skos:prefLabel "has state"@en ;
 .  
+
+fsdf:hasRelationToGround
+  a owl:ObjectProperty ;
+  rdfs:domain geo:Feature ;
+  rdfs:range skos:Concept ;
+  skos:definition "The relation of this Feature to the earth's surface"@en ;
+  skos:prefLabel "has relation to ground"@en ;
+.
+
+fsdf:hasExpectedObservableProperty
+  a owl:ObjectProperty ;
+  rdfs:domain geo:Feature ;
+  rdfs:range sosa:ObservableProperty ;
+  skos:definition "The Feature has an expected Observable Property"@en ;
+  skos:prefLabel "has expected observable property"@en ;
+.
+
+fsdf:isExpectedToBeObservablePropertyOf
+  a owl:ObjectProperty ;
+  owl:inverseOf fsdf:hasExpectedObservableProperty ;
+  skos:definition "The Observable Property is expected to be of a Feature"@en ;
+  skos:prefLabel "is expected to be observable property of"@en ;
+.
 
 # from SOSA
 
