@@ -1,10 +1,10 @@
 # baseURI: https://linked.data.gov.au/def/fsdf
+# imports: https://linked.data.gov.au/def/fsdf/common
 # prefix: fsdf
 
 @prefix fsdf: <https://linked.data.gov.au/def/fsdf#> .
 @prefix asgs: <https://linked.data.gov.au/def/asgs#> .
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix jurisdictions: <https://linked.data.gov.au/dataset/fsdf/jurisdictions/> .
@@ -12,7 +12,7 @@
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix sdo: <http://schema.org/> .
+@prefix sdo: <https://schema.org/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
 @prefix ssn: <http://www.w3.org/ns/ssn/> .
@@ -24,16 +24,34 @@
 <https://linked.data.gov.au/def/fsdf>
   a owl:Ontology ;
   dcterms:created "2018-03-07"^^xsd:date ;
-  dcterms:creator <http://orcid.org/0000-0002-8742-7730> ;
-  dcterms:creator <https://linked.data.gov.au/org/ga> ;
-  dcterms:modified "2021-05-14" ;
+  dcterms:creator <https://linked.data.gov.au/org/surround> ;
+  dcterms:modified "2021-06-09"^^xsd:date ;
   dcterms:publisher <https://linked.data.gov.au/org/anzlic> ;
   vann:preferredNamespacePrefix "fsdf" ;
   rdfs:label "FSDF ontology" ;
+  owl:imports <https://linked.data.gov.au/def/fsdf/common> ;
   owl:versionIRI <https://linked.data.gov.au/def/fsdf/1.1> ;
   owl:versionInfo "1.0"@en ;
-  owl:versionInfo "This 1.0 is an early version of the ontology but is a great departure from the 0.5 version that was published in 2018. This version concentrates on defining the FSDF concepts, not listing all of the FSDF datasets which are listed in a separate data graph within the overall FSDF Knolwedge Graph"@en ;
-  skos:definition "An ontology describing the Calsses of concepts relevant to the [ANZLIC - The Spatial  Information Council](https://www.anzlic.gov.au)'s' Foundation Spatial Data Framework (FSDF) project which is \"a common reference for the assembly and maintenance of Australian and New Zealand foundation level spatial data\""@en ;  
+  owl:versionInfo "This 1.0 is an early version of the ontology but is a great departure from the 0.5 version that was published in 2018. This version concentrates on defining the FSDF concepts, not listing all of the FSDF datasets which are listed in a separate data graph within the overall FSDF Knolwedge Graph. This version imports the FSDF common elements ontology."@en ;
+  skos:definition """An ontology describing the concepts relevant to the [ANZLIC - The Spatial  Information Council](https://www.anzlic.gov.au)s' Foundation Spatial Data Framework (FSDF) project which is "a common reference for the assembly and maintenance of Australian and New Zealand foundation level spatial data".
+  
+This contology contains a number of classes relevant to dataset description, management and provenance, such as `Dataset`, `Mandate` (laws/policies causing the generation of datasets), `Agency` (government bodies that own and create datasets) and `Jurisdition` (government bodies that authority within a domain). Additionally, properties that link these classes, such as `affectsAgency` (linking a `Mandate` to an `Agency`).
+
+It also contains taxonomies (vocabularies) used to categorise datasets and sub-dataset elements. The main taxonomy is the "FSDF Themes" and there are many specialised sub-taxonomies for elements within it, such as "FSDF Themes - Physcial Infrastructure".
+
+Also provided here are common properties for FSDF datasets and their contents, such as `hasGroundRelation` (relates an infrastructure Feature to the earth's surface) as well as taxonomies for many of these proerties' values."""@en ;  
+.
+
+<https://linked.data.gov.au/org/surround>
+  a sdo:Organization ;
+  sdo:name "SURROUND Australia Pty Ltd" ;
+  sdo:url "https://surround.com"^^xsd:anyURI ;
+.
+
+<https://linked.data.gov.au/org/anzlic>
+  a sdo:Organization ;
+  sdo:name "ANZLIC - the Spatial Information Council" ;
+  sdo:url "https://www.anzlic.gov.au"^^xsd:anyURI ;
 .
 
 prov:Agent
@@ -58,7 +76,7 @@ fsdf:Agency
 .
 fsdf:Dataset
   a owl:Class ;
-  rdfs:subClassOf owl:Thing , prov:Entity ;
+  rdfs:subClassOf owl:Thing , dcat:Dataset , prov:Entity ;
   skos:definition "An FSDF Dataset is a Loc-I Dataset, that is a dataset of spatial data following the Location Index (Loc-I) protocols. An FDSF Dataset has additional requirements on it for its use within the FSDF Programme, for example, the dataset must be classified according to the FSDF Themes vocabulary and must have various agents (organisations) of relevance to the dataset, such as crator and owner, recorded."@en ;
   skos:prefLabel "Dataset"@en ;
 .
@@ -191,7 +209,7 @@ sosa:FeatureOfInterest a owl:Class ;
 sosa:ObservableProperty a owl:Class ;
 	skos:prefLabel "Observable Property"@en ;
     skos:definition "An observable quality (property, characteristic) of a FeatureOfInterest."@en ;
-    skos:example "The height of a tree, the depth of a water body, or the temperature of a surface are examples of observable properties, while the value of a classic car is not (directly) observable but asserted."@en ;
+    skos:example "The height of a tree, the depth of a water body, or the temperature of a surface are examples of observable properties, while the value of a classic car is not (directly) observable but asserted."^^rdf:HTML ;
     rdfs:isDefinedBy sosa: ;
 .
 sosa:usedProcedure a owl:ObjectProperty ;
@@ -206,7 +224,7 @@ sosa:usedProcedure a owl:ObjectProperty ;
 sosa:hasFeatureOfInterest a owl:ObjectProperty ;
     skos:prefLabel "has feature of interest"@en ;
     skos:definition "A relation between an Observation and the entity whose quality was observed, or between an Actuation and the entity whose property was modified, or between an act of Sampling and the entity that was sampled."@en ;
-    skos:example "For example, in an Observation of the weight of a person, the FeatureOfInterest is the person and the property is its weight."@en ;
+    skos:example "For example, in an Observation of the weight of a person, the FeatureOfInterest is the person and the property is its weight."^^rdf:HTML ;
     rdfs:domain sosa:Observation ;
     rdfs:domain sosa:Actuation ;
     rdfs:domain sosa:Sampling ;
@@ -229,7 +247,7 @@ sosa:isFeatureOfInterestOf a owl:ObjectProperty ;
 sosa:Observation a owl:Class ;
     skos:prefLabel "Observation"@en ;
     skos:definition "Act of carrying out an (Observation) Procedure to estimate or calculate a value of a property of a FeatureOfInterest. Links to a Sensor to describe what made the Observation and how; links to an ObservableProperty to describe what the result is an estimate of, and to a FeatureOfInterest to detail what that property was associated with."@en ;
-    skos:example "The activity of estimating the intensity of an Earthquake using the Mercalli intensity scale is an Observation as is measuring the moment magnitude, i.e., the energy released by said earthquake."@en ;
+    skos:example "The activity of estimating the intensity of an Earthquake using the Mercalli intensity scale is an Observation as is measuring the moment magnitude, i.e., the energy released by said earthquake."^^rdf:HTML ;
     rdfs:isDefinedBy sosa: ;
 .
 sosa:observedProperty a owl:ObjectProperty ;
@@ -242,7 +260,7 @@ sosa:observedProperty a owl:ObjectProperty ;
 sosa:Result a owl:Class ;
     skos:prefLabel "Result"@en ;
     skos:definition "The Result of an Observation, Actuation, or act of Sampling. To store an observation's simple result value one can use the hasSimpleResult property."@en ;
-    skos:example "The value 20 as the height of a certain tree together with the unit, e.g., Meter."@en ;
+    skos:example "The value 20 as the height of a certain tree together with the unit, e.g., Meter."^^rdf:HTML ;
     rdfs:isDefinedBy sosa: ;
 .
 sosa:hasResult a owl:ObjectProperty ;
@@ -270,7 +288,7 @@ sosa:isResultOf a owl:ObjectProperty ;
 sosa:hasSimpleResult a owl:DatatypeProperty ;
     skos:prefLabel "has simple result"@en ;
     skos:definition "The simple value of an Observation or Actuation or act of Sampling."@en ;
-    skos:example "For instance, the values 23 or true."@en ;
+    skos:example "For instance, the values 23 or true."^^rdf:HTML ;
     rdfs:domain sosa:Actuation ;
     rdfs:domain sosa:Observation ;
     rdfs:domain sosa:Sampling ;

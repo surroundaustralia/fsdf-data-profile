@@ -47,6 +47,24 @@ This KG and the three listed above can also be used in concert to answer questio
 
 This sort of query requires data from the Population KG to be "reapportioned" to catchments in the Loc-I KG's Geofabric dataset via the ASGS' statistical areas.
 
+# KG Elements
+The machine-readable listing of this KG's elements can be found in its manifest, see `edg/manifest.ttl`. The main KG elements are:
+
+* [FSDF Ontology]()
+    * this imports the [FSDF common elements ontology]()
+* multiple taxonomies
+    * see `edg/taxonomies`
+        * Ground Relations
+        * Observable Properties
+        * Operational Statuses
+        * FSDF Themes
+        * sub-themes of FDSF Themes
+* several data graphs
+    * Agencies
+    * Datasets
+    * Feature/Property Relations
+    * Jurisdictions
+    * Mandates
 
 ## License
 
