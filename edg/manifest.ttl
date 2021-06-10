@@ -110,6 +110,10 @@ register:themes
   sopbl:proxy "https://linked.data.gov.au/def/fsdf/themes"^^xsd:anyURI ;
   sopbl:purpose "The FSDF KG Product"@en ;
 .
+#
+#   Sub vocaularies
+#
+
 register:themes-physical-infrastructure
   a sopbl:ManagedGraph ;
   dcterms:provenance "Authoratitive version, generated here from non-RDF source data"@en ;
@@ -121,3 +125,6 @@ register:themes-physical-infrastructure
   sopbl:proxy "https://linked.data.gov.au/def/fsdf/themes/physical-infrastructure-cs"^^xsd:anyURI ;
   sopbl:purpose "The FSDF KG Product"@en ;
 .
+#
+#   Data Profile
+#

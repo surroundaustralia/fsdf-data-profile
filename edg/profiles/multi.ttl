@@ -1,0 +1,111 @@
+@prefix : <https://linked.data.gov.au/def/loci-dp/shapes/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix fsdf: <https://linked.data.gov.au/def/fsdf/> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sdo: <https://schema.org/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+#
+#   Dataset
+#
+
+:Requirement-D-jurisdiction
+	a sh:NodeShape ;
+	sh:targetClass fsdf:Dataset ;
+    sh:message "Requirement D-jurisdiction: Each FSDF Dataset _MUST_ have one and only one relationship to a `fsdf:Jurisdiction` object, indicated using the `fsdf:hasJurisdiction` predicate"@en ;
+    sh:property [
+        sh:path fsdf:hasJurisdiction ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:class fsdf:Jurisdiction
+    ]
+.
+
+:Requirement-D-custodian
+	a sh:NodeShape ;
+	sh:targetClass fsdf:Dataset ;
+    sh:message "Requirement D-custodian: Each FSDF Dataset _MUST_ have one and only one custodianship relationship to a `fsdf:Agency` object, indicated using the `fsdf:hasCustodian` predicate"@en ;
+    sh:property [
+        sh:path fsdf:hasCustodian ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:class fsdf:Agency
+    ]
+. 
+
+:Requirement-D-theme
+	a sh:NodeShape ;
+	sh:targetClass dcat:Dataset ;
+    sh:message "Requirement D-theme: Each FSDF Dataset _MUST_ have at least one relationship to a `skos:Concept` object, indicated using the `dcat:theme` predicate, with that `skos:Concept` being a member of the FSDF Themse vocabulary, indicated using the `skos:inScheme` predicate."@en ;
+    sh:property [
+        sh:path dcat:theme ;
+        sh:minCount 1 ;
+        sh:class skos:Concept ;
+        # TODO: enable this shape when Themes subvocabs are merged into one
+        # sh:node [
+        #     sh:xone (
+        #         [
+        #             sh:property [
+        #                 sh:path skos:inScheme ;
+        #                 sh:hasValue <https://linked.data.gov.au/def/fsdf/themes> ;
+        #             ]
+        #         ]
+        #         [
+        #             sh:property [
+        #                 sh:path skos:topConceptOf ;
+        #                 sh:hasValue <https://linked.data.gov.au/def/fsdf/themes> ;
+        #             ]
+        #         ]
+        #     )
+        # ] ;
+    ]
+. 
+
+#
+#   Feature Collection
+#
+
+:Requirement-FC-ispartof
+	a sh:NodeShape ;
+	sh:targetClass geo:FeatureCollection ;
+    sh:message "Requirement FC-ispartof: Each FSDF Feature Collection _MUST_ indicate that it is part of one and only one `dcat:Dataset` with the `dcterms:isPartOf` predicate."@en ;
+    sh:property [
+        sh:path dcat:isPartOf ;        
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:class dcat:Dataset ;
+    ]
+. 
+
+:Requirement-FC-theme
+	a sh:NodeShape ;
+	sh:targetClass geo:FeatureCollection ;
+    sh:message "Requirement FC-type: Each FSDF Feature Collection _MAY_ have at least one relationship to a `skos:Concept` object, indicated using the `dcterms:theme` predicate, with that `skos:Concept` being a member of the FSDF Themes vocabulary, indicated using the `skos:inScheme` predicate."@en ;
+    sh:property [
+        sh:path dcat:theme ;
+        sh:class skos:Concept ;
+        # TODO: enable this shape when Themes subvocabs are merged into one
+        # sh:node [
+        #     sh:xone (
+        #         [
+        #             sh:property [
+        #                 sh:path skos:inScheme ;
+        #                 sh:hasValue <https://linked.data.gov.au/def/fsdf/themes> ;
+        #             ]
+        #         ]
+        #         [
+        #             sh:property [
+        #                 sh:path skos:topConceptOf ;
+        #                 sh:hasValue <https://linked.data.gov.au/def/fsdf/themes> ;
+        #             ]
+        #         ]
+        #     )
+        # ] ;
+    ]
+. 

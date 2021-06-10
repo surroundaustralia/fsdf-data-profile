@@ -1,0 +1,88 @@
+@prefix : <https://linked.data.gov.au/def/fsdf/dp/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix fsdf: <https://linked.data.gov.au/def/fsdf/> .
+@prefix prof: <http://www.w3.org/ns/dx/prof/> .
+@prefix role: <http://www.w3.org/ns/dx/prof/role/> .
+@prefix sdo: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+
+fsdf:dp
+    a prof:Profile ;
+    skos:prefLabel "FSDF Data Profile"@en ;
+    dcterms:created "2021-06-10"^^xsd:date ;
+    dcterms:creator <https://linked.data.gov.au/org/surround> , <https://linked.data.gov.au/org/ga> ;
+    dcterms:modified "2021-06-10"^^xsd:date ;
+    dcterms:publisher <https://linked.data.gov.au/org/anzlic> ;
+    skos:definition "This profile specifies the rules that [RDF](https://www.w3.org/RDF/) data must adhere to, to be valid according to this profile and thus fit for use with instances of the OGC LD API tool. It also provides machine-readable data validators." ;
+    prof:hasResource 
+    # [
+    #     skos:prefLabel "Specification"@en ;
+    #     dcterms:description "This profile's specification that provides its normative rules."@en ;
+    #     dcterms:conformsTo <https://www.w3.org/TR/> ;
+    #     dcterms:format "text/html" ;
+    #     prof:hasArtifact :spec ;
+    #     prof:hasRole role:specification
+    # ] ,
+    [
+        skos:prefLabel "Feature Validator"@en ;
+        dcterms:description "A SHACL validator Shape file implementing the specification's rules for the `fsdf:Feature` class"@en ;
+        dcterms:conformsTo <https://www.w3.org/TR/shacl/> ;
+        dcterms:format "text/turtle" ;
+        prof:hasArtifact :feature-validator ;
+        prof:hasRole role:validation
+    ] ,
+    [
+        skos:prefLabel "Multi-class Validator"@en ;
+        dcterms:description "A SHACL validator Shape file implementing the specification's rules for classes other than `fsdf:Feature`"@en ;
+        dcterms:conformsTo <https://www.w3.org/TR/shacl/> ;
+        dcterms:format "text/turtle" ;
+        prof:hasArtifact :multi-validator ;
+        prof:hasRole role:validation
+    ] ,      
+    # [
+    #     skos:prefLabel "Example of a valid Dataset"@en ;
+    #     dcterms:format "text/turtle" ;
+    #     prof:hasArtifact <https://w3id.org/profile/ogcldapi/example/dataset-valid> ;
+    #     prof:hasRole role:example
+    # ] ,
+    # [
+    #     skos:prefLabel "Example of an invalid Dataset"@en ;
+    #     skos:definition "This example is invalid because the Dataset doesn't indicate it's creator or a modified date and the created data is a string, not an XSD date or date variant"@en ;
+    #     dcterms:format "text/turtle" ;
+    #     prof:hasArtifact <https://w3id.org/profile/ogcldapi/example/dataset-invalid> ;
+    #     prof:hasRole role:example
+    # ] ,
+    [
+        skos:prefLabel "Profile Code Repository"@en ;
+        skos:definition "An online version control repository storing all the content of this profile"@en ;
+        prof:hasArtifact :repo ;
+        prof:hasRole role:repository
+    ] ,
+    [
+        skos:prefLabel "Profile Code Repository README"@en ;
+        skos:definition "An informal guidance document explaining parts of this profile and how to use them"@en ;
+        prof:hasArtifact :guidance ;
+        prof:hasRole role:guidance
+    ] ; 
+    prof:isProfileOf <https://linked.data.gov.au/def/loci-dp> ;
+.
+
+<https://linked.data.gov.au/org/surround>
+    a sdo:Organization ;
+    sdo:name "SURROUND Australia Pty Ltd" ;
+    sdo:url "https://surroundaustralia.com"^^xsd:anyURI ;
+.
+
+<https://linked.data.gov.au/org/anzlic>
+  a sdo:Organization ;
+  sdo:name "ANZLIC - the Spatial Information Council" ;
+  sdo:url "https://www.anzlic.gov.au"^^xsd:anyURI ;
+.
+
+<https://linked.data.gov.au/org/ga>
+  a sdo:Organization ;
+  sdo:name "Geoscience Australia" ;
+  sdo:url "https://www.ga.gov.au"^^xsd:anyURI ;
+.

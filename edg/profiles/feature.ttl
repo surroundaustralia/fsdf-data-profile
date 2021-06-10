@@ -1,0 +1,77 @@
+# NOTE: this validator is far from complete givne the properties expected for FSDF Feature intances 
+# (see the Common Ontology properties for Feature: https://github.com/GeoscienceAustralia/FSDF/blob/master/images/FSDF-core-ontology.png)
+# but it will not be completed until that ontology, and work on the broader FSDF KG, is stabalised
+
+@prefix : <https://linked.data.gov.au/def/loci-dp/shapes/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix fsdf: <https://linked.data.gov.au/def/fsdf/> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sdo: <https://schema.org/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+:Requirement-F-type
+	a sh:NodeShape ;
+	sh:targetClass geo:Feature ;
+    sh:message "Requirement F-type: Each FSDF Feature _MUST_ have at least one relationship to a `skos:Concept` object, indicated using the `dcterms:type` predicate, with that `skos:Concept` being a member of the FSDF Themes vocabulary, indicated using the `skos:inScheme` predicate."@en ;
+    sh:property [
+        sh:path dcat:theme ;
+        sh:class skos:Concept ;
+        # TODO: enable this shape when Themes subvocabs are merged into one
+        # sh:node [
+        #     sh:xone (
+        #         [
+        #             sh:property [
+        #                 sh:path skos:inScheme ;
+        #                 sh:hasValue <https://linked.data.gov.au/def/fsdf/themes> ;
+        #             ]
+        #         ]
+        #         [
+        #             sh:property [
+        #                 sh:path skos:topConceptOf ;
+        #                 sh:hasValue <https://linked.data.gov.au/def/fsdf/themes> ;
+        #             ]
+        #         ]
+        #     )
+        # ] ;
+    ]
+.
+
+:Requirement-F-fsource
+	a sh:NodeShape ;
+	sh:targetClass geo:Feature ;
+    sh:message "Requirement F-fsource: Each FSDF Feature _MUST_ have a Feature source property indicated with a `core:featureSource` predicate"@en ;
+    sh:property [
+        sh:path core:featureSource ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+    ]
+.
+
+:Requirement-F-fdate
+	a sh:NodeShape ;
+	sh:targetClass geo:Feature ;
+    sh:message "Requirement F-fdate: Each FSDF Feature _MUST_ have a Feature date property indicated with `core:featureDate` predicate pointing to either an `xsd:date`, `xsd:dateTime` or `xsd:dateTimeStamp` literal value"@en ;
+    sh:property [
+        sh:path core:featureDate ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:or (
+            [
+                sh:datatype xsd:dateTime ;
+            ]
+            [
+                sh:datatype xsd:date ;
+            ]
+            [
+                sh:datatype xsd:dateTimeStamp ;
+            ]
+        ) ;
+    ]
+.
+

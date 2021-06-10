@@ -2,7 +2,7 @@
 # imports: https://linked.data.gov.au/def/fsdf/common
 # prefix: fsdf
 
-@prefix fsdf: <https://linked.data.gov.au/def/fsdf#> .
+@prefix fsdf: <https://linked.data.gov.au/def/fsdf/> .
 @prefix asgs: <https://linked.data.gov.au/def/asgs#> .
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
@@ -61,24 +61,28 @@ prov:Agent
   skos:definition "An agent is something that bears some form of responsibility for an activity taking place, for the existence of an entity, or for another agent's activity."@en ;
   skos:prefLabel "Agent"@en ;
 .
-
+skos:Concept a owl:Class ;
+  skos:prefLabel "Concept"@en ;
+  rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
+  skos:definition "An idea or notion; a unit of thought."@en ;
+.
 sdo:Organization
   a owl:Class ;
   rdfs:subClassOf prov:Agent ;
   skos:definition "An organization such as a government agency, a school, NGO, corporation, club, or even a whole government."@en ;
   skos:prefLabel "Organisation"@en ;
 .
-
 fsdf:Agency
   a owl:Class ;
   rdfs:subClassOf sdo:Organization ;
   skos:definition "An FSDF Agency is a Government Organisation that is involved with the FSDF Programme"@en ;
   skos:prefLabel "Agency"@en ;
 .
-fsdf:Dataset
+dcat:Dataset
   a owl:Class ;
-  rdfs:subClassOf owl:Thing , dcat:Dataset , prov:Entity ;
-  skos:definition "An FSDF Dataset is a Loc-I Dataset, that is a dataset of spatial data following the Location Index (Loc-I) protocols. An FDSF Dataset has additional requirements on it for its use within the FSDF Programme, for example, the dataset must be classified according to the FSDF Themes vocabulary and must have various agents (organisations) of relevance to the dataset, such as crator and owner, recorded."@en ;
+  rdfs:isDefinedby <http://www.w3.org/ns/dcat> ;
+  rdfs:subClassOf owl:Thing , prov:Entity , dcat:Resource ;
+  skos:definition "A collection of data, published or curated by a single agent, and available for access or download in one or more representations."@en ;
   skos:prefLabel "Dataset"@en ;
 .
 fsdf:Jurisdiction
@@ -100,12 +104,6 @@ fsdf:Mandate
   skos:definition "An FSDF Mandate is an Australian Commonwealth or State & Territory legislation thatassigns responsibility for FSDF data or operations to an FSDF Agency. An FSDF Mandate is represented as a specialised form of DCAT Resource which ensures that a DCAT-style catalogue of instances of FSDF Mandates can be made."@en ;
   skos:prefLabel "Mandate"@en ;
 .
-fsdf:Theme
-  a owl:Class ;
-  rdfs:subClassOf owl:Thing , skos:Concept ;
-  skos:definition "An FSDF Theme is a SKOS Concept, that is a taxonomy classification class of object, used by the FSDF Programme to organise FSDF Datasets"@en ;
-  skos:prefLabel "Theme"@en ;
-.
 fsdf:affectsAgency
   a owl:ObjectProperty ;
   rdfs:domain fsdf:Mandate ;
@@ -115,7 +113,7 @@ fsdf:affectsAgency
 .
 fsdf:hasCustodian
   a owl:ObjectProperty ;
-  rdfs:domain fsdf:Dataset ;
+  rdfs:domain dcat:Dataset ;
   rdfs:range fsdf:Agency ;
   rdfs:subPropertyOf dcterms:publisher ;
   rdfs:subPropertyOf prov:agent ;
