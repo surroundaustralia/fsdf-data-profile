@@ -37,7 +37,8 @@ fsdf:dp
         skos:prefLabel "Profile Code Repository"@en ;
         skos:definition "An online version control repository storing all the content of this profile"@en ;
         prof:hasArtifact :repo ;
-        prof:hasRole role:repository
+        prof:hasRole role:repository ;
+        prof:hasArtifact "https://github.com/surroundaustralia/fsdf-kg"^^xsd:anyURI ;
     ] ; 
     prof:isProfileOf <https://linked.data.gov.au/def/loci-dp> ;
 .
