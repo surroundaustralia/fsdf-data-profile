@@ -228,7 +228,6 @@ sosa:hasFeatureOfInterest a owl:ObjectProperty ;
     rdfs:domain sosa:Actuation ;
     rdfs:domain sosa:Sampling ;
     rdfs:range sosa:FeatureOfInterest ;
-    rdfs:range sosa:Sample ;
     owl:inverseOf sosa:isFeatureOfInterestOf ;
     rdfs:isDefinedBy sosa: ;
 .
@@ -261,6 +260,7 @@ sosa:Result a owl:Class ;
     skos:definition "The Result of an Observation, Actuation, or act of Sampling. To store an observation's simple result value one can use the hasSimpleResult property."@en ;
     skos:example "The value 20 as the height of a certain tree together with the unit, e.g., Meter."^^rdf:HTML ;
     rdfs:isDefinedBy sosa: ;
+    rdfs:subClassOf sosa:Sample ;
 .
 sosa:hasResult a owl:ObjectProperty ;
     skos:prefLabel "has result"@en ;
@@ -318,6 +318,7 @@ sosa:ObservationCollection
     a owl:Class ;
     skos:definition "Collection of observations, typically with one or more property shared by all of its members"@en ;
     skos:prefLabel "Collection of observations"@en ;
+    rdfs:subClassOf sosa:Observation ;
     rdfs:subClassOf [
         a owl:Restriction ;
         owl:allValuesFrom sosa:FeatureOfInterest ;
@@ -397,17 +398,10 @@ sosa:hasMember
     a owl:ObjectProperty ;
     rdfs:domain sosa:ObservationCollection ;
     rdfs:range sosa:Observation ;
-    rdfs:range sosa:ObservationCollection ;
     skos:definition "Link to a member within a collection of (observations) or (collections of observations) that share the same value for one or more of the characteristic properties"@en ;
     rdfs:domain sosa:ObservationCollection ;
-    skos:prefLabel "member observation"@en ;
-    rdfs:range [
-        a owl:Class ;
-        owl:unionOf (
-            sosa:Observation
-            sosa:ObservationCollection
-        ) ;
-    ] ;
+    skos:prefLabel "has member"@en ;
+    rdfs:range sosa:Observation ;
     rdfs:subPropertyOf rdfs:member ;
 .
 sosa:observedProperty

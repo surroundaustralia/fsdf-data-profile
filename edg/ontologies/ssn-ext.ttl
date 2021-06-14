@@ -141,13 +141,7 @@ sosa:hasMember
   rdfs:comment "Link to a member within a collection of (observations) or (collections of observations) that share the same value for one or more of the characteristic properties" ;
   rdfs:domain sosa:ObservationCollection ;
   rdfs:label "member observation" ;
-  rdfs:range [
-      a owl:Class ;
-      owl:unionOf (
-          sosa:Observation
-          sosa:ObservationCollection
-        ) ;
-    ] ;
+  rdfs:range sosa:Observation ;
   rdfs:subPropertyOf rdfs:member ;
 .
 sosa:hasOriginalSample

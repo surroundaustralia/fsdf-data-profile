@@ -1,7 +1,4 @@
 # baseURI: https://linked.data.gov.au/def/fsdf/common
-# imports: http://purl.org/dc/terms/
-# imports: http://www.opengis.net/ont/geosparql
-# imports: http://www.w3.org/2006/time
 # prefix: common
 
 @prefix cdt: <https://w3id.org/cdt/> .
@@ -26,9 +23,6 @@
   dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
   dcterms:modified "2021-05-24"^^xsd:date ;
   dcterms:title "FSDF common elements ontology" ;
-  owl:imports <http://purl.org/dc/terms/> ;
-  owl:imports <http://www.opengis.net/ont/geosparql> ;
-  owl:imports <http://www.w3.org/2006/time> ;
   sdo:codeRepository "https://github.com/GeoscienceAustralia/FSDF"^^xsd:anyURI ;
 .
 common:Contact

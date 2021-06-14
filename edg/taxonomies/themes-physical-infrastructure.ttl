@@ -1,5 +1,4 @@
 # baseURI: https://linked.data.gov.au/def/fsdf/themes/physical-infrastructure-cs
-# prefix: themes
 
 @prefix cs: <https://linked.data.gov.au/def/fsdf/themes/physical-infrastructure-cs> .
 @prefix dcterms: <http://purl.org/dc/terms/> .

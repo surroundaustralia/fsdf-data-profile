@@ -52,6 +52,22 @@ register:datasets
   sopbl:proxy "https://linked.data.gov.au/dataset/fsdf/datasets"^^xsd:anyURI ;
   sopbl:purpose "The GovKG Product"@en ;
 .
+register:fpr
+  a sopbl:ManagedGraph ;
+  dcterms:provenance "Authoratitive version, generated here from non-RDF source data"@en ;
+  teamwork:rootClass owl:Thing ;
+  rdfs:comment "Associations between classes of geospatial Feature and the expected observable Properties of them, of relevance to the FSDF project"@en ;
+  rdfs:label "FSDF Feature Property Relations"@en ;
+  sopbl:edgType <http://teamwork.topbraidlive.org/datagraph/datagraphprojects#ProjectType> ;
+  sopbl:include "https://data.surroundaustralia.com/platform/shapes/comment-from"^^xsd:anyURI ;
+  sopbl:include "https://data.surroundaustralia.com/platform/shapes/label-from"^^xsd:anyURI ;
+  sopbl:include "https://linked.data.gov.au/def/fsdf/observable-properties"^^xsd:anyURI ;
+  sopbl:include "https://linked.data.gov.au/def/fsdf/themes"^^xsd:anyURI ;
+  sopbl:localCopyPath "datagraphs/mandates.ttl" ;
+  sopbl:module "FSDF" ;
+  sopbl:proxy "https://linked.data.gov.au/dataset/fsdf/mandates"^^xsd:anyURI ;
+  sopbl:purpose "The GovKG Product"@en ;
+.
 register:jurisdictions
   a sopbl:ManagedGraph ;
   dcterms:provenance "Authoratitive version, generated here from non-RDF source data"@en ;
@@ -83,6 +99,17 @@ register:mandates
   sopbl:proxy "https://linked.data.gov.au/dataset/fsdf/mandates"^^xsd:anyURI ;
   sopbl:purpose "The GovKG Product"@en ;
 .
+register:observable-properties
+  a sopbl:ManagedGraph ;
+  dcterms:provenance "Authoratitive version, generated here from non-RDF source data"@en ;
+  rdfs:comment "Physical properties of Features that may be observed to gain measurements of capacities"@en ;
+  rdfs:label "FSDF Observable Properties"@en ;
+  sopbl:edgType <http://evn.topbraidlive.org/evnprojects#ProjectType> ;
+  sopbl:localCopyPath "taxonomies/observable-properties.ttl" ;
+  sopbl:module "FSDF" ;
+  sopbl:proxy "https://linked.data.gov.au/def/fsdf/observable-properties"^^xsd:anyURI ;
+  sopbl:purpose "The FSDF KG Product"@en ;
+.
 register:ont
   a sopbl:ManagedGraph ;
   dcterms:provenance "Built for the FSDF Project"@en ;
@@ -110,10 +137,17 @@ register:themes
   sopbl:proxy "https://linked.data.gov.au/def/fsdf/themes"^^xsd:anyURI ;
   sopbl:purpose "The FSDF KG Product"@en ;
 .
-#
-#   Sub vocaularies
-#
-
+register:themes-buildings-and-settlements
+  a sopbl:ManagedGraph ;
+  dcterms:provenance "Authoratitive version, generated here from non-RDF source data"@en ;
+  rdfs:comment "The FSDF Themes - Buildings & Settlements vocabulary, as created for the Loc-I DR Project"@en ;
+  rdfs:label "FSDF Themes - Buildings & Settlements"@en ;
+  sopbl:edgType <http://evn.topbraidlive.org/evnprojects#ProjectType> ;
+  sopbl:localCopyPath "taxonomies/themes-buildings-and-settlements.ttl" ;
+  sopbl:module "FSDF" ;
+  sopbl:proxy "https://linked.data.gov.au/def/fsdf/themes/buildings-and-settlements-cs"^^xsd:anyURI ;
+  sopbl:purpose "The FSDF KG Product"@en ;
+.
 register:themes-physical-infrastructure
   a sopbl:ManagedGraph ;
   dcterms:provenance "Authoratitive version, generated here from non-RDF source data"@en ;
@@ -125,6 +159,3 @@ register:themes-physical-infrastructure
   sopbl:proxy "https://linked.data.gov.au/def/fsdf/themes/physical-infrastructure-cs"^^xsd:anyURI ;
   sopbl:purpose "The FSDF KG Product"@en ;
 .
-#
-#   Data Profile
-#

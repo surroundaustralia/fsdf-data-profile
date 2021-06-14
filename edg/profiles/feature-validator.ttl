@@ -1,8 +1,9 @@
-# NOTE: this validator is far from complete givne the properties expected for FSDF Feature intances 
+# NOTE: this validator is far from complete given the properties expected for FSDF Feature intances 
 # (see the Common Ontology properties for Feature: https://github.com/GeoscienceAustralia/FSDF/blob/master/images/FSDF-core-ontology.png)
 # but it will not be completed until that ontology, and work on the broader FSDF KG, is stabalised
 
-@prefix : <https://linked.data.gov.au/def/loci-dp/shapes/> .
+@prefix : <https://linked.data.gov.au/def/fsdf-dp/shapes/> .
+@prefix common: <https://linked.data.gov.au/def/fsdf/common#> .
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix fsdf: <https://linked.data.gov.au/def/fsdf/> .
@@ -45,9 +46,9 @@
 :Requirement-F-fsource
 	a sh:NodeShape ;
 	sh:targetClass geo:Feature ;
-    sh:message "Requirement F-fsource: Each FSDF Feature _MUST_ have a Feature source property indicated with a `core:featureSource` predicate"@en ;
+    sh:message "Requirement F-fsource: Each FSDF Feature _MUST_ have a Feature source property indicated with a `common:featureSource` predicate"@en ;
     sh:property [
-        sh:path core:featureSource ;
+        sh:path common:featureSource ;
         sh:minCount 1 ;
         sh:maxCount 1 ;
     ]
@@ -56,9 +57,9 @@
 :Requirement-F-fdate
 	a sh:NodeShape ;
 	sh:targetClass geo:Feature ;
-    sh:message "Requirement F-fdate: Each FSDF Feature _MUST_ have a Feature date property indicated with `core:featureDate` predicate pointing to either an `xsd:date`, `xsd:dateTime` or `xsd:dateTimeStamp` literal value"@en ;
+    sh:message "Requirement F-fdate: Each FSDF Feature _MUST_ have a Feature date property indicated with `common:featureDate` predicate pointing to either an `xsd:date`, `xsd:dateTime` or `xsd:dateTimeStamp` literal value"@en ;
     sh:property [
-        sh:path core:featureDate ;
+        sh:path common:featureDate ;
         sh:minCount 1 ;
         sh:maxCount 1 ;
         sh:or (

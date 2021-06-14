@@ -16,20 +16,8 @@
     skos:prefLabel "FSDF Feature Property Relations"@en ;
 .
 
-obsp:ratedVoltage fsdf:isExpectedToBeObservablePropertyOf [ 
-    a geo:Feature ;
-    dcterms:type themes:electrical-infrastructure
-] ;
-.
+obsp:ratedVoltage fsdf:likelyPropertyOfFeatureWithTheme themes:electrical-infrastructure .
 
-obsp:population fsdf:isExpectedToBeObservablePropertyOf [ 
-    a geo:Feature ;
-    dcterms:type themes:population-distributions
-] ;
-.
+obsp:population fsdf:likelyPropertyOfFeatureWithTheme themes:population-distributions .
 
-obsp:populationChange fsdf:isExpectedToBeObservablePropertyOf [ 
-    a geo:Feature ;
-    dcterms:type themes:population-distributions
-] ;
-.
+obsp:populationChange fsdf:likelyPropertyOfFeatureWithTheme themes:population-distributions .
