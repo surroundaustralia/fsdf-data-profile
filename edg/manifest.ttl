@@ -61,11 +61,13 @@ register:fpr
   sopbl:edgType <http://teamwork.topbraidlive.org/datagraph/datagraphprojects#ProjectType> ;
   sopbl:include "https://data.surroundaustralia.com/platform/shapes/comment-from"^^xsd:anyURI ;
   sopbl:include "https://data.surroundaustralia.com/platform/shapes/label-from"^^xsd:anyURI ;
+  sopbl:include "https://linked.data.gov.au/def/fsdf.shapes"^^xsd:anyURI ;
   sopbl:include "https://linked.data.gov.au/def/fsdf/observable-properties"^^xsd:anyURI ;
   sopbl:include "https://linked.data.gov.au/def/fsdf/themes"^^xsd:anyURI ;
-  sopbl:localCopyPath "datagraphs/mandates.ttl" ;
+  sopbl:include "https://linked.data.gov.au/def/fsdf/themes/physical-infrastructure-cs"^^xsd:anyURI ;
+  sopbl:localCopyPath "datagraphs/feature-property-relations.ttl" ;
   sopbl:module "FSDF" ;
-  sopbl:proxy "https://linked.data.gov.au/dataset/fsdf/mandates"^^xsd:anyURI ;
+  sopbl:proxy "https://linked.data.gov.au/dataset/fsdf/feature-property-relations"^^xsd:anyURI ;
   sopbl:purpose "The GovKG Product"@en ;
 .
 register:jurisdictions

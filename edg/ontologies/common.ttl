@@ -25,9 +25,9 @@
   dcterms:title "FSDF common elements ontology" ;
   sdo:codeRepository "https://github.com/GeoscienceAustralia/FSDF"^^xsd:anyURI ;
 .
-common:Contact
+common:ContactDetails
   a owl:Class ;
-  rdfs:label "contact"@en ;
+  rdfs:label "Contact Details"@en ;
   rdfs:subClassOf owl:Thing ;
   rdfs:subClassOf [
       a owl:Restriction ;
@@ -68,7 +68,7 @@ common:Contact
 .
 common:DocumentCitation
   a owl:Class ;
-  rdfs:label "document citation"@en ;
+  rdfs:label "Document Citation"@en ;
   rdfs:subClassOf owl:Thing ;
   rdfs:subClassOf [
       a owl:Restriction ;
@@ -114,7 +114,7 @@ common:Feature
 .
 common:LegislationCitation
   a owl:Class ;
-  rdfs:label "legislation citation"@en ;
+  rdfs:label "Legislation Citation"@en ;
   rdfs:subClassOf common:DocumentCitation ;
   rdfs:subClassOf [
       a owl:Restriction ;
@@ -145,7 +145,7 @@ common:Link
 .
 common:OfficialJournalInformation
   a owl:Class ;
-  rdfs:label "official journal information"@en ;
+  rdfs:label "Official Journal Information"@en ;
   rdfs:subClassOf owl:Thing ;
   rdfs:subClassOf [
       a owl:Restriction ;
@@ -171,8 +171,7 @@ common:OfficialJournalInformation
 .
 common:RelatedParty
   a owl:Class ;
-  rdfs:comment "NOTE 1 A party, typically an individual person, acting as a general point of contact for a resource can be specified without providing any particular role."@en ;
-  rdfs:label "related party"@en ;
+  rdfs:label "Related Party"@en ;
   rdfs:subClassOf owl:Thing ;
   rdfs:subClassOf [
       a owl:Restriction ;
@@ -214,9 +213,9 @@ common:Sign
 .
 common:ThematicIdentifier
   a owl:Class ;
-  rdfs:comment """Some spatial objects may be assigned multiple unique identifiers. 
+  skos:scopeNote """Some spatial objects may be assigned multiple unique identifiers. 
 These may have been established to meet data exchange requirements of different reporting obligations at International, European or national levels and/or internal data maintenance requirements."""@en ;
-  rdfs:label "thematic identifier"@en ;
+  rdfs:label "Thematic Identifier"@en ;
   rdfs:subClassOf owl:Thing ;
   rdfs:subClassOf [
       a owl:Restriction ;

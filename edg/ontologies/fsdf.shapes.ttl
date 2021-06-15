@@ -57,3 +57,26 @@ fsdfsh:definition
   sh:minCount 1 ;
   sh:name "Text" ;
 .
+
+fsdfsh:themeOfFeatureWithProperty
+  a sh:PropertyShape ;
+  sh:path fsdf:themeOfFeatureWithProperty ;
+  sh:maxCount 1 ;
+  sh:minCount 1 ;
+  sh:name "theme of feature with property" ;
+  dash:viewer dash:DetailsViewer ;
+.
+
+skos:Concept
+  a sh:NodeShape ;
+  rdfs:label "Concept" ;
+  sh:targetClass skos:Concept ;
+  sh:property [
+	  a sh:PropertyShape ;
+	  sh:path fsdf:likelyPropertyOfFeatureWithTheme ;
+	  sh:nodeKind sh:IRI ;
+	  sh:maxCount 1 ;
+	  sh:name "likely property of feature with theme" ;
+	  dash:viewer dash:DetailsViewer ;
+  ] ;
+.

@@ -63,6 +63,7 @@ prov:Agent
 .
 skos:Concept a owl:Class ;
   skos:prefLabel "Concept"@en ;
+  rdfs:subClassOf owl:Thing ;
   rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
   skos:definition "An idea or notion; a unit of thought."@en ;
 .
@@ -182,19 +183,21 @@ fsdf:hasRelationToGround
   skos:prefLabel "has relation to ground"@en ;
 .
 
-fsdf:hasExpectedObservableProperty
+fsdf:themeOfFeatureWithProperty
   a owl:ObjectProperty ;
-  rdfs:domain geo:Feature ;
+  rdfs:domain skos:Concept ;
   rdfs:range sosa:ObservableProperty ;
-  skos:definition "The Feature has an expected Observable Property"@en ;
-  skos:prefLabel "has expected observable property"@en ;
+  skos:definition "A Feature with this theme has this expected Observable Property"@en ;
+  skos:prefLabel "theme of feature with property"@en ;
 .
 
-fsdf:isExpectedToBeObservablePropertyOf
+fsdf:likelyPropertyOfFeatureWithTheme
   a owl:ObjectProperty ;
   owl:inverseOf fsdf:hasExpectedObservableProperty ;
-  skos:definition "The Observable Property is expected to be of a Feature"@en ;
-  skos:prefLabel "is expected to be observable property of"@en ;
+  rdfs:domain sosa:ObservableProperty ;
+  rdfs:range skos:Concept ;  
+  skos:definition "This Observable Property is expected to be of a Feature with this theme"@en ;
+  skos:prefLabel "likely property of feature with theme"@en ;
 .
 
 # from SOSA
