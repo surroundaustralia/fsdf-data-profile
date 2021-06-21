@@ -54,3 +54,20 @@ obsp:populationChange
     skos:topConceptOf cs: ;
 .
 
+obsp:height
+    a skos:Concept ;
+    skos:prefLabel "Height"@en ;
+    skos:definition "The height, abvove groud, of the Feature, in metres"@en ;
+    rdfs:isDefinedBy cs: ;
+    skos:inScheme cs: ;
+    skos:topConceptOf cs: ;
+.
+
+obsp:verticalObstruction
+    a skos:Concept ;
+    skos:prefLabel "Vertical Obstruction"@en ;
+    skos:definition "The height, abvove groud, of the Feature, in feet"@en ;
+    rdfs:isDefinedBy cs: ;
+    skos:inScheme cs: ;
+    skos:topConceptOf cs: ;
+.

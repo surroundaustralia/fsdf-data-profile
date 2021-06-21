@@ -105,6 +105,20 @@ fsdf:Mandate
   skos:definition "An FSDF Mandate is an Australian Commonwealth or State & Territory legislation thatassigns responsibility for FSDF data or operations to an FSDF Agency. An FSDF Mandate is represented as a specialised form of DCAT Resource which ensures that a DCAT-style catalogue of instances of FSDF Mandates can be made."@en ;
   skos:prefLabel "Mandate"@en ;
 .
+geo:FeatureCollection
+  a owl:Class ;
+  rdfs:isDefinedby <http://www.opengis.net/ont/geosparql> ;
+  rdfs:subClassOf owl:Thing , prov:Entity ;
+  skos:definition "The class Feature Collection represents any collection of individual Features."@en ;
+  skos:prefLabel "Feature Collection"@en ;
+.
+geo:Feature
+  a owl:Class ;
+  rdfs:isDefinedby <http://www.opengis.net/ont/geosparql> ;
+  rdfs:subClassOf owl:Thing , prov:Entity ;
+  skos:definition "This class represents the top-level feature type. This class is equivalent to GFI_Feature defined in ISO 19156, and it is superclass of all feature types."@en ;
+  skos:prefLabel "Feature"@en ;
+.
 fsdf:affectsAgency
   a owl:ObjectProperty ;
   rdfs:domain fsdf:Mandate ;
@@ -203,12 +217,14 @@ fsdf:likelyPropertyOfFeatureWithTheme
 # from SOSA
 
 sosa:FeatureOfInterest a owl:Class ;
+	rdfs:subClassOf owl:Thing ;
 	skos:prefLabel "Feature Of Interest"@en ;
 	skos:definition "The thing whose property is being estimated or calculated in the course of an Observation to arrive at a Result or whose property is being manipulated by an Actuator, or which is being sampled or transformed in an act of Sampling."@en ;
 	rdfs:comment "The thing whose property is being estimated or calculated in the course of an Observation to arrive at a Result or whose property is being manipulated by an Actuator, or which is being sampled or transformed in an act of Sampling."@en ;
 	rdfs:isDefinedBy sosa: ;
 .
 sosa:ObservableProperty a owl:Class ;
+	rdfs:subClassOf owl:Thing ;
 	skos:prefLabel "Observable Property"@en ;
     skos:definition "An observable quality (property, characteristic) of a FeatureOfInterest."@en ;
     skos:example "The height of a tree, the depth of a water body, or the temperature of a surface are examples of observable properties, while the value of a classic car is not (directly) observable but asserted."^^rdf:HTML ;
@@ -246,6 +262,7 @@ sosa:isFeatureOfInterestOf a owl:ObjectProperty ;
     rdfs:isDefinedBy sosa: ;
 .
 sosa:Observation a owl:Class ;
+	rdfs:subClassOf owl:Thing ;
     skos:prefLabel "Observation"@en ;
     skos:definition "Act of carrying out an (Observation) Procedure to estimate or calculate a value of a property of a FeatureOfInterest. Links to a Sensor to describe what made the Observation and how; links to an ObservableProperty to describe what the result is an estimate of, and to a FeatureOfInterest to detail what that property was associated with."@en ;
     skos:example "The activity of estimating the intensity of an Earthquake using the Mercalli intensity scale is an Observation as is measuring the moment magnitude, i.e., the energy released by said earthquake."^^rdf:HTML ;
@@ -319,6 +336,7 @@ sosa:phenomenonTime a owl:ObjectProperty ;
 
 sosa:ObservationCollection
     a owl:Class ;
+    rdfs:subClassOf owl:Thing ;
     skos:definition "Collection of observations, typically with one or more property shared by all of its members"@en ;
     skos:prefLabel "Collection of observations"@en ;
     rdfs:subClassOf sosa:Observation ;

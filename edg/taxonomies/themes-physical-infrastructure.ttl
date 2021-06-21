@@ -191,3 +191,39 @@ themes:renewable
     skos:topConceptOf cs: ;
     dcterms:provenance "Defined in the Loc-I DR project to classify spatial features" ;
 .
+
+#
+# Power Station Type
+#
+themes:solar
+    a skos:Concept ;
+    skos:prefLabel "Renewable"@en ;
+    skos:definition "A renewable energy source"@en ;
+    rdfs:isDefinedBy cs: ;
+    skos:broader themes:physical-infrastructure ;
+    skos:inScheme cs: ;
+    skos:topConceptOf cs: ;
+    dcterms:provenance "Defined in the Loc-I DR project to classify spatial features" ;
+.
+
+themes:solarPhotovoltaic
+    a skos:Concept ;
+    skos:prefLabel "Renewable"@en ;
+    skos:definition "A renewable energy source"@en ;
+    rdfs:isDefinedBy cs: ;
+    skos:broader themes:physical-infrastructure ;
+    skos:inScheme cs: ;
+    skos:topConceptOf cs: ;
+    dcterms:provenance "Defined in the Loc-I DR project to classify spatial features" ;
+.
+themes:standardPV
+    a skos:Concept ;
+    skos:prefLabel "Renewable"@en ;
+    skos:definition "A renewable energy source"@en ;
+    rdfs:isDefinedBy cs: ;
+    skos:broader themes:physical-infrastructure ;
+    skos:inScheme cs: ;
+    skos:topConceptOf cs: ;
+    dcterms:provenance "Defined in the Loc-I DR project to classify spatial features" ;
+.
+
