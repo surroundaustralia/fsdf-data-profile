@@ -16,12 +16,12 @@ cs:
     dcterms:creator <https://linked.data.gov.au/org/ga> ;
     dcterms:publisher <https://linked.data.gov.au/org/anzlic> ;
     dcterms:created "2021-05-13"^^xsd:date ;
-    dcterms:modified "2021-05-13"^^xsd:date ;
+    dcterms:modified "2021-06-29"^^xsd:date ;
     dcterms:provenance "Created for the Loc-I DR Project" ;
-    skos:definition "This vocabulary is an extension to the FSDF Themes vocabulary" ;
+    skos:definition "Subcategories within the FSDF Themes' Vocabulary's _Physical Infrastructure_ category."@en ;
+    skos:note "This vocabulary is an extension to the FSDF Themes vocabulary" ;
     owl:versionInfo "1.0"^^xsd:string ;
-    skos:hasTopConcept 
-        themes:physical-infrastructure ;
+    skos:hasTopConcept themes:physical-infrastructure ;
 .
 
 
@@ -42,7 +42,6 @@ themes:electrical-infrastructure
     rdfs:isDefinedBy cs: ;
     skos:broader themes:physical-infrastructure ;
     skos:inScheme cs: ;
-    skos:topConceptOf cs: ;
     dcterms:provenance "Defined in the Loc-I DR project to classify spatial features" ;
 .
 
@@ -53,7 +52,6 @@ themes:pipelines
     rdfs:isDefinedBy cs: ;
     skos:broader themes:physical-infrastructure ;
     skos:inScheme cs: ;
-    skos:topConceptOf cs: ;
     dcterms:provenance "Defined in the Loc-I DR project to classify spatial features" ;
 .
 
@@ -64,7 +62,6 @@ themes:waste-management
     rdfs:isDefinedBy cs: ;
     skos:broader themes:physical-infrastructure ;
     skos:inScheme cs: ;
-    skos:topConceptOf cs: ;
     dcterms:provenance "Defined in the Loc-I DR project to classify spatial features" ;
 .
 
@@ -75,7 +72,6 @@ themes:wastewater-treatment
     rdfs:isDefinedBy cs: ;
     skos:broader themes:physical-infrastructure ;
     skos:inScheme cs: ;
-    skos:topConceptOf cs: ;
     dcterms:provenance "Defined in the Loc-I DR project to classify spatial features" ;
 .
 
@@ -86,7 +82,6 @@ themes:generation-infrastructure
     rdfs:isDefinedBy cs: ;
     skos:broader themes:electrical-infrastructure ;
     skos:inScheme cs: ;
-    skos:topConceptOf cs: ;
     dcterms:provenance "Defined in the Loc-I DR project to classify spatial features" ;
 .
 
@@ -97,7 +92,6 @@ themes:transmission-infrastructure
     rdfs:isDefinedBy cs: ;
     skos:broader themes:electrical-infrastructure ;
     skos:inScheme cs: ;
-    skos:topConceptOf cs: ;
     dcterms:provenance "Defined in the Loc-I DR project to classify spatial features" ;
 .
 
@@ -109,7 +103,6 @@ themes:power-line
     rdfs:isDefinedBy cs: ;
     skos:broader themes:transmission-infrastructure ;
     skos:inScheme cs: ;
-    skos:topConceptOf cs: ;
     dcterms:provenance "Defined in the Loc-I DR project to classify spatial features" ;
 .
 
@@ -120,7 +113,6 @@ themes:high-voltage-power-line
     rdfs:isDefinedBy cs: ;
     skos:broader themes:power-line ;
     skos:inScheme cs: ;
-    skos:topConceptOf cs: ;
     dcterms:provenance "Defined in the Loc-I DR project to classify spatial features" ;
 .
 
@@ -131,7 +123,6 @@ themes:high-voltage-power-line-overhead
     rdfs:isDefinedBy cs: ;
     skos:broader themes:high-voltage-power-line ;
     skos:inScheme cs: ;
-    skos:topConceptOf cs: ;
     dcterms:provenance "Defined in the Loc-I DR project to classify spatial features" ;
 .
 
@@ -142,7 +133,6 @@ themes:high-voltage-power-line-underground
     rdfs:isDefinedBy cs: ;
     skos:broader themes:high-voltage-power-line ;
     skos:inScheme cs: ;
-    skos:topConceptOf cs: ;
     dcterms:provenance "Defined in the Loc-I DR project to classify spatial features" ;
 .
 
@@ -154,7 +144,6 @@ themes:low-voltage-power-line
     rdfs:isDefinedBy cs: ;
     skos:broader themes:power-line ;
     skos:inScheme cs: ;
-    skos:topConceptOf cs: ;
     dcterms:provenance "Defined in the Loc-I DR project to classify spatial features" ;
 .
 
@@ -166,7 +155,6 @@ themes:low-voltage-power-line-overhead
     rdfs:isDefinedBy cs: ;
     skos:broader themes:low-voltage-power-line ;
     skos:inScheme cs: ;
-    skos:topConceptOf cs: ;
     dcterms:provenance "Defined in the Loc-I DR project to classify spatial features" ;
 .
 
@@ -177,7 +165,6 @@ themes:substation-infrastructure
     rdfs:isDefinedBy cs: ;
     skos:broader themes:electrical-infrastructure ;
     skos:inScheme cs: ;
-    skos:topConceptOf cs: ;
     dcterms:provenance "Defined in the Loc-I DR project to classify spatial features" ;
 .
 
@@ -188,7 +175,6 @@ themes:renewable
     rdfs:isDefinedBy cs: ;
     skos:broader themes:physical-infrastructure ;
     skos:inScheme cs: ;
-    skos:topConceptOf cs: ;
     dcterms:provenance "Defined in the Loc-I DR project to classify spatial features" ;
 .
 
@@ -202,7 +188,6 @@ themes:solar
     rdfs:isDefinedBy cs: ;
     skos:broader themes:physical-infrastructure ;
     skos:inScheme cs: ;
-    skos:topConceptOf cs: ;
     dcterms:provenance "Defined in the Loc-I DR project to classify spatial features" ;
 .
 
@@ -213,7 +198,6 @@ themes:solarPhotovoltaic
     rdfs:isDefinedBy cs: ;
     skos:broader themes:physical-infrastructure ;
     skos:inScheme cs: ;
-    skos:topConceptOf cs: ;
     dcterms:provenance "Defined in the Loc-I DR project to classify spatial features" ;
 .
 themes:standardPV
@@ -223,7 +207,6 @@ themes:standardPV
     rdfs:isDefinedBy cs: ;
     skos:broader themes:physical-infrastructure ;
     skos:inScheme cs: ;
-    skos:topConceptOf cs: ;
     dcterms:provenance "Defined in the Loc-I DR project to classify spatial features" ;
 .
 

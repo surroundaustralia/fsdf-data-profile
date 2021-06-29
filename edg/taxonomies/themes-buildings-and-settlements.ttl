@@ -16,12 +16,12 @@ cs:
     dcterms:creator <https://linked.data.gov.au/org/ga> ;
     dcterms:publisher <https://linked.data.gov.au/org/anzlic> ;
     dcterms:created "2021-06-11"^^xsd:date ;
-    dcterms:modified "2021-06-14"^^xsd:date ;
+    dcterms:modified "2021-06-29"^^xsd:date ;
     dcterms:provenance "Created for the Loc-I DR Project" ;
-    skos:definition "This vocabulary is an extension to the FSDF Themes vocabulary" ;
+    skos:definition "Subcategories within the FSDF Themes' Vocabulary's _Buildings and Settlements_ category."@en ;
+    skos:note "This vocabulary is an extension to the FSDF Themes vocabulary" ;
     owl:versionInfo "1.0"^^xsd:string ;
-    skos:hasTopConcept 
-        themes:buildings-and-settlements ;
+    skos:hasTopConcept themes:buildings-and-settlements ;
 .
 
 
