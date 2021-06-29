@@ -1,0 +1,98 @@
+# baseURI: https://linked.data.gov.au/def/fsdf/licenses
+# prefix: ground
+
+@prefix cs: <https://linked.data.gov.au/def/fsdf/themes/licenses> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ground: <https://linked.data.gov.au/def/fsdf/themes/licenses/> .
+@prefix lic: <http://purl.org/NET/rdflicense/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+
+cs: 
+    a owl:Ontology , skos:ConceptScheme ;
+    skos:prefLabel "FSDF Ground Relations"@en ;
+    dcterms:creator <https://linked.data.gov.au/org/ga> ;
+    dcterms:publisher <https://linked.data.gov.au/org/icsm> ;
+    dcterms:created "2021-06-29"^^xsd:date ;
+    dcterms:modified "2021-06-29"^^xsd:date ;
+    dcterms:provenance "Created for the Loc-I DR Project"@en ;
+    skos:definition "This vocabulary lists licenses of interest to the FSDF project"@en ;
+    owl:versionInfo "1.0"^^xsd:string ;
+    skos:hasTopConcept
+    	lic:cc-by4.0 ,
+        lic:cc-by-nc4.0 ,
+        lic:cc-by-sa4.0 ,
+        lic:cc-by-nd4.0 ,
+        lic:cc-by-sa3.0au ,
+        lic:cc-by2.0au ,
+        lic:APACHE2.0 ,
+        lic:MIT1.0 ,
+        lic:publicdomain ;
+.
+
+lic:cc-by4.0
+    skos:prefLabel "Attribution 4.0 International (CC BY 4.0)"@en ;
+    skos:definition "As per the license' legal code"@en ;
+    skos:topConceptOf cs: ;
+    rdfs:isDefinedby <http://purl.org/NET/rdflicense> ;
+.
+    
+lic:cc-by-nc4.0
+    skos:prefLabel "Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)"@en ;
+    skos:definition "As per the license' legal code"@en ;
+    skos:topConceptOf cs: ;
+    rdfs:isDefinedby <http://purl.org/NET/rdflicense> ;
+.
+
+lic:cc-by-sa4.0
+    skos:prefLabel "Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)"@en ;
+    skos:definition "As per the license' legal code"@en ;
+    skos:topConceptOf cs: ;
+    rdfs:isDefinedby <http://purl.org/NET/rdflicense> ;
+.
+
+lic:cc-by-nd4.0
+    skos:prefLabel "Attribution-NoDerivatives 4.0 International (CC BY-ND 4.0)"@en ;
+    skos:definition "As per the license' legal code"@en ;
+    skos:topConceptOf cs: ;
+    rdfs:isDefinedby <http://purl.org/NET/rdflicense> ;
+.
+
+lic:cc-by-sa3.0au
+    skos:prefLabel "Attribution-ShareAlike 3.0 Australia (CC BY-SA 3.0 AU)"@en ;
+    skos:definition "As per the license' legal code"@en ;
+    skos:topConceptOf cs: ;
+    rdfs:isDefinedby <http://purl.org/NET/rdflicense> ;
+.
+
+lic:cc-by2.0au
+    skos:prefLabel "Attribution 2.0 Australia (CC BY 2.0 AU)"@en ;
+    skos:definition "As per the license' legal code"@en ;
+    skos:topConceptOf cs: ;
+    rdfs:isDefinedby <http://purl.org/NET/rdflicense> ;
+.
+
+lic:APACHE2.0
+    skos:prefLabel "Apache License Version 2.0"@en ;
+    skos:definition "As per the license' legal code"@en ;
+    skos:topConceptOf cs: ;
+    rdfs:isDefinedby <http://purl.org/NET/rdflicense> ;
+.
+
+lic:MIT1.0
+    skos:prefLabel "MIT License"@en ;
+    skos:definition "As per the license' legal code"@en ;
+    skos:topConceptOf cs: ;
+    rdfs:isDefinedby <http://purl.org/NET/rdflicense> ;
+.
+
+lic:publicdomain
+    skos:prefLabel "Public domain"@en ;
+    skos:definition "As per the license' legal code"@en ;
+    skos:topConceptOf cs: ;
+    rdfs:isDefinedby <http://purl.org/NET/rdflicense> ;
+.
