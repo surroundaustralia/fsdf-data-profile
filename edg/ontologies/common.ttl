@@ -235,6 +235,7 @@ common:address
   a owl:ObjectProperty ;
   rdfs:comment "rdfs:subPropertyOf locn:address" ;
   rdfs:domain common:Contact ;
+  rdfs:label "Address" ;
   skos:definition "An address provided as free text."@en ;
 .
 common:attributeDate
