@@ -156,12 +156,14 @@ fsdf:hasPrimaryFuelType
   rdfs:range fsdf:FuelType ;
   skos:prefLabel "The primary fuel type used by a generator" ;
 .
+
 fsdf:hasPrimarySubFuelType
   a owl:ObjectProperty ;
   rdfs:domain themes:generation-infrastructure ;
   rdfs:range fsdf:FuelType ;
   skos:prefLabel "The primary sub-fuel type used by a generator" ;
 .
+
 fsdf:hasResponsibleAuthority
   a owl:ObjectProperty ;
   rdfs:domain fsdf:Mandate ;
@@ -199,8 +201,7 @@ fsdf:hasSpatialConfidence
   skos:prefLabel "has spatial confidence"@en ;
 .
 
-
-fsdf:hasState 
+fsdf:hasState
   a owl:ObjectProperty ;
   rdfs:domain geo:Feature ;
   rdfs:range asgs:StateOrTerritory ;
