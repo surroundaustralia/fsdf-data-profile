@@ -458,6 +458,12 @@ common:positionName
   rdfs:range rdf:langString ;
   skos:definition "Position of the party in relation to a resource, such as head of department."@en ;
 .
+common:hasRelatedParty
+  a owl:ObjectProperty ;
+  rdfs:domain geo:Feature ;
+  rdfs:range common:RelatedParty ;
+  skos:definition "The related party of a resource."@en ;
+.
 common:recordTime
   a owl:ObjectProperty ;
   rdfs:comment "Time interval (period) at which this version of the spatial object was inserted or changed in the spatial data set" ;
