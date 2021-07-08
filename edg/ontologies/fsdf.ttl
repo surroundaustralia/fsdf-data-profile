@@ -16,6 +16,7 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
 @prefix ssn: <http://www.w3.org/ns/ssn/> .
+@prefix themes: <https://linked.data.gov.au/def/fsdf/themes/> .
 @prefix time: <http://www.w3.org/2006/time#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
@@ -86,6 +87,11 @@ dcat:Dataset
   skos:definition "A collection of data, published or curated by a single agent, and available for access or download in one or more representations."@en ;
   skos:prefLabel "Dataset"@en ;
 .
+fsdf:FuelType
+  a owl:Class ;
+  skos:definition "The type of a fuel used by electricity generating infrastructure." ;
+  skos:prefLabel "Fuel Type"
+.
 fsdf:Jurisdiction
   a owl:Class ;
   rdfs:subClassOf sdo:Organization ;
@@ -142,6 +148,19 @@ fsdf:hasJurisdiction
   rdfs:subPropertyOf prov:agent ;
   skos:definition "The Jurisdiction responsible for this object"@en ;
   skos:prefLabel "has jurisdiction"@en ;
+.
+
+fsdf:hasPrimaryFuelType
+  a owl:ObjectProperty ;
+  rdfs:domain themes:generation-infrastructure ;
+  rdfs:range fsdf:FuelType ;
+  skos:prefLabel "The primary fuel type used by a generator" ;
+.
+fsdf:hasPrimarySubFuelType
+  a owl:ObjectProperty ;
+  rdfs:domain themes:generation-infrastructure ;
+  rdfs:range fsdf:FuelType ;
+  skos:prefLabel "The primary sub-fuel type used by a generator" ;
 .
 fsdf:hasResponsibleAuthority
   a owl:ObjectProperty ;
