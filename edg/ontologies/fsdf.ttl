@@ -154,6 +154,7 @@ fsdf:hasPrimaryFuelType
   a owl:ObjectProperty ;
   rdfs:domain themes:generation-infrastructure ;
   rdfs:range fsdf:FuelType ;
+  rdfs:label "Primary Fuel Type" ;
   skos:prefLabel "The primary fuel type used by a generator." ;
 .
 
@@ -161,6 +162,7 @@ fsdf:hasPrimarySubFuelType
   a owl:ObjectProperty ;
   rdfs:domain themes:generation-infrastructure ;
   rdfs:range fsdf:FuelType ;
+  rdfs:label "Primary Sub-fuel Type" ;
   skos:prefLabel "The primary sub-fuel type used by a generator." ;
 .
 
@@ -168,6 +170,7 @@ fsdf:hasGeneratorNumber
   a owl:ObjectProperty ;
   rdfs:domain themes:generation-infrastructure ;
   rdfs:range rdfs:Literal ;
+  rdfs:label "Generator Number" ;
   skos:prefLabel "The generator number for electricity generation infrastructure." ;
 .
 
@@ -175,6 +178,7 @@ fsdf:hasEmbeddedNetworkOperator
   a owl:ObjectProperty ;
   rdfs:domain themes:generation-infrastructure ;
   rdfs:range rdfs:Literal ;
+  rdfs:label "Embedded Network Operator" ;
   skos:prefLabel "The embedded network operator identifier for electricity generation infrastructure." ;
 .
 
