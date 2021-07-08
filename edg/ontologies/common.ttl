@@ -285,6 +285,14 @@ common:electronicMailAddress
   rdfs:range xsd:string ;
   skos:definition "An address of the organisation's or individual's electronic mailbox."@en ;
 .
+
+common:featureDataProvenance
+  a owl:DatatypeProperty ;
+  dcterms:description "Where the data for this feature came from." ;
+  rdfs:domain common:Feature ;
+  rdfs:label "Feature Data Provenance" ;
+.
+
 common:featureDate
   a owl:DatatypeProperty ;
   dcterms:description "This is the date of the latest primary source material where the position of a particular feature was added, verified, or subsequently changed." ;
@@ -476,6 +484,7 @@ common:role
   rdfs:domain common:RelatedParty ;
   rdfs:range skos:Concept ;
   rdfs:seeAlso <http://inspire.ec.europa.eu/codeList/PartyRoleValue> ;
+  rdfs:label "role" ;
   skos:definition "Role(s) of the party in relation to a resource, such as owner."@en ;
 .
 common:shortName
