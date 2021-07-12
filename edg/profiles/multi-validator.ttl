@@ -76,7 +76,7 @@
 	sh:targetClass geo:FeatureCollection ;
     sh:message "Requirement FC-ispartof: Each FSDF Feature Collection _MUST_ indicate that it is part of one and only one `dcat:Dataset` with the `dcterms:isPartOf` predicate."@en ;
     sh:property [
-        sh:path dcat:isPartOf ;        
+        sh:path dcterms:isPartOf ;
         sh:minCount 1 ;
         sh:maxCount 1 ;
         sh:class dcat:Dataset ;
