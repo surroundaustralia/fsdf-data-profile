@@ -235,6 +235,7 @@ common:address
   a owl:ObjectProperty ;
   rdfs:comment "rdfs:subPropertyOf locn:address" ;
   rdfs:domain common:Contact ;
+  rdfs:label "Address" ;
   skos:definition "An address provided as free text."@en ;
 .
 common:attributeDate
@@ -284,6 +285,14 @@ common:electronicMailAddress
   rdfs:range xsd:string ;
   skos:definition "An address of the organisation's or individual's electronic mailbox."@en ;
 .
+
+common:featureDataProvenance
+  a owl:DatatypeProperty ;
+  dcterms:description "Where the data for this feature came from." ;
+  rdfs:domain common:Feature ;
+  rdfs:label "Feature Data Provenance" ;
+.
+
 common:featureDate
   a owl:DatatypeProperty ;
   dcterms:description "This is the date of the latest primary source material where the position of a particular feature was added, verified, or subsequently changed." ;
@@ -458,6 +467,12 @@ common:positionName
   rdfs:range rdf:langString ;
   skos:definition "Position of the party in relation to a resource, such as head of department."@en ;
 .
+common:hasRelatedParty
+  a owl:ObjectProperty ;
+  rdfs:domain geo:Feature ;
+  rdfs:range common:RelatedParty ;
+  skos:definition "The related party of a resource."@en ;
+.
 common:recordTime
   a owl:ObjectProperty ;
   rdfs:comment "Time interval (period) at which this version of the spatial object was inserted or changed in the spatial data set" ;
@@ -469,6 +484,7 @@ common:role
   rdfs:domain common:RelatedParty ;
   rdfs:range skos:Concept ;
   rdfs:seeAlso <http://inspire.ec.europa.eu/codeList/PartyRoleValue> ;
+  rdfs:label "role" ;
   skos:definition "Role(s) of the party in relation to a resource, such as owner."@en ;
 .
 common:shortName
