@@ -107,14 +107,6 @@ Australian Electoral boundaries are a collection of legislative, political bound
     skos:broader themes:administrative-boundaries ;
 .
 
-themes:floods
-    a skos:Concept ;
-    skos:prefLabel "Floods"@en ;
-    skos:definition "Areas within Australia which have flooded within a particular flood event." ;
-    rdfs:isDefinedBy cs: ;
-    skos:inScheme cs: ;
-.
-
 themes:maritime-jurisdiction-boundaries
     a skos:Concept ;
     skos:prefLabel "Maritime Jurisdiction Boundaries"@en ;
