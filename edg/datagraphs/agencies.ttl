@@ -157,9 +157,25 @@ agencies:hydro-tasmania
   sdo:url ""^^xsd:anyURI ;
 .
 
-agencies:ga:
+agencies:ga
   a fsdf:Agency ;
   sdo:name "Geoscience Australia" ;
   sdo:url "https://www.ga.gov.au"^^xsd:anyURI ;
   reg:register <https://linked.data.gov.au/org/> ;
+.
+agencies:dnrm
+  a fsdf:Agency ;
+  sdo:name "Department of Natural Resources and Mining" ;
+.
+agencies:delwp
+  a fsdf:Agency ;
+  sdo:name "Department of Environment, Land, Water & Planning" ;
+.
+agencies:lt
+  a fsdf:Agency ;
+  sdo:name "Land Tasmania - Department of Primary Industries, Parks, Water and Environment" ;
+.
+agencies:doh
+  a fsdf:Agency ;
+  sdo:name "Department of Health" ;
 .
