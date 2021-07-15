@@ -20,6 +20,7 @@
 
 <https://linked.data.gov.au/def/fsdf.shapes>
   a owl:Ontology ;
+  rdfs:label "Shapes for the FSDF Ontology, hand made" ;  
   owl:imports <http://datashapes.org/dash> ;
   owl:imports <http://datashapes.org/owl2shacl> ;
   owl:imports <https://linked.data.gov.au/def/fsdf> ;

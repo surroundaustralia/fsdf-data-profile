@@ -210,3 +210,13 @@ themes:standardPV
     dcterms:provenance "Defined in the Loc-I DR project to classify spatial features" ;
 .
 
+
+# Substation sub-types:
+# Terminal
+# Switchyard
+# Subtransmission
+# Zone
+# Substation
+# Transmission
+# Sole Use
+# Bulk Supply Point
