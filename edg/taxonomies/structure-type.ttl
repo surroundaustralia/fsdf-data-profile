@@ -1,0 +1,4 @@
+# for Substations & PowerStations hasStructureType, perhaps others
+# 	standrd PV - from Power Stations
+# 	solar
+#	
