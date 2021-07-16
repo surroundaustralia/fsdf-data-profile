@@ -62,6 +62,11 @@ jurisdictions:wa
   dcterms:title "Western Australia"@en ;
   dcterms:description "The Government of WA, as a Government Entity with a mandate to define laws for the State of WA"@en ;
 .
+jurisdictions:other
+  a fsdf:Jurisdiction ;
+  dcterms:title "Other Territories"@en ;
+  dcterms:description "Australian Territories other than the Australian Capital Territory and Northern Territory"@en ;
+.
 
 jurisdictions:abs
   a fsdf:Jurisdiction ;
