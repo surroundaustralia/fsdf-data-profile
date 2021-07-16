@@ -111,7 +111,7 @@ themes:emergency-management-facility
     dcterms:provenance "Defined in the Loc-I DR project to classify spatial features" ;
 .
 
-themes:primary-school:
+themes:primary-school
     a skos:Concept ;
     skos:prefLabel "Primary School"@en ;
     skos:definition "An Educational Facility that is a Primary School only"@en ;
@@ -122,7 +122,7 @@ themes:primary-school:
     dcterms:provenance "Defined in the Loc-I DR project to classify spatial features" ;
 .
 
-themes:primary-and-secondary-school:
+themes:primary-and-secondary-school
     a skos:Concept ;
     skos:prefLabel "Primary and Secondary School"@en ;
     skos:definition "An Educational Facility that includes a Primary and Secondary School"@en ;
@@ -133,7 +133,7 @@ themes:primary-and-secondary-school:
     dcterms:provenance "Defined in the Loc-I DR project to classify spatial features" ;
 .
 
-themes:secondary-school:
+themes:secondary-school
     a skos:Concept ;
     skos:prefLabel "Secondary School"@en ;
     skos:definition "An Educational Facility that is a Secondary School"@en ;
@@ -144,7 +144,7 @@ themes:secondary-school:
     dcterms:provenance "Defined in the Loc-I DR project to classify spatial features" ;
 .
 
-themes:tertiary-institution:
+themes:tertiary-institution
     a skos:Concept ;
     skos:prefLabel "Tertiary Institution"@en ;
     skos:definition "An Educational Facility that is a Tertiary Institution"@en ;
@@ -155,7 +155,7 @@ themes:tertiary-institution:
     dcterms:provenance "Defined in the Loc-I DR project to classify spatial features" ;
 .
 
-themes:special-needs-school:
+themes:special-needs-school
     a skos:Concept ;
     skos:prefLabel "Special Needs School"@en ;
     skos:definition "An Educational Facility that is a Special Needs School"@en ;
@@ -166,7 +166,7 @@ themes:special-needs-school:
     dcterms:provenance "Defined in the Loc-I DR project to classify spatial features" ;
 .
 
-themes:high-school:
+themes:high-school
     a skos:Concept ;
     skos:prefLabel "High School"@en ;
     skos:definition "An Educational Facility that is a High School"@en ;
@@ -177,7 +177,7 @@ themes:high-school:
     dcterms:provenance "Defined in the Loc-I DR project to classify spatial features" ;
 .
 
-themes:technical-college:
+themes:technical-college
     a skos:Concept ;
     skos:prefLabel "Technical College"@en ;
     skos:definition "An Educational Facility that is a Technical College"@en ;
@@ -188,7 +188,7 @@ themes:technical-college:
     dcterms:provenance "Defined in the Loc-I DR project to classify spatial features" ;
 .
 
-themes:community-education-college:
+themes:community-education-college
     a skos:Concept ;
     skos:prefLabel "Community Education College"@en ;
     skos:definition "An Educational Facility that is a Community Education College"@en ;
@@ -199,7 +199,7 @@ themes:community-education-college:
     dcterms:provenance "Defined in the Loc-I DR project to classify spatial features" ;
 .
 
-themes:kindergarten:
+themes:kindergarten
     a skos:Concept ;
     skos:prefLabel "Kindergarten"@en ;
     skos:definition "An Educational Facility that is a Kindergarten"@en ;
@@ -210,7 +210,7 @@ themes:kindergarten:
     dcterms:provenance "Defined in the Loc-I DR project to classify spatial features" ;
 .
 
-themes:preschool:
+themes:preschool
     a skos:Concept ;
     skos:prefLabel "PreSchool"@en ;
     skos:definition "An Educational Facility that is a PreSchool"@en ;
@@ -221,7 +221,7 @@ themes:preschool:
     dcterms:provenance "Defined in the Loc-I DR project to classify spatial features" ;
 .
 
-themes:secondary-college:
+themes:secondary-college
     a skos:Concept ;
     skos:prefLabel "Secondary College"@en ;
     skos:definition "An Educational Facility that is a Secondary College"@en ;
@@ -232,7 +232,7 @@ themes:secondary-college:
     dcterms:provenance "Defined in the Loc-I DR project to classify spatial features" ;
 .
 
-themes:childcare-centre:
+themes:childcare-centre
     a skos:Concept ;
     skos:prefLabel "Childcare Centre"@en ;
     skos:definition "An Educational Facility that is a Childcare Centre"@en ;
@@ -243,7 +243,7 @@ themes:childcare-centre:
     dcterms:provenance "Defined in the Loc-I DR project to classify spatial features" ;
 .
 
-themes:academy:
+themes:academy
     a skos:Concept ;
     skos:prefLabel "Academy"@en ;
     skos:definition "An Educational Facility that is a Academy"@en ;
@@ -254,7 +254,7 @@ themes:academy:
     dcterms:provenance "Defined in the Loc-I DR project to classify spatial features" ;
 .
 
-themes:fire-station-metro:
+themes:fire-station-metro
     a skos:Concept ;
     skos:prefLabel "Fire Station Metro"@en ;
     skos:definition "An Emergency Management Facility that is a Fire Station in a metropolitan area"@en ;
@@ -265,7 +265,7 @@ themes:fire-station-metro:
     dcterms:provenance "Defined in the Loc-I DR project to classify spatial features" ;
 .
 
-themes:ambulance-station:
+themes:ambulance-station
     a skos:Concept ;
     skos:prefLabel "Ambulance Station"@en ;
     skos:definition "An Emergency Management Facility that is a Ambulance Station"@en ;
@@ -276,7 +276,7 @@ themes:ambulance-station:
     dcterms:provenance "Defined in the Loc-I DR project to classify spatial features" ;
 .
 
-themes:other-emergency-building:
+themes:other-emergency-building
     a skos:Concept ;
     skos:prefLabel "Other Emergency Building"@en ;
     skos:definition "An Emergency Management Facility other than those specified in this vocabulary"@en ;
@@ -287,7 +287,7 @@ themes:other-emergency-building:
     dcterms:provenance "Defined in the Loc-I DR project to classify spatial features" ;
 .
 
-themes:state-emergency-service-depot:
+themes:state-emergency-service-depot
     a skos:Concept ;
     skos:prefLabel "State Emergency Service Depot"@en ;
     skos:definition "An Emergency Management Facility that is a State Emergency Service Depot"@en ;
@@ -298,7 +298,7 @@ themes:state-emergency-service-depot:
     dcterms:provenance "Defined in the Loc-I DR project to classify spatial features" ;
 .
 
-themes:police-station:
+themes:police-station
     a skos:Concept ;
     skos:prefLabel "Police Station"@en ;
     skos:definition "An Emergency Management Facility that is a Police Station"@en ;
@@ -309,7 +309,7 @@ themes:police-station:
     dcterms:provenance "Defined in the Loc-I DR project to classify spatial features" ;
 .
 
-themes:rfs-station:
+themes:rfs-station
     a skos:Concept ;
     skos:prefLabel "RFS Station"@en ;
     skos:definition "An Emergency Management Facility that is a RFS Station"@en ;
@@ -320,7 +320,7 @@ themes:rfs-station:
     dcterms:provenance "Defined in the Loc-I DR project to classify spatial features" ;
 .
 
-themes:indigenous-health-centre:
+themes:indigenous-health-centre
     a skos:Concept ;
     skos:prefLabel "Indigenous Health Centre"@en ;
     skos:definition "An Emergency Management Facility that is an Indigenous Health Centre"@en ;
@@ -331,7 +331,7 @@ themes:indigenous-health-centre:
     dcterms:provenance "Defined in the Loc-I DR project to classify spatial features" ;
 .
 
-themes:disability-support-service:
+themes:disability-support-service
     a skos:Concept ;
     skos:prefLabel "Disability Support Service"@en ;
     skos:definition "An Emergency Management Facility that is an Disability Support Service"@en ;
@@ -342,7 +342,7 @@ themes:disability-support-service:
     dcterms:provenance "Defined in the Loc-I DR project to classify spatial features" ;
 .
 
-themes:aged-care-facility:
+themes:aged-care-facility
     a skos:Concept ;
     skos:prefLabel "Aged Care Facility"@en ;
     skos:definition "An Emergency Management Facility that is an Aged Care Facility"@en ;
@@ -353,7 +353,7 @@ themes:aged-care-facility:
     dcterms:provenance "Defined in the Loc-I DR project to classify spatial features" ;
 .
 
-themes:nursing-home:
+themes:nursing-home
     a skos:Concept ;
     skos:prefLabel "Nursing Home"@en ;
     skos:definition "An Emergency Management Facility that is an Nursing Home"@en ;
