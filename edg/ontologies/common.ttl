@@ -231,6 +231,7 @@ These may have been established to meet data exchange requirements of different 
     ] ;
   skos:definition "Thematic identifier to uniquely identify the spatial object."@en ;
 .
+
 common:address
   a owl:ObjectProperty ;
   rdfs:comment "rdfs:subPropertyOf locn:address" ;
@@ -238,6 +239,15 @@ common:address
   rdfs:label "Address" ;
   skos:definition "An address provided as free text."@en ;
 .
+
+common:suburb
+  a owl:ObjectProperty ;
+  rdfs:domain geo:Feature ;
+  rdfs:range rdfs:Literal ;
+  rdfs:label "Suburb" ;
+  skos:definition "A suburb provided as free text."@en ;
+.
+
 common:attributeDate
   a owl:DatatypeProperty ;
   dcterms:description "This is the date of the latest primary source material used to initially assign, or subsequently change or confirm the value of, one of the attributes of the feature." ;
@@ -246,6 +256,7 @@ common:attributeDate
   rdfs:range xsd:date ;
   rdfs:subPropertyOf dcterms:date ;
 .
+
 common:attributeSource
   a owl:ObjectProperty ;
   dcterms:description "This is the name of the latest primary source material used to populate the attribute field/s of a feature." ;
@@ -253,18 +264,21 @@ common:attributeSource
   rdfs:label "Attribute Source" ;
   rdfs:subPropertyOf dcterms:source ;
 .
+
 common:contact
   a owl:ObjectProperty ;
   rdfs:label "contact"@en ;
   rdfs:range common:Contact ;
   skos:definition "Contact information for the related party."@en ;
 .
+
 common:contactInstructions
   a owl:DatatypeProperty ;
   rdfs:domain common:Contact ;
   rdfs:range rdf:langString ;
   skos:definition "Supplementary instructions on how or when to contact an individual or organisation."@en ;
 .
+
 common:custodianAgency
   a owl:ObjectProperty ;
   dcterms:description "The agency or organisation for the source of this feature" ;
@@ -272,6 +286,7 @@ common:custodianAgency
   rdfs:label "Custodian Agency" ;
   rdfs:range skos:Concept ;
 .
+
 common:custodianLicensing
   a owl:ObjectProperty ;
   dcterms:description "Specific licensing relating to this feature" ;
@@ -279,6 +294,7 @@ common:custodianLicensing
   rdfs:label "Custodian Licensing" ;
   rdfs:subPropertyOf dcterms:license ;
 .
+
 common:electronicMailAddress
   a owl:DatatypeProperty ;
   rdfs:domain common:Contact ;
@@ -301,6 +317,7 @@ common:featureDate
   rdfs:range xsd:date ;
   rdfs:subPropertyOf dcterms:date ;
 .
+
 common:featureSource
   a owl:ObjectProperty ;
   dcterms:description "This is the name of the latest primary source used to add, update or verify a features existence or position. In most cases, this would be imagery (satellite, orthophotography, World Imagery)." ;
@@ -308,6 +325,7 @@ common:featureSource
   rdfs:label "Feature Source" ;
   rdfs:subPropertyOf dcterms:source ;
 .
+
 common:featureSubType
   a owl:ObjectProperty ;
   dcterms:description "An identifier for the type of feature represented" ;
@@ -315,6 +333,7 @@ common:featureSubType
   rdfs:label "Feature sub-type" ;
   rdfs:subPropertyOf dcterms:type ;
 .
+
 common:hoursOfService
   a owl:DatatypeProperty ;
   rdfs:domain common:Contact ;
