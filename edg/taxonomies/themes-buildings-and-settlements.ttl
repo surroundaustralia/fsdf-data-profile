@@ -67,6 +67,28 @@ themes:hopsital
     dcterms:provenance "Defined in the Loc-I DR project to classify spatial features" ;
 .
 
+themes:private-overnight-hopsital
+    a skos:Concept ;
+    skos:prefLabel "Private Overnight Hopsital"@en ;
+    skos:definition "A Private Overnight hospital facility"@en ;
+    rdfs:isDefinedBy cs: ;
+    skos:broader themes:hopsital ;
+    skos:inScheme cs: ;
+    skos:topConceptOf cs: ;
+    dcterms:provenance "Defined in the Loc-I DR project to classify spatial features" ;
+.
+
+themes:private-same-day-hopsital
+    a skos:Concept ;
+    skos:prefLabel "Private Same Day Hopsital"@en ;
+    skos:definition "A Private Same Day hospital facility"@en ;
+    rdfs:isDefinedBy cs: ;
+    skos:broader themes:hopsital ;
+    skos:inScheme cs: ;
+    skos:topConceptOf cs: ;
+    dcterms:provenance "Defined in the Loc-I DR project to classify spatial features" ;
+.
+
 themes:general-practice
     a skos:Concept ;
     skos:prefLabel "General Practice"@en ;
