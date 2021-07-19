@@ -192,9 +192,9 @@ themes:non-renewable
 themes:solar
     a skos:Concept ;
     skos:prefLabel "Renewable"@en ;
-    skos:definition "A renewable energy source"@en ;
+    skos:definition "A solar power source"@en ;
     rdfs:isDefinedBy cs: ;
-    skos:broader themes:physical-infrastructure ;
+    skos:broader themes:generation-infrastructure ;
     skos:inScheme cs: ;
     dcterms:provenance "Defined in the Loc-I DR project to classify spatial features" ;
 .
@@ -202,29 +202,110 @@ themes:solar
 themes:solarPhotovoltaic
     a skos:Concept ;
     skos:prefLabel "Renewable"@en ;
-    skos:definition "A renewable energy source"@en ;
+    skos:definition "A solar photovoltaic power source"@en ;
     rdfs:isDefinedBy cs: ;
-    skos:broader themes:physical-infrastructure ;
+    skos:broader themes:generation-infrastructure ;
     skos:inScheme cs: ;
     dcterms:provenance "Defined in the Loc-I DR project to classify spatial features" ;
 .
 themes:standardPV
     a skos:Concept ;
     skos:prefLabel "Renewable"@en ;
-    skos:definition "A renewable energy source"@en ;
+    skos:definition "A standard PV power source"@en ;
     rdfs:isDefinedBy cs: ;
-    skos:broader themes:physical-infrastructure ;
+    skos:broader themes:generation-infrastructure ;
+    skos:inScheme cs: ;
+    dcterms:provenance "Defined in the Loc-I DR project to classify spatial features" ;
+.
+#
+#  Substation sub-types:
+#
+themes:terminal
+    a skos:Concept ;
+    skos:prefLabel "Terminal"@en ;
+    skos:definition "Substation Terminal infrastructure "@en ;
+    rdfs:isDefinedBy cs: ;
+    skos:broader themes:substation-infrastructure ;
     skos:inScheme cs: ;
     dcterms:provenance "Defined in the Loc-I DR project to classify spatial features" ;
 .
 
+themes:switchyard
+    a skos:Concept ;
+    skos:prefLabel "Switchyard"@en ;
+    skos:definition "Substation Switchyard infrastructure "@en ;
+    rdfs:isDefinedBy cs: ;
+    skos:broader themes:substation-infrastructure ;
+    skos:inScheme cs: ;
+    dcterms:provenance "Defined in the Loc-I DR project to classify spatial features" ;
+.
 
-# Substation sub-types:
-# Terminal
-# Switchyard
-# Subtransmission
-# Zone
-# Substation
-# Transmission
-# Sole Use
-# Bulk Supply Point
+themes:subtransmission
+    a skos:Concept ;
+    skos:prefLabel "Subtransmission"@en ;
+    skos:definition "Substation Subtransmission infrastructure "@en ;
+    rdfs:isDefinedBy cs: ;
+    skos:broader themes:substation-infrastructure ;
+    skos:inScheme cs: ;
+    dcterms:provenance "Defined in the Loc-I DR project to classify spatial features" ;
+.
+
+themes:zone
+    a skos:Concept ;
+    skos:prefLabel "Zone"@en ;
+    skos:definition "Substation Zone infrastructure "@en ;
+    rdfs:isDefinedBy cs: ;
+    skos:broader themes:substation-infrastructure ;
+    skos:inScheme cs: ;
+    dcterms:provenance "Defined in the Loc-I DR project to classify spatial features" ;
+.
+
+themes:transmission
+    a skos:Concept ;
+    skos:prefLabel "Transmission"@en ;
+    skos:definition "Substation Transmission infrastructure "@en ;
+    rdfs:isDefinedBy cs: ;
+    skos:broader themes:substation-infrastructure ;
+    skos:inScheme cs: ;
+    dcterms:provenance "Defined in the Loc-I DR project to classify spatial features" ;
+.
+
+themes:substation
+    a skos:Concept ;
+    skos:prefLabel "Substation"@en ;
+    skos:definition "The substation itself within substation infrastructure "@en ;
+    rdfs:isDefinedBy cs: ;
+    skos:broader themes:substation-infrastructure ;
+    skos:inScheme cs: ;
+    dcterms:provenance "Defined in the Loc-I DR project to classify spatial features" ;
+.
+
+themes:transmission
+    a skos:Concept ;
+    skos:prefLabel "Transmission"@en ;
+    skos:definition "Substation Transmission infrastructure "@en ;
+    rdfs:isDefinedBy cs: ;
+    skos:broader themes:substation-infrastructure ;
+    skos:inScheme cs: ;
+    dcterms:provenance "Defined in the Loc-I DR project to classify spatial features" ;
+.
+
+themes:sole-use
+    a skos:Concept ;
+    skos:prefLabel "Sole Use"@en ;
+    skos:definition "Substation Sole Use infrastructure "@en ;
+    rdfs:isDefinedBy cs: ;
+    skos:broader themes:substation-infrastructure ;
+    skos:inScheme cs: ;
+    dcterms:provenance "Defined in the Loc-I DR project to classify spatial features" ;
+.
+
+themes:bulk-supply-point
+    a skos:Concept ;
+    skos:prefLabel "Bulk Supply Point"@en ;
+    skos:definition "Substation Bulk Supply Point infrastructure "@en ;
+    rdfs:isDefinedBy cs: ;
+    skos:broader themes:substation-infrastructure ;
+    skos:inScheme cs: ;
+    dcterms:provenance "Defined in the Loc-I DR project to classify spatial features" ;
+.
