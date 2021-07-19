@@ -36,6 +36,15 @@ obsp:ratedVoltage
     skos:topConceptOf cs: ;
 .
 
+obsp:generationMW
+    a skos:Concept ;
+    skos:prefLabel "Generation Mega Watts"@en ;
+    skos:definition "The rated generation capactiy of a power-infrastructure resource"@en ;
+    rdfs:isDefinedBy cs: ;
+    skos:inScheme cs: ;
+    skos:topConceptOf cs: ;
+.
+
 obsp:population
     a skos:Concept ;
     skos:prefLabel "Population"@en ;
