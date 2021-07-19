@@ -203,6 +203,13 @@ fsdf:hasOperationalStatus
   skos:prefLabel "has operational status"@en ;
 .
 
+fsdf:featureDataProvenance
+  a owl:ObjectProperty ;
+  rdfs:domain geo:Feature ;
+  skos:definition "The provenance (source from which, and date) that feature data was received."@en ;
+  skos:prefLabel "feature data provenance"@en ;
+.
+
 fsdf:featureObservation
   a owl:ObjectProperty ;
   rdfs:domain geo:Feature ;
@@ -225,7 +232,7 @@ fsdf:hasState
   rdfs:range asgs:StateOrTerritory ;
   skos:definition "The State or Territory that this Feature is within"@en ;
   skos:prefLabel "has state"@en ;
-.  
+.
 
 fsdf:hasRelationToGround
   a owl:ObjectProperty ;
