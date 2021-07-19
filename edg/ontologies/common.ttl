@@ -490,6 +490,7 @@ common:hasRelatedParty
   a owl:ObjectProperty ;
   rdfs:domain geo:Feature ;
   rdfs:range common:RelatedParty ;
+  rdfs:label "related party" ;
   skos:definition "The related party of a resource."@en ;
 .
 common:recordTime

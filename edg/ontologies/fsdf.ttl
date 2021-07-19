@@ -215,7 +215,7 @@ fsdf:featureObservation
   rdfs:domain geo:Feature ;
   rdfs:range sosa:ObservableProperty ;
   skos:definition "The mode of physical operation of the feature"@en ;
-  skos:prefLabel "has operational status"@en ;
+  skos:prefLabel "an observation for a feature"@en ;
 .
 
 fsdf:hasSpatialConfidence
