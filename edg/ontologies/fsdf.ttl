@@ -70,6 +70,19 @@ skos:Concept a owl:Class ;
   rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
   skos:definition "An idea or notion; a unit of thought"@en ;
 .
+fsdf:OperationalStatus a owl:Class ;
+  skos:prefLabel "Operational Status"@en ;
+  rdfs:subClassOf skos:Concept ;
+  rdfs:isDefinedBy ont: ;
+  skos:definition "The status of the operations of FSDF infrastructure assets (Features). All instances of these are contained within the Operational Statuses taxonomy within the FSDF Knowledge Graph"@en ;
+.
+fsdf:GroundRelation a owl:Class ;
+  skos:prefLabel "Ground Relation"@en ;
+  rdfs:subClassOf skos:Concept ;
+  rdfs:isDefinedBy ont: ;
+  skos:definition "The relations of geospatial Feature to the earth's surface. All instances of these are contained within the Ground Relations taxonomy within the FSDF Knowledge Graph"@en ;
+.
+
 sdo:Organization
   a owl:Class ;
   rdfs:subClassOf prov:Agent ;
@@ -204,7 +217,7 @@ fsdf:hasResponsibleAuthority
 fsdf:hasOperationalStatus 
   a owl:ObjectProperty ;
   rdfs:domain geo:Feature ;
-  rdfs:range skos:Concept ;
+  rdfs:range fsdf:OperationalStatus ;
   skos:definition "The mode of physical operation of the feature"@en ;
   skos:prefLabel "has operational status"@en ;
 .
@@ -235,14 +248,14 @@ fsdf:hasSpatialConfidence
 fsdf:hasRelationToGround
   a owl:ObjectProperty ;
   rdfs:domain geo:Feature ;
-  rdfs:range skos:Concept ;
+  rdfs:range fsdf:GroundRelation ;
   skos:definition "The relation of this Feature to the earth's surface"@en ;
   skos:prefLabel "has relation to ground"@en ;
 .
 
 fsdf:themeOfFeatureWithProperty
   a owl:ObjectProperty ;
-  rdfs:domain skos:Concept ;
+  rdfs:domain fsdf:Theme ;
   rdfs:range sosa:ObservableProperty ;
   skos:definition "A Feature with this theme has this expected Observable Property"@en ;
   skos:prefLabel "theme of feature with property"@en ;
@@ -252,7 +265,7 @@ fsdf:likelyPropertyOfFeatureWithTheme
   a owl:ObjectProperty ;
   owl:inverseOf fsdf:hasExpectedObservableProperty ;
   rdfs:domain sosa:ObservableProperty ;
-  rdfs:range skos:Concept ;  
+  rdfs:range fsdf:Theme ;  
   skos:definition "This Observable Property is expected to be of a Feature with this theme"@en ;
   skos:prefLabel "likely property of feature with theme"@en ;
 .

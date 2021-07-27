@@ -3,6 +3,7 @@
 
 @prefix cs: <https://linked.data.gov.au/def/fsdf/physical-infrastructure-cs> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix fsdf: <https://linked.data.gov.au/def/fsdf/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -20,7 +21,7 @@ cs:
     dcterms:created "2021-05-13"^^xsd:date ;
     dcterms:modified "2021-05-13"^^xsd:date ;
     dcterms:provenance "Created for the Loc-I DR Project" ;
-    skos:definition "This vocabulary is used to indicate the status of the operations of FSDF infrastructure assets (Features)" ;
+    skos:definition "This vocabulary is used to indicate the status of the operations of FSDF infrastructure assets (Features)"@en ;
     owl:versionInfo "1.0"^^xsd:string ;
     skos:hasTopConcept 
         opstatus:operational ,
@@ -29,7 +30,7 @@ cs:
 .
 
 opstatus:operational
-    a skos:Concept ;
+    a skos:Concept , fsdf:OperationalStatus ;
     skos:prefLabel "Operational"@en ;
     skos:definition "The Feature is operating"@en ;
     rdfs:isDefinedBy cs: ;
@@ -37,7 +38,7 @@ opstatus:operational
     skos:topConceptOf cs: ;
 .
 opstatus:non-operational
-    a skos:Concept ;
+    a skos:Concept , fsdf:OperationalStatus ;
     skos:prefLabel "Non-Operational"@en ;
     skos:definition "The Feature is not operating"@en ;
     rdfs:isDefinedBy cs: ;
@@ -45,7 +46,7 @@ opstatus:non-operational
     skos:topConceptOf cs: ;
 .
 opstatus:decommissioned
-    a skos:Concept ;
+    a skos:Concept , fsdf:OperationalStatus ;
     skos:prefLabel "Decommissioned"@en ;
     skos:definition "The Feature is decommissioned"@en ;
     rdfs:isDefinedBy cs: ;
@@ -53,7 +54,7 @@ opstatus:decommissioned
     skos:topConceptOf cs: ;
 .
 opstatus:proposed
-    a skos:Concept ;
+    a skos:Concept , fsdf:OperationalStatus ;
     skos:prefLabel "Proposed"@en ;
     skos:definition "The Feature is proposed"@en ;
     rdfs:isDefinedBy cs: ;
