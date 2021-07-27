@@ -12,6 +12,7 @@
 <https://linked.data.gov.au/dataset/fsdf/feature-property-relations> 
     a owl:Ontology ;
     owl:imports <https://linked.data.gov.au/def/fsdf> ;
+    dcterms:license <http://purl.org/NET/rdflicense/cc-by4.0> ;
     dcterms:token "fpr"^^xsd:token
     skos:definition "This Data Graph contains associations between classes of geospatial Feature and the expected observable Properties of them, of relevance to the FSDF project"@en ;
     dcterms:title "FSDF Feature Property Relations"@en ;

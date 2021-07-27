@@ -16,6 +16,7 @@ cs:
     skos:prefLabel "FSDF Themes - Physcial Infrastructure" ;
     dcterms:creator <https://linked.data.gov.au/org/ga> ;
     dcterms:publisher <https://linked.data.gov.au/org/icsm> ;
+    dcterms:license <http://purl.org/NET/rdflicense/cc-by4.0> ;
     dcterms:created "2021-05-13"^^xsd:date ;
     dcterms:modified "2021-05-13"^^xsd:date ;
     dcterms:provenance "Created for the Loc-I DR Project" ;
