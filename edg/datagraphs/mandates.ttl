@@ -3,6 +3,7 @@
 # prefix: mandates
 
 @prefix dg: <https://linked.data.gov.au/dataset/fsdf/mandates> .
+@prefix agencies: <https://linked.data.gov.au/dataset/fsdf/agencies/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix fsdf: <https://linked.data.gov.au/def/fsdf#> .
 @prefix jurisdictions: <https://linked.data.gov.au/dataset/fsdf/jurisdictions/> .
@@ -37,6 +38,7 @@ mandates:clp-1994
   dcterms:title "Catchment and Land Protection Act 1994"@en ;
   dcterms:source "http://www.austlii.edu.au/cgi-bin/viewdoc/au/legis/vic/consol_act/calpa1994267/notes.html"^^xsd:anyURI ;
   fsdf:responsibleAuthority jurisdictions:vic ;
+  fsdf:affectsAgency agencies:delwp ;
 .
 mandates:alra-1976
   a fsdf:Mandate ;

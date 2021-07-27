@@ -130,6 +130,11 @@ fsdf:Agency
   rdfs:subClassOf sdo:Organization ;
   skos:definition "An FSDF Agency is a Government Organisation that is involved with the FSDF Programme"@en ;
   skos:prefLabel "Agency"@en ;
+  skos:example """# example from the FSDF datagraph Agencies
+agencies:nntt
+  a fsdf:Agency ;
+  sdo:name "National Native Title Tribunal"@en ;
+.""" ;
 .
 dcat:Dataset
   a owl:Class ;
@@ -156,6 +161,15 @@ fsdf:Mandate
     ] ;
   skos:definition "An FSDF Mandate is an Australian Commonwealth or State & Territory legislation thatassigns responsibility for FSDF data or operations to an FSDF Agency. An FSDF Mandate is represented as a specialised form of DCAT Resource which ensures that a DCAT-style catalogue of instances of FSDF Mandates can be made"@en ;
   skos:prefLabel "Mandate"@en ;
+  skos:example """# example from the FSDF datagraph Mandates
+# Here the Mandate is a law (an Act) that was enacted by Victoria
+# This Act comples the collection of certain natural-resource datasets by DELWP
+mandates:clp-1994
+  a fsdf:Mandate ;
+  dcterms:title "Catchment and Land Protection Act 1994"@en ;
+  fsdf:responsibleAuthority jurisdictions:vic ;
+  fsdf:affectsAgency agencies:delwp ;
+.""" ;
 .
 geo:FeatureCollection
   a owl:Class ;
@@ -177,6 +191,11 @@ fsdf:affectsAgency
   rdfs:range fsdf:Agency ;
   skos:definition "A Agency that is subject to the instructions of this Mandate"@en ;
   skos:prefLabel "affects Agency"@en ;
+  skos:example """# example from the FSDF datagraph Mandates
+# Here a particular Mandate affects a particular Agency
+mandates:clp-1994
+  fsdf:affectsAgency agencies:delwp ;
+.""" ;  
 .
 fsdf:hasCustodian
   a owl:ObjectProperty ;
@@ -257,22 +276,6 @@ fsdf:featureDataProvenance
   rdfs:domain geo:Feature ;
   skos:definition "The provenance (source from which, and date) that feature data was received"@en ;
   skos:prefLabel "feature data provenance"@en ;
-.
-
-fsdf:featureObservation
-  a owl:ObjectProperty ;
-  rdfs:domain geo:Feature ;
-  rdfs:range sosa:ObservableProperty ;
-  skos:definition "The mode of physical operation of the feature"@en ;
-  skos:prefLabel "an observation for a feature"@en ;
-.
-
-fsdf:hasSpatialConfidence
-  a owl:DatatypeProperty ;
-  rdfs:domain geo:Geometry ;
-  rdfs:range xsd:float ;
-  skos:definition "The confidence (in m) of a geometry's spatial positions"@en ;
-  skos:prefLabel "has spatial confidence"@en ;
 .
 
 fsdf:hasRelationToGround
