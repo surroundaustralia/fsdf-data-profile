@@ -3,10 +3,12 @@
 
 @prefix cs: <https://linked.data.gov.au/def/fsdf/observable-properties> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix fsdf: <https://linked.data.gov.au/def/fsdf/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
 @prefix op: <https://linked.data.gov.au/def/fsdf/observable-properties/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
@@ -20,7 +22,7 @@ cs:
     dcterms:created "2021-05-13"^^xsd:date ;
     dcterms:modified "2021-05-13"^^xsd:date ;
     dcterms:provenance "Created for the Loc-I DR Project"@en ;
-    skos:definition "This vocabulary lists physical properties of Features that may be observed to gain measurements of capacities of the Feature"@en ;
+    skos:definition "This vocabulary lists properties of Features that may be observed"@en ;
     owl:versionInfo "1.0"^^xsd:string ;
     skos:hasTopConcept
     	op:ratedVoltage ,
@@ -29,7 +31,7 @@ cs:
 .
 
 op:ratedVoltage
-    a skos:Concept ;
+    a skos:Concept , sosa:ObservableProperty ;
     skos:prefLabel "Rated Voltage"@en ;
     skos:definition "The voltage that the Feature is rated to carry or operate at"@en ;
     rdfs:isDefinedBy cs: ;
@@ -38,7 +40,7 @@ op:ratedVoltage
 .
 
 op:generationMW
-    a skos:Concept ;
+    a skos:Concept , sosa:ObservableProperty ;
     skos:prefLabel "Generation Mega Watts"@en ;
     skos:definition "The rated generation capactiy of a power-infrastructure resource"@en ;
     rdfs:isDefinedBy cs: ;
@@ -47,7 +49,7 @@ op:generationMW
 .
 
 op:population
-    a skos:Concept ;
+    a skos:Concept , sosa:ObservableProperty ;
     skos:prefLabel "Population"@en ;
     skos:definition "The total count of people for a given Feature"@en ;
     rdfs:isDefinedBy cs: ;
@@ -56,7 +58,7 @@ op:population
 .
 
 op:populationChange
-    a skos:Concept ;
+    a skos:Concept , sosa:ObservableProperty ;
     skos:prefLabel "Population Change"@en ;
     skos:definition "The change in population for a given Feature and a given teporal interval"@en ;
     rdfs:isDefinedBy cs: ;
@@ -65,7 +67,7 @@ op:populationChange
 .
 
 op:height
-    a skos:Concept ;
+    a skos:Concept , sosa:ObservableProperty ;
     skos:prefLabel "Height"@en ;
     skos:definition "The height, abvove groud, of the Feature, in metres"@en ;
     rdfs:isDefinedBy cs: ;
@@ -74,7 +76,7 @@ op:height
 .
 
 op:verticalObstruction
-    a skos:Concept ;
+    a skos:Concept , sosa:ObservableProperty ;
     skos:prefLabel "Vertical Obstruction"@en ;
     skos:definition "The height, abvove groud, of the Feature, in feet"@en ;
     rdfs:isDefinedBy cs: ;

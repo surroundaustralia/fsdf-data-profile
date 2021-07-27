@@ -14,7 +14,7 @@
 
 cs: 
     a owl:Ontology , skos:ConceptScheme ;
-    skos:prefLabel "FSDF Themes - Physcial Infrastructure" ;
+    skos:prefLabel "FSDF Operational Statuses" ;
     dcterms:creator <https://linked.data.gov.au/org/ga> ;
     dcterms:publisher <https://linked.data.gov.au/org/icsm> ;
     dcterms:license <http://purl.org/NET/rdflicense/cc-by4.0> ;

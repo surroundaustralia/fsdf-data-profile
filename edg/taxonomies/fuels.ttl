@@ -12,7 +12,7 @@
 
 cs:
     a owl:Ontology , skos:ConceptScheme ;
-    skos:prefLabel "FSDF Fuel Types" ;
+    skos:prefLabel "FSDF Fuels" ;
     dcterms:creator <https://linked.data.gov.au/org/ga> ;
     dcterms:publisher <https://linked.data.gov.au/org/icsm> ;
     dcterms:license <http://purl.org/NET/rdflicense/cc-by4.0> ;

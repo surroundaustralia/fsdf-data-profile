@@ -9,6 +9,7 @@
 
 @prefix cs: <https://linked.data.gov.au/def/fsdf/materialtypes> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix fsdf: <https://linked.data.gov.au/def/fsdf/> .
 @prefix material: <https://linked.data.gov.au/def/fsdf/materialtypes/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -18,7 +19,7 @@
 
 cs:
     a owl:Ontology , skos:ConceptScheme ;
-    skos:prefLabel "FSDF Material Types" ;
+    skos:prefLabel "FSDF Material" ;
     dcterms:creator <https://linked.data.gov.au/org/ga> ;
     dcterms:publisher <https://linked.data.gov.au/org/icsm> ;
     dcterms:license <http://purl.org/NET/rdflicense/cc-by4.0> ;

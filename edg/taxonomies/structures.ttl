@@ -8,16 +8,17 @@
 
 @prefix cs: <https://linked.data.gov.au/def/fsdf/structuretypes> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix structure: <https://linked.data.gov.au/def/fsdf/structuretypes/> .
+@prefix fsdf: <https://linked.data.gov.au/def/fsdf/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix structure: <https://linked.data.gov.au/def/fsdf/structuretypes/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 cs:
     a owl:Ontology , skos:ConceptScheme ;
-    skos:prefLabel "FSDF Structure Types" ;
+    skos:prefLabel "FSDF Structures" ;
     dcterms:creator <https://linked.data.gov.au/org/ga> ;
     dcterms:publisher <https://linked.data.gov.au/org/icsm> ;
     dcterms:license <http://purl.org/NET/rdflicense/cc-by4.0> ;

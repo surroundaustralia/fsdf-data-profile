@@ -70,17 +70,53 @@ skos:Concept a owl:Class ;
   rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
   skos:definition "An idea or notion; a unit of thought"@en ;
 .
-fsdf:OperationalStatus a owl:Class ;
-  skos:prefLabel "Operational Status"@en ;
+fsdf:Fuel a owl:Class ;
+  skos:prefLabel "Fuel"@en ;
   rdfs:subClassOf skos:Concept ;
   rdfs:isDefinedBy ont: ;
-  skos:definition "The status of the operations of FSDF infrastructure assets (Features). All instances of these are contained within the Operational Statuses taxonomy within the FSDF Knowledge Graph"@en ;
+  skos:definition "A type of fuel used by powerstations. May be renewable or non-renewable. All instances of these are contained within the Fuels taxonomy within the FSDF Knowledge Graph"@en ;
 .
 fsdf:GroundRelation a owl:Class ;
   skos:prefLabel "Ground Relation"@en ;
   rdfs:subClassOf skos:Concept ;
   rdfs:isDefinedBy ont: ;
   skos:definition "The relations of geospatial Feature to the earth's surface. All instances of these are contained within the Ground Relations taxonomy within the FSDF Knowledge Graph"@en ;
+.
+fsdf:Material a owl:Class ;
+  skos:prefLabel "Material"@en ;
+  rdfs:subClassOf skos:Concept ;
+  rdfs:isDefinedBy ont: ;
+  skos:definition "Types of material used to construct buildings and facilities in various FSDF datasets. All instances of these are contained within the Materials taxonomy within the FSDF Knowledge Graph"@en ;
+.
+fsdf:ObservableProperty a owl:Class ;
+  skos:prefLabel "Observable Property"@en ;
+  rdfs:subClassOf skos:Concept ;
+  rdfs:isDefinedBy ont: ;
+  skos:definition "Properties of Features that may be observed. All instances of these are contained within the Observable Properties taxonomy within the FSDF Knowledge Graph"@en ;
+.
+fsdf:OperationalStatus a owl:Class ;
+  skos:prefLabel "Operational Status"@en ;
+  rdfs:subClassOf skos:Concept ;
+  rdfs:isDefinedBy ont: ;
+  skos:definition "The status of the operations of FSDF infrastructure assets (Features). All instances of these are contained within the Operational Statuses taxonomy within the FSDF Knowledge Graph"@en ;
+.
+fsdf:PhysicalCondition a owl:Class ;
+  skos:prefLabel "Physical Condition"@en ;
+  rdfs:subClassOf skos:Concept ;
+  rdfs:isDefinedBy ont: ;
+  skos:definition "The types of physical condition that buildings and facilities are known to be in, in various FSDF datasets. All instances of these are contained within the Physical Conditions taxonomy within the FSDF Knowledge Graph"@en ;
+.
+fsdf:Structure a owl:Class ;
+  skos:prefLabel "Structure"@en ;
+  rdfs:subClassOf skos:Concept ;
+  rdfs:isDefinedBy ont: ;
+  skos:definition "The types of structure that buildings and facilities may have, in various FSDF datasets. All instances of these are contained within the Physical Conditions taxonomy within the FSDF Knowledge Graph"@en ;
+.
+fsdf:Theme a owl:Class ;
+  skos:prefLabel "FSDF Theme"@en ;
+  rdfs:subClassOf skos:Concept ;
+  rdfs:isDefinedBy ont: ;
+  skos:definition "A skos:Concept taken from the FSDF programme's controlled list of 'Themes'. All instnaces are contained within the FSDF Themese taxonomy, and sub-taxonomies of it, all within the FSDF Knowledge Graph"@en ;
 .
 
 sdo:Organization
@@ -101,12 +137,6 @@ dcat:Dataset
   rdfs:subClassOf owl:Thing , prov:Entity , dcat:Resource ;
   skos:definition "A collection of data, published or curated by a single agent, and available for access or download in one or more representations"@en ;
   skos:prefLabel "Dataset"@en ;
-.
-fsdf:FuelType
-  a owl:Class ;
-  rdfs:isDefinedby ont: ;
-  skos:definition "The type of a fuel used by electricity generating infrastructure"@en ;
-  skos:prefLabel "Fuel Type"@en ;
 .
 fsdf:Jurisdiction
   a owl:Class ;
@@ -166,33 +196,33 @@ fsdf:hasJurisdiction
   skos:prefLabel "has jurisdiction"@en ;
 .
 
-fsdf:hasPrimaryFuelType
+fsdf:hasPrimaryFuel
   a owl:ObjectProperty ;
-  rdfs:domain themes:generation-infrastructure ;
-  rdfs:range fsdf:FuelType ;
-  skos:prefLabel "Primary Fuel Type"@en ;
+  rdfs:domain geo:Feature ;
+  rdfs:range fsdf:Fuel ;
+  skos:prefLabel "Primary Fuel"@en ;
   skos:definition "The primary fuel type used by a generator"@en ;
 .
 
-fsdf:hasPrimarySubFuelType
+fsdf:hasPrimarySubFuel
   a owl:ObjectProperty ;
-  rdfs:domain themes:generation-infrastructure ;
-  rdfs:range fsdf:FuelType ;
-  skos:prefLabel "Primary Sub-fuel Type"@en ;
+  rdfs:domain geo:Feature ;
+  rdfs:range fsdf:Fuel ;
+  skos:prefLabel "Primary Sub-fuel"@en ;
   skos:definition "The primary sub-fuel type used by a generator"@en ;
 .
 
 fsdf:hasGeneratorNumber
   a owl:ObjectProperty ;
-  rdfs:domain themes:generation-infrastructure ;
-  rdfs:range rdfs:Literal ;
+  rdfs:domain geo:Feature ;
+  rdfs:range xsd:integer ;
   skos:prefLabel "Generator Number"@en ;
   skos:definition "The generator number for electricity generation infrastructure"@en ;
 .
 
 fsdf:hasEmbeddedNetworkOperator
   a owl:ObjectProperty ;
-  rdfs:domain themes:generation-infrastructure ;
+  rdfs:domain geo:Feature ;
   rdfs:range rdfs:Literal ;
   skos:prefLabel "Embedded Network Operator"@en ;
   skos:definition "The embedded network operator identifier for electricity generation infrastructure"@en ;
@@ -259,6 +289,7 @@ fsdf:themeOfFeatureWithProperty
   rdfs:range sosa:ObservableProperty ;
   skos:definition "A Feature with this theme has this expected Observable Property"@en ;
   skos:prefLabel "theme of feature with property"@en ;
+  skos:example """""" ;
 .
 
 fsdf:likelyPropertyOfFeatureWithTheme
