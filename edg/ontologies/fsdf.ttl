@@ -294,7 +294,7 @@ fsdf:themeOfFeatureWithProperty
   skos:prefLabel "theme of feature with property"@en ;
   skos:example """# example from the feature-property-relations datagraph
 themes:electrical-infrastructure
-  fsdf:likelyPropertyOfFeatureWithTheme obsp:ratedVoltage ;
+  fsdf:themeOfFeatureWithProperty obsp:ratedVoltage ;
 .""" ;
 .
 
