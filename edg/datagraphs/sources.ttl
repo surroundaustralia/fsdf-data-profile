@@ -1,38 +1,2715 @@
-# add Source class to FSDF Ontology
-# Populate this taxonomy from data
-
-# baseURI: https://linked.data.gov.au/dataset/fsdf/sources
-# imports: https://linked.data.gov.au/def/fsdf
-# prefix: source
-
-@prefix dg: <https://linked.data.gov.au/dataset/fsdf/sources> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dg: <https://linked.data.gov.au/dataset/fsdf/sources> .
 @prefix fsdf: <https://linked.data.gov.au/def/fsdf#> .
-@prefix source: <https://linked.data.gov.au/def/fsdf/themes/sources/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix source: <https://linked.data.gov.au/def/fsdf/themes/sources/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://linked.data.gov.au/dataset/fsdf/sources>
-    a owl:Ontology ;
-    dcterms:title "FSDF Sources"@en ;
-    dcterms:identifier "sources"^^xsd:token ;
-    dcterms:creator <https://linked.data.gov.au/org/ga> ;
-    dcterms:publisher <https://linked.data.gov.au/org/icsm> ;
-    dcterms:license <http://purl.org/NET/rdflicense/cc-by4.0> ;
+<https://linked.data.gov.au/def/fsdf/themes/sources/mitez–northerngaspipelineimpactstudyreport2016> a fsdf:Source ;
+    dcterms:description "MITEZ – Northern Gas Pipeline Impact Study Report 2016 (Section 2.3.1 – Mt Isa Region)"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "MITEZ – Northern Gas Pipeline Impact Study Report 2016 (Section 2.3.1 – Mt Isa Region)"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:2009transmissionanddistributionannualreport a fsdf:Source ;
+    dcterms:description "2009 Transmission and Distribution Annual Report"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "2009 Transmission and Distribution Annual Report"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:acengineeringwebsite a fsdf:Source ;
+    dcterms:description "AC Engineering Website"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "AC Engineering Website"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:actemergencyservicesagency a fsdf:Source ;
+    dcterms:description "ACT Emergency Services Agency"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "ACT Emergency Services Agency"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:actewagl a fsdf:Source ;
+    dcterms:description "ACTEWAGL"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "ACTEWAGL"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:actgovtdataintegrationprogram a fsdf:Source ;
+    dcterms:description "ACT Govt Data Integration Program"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "ACT Govt Data Integration Program"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:activeactivitieswebsite a fsdf:Source ;
+    dcterms:description "Active Activities Website"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Active Activities Website"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:aemo-australianenergymarketoperators2012 a fsdf:Source ;
+    dcterms:description "AEMO-Australian Energy Market Operators 2012"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "AEMO-Australian Energy Market Operators 2012"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:aemo-australianenergymarketoperators2013 a fsdf:Source ;
+    dcterms:description "AEMO-Australian Energy Market Operators 2013"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "AEMO-Australian Energy Market Operators 2013"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:aemo-australianenergymarketoperators2015 a fsdf:Source ;
+    dcterms:description "AEMO-Australian Energy Market Operators 2015"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "AEMO-Australian Energy Market Operators 2015"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:aemo-australianenergymarketoperators2016 a fsdf:Source ;
+    dcterms:description "AEMO-Australian Energy Market Operators 2016"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "AEMO-Australian Energy Market Operators 2016"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:aemo-australianenergymarketoperators2019 a fsdf:Source ;
+    dcterms:description "AEMO-Australian Energy Market Operators 2019"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "AEMO-Australian Energy Market Operators 2019"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:aemo_esoo2011chapter4.pdf a fsdf:Source ;
+    dcterms:description "AEMO_ESOO2011chapter4.pdf"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "AEMO_ESOO2011chapter4.pdf"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:aemogeneratorlist a fsdf:Source ;
+    dcterms:description "AEMO Generator List "@en,
+        "AEMO generator List"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "AEMO Generator List "@en,
+        "AEMO generator List"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:aged_care_services_oct_2019.shp a fsdf:Source ;
+    dcterms:description "Aged_Care_Services_Oct_2019.shp"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Aged_Care_Services_Oct_2019.shp"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:aglwebsite a fsdf:Source ;
+    dcterms:description "AGL Website"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "AGL Website"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:airservicesaustralia a fsdf:Source ;
+    dcterms:description "Airservices Australia"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Airservices Australia"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:albanywindfarm.pdf a fsdf:Source ;
+    dcterms:description "AlbanyWindFarm.pdf"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "AlbanyWindFarm.pdf"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:albertwaterwaysccwebsite a fsdf:Source ;
+    dcterms:description "Albert Waterways CC Website"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Albert Waterways CC Website"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:alcoaelectricitygenerationlicence14.pdf a fsdf:Source ;
+    dcterms:description "Alcoa Electricity Generation Licence 14.pdf"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Alcoa Electricity Generation Licence 14.pdf"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:alicesolarcitywebsite a fsdf:Source ;
+    dcterms:description "Alice Solar City Website"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Alice Solar City Website"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:alintaenergywebsite a fsdf:Source ;
+    dcterms:description "Alinta Energy Website"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Alinta Energy Website"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:alintawebsiteenergywisewinter2007 a fsdf:Source ;
+    dcterms:description "Alinta Website Energy Wise Winter 2007"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Alinta Website Energy Wise Winter 2007"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:alossatelliteimagery_2pt5m_northqldzone54 a fsdf:Source ;
+    dcterms:description "Alos Satellite Imagery_2pt5m_North Qld Zone54"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Alos Satellite Imagery_2pt5m_North Qld Zone54"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:alossatelliteimagery_2pt5m_westqld a fsdf:Source ;
+    dcterms:description "Alos Satellite Imagery_2pt5m_West Qld"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Alos Satellite Imagery_2pt5m_West Qld"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:ambulancensw a fsdf:Source ;
+    dcterms:description "Ambulance NSW"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Ambulance NSW"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:ambulanceserviceofnsw a fsdf:Source ;
+    dcterms:description "Ambulance Service of NSW"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Ambulance Service of NSW"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:anaecowebsite a fsdf:Source ;
+    dcterms:description "AnaeCo Website"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "AnaeCo Website"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:anglogoldashantiwebsite a fsdf:Source ;
+    dcterms:description "Anglogold Ashanti Website"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Anglogold Ashanti Website"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:apagroup a fsdf:Source ;
+    dcterms:description "APA Group"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "APA Group"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:argylediamondswebsite a fsdf:Source ;
+    dcterms:description "Argyle Diamonds Website"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Argyle Diamonds Website"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:atcopowerwebsite a fsdf:Source ;
+    dcterms:description "ATCO Power Website"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "ATCO Power Website"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:aussiewebwebsite a fsdf:Source ;
+    dcterms:description "Aussieweb Website"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Aussieweb Website"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:australianpapersustainabilityreport2010 a fsdf:Source ;
+    dcterms:description "Australian Paper Sustainability Report 2010"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Australian Paper Sustainability Report 2010"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:barrickwebsite a fsdf:Source ;
+    dcterms:description "Barrick Website"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Barrick Website"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:benowachildrenscentreswebsite a fsdf:Source ;
+    dcterms:description "Benowa Childrens Centres Website"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Benowa Childrens Centres Website"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:boardofstudiesnsw a fsdf:Source ;
+    dcterms:description "Board of Studies NSW"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Board of Studies NSW"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:callideoxyfuelprojectwebsite a fsdf:Source ;
+    dcterms:description "Callide OxyFuel Project Website"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Callide OxyFuel Project Website"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:careforkidswebsite a fsdf:Source ;
+    dcterms:description "Care for Kids Website"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Care for Kids Website"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:catalogue.data.wa.gov.au-dataset-dfes-stations a fsdf:Source ;
+    dcterms:description "https://catalogue.data.wa.gov.au/dataset/dfes-stations"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "https://catalogue.data.wa.gov.au/dataset/dfes-stations"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:catalogue.data.wa.gov.au-dataset-wa-police-stations a fsdf:Source ;
+    dcterms:description "https://catalogue.data.wa.gov.au/dataset/wa-police-stations"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "https://catalogue.data.wa.gov.au/dataset/wa-police-stations"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:childersolarfarm a fsdf:Source ;
+    dcterms:description "http://childersolarfarm.com.au/"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "http://childersolarfarm.com.au/"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:citicpacificminingwebsite a fsdf:Source ;
+    dcterms:description "Citic Pacific Mining Website"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Citic Pacific Mining Website"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:cityofcockburnwebsite a fsdf:Source ;
+    dcterms:description "City of Cockburn Website"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "City of Cockburn Website"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:citywestcabletunnelsubmissionsreport a fsdf:Source ;
+    dcterms:description "City West Cable Tunnel Submissions Report"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "City West Cable Tunnel Submissions Report"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:cleaneenergycouncilwebsite a fsdf:Source ;
+    dcterms:description "Cleane Energy Council Website"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Cleane Energy Council Website"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:cleanenergycouncilwebsite a fsdf:Source ;
+    dcterms:description "Clean Energy Council Website"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Clean Energy Council Website"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:cloncurrynon-networkoptionsreport a fsdf:Source ;
+    dcterms:description "Cloncurry Non - Network Options Report"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Cloncurry Non - Network Options Report"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:cloncurrynon-networkoptionsreportpage6 a fsdf:Source ;
+    dcterms:description "Cloncurry Non-Network Options Report page 6"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Cloncurry Non-Network Options Report page 6"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:contactpowerwebsite a fsdf:Source ;
+    dcterms:description "Contact Power Website"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Contact Power Website"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:contractpowerwebsite a fsdf:Source ;
+    dcterms:description "Contract Power Website"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Contract Power Website"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:csirowebsite a fsdf:Source ;
+    dcterms:description "CSIRO Website"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "CSIRO Website"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:data.qld.gov.au a fsdf:Source ;
+    dcterms:description "http://data.qld.gov.au"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "http://data.qld.gov.au"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:data.vic.gov.au a fsdf:Source ;
+    dcterms:description "http://data.vic.gov.au"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "http://data.vic.gov.au"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:departmentofeducationandcommunitiesnsw a fsdf:Source ;
+    dcterms:description "Department of Education and Communities NSW"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Department of Education and Communities NSW"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:departmentofprimaryindustries a fsdf:Source ;
+    dcterms:description "Department of Primary Industries"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Department of Primary Industries"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:dpipwe a fsdf:Source ;
+    dcterms:description "DPIPWE"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "DPIPWE"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:echildcarewebsite a fsdf:Source ;
+    dcterms:description "eChildcare Website"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "eChildcare Website"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:electranetwebsite a fsdf:Source ;
+    dcterms:description "ElectraNet Website"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "ElectraNet Website"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:electricity-generation-map a fsdf:Source ;
+    dcterms:description "https://maps.dnrm.qld.gov.au/electricity-generation-map/#"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "https://maps.dnrm.qld.gov.au/electricity-generation-map/#"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:energydevelopmentswebsite a fsdf:Source ;
+    dcterms:description "Energy Developments Website"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Energy Developments Website"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:energynewsbulletinwebsite a fsdf:Source ;
+    dcterms:description "Energy News Bulletin Website"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Energy News Bulletin Website"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:ergonenergywebsite a fsdf:Source ;
+    dcterms:description "Ergon Energy Website"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Ergon Energy Website"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:esriworldimagery a fsdf:Source ;
+    dcterms:description "Esri World Imagery"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Esri World Imagery"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:essentialenergy a fsdf:Source ;
+    dcterms:description "Essential Energy"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Essential Energy"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:firerescuensw a fsdf:Source ;
+    dcterms:description "Fire & Rescue NSW"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Fire & Rescue NSW"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:fortesqueminewebsite a fsdf:Source ;
+    dcterms:description "Fortesque Mine Website"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Fortesque Mine Website"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:ga2009powerstationsdatabase a fsdf:Source ;
+    dcterms:description "GA 2009 Power Stations Database"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "GA 2009 Power Stations Database"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:ga_1:250000topographicdata_sg5615brisbane a fsdf:Source ;
+    dcterms:description "GA_1:250000 Topographic Data_SG5615 Brisbane"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "GA_1:250000 Topographic Data_SG5615 Brisbane"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:ga_1:250000topographicdata_sh563tweedheads a fsdf:Source ;
+    dcterms:description "GA_1:250000 Topographic Data_SH563 Tweed Heads"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "GA_1:250000 Topographic Data_SH563 Tweed Heads"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:ga_fieldcheck a fsdf:Source ;
+    dcterms:description "GA_Field Check"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "GA_Field Check"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:ga_nationaltopographicinfocoordinitiative a fsdf:Source ;
+    dcterms:description "GA_National Topographic Info Coord Initiative"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "GA_National Topographic Info Coord Initiative"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:gascoynedevelopmentcommissionwebsite a fsdf:Source ;
+    dcterms:description "Gascoyne Development Commission Website"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Gascoyne Development Commission Website"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:globalenergyobservatory a fsdf:Source ;
+    dcterms:description "Global Energy Observatory"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Global Energy Observatory"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:grasmerewindfarmwebsite a fsdf:Source ;
+    dcterms:description "Grasmere Wind Farm website"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Grasmere Wind Farm website"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:horizonpower a fsdf:Source ;
+    dcterms:description "Horizon Power"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Horizon Power"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:horizonpowerwebsite a fsdf:Source ;
+    dcterms:description "Horizon Power Website"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Horizon Power Website"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:hydrotasmaniawebsite a fsdf:Source ;
+    dcterms:description "Hydro Tasmania Web Site"@en,
+        "Hydro Tasmania Website"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Hydro Tasmania Web Site"@en,
+        "Hydro Tasmania Website"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:infrastructurecapitalgroupwebsite a fsdf:Source ;
+    dcterms:description "Infrastructure Capital Group Website"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Infrastructure Capital Group Website"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:integralenergy a fsdf:Source ;
+    dcterms:description "Integral Energy"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Integral Energy"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:ipplc-australian-assets.pdf a fsdf:Source ;
+    dcterms:description "IPPLC-Australian-Assets.pdf"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "IPPLC-Australian-Assets.pdf"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:landandpropertyinformation-nsw a fsdf:Source ;
+    dcterms:description "Land and Property Information - NSW"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Land and Property Information - NSW"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:landfillgasandpowerwebsite a fsdf:Source ;
+    dcterms:description "Landfill Gas and Power Website"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Landfill Gas and Power Website"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:landgate-wa a fsdf:Source ;
+    dcterms:description "Landgate - WA"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Landgate - WA"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:landgatepublicwebsite a fsdf:Source ;
+    dcterms:description "Landgate Public Website"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Landgate Public Website"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:leightoncontractorswebsite a fsdf:Source ;
+    dcterms:description "Leighton Contractors Website"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Leighton Contractors Website"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:lmsgenerationwebsite a fsdf:Source ;
+    dcterms:description "LMS Generation Website"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "LMS Generation Website"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:localcouncil a fsdf:Source ;
+    dcterms:description "Local Council"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Local Council"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:metriconstadiumwebsite a fsdf:Source ;
+    dcterms:description "Metricon Stadium Website"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Metricon Stadium Website"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:mitez-northerngaspipelineimpactstudyreport2016 a fsdf:Source ;
+    dcterms:description "MITEZ-Northern Gas Pipeline Impact Study Report 2016 (Section 2.3.1 – Mt Isa Region)"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "MITEZ-Northern Gas Pipeline Impact Study Report 2016 (Section 2.3.1 – Mt Isa Region)"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:mychildwebsite a fsdf:Source ;
+    dcterms:description "My Child Website"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "My Child Website"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:nationaldirectorywebsite a fsdf:Source ;
+    dcterms:description "National Directory Website"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "National Directory Website"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:northernterritorypolicefireemergencyservices a fsdf:Source ;
+    dcterms:description "Northern Territory Police, Fire & Emergency Services"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Northern Territory Police, Fire & Emergency Services"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:northernterritoryutilitiescommissionpowerandwatercorporation2011 a fsdf:Source ;
+    dcterms:description "Northern Territory Utilities Commission Power and Water Corporation 2011"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Northern Territory Utilities Commission Power and Water Corporation 2011"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:northernterritoryutilitiescommissionpowerandwatercorporation2012 a fsdf:Source ;
+    dcterms:description "Northern Territory Utilities Commission Power and Water Corporation 2012"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Northern Territory Utilities Commission Power and Water Corporation 2012"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:northernterritoryutilitiescommissionpowerandwatercorporation2016 a fsdf:Source ;
+    dcterms:description "Northern Territory Utilities Commission Power and Water Corporation 2016"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Northern Territory Utilities Commission Power and Water Corporation 2016"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:northernterritoryutilitiescommissionpowersystemreview2009-10 a fsdf:Source ;
+    dcterms:description "Northern Territory Utilities Commission Power System Review 2009-10"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Northern Territory Utilities Commission Power System Review 2009-10"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:northwestinterconnectedsystemwebsite a fsdf:Source ;
+    dcterms:description "North West Interconnected System Website"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "North West Interconnected System Website"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:nswlandandpropertyinformation a fsdf:Source ;
+    dcterms:description "NSW Land and Property Information"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "NSW Land and Property Information"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:nswpoliceforce a fsdf:Source ;
+    dcterms:description "NSW Police Force"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "NSW Police Force"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:ntfireandrescue a fsdf:Source ;
+    dcterms:description "NT Fire and Rescue"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "NT Fire and Rescue"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:ntpowerandwatercorp a fsdf:Source ;
+    dcterms:description "NT Power and Water Corp"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "NT Power and Water Corp"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:ntutilitescommissionpowersystemreview a fsdf:Source ;
+    dcterms:description "NT Utilites Commission Power System Review"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "NT Utilites Commission Power System Review"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:officeoftherenewableenergyregulator a fsdf:Source ;
+    dcterms:description "Office of the Renewable Energy Regulator"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Office of the Renewable Energy Regulator"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:orthophotography_10cm_allora a fsdf:Source ;
+    dcterms:description "Orthophotography_10cm_Allora"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Orthophotography_10cm_Allora"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:orthophotography_10cm_bell a fsdf:Source ;
+    dcterms:description "Orthophotography_10cm_Bell"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Orthophotography_10cm_Bell"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:orthophotography_10cm_brigalow a fsdf:Source ;
+    dcterms:description "Orthophotography_10cm_Brigalow"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Orthophotography_10cm_Brigalow"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:orthophotography_10cm_brisbane a fsdf:Source ;
+    dcterms:description "Orthophotography_10cm_Brisbane"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Orthophotography_10cm_Brisbane"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:orthophotography_10cm_chinchilla a fsdf:Source ;
+    dcterms:description "Orthophotography_10cm_Chinchilla"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Orthophotography_10cm_Chinchilla"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:orthophotography_10cm_condamine a fsdf:Source ;
+    dcterms:description "Orthophotography_10cm_Condamine"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Orthophotography_10cm_Condamine"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:orthophotography_10cm_dalby a fsdf:Source ;
+    dcterms:description "Orthophotography_10cm_Dalby"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Orthophotography_10cm_Dalby"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:orthophotography_10cm_drillham a fsdf:Source ;
+    dcterms:description "Orthophotography_10cm_Drillham"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Orthophotography_10cm_Drillham"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:orthophotography_10cm_dulacca a fsdf:Source ;
+    dcterms:description "Orthophotography_10cm_Dulacca"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Orthophotography_10cm_Dulacca"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:orthophotography_10cm_glenmorgan a fsdf:Source ;
+    dcterms:description "Orthophotography_10cm_Glenmorgan"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Orthophotography_10cm_Glenmorgan"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:orthophotography_10cm_herveybay a fsdf:Source ;
+    dcterms:description "Orthophotography_10cm_Hervey Bay"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Orthophotography_10cm_Hervey Bay"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:orthophotography_10cm_ipswich a fsdf:Source ;
+    dcterms:description "Orthophotography_10cm_Ipswich"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Orthophotography_10cm_Ipswich"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:orthophotography_10cm_jandowae a fsdf:Source ;
+    dcterms:description "Orthophotography_10cm_Jandowae"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Orthophotography_10cm_Jandowae"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:orthophotography_10cm_kaimkillenbun a fsdf:Source ;
+    dcterms:description "Orthophotography_10cm_Kaimkillenbun"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Orthophotography_10cm_Kaimkillenbun"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:orthophotography_10cm_killarney a fsdf:Source ;
+    dcterms:description "Orthophotography_10cm_Killarney"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Orthophotography_10cm_Killarney"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:orthophotography_10cm_maryborough a fsdf:Source ;
+    dcterms:description "Orthophotography_10cm_Maryborough"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Orthophotography_10cm_Maryborough"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:orthophotography_10cm_meandarra a fsdf:Source ;
+    dcterms:description "Orthophotography_10cm_Meandarra"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Orthophotography_10cm_Meandarra"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:orthophotography_10cm_miles a fsdf:Source ;
+    dcterms:description "Orthophotography_10cm_Miles"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Orthophotography_10cm_Miles"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:orthophotography_10cm_mitchell a fsdf:Source ;
+    dcterms:description "Orthophotography_10cm_Mitchell"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Orthophotography_10cm_Mitchell"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:orthophotography_10cm_mountmorgan a fsdf:Source ;
+    dcterms:description "Orthophotography_10cm_Mount Morgan"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Orthophotography_10cm_Mount Morgan"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:orthophotography_10cm_rockhampton a fsdf:Source ;
+    dcterms:description "Orthophotography_10cm_Rockhampton"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Orthophotography_10cm_Rockhampton"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:orthophotography_10cm_sunshinecoast a fsdf:Source ;
+    dcterms:description "Orthophotography_10cm_Sunshine Coast"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Orthophotography_10cm_Sunshine Coast"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:orthophotography_10cm_tara a fsdf:Source ;
+    dcterms:description "Orthophotography_10cm_Tara"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Orthophotography_10cm_Tara"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:orthophotography_10cm_tiaro a fsdf:Source ;
+    dcterms:description "Orthophotography_10cm_Tiaro"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Orthophotography_10cm_Tiaro"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:orthophotography_10cm_torbanlea a fsdf:Source ;
+    dcterms:description "Orthophotography_10cm_Torbanlea"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Orthophotography_10cm_Torbanlea"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:orthophotography_10cm_wandoan a fsdf:Source ;
+    dcterms:description "Orthophotography_10cm_Wandoan"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Orthophotography_10cm_Wandoan"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:orthophotography_10cm_warra a fsdf:Source ;
+    dcterms:description "Orthophotography_10cm_Warra"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Orthophotography_10cm_Warra"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:orthophotography_10cm_warwick a fsdf:Source ;
+    dcterms:description "Orthophotography_10cm_Warwick"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Orthophotography_10cm_Warwick"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:orthophotography_10cm_yeppoon a fsdf:Source ;
+    dcterms:description "Orthophotography_10cm_Yeppoon"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Orthophotography_10cm_Yeppoon"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:orthophotography_12pt5cm_crowsnest a fsdf:Source ;
+    dcterms:description "Orthophotography_12pt5cm_Crows Nest"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Orthophotography_12pt5cm_Crows Nest"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:orthophotography_12pt5cm_goombungee a fsdf:Source ;
+    dcterms:description "Orthophotography_12pt5cm_Goombungee"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Orthophotography_12pt5cm_Goombungee"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:orthophotography_12pt5cm_logan a fsdf:Source ;
+    dcterms:description "Orthophotography_12pt5cm_Logan"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Orthophotography_12pt5cm_Logan"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:orthophotography_12pt5cm_millmerran a fsdf:Source ;
+    dcterms:description "Orthophotography_12pt5cm_Millmerran"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Orthophotography_12pt5cm_Millmerran"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:orthophotography_12pt5cm_pittsworth a fsdf:Source ;
+    dcterms:description "Orthophotography_12pt5cm_Pittsworth"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Orthophotography_12pt5cm_Pittsworth"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:orthophotography_12pt5cm_toowoomba a fsdf:Source ;
+    dcterms:description "Orthophotography_12pt5cm_Toowoomba"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Orthophotography_12pt5cm_Toowoomba"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:orthophotography_15cm_abercorn a fsdf:Source ;
+    dcterms:description "Orthophotography_15cm_Abercorn"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Orthophotography_15cm_Abercorn"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:orthophotography_15cm_aratula a fsdf:Source ;
+    dcterms:description "Orthophotography_15cm_Aratula"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Orthophotography_15cm_Aratula"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:orthophotography_15cm_babinda a fsdf:Source ;
+    dcterms:description "Orthophotography_15cm_Babinda"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Orthophotography_15cm_Babinda"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:orthophotography_15cm_baralaba a fsdf:Source ;
+    dcterms:description "Orthophotography_15cm_Baralaba"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Orthophotography_15cm_Baralaba"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:orthophotography_15cm_biloela a fsdf:Source ;
+    dcterms:description "Orthophotography_15cm_Biloela"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Orthophotography_15cm_Biloela"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:orthophotography_15cm_bluff a fsdf:Source ;
+    dcterms:description "Orthophotography_15cm_Bluff"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Orthophotography_15cm_Bluff"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:orthophotography_15cm_brisbane a fsdf:Source ;
+    dcterms:description "Orthophotography_15cm_Brisbane"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Orthophotography_15cm_Brisbane"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:orthophotography_15cm_cairns a fsdf:Source ;
+    dcterms:description "Orthophotography_15cm_Cairns"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Orthophotography_15cm_Cairns"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:orthophotography_15cm_charleville a fsdf:Source ;
+    dcterms:description "Orthophotography_15cm_Charleville"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Orthophotography_15cm_Charleville"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:orthophotography_15cm_clermont a fsdf:Source ;
+    dcterms:description "Orthophotography_15cm_Clermont"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Orthophotography_15cm_Clermont"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:orthophotography_15cm_cooktown a fsdf:Source ;
+    dcterms:description "Orthophotography_15cm_Cooktown"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Orthophotography_15cm_Cooktown"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:orthophotography_15cm_coominya a fsdf:Source ;
+    dcterms:description "Orthophotography_15cm_Coominya"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Orthophotography_15cm_Coominya"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:orthophotography_15cm_dajarra a fsdf:Source ;
+    dcterms:description "Orthophotography_15cm_Dajarra"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Orthophotography_15cm_Dajarra"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:orthophotography_15cm_dysart a fsdf:Source ;
+    dcterms:description "Orthophotography_15cm_Dysart"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Orthophotography_15cm_Dysart"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:orthophotography_15cm_eidsvold a fsdf:Source ;
+    dcterms:description "Orthophotography_15cm_Eidsvold"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Orthophotography_15cm_Eidsvold"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:orthophotography_15cm_eromanga a fsdf:Source ;
+    dcterms:description "Orthophotography_15cm_Eromanga"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Orthophotography_15cm_Eromanga"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:orthophotography_15cm_esk a fsdf:Source ;
+    dcterms:description "Orthophotography_15cm_Esk"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Orthophotography_15cm_Esk"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:orthophotography_15cm_fernvale a fsdf:Source ;
+    dcterms:description "Orthophotography_15cm_Fernvale"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Orthophotography_15cm_Fernvale"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:orthophotography_15cm_gayndah a fsdf:Source ;
+    dcterms:description "Orthophotography_15cm_Gayndah"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Orthophotography_15cm_Gayndah"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:orthophotography_15cm_gladstone a fsdf:Source ;
+    dcterms:description "Orthophotography_15cm_Gladstone"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Orthophotography_15cm_Gladstone"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:orthophotography_15cm_goldcoast a fsdf:Source ;
+    dcterms:description "Orthophotography_15cm_Gold Coast"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Orthophotography_15cm_Gold Coast"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:orthophotography_15cm_goomeri a fsdf:Source ;
+    dcterms:description "Orthophotography_15cm_Goomeri"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Orthophotography_15cm_Goomeri"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:orthophotography_15cm_goondiwindi a fsdf:Source ;
+    dcterms:description "Orthophotography_15cm_Goondiwindi"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Orthophotography_15cm_Goondiwindi"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:orthophotography_15cm_goovigen a fsdf:Source ;
+    dcterms:description "Orthophotography_15cm_Goovigen"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Orthophotography_15cm_Goovigen"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:orthophotography_15cm_gympie a fsdf:Source ;
+    dcterms:description "Orthophotography_15cm_Gympie"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Orthophotography_15cm_Gympie"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:orthophotography_15cm_harrisville a fsdf:Source ;
+    dcterms:description "Orthophotography_15cm_Harrisville"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Orthophotography_15cm_Harrisville"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:orthophotography_15cm_inglewood a fsdf:Source ;
+    dcterms:description "Orthophotography_15cm_Inglewood"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Orthophotography_15cm_Inglewood"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:orthophotography_15cm_injune a fsdf:Source ;
+    dcterms:description "Orthophotography_15cm_Injune"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Orthophotography_15cm_Injune"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:orthophotography_15cm_ipswich a fsdf:Source ;
+    dcterms:description "Orthophotography_15cm_Ipswich"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Orthophotography_15cm_Ipswich"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:orthophotography_15cm_jambin a fsdf:Source ;
+    dcterms:description "Orthophotography_15cm_Jambin"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Orthophotography_15cm_Jambin"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:orthophotography_15cm_kalbar a fsdf:Source ;
+    dcterms:description "Orthophotography_15cm_Kalbar"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Orthophotography_15cm_Kalbar"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:orthophotography_15cm_kilcoy a fsdf:Source ;
+    dcterms:description "Orthophotography_15cm_Kilcoy"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Orthophotography_15cm_Kilcoy"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:orthophotography_15cm_kooralbyn a fsdf:Source ;
+    dcterms:description "Orthophotography_15cm_Kooralbyn"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Orthophotography_15cm_Kooralbyn"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:orthophotography_15cm_leyburn a fsdf:Source ;
+    dcterms:description "Orthophotography_15cm_Leyburn"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Orthophotography_15cm_Leyburn"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:orthophotography_15cm_lowood a fsdf:Source ;
+    dcterms:description "Orthophotography_15cm_Lowood"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Orthophotography_15cm_Lowood"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:orthophotography_15cm_monto a fsdf:Source ;
+    dcterms:description "Orthophotography_15cm_Monto"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Orthophotography_15cm_Monto"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:orthophotography_15cm_moranbah a fsdf:Source ;
+    dcterms:description "Orthophotography_15cm_Moranbah"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Orthophotography_15cm_Moranbah"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:orthophotography_15cm_moretonbayurban a fsdf:Source ;
+    dcterms:description "Orthophotography_15cm_Moreton Bay Urban"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Orthophotography_15cm_Moreton Bay Urban"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:orthophotography_15cm_morven a fsdf:Source ;
+    dcterms:description "Orthophotography_15cm_Morven"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Orthophotography_15cm_Morven"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:orthophotography_15cm_mountalford a fsdf:Source ;
+    dcterms:description "Orthophotography_15cm_Mount Alford"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Orthophotography_15cm_Mount Alford"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:orthophotography_15cm_moura a fsdf:Source ;
+    dcterms:description "Orthophotography_15cm_Moura"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Orthophotography_15cm_Moura"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:orthophotography_15cm_mttamborine a fsdf:Source ;
+    dcterms:description "Orthophotography_15cm_Mt Tamborine"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Orthophotography_15cm_Mt Tamborine"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:orthophotography_15cm_muckadilla a fsdf:Source ;
+    dcterms:description "Orthophotography_15cm_Muckadilla"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Orthophotography_15cm_Muckadilla"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:orthophotography_15cm_mundubbera a fsdf:Source ;
+    dcterms:description "Orthophotography_15cm_Mundubbera"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Orthophotography_15cm_Mundubbera"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:orthophotography_15cm_mungallala a fsdf:Source ;
+    dcterms:description "Orthophotography_15cm_Mungallala"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Orthophotography_15cm_Mungallala"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:orthophotography_15cm_nebo a fsdf:Source ;
+    dcterms:description "Orthophotography_15cm_Nebo"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Orthophotography_15cm_Nebo"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:orthophotography_15cm_peakcrossing a fsdf:Source ;
+    dcterms:description "Orthophotography_15cm_Peak Crossing"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Orthophotography_15cm_Peak Crossing"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:orthophotography_15cm_portdouglas a fsdf:Source ;
+    dcterms:description "Orthophotography_15cm_Port Douglas"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Orthophotography_15cm_Port Douglas"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:orthophotography_15cm_rainbowbeach a fsdf:Source ;
+    dcterms:description "Orthophotography_15cm_Rainbow Beach"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Orthophotography_15cm_Rainbow Beach"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:orthophotography_15cm_rathdowney a fsdf:Source ;
+    dcterms:description "Orthophotography_15cm_Rathdowney"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Orthophotography_15cm_Rathdowney"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:orthophotography_15cm_richmond a fsdf:Source ;
+    dcterms:description "Orthophotography_15cm_Richmond"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Orthophotography_15cm_Richmond"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:orthophotography_15cm_rolleston a fsdf:Source ;
+    dcterms:description "Orthophotography_15cm_Rolleston"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Orthophotography_15cm_Rolleston"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:orthophotography_15cm_roma a fsdf:Source ;
+    dcterms:description "Orthophotography_15cm_Roma"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Orthophotography_15cm_Roma"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:orthophotography_15cm_saintgeorge a fsdf:Source ;
+    dcterms:description "Orthophotography_15cm_Saint George"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Orthophotography_15cm_Saint George"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:orthophotography_15cm_surat a fsdf:Source ;
+    dcterms:description "Orthophotography_15cm_Surat"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Orthophotography_15cm_Surat"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:orthophotography_15cm_talwood a fsdf:Source ;
+    dcterms:description "Orthophotography_15cm_Talwood"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Orthophotography_15cm_Talwood"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:orthophotography_15cm_taroom a fsdf:Source ;
+    dcterms:description "Orthophotography_15cm_Taroom"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Orthophotography_15cm_Taroom"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:orthophotography_15cm_texas a fsdf:Source ;
+    dcterms:description "Orthophotography_15cm_Texas"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Orthophotography_15cm_Texas"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:orthophotography_15cm_thallon a fsdf:Source ;
+    dcterms:description "Orthophotography_15cm_Thallon"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Orthophotography_15cm_Thallon"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:orthophotography_15cm_thangool a fsdf:Source ;
+    dcterms:description "Orthophotography_15cm_Thangool"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Orthophotography_15cm_Thangool"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:orthophotography_15cm_thargomindah a fsdf:Source ;
+    dcterms:description "Orthophotography_15cm_Thargomindah"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Orthophotography_15cm_Thargomindah"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:orthophotography_15cm_theodore a fsdf:Source ;
+    dcterms:description "Orthophotography_15cm_Theodore"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Orthophotography_15cm_Theodore"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:orthophotography_15cm_tincanbay a fsdf:Source ;
+    dcterms:description "Orthophotography_15cm_Tin Can Bay"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Orthophotography_15cm_Tin Can Bay"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:orthophotography_15cm_toogoolawah a fsdf:Source ;
+    dcterms:description "Orthophotography_15cm_Toogoolawah"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Orthophotography_15cm_Toogoolawah"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:orthophotography_15cm_wallumbilla a fsdf:Source ;
+    dcterms:description "Orthophotography_15cm_Wallumbilla"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Orthophotography_15cm_Wallumbilla"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:orthophotography_15cm_warrilview a fsdf:Source ;
+    dcterms:description "Orthophotography_15cm_Warril View"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Orthophotography_15cm_Warril View"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:orthophotography_15cm_wowan a fsdf:Source ;
+    dcterms:description "Orthophotography_15cm_Wowan"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Orthophotography_15cm_Wowan"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:orthophotography_15cm_wujalwujal a fsdf:Source ;
+    dcterms:description "Orthophotography_15cm_Wujal Wujal"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Orthophotography_15cm_Wujal Wujal"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:orthophotography_15cm_yelarbon a fsdf:Source ;
+    dcterms:description "Orthophotography_15cm_Yelarbon"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Orthophotography_15cm_Yelarbon"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:orthophotography_15cm_yuleba a fsdf:Source ;
+    dcterms:description "Orthophotography_15cm_Yuleba"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Orthophotography_15cm_Yuleba"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:orthophotography_20cm_alpha a fsdf:Source ;
+    dcterms:description "Orthophotography_20cm_Alpha"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Orthophotography_20cm_Alpha"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:orthophotography_20cm_amiens a fsdf:Source ;
+    dcterms:description "Orthophotography_20cm_Amiens"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Orthophotography_20cm_Amiens"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:orthophotography_20cm_applethorpe a fsdf:Source ;
+    dcterms:description "Orthophotography_20cm_Applethorpe"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Orthophotography_20cm_Applethorpe"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:orthophotography_20cm_ballandean a fsdf:Source ;
+    dcterms:description "Orthophotography_20cm_Ballandean"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Orthophotography_20cm_Ballandean"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:orthophotography_20cm_boulia a fsdf:Source ;
+    dcterms:description "Orthophotography_20cm_Boulia"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Orthophotography_20cm_Boulia"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:orthophotography_20cm_cherbourg a fsdf:Source ;
+    dcterms:description "Orthophotography_20cm_Cherbourg"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Orthophotography_20cm_Cherbourg"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:orthophotography_20cm_cloncurry a fsdf:Source ;
+    dcterms:description "Orthophotography_20cm_Cloncurry"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Orthophotography_20cm_Cloncurry"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:orthophotography_20cm_conondale a fsdf:Source ;
+    dcterms:description "Orthophotography_20cm_Conondale"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Orthophotography_20cm_Conondale"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:orthophotography_20cm_cottonvale a fsdf:Source ;
+    dcterms:description "Orthophotography_20cm_Cottonvale"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Orthophotography_20cm_Cottonvale"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:orthophotography_20cm_dalveen a fsdf:Source ;
+    dcterms:description "Orthophotography_20cm_Dalveen"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Orthophotography_20cm_Dalveen"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:orthophotography_20cm_emerald a fsdf:Source ;
+    dcterms:description "Orthophotography_20cm_Emerald"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Orthophotography_20cm_Emerald"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:orthophotography_20cm_glenaplin a fsdf:Source ;
+    dcterms:description "Orthophotography_20cm_Glen Aplin"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Orthophotography_20cm_Glen Aplin"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:orthophotography_20cm_jericho a fsdf:Source ;
+    dcterms:description "Orthophotography_20cm_Jericho"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Orthophotography_20cm_Jericho"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:orthophotography_20cm_jundah a fsdf:Source ;
+    dcterms:description "Orthophotography_20cm_Jundah"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Orthophotography_20cm_Jundah"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:orthophotography_20cm_karara a fsdf:Source ;
+    dcterms:description "Orthophotography_20cm_Karara"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Orthophotography_20cm_Karara"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:orthophotography_20cm_kenilworth a fsdf:Source ;
+    dcterms:description "Orthophotography_20cm_Kenilworth"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Orthophotography_20cm_Kenilworth"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:orthophotography_20cm_kingaroy a fsdf:Source ;
+    dcterms:description "Orthophotography_20cm_Kingaroy"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Orthophotography_20cm_Kingaroy"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:orthophotography_20cm_kumbia a fsdf:Source ;
+    dcterms:description "Orthophotography_20cm_Kumbia"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Orthophotography_20cm_Kumbia"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:orthophotography_20cm_maryvale a fsdf:Source ;
+    dcterms:description "Orthophotography_20cm_Maryvale"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Orthophotography_20cm_Maryvale"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:orthophotography_20cm_murgon a fsdf:Source ;
+    dcterms:description "Orthophotography_20cm_Murgon"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Orthophotography_20cm_Murgon"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:orthophotography_20cm_muttaburra a fsdf:Source ;
+    dcterms:description "Orthophotography_20cm_Muttaburra"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Orthophotography_20cm_Muttaburra"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:orthophotography_20cm_proston a fsdf:Source ;
+    dcterms:description "Orthophotography_20cm_Proston"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Orthophotography_20cm_Proston"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:orthophotography_20cm_tambo a fsdf:Source ;
+    dcterms:description "Orthophotography_20cm_Tambo"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Orthophotography_20cm_Tambo"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:orthophotography_20cm_tannymorel a fsdf:Source ;
+    dcterms:description "Orthophotography_20cm_Tannymorel"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Orthophotography_20cm_Tannymorel"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:orthophotography_20cm_thesummit a fsdf:Source ;
+    dcterms:description "Orthophotography_20cm_The Summit"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Orthophotography_20cm_The Summit"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:orthophotography_20cm_tingoora a fsdf:Source ;
+    dcterms:description "Orthophotography_20cm_Tingoora"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Orthophotography_20cm_Tingoora"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:orthophotography_20cm_urandangi a fsdf:Source ;
+    dcterms:description "Orthophotography_20cm_Urandangi"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Orthophotography_20cm_Urandangi"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:orthophotography_20cm_winton a fsdf:Source ;
+    dcterms:description "Orthophotography_20cm_Winton"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Orthophotography_20cm_Winton"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:orthophotography_20cm_wondai a fsdf:Source ;
+    dcterms:description "Orthophotography_20cm_Wondai"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Orthophotography_20cm_Wondai"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:orthophotography_20cm_yangan a fsdf:Source ;
+    dcterms:description "Orthophotography_20cm_Yangan"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Orthophotography_20cm_Yangan"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:orthophotography_25cm_burketown a fsdf:Source ;
+    dcterms:description "Orthophotography_25cm_Burketown"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Orthophotography_25cm_Burketown"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:orthophotography_25cm_doomadgee a fsdf:Source ;
+    dcterms:description "Orthophotography_25cm_Doomadgee"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Orthophotography_25cm_Doomadgee"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:orthophotography_25cm_greatpalmisland a fsdf:Source ;
+    dcterms:description "Orthophotography_25cm_Great Palm Island"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Orthophotography_25cm_Great Palm Island"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:orthophotography_25cm_kowanyama a fsdf:Source ;
+    dcterms:description "Orthophotography_25cm_Kowanyama"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Orthophotography_25cm_Kowanyama"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:orthophotography_25cm_normanton a fsdf:Source ;
+    dcterms:description "Orthophotography_25cm_Normanton"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Orthophotography_25cm_Normanton"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:orthophotography_25cm_sheepstation a fsdf:Source ;
+    dcterms:description "Orthophotography_25cm_Sheepstation"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Orthophotography_25cm_Sheepstation"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:orthophotography_25cm_townsville a fsdf:Source ;
+    dcterms:description "Orthophotography_25cm_Townsville"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Orthophotography_25cm_Townsville"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:orthophotography_25cm_weipa a fsdf:Source ;
+    dcterms:description "Orthophotography_25cm_Weipa"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Orthophotography_25cm_Weipa"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:orthophotography_30cm_moretonbayrural a fsdf:Source ;
+    dcterms:description "Orthophotography_30cm_Moreton Bay Rural"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Orthophotography_30cm_Moreton Bay Rural"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:orthophotography_40cm_9348bundaberg a fsdf:Source ;
+    dcterms:description "Orthophotography_40cm_9348 Bundaberg"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Orthophotography_40cm_9348 Bundaberg"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:orthophotography_40cm_9447pialba a fsdf:Source ;
+    dcterms:description "Orthophotography_40cm_9447 Pialba"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Orthophotography_40cm_9447 Pialba"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:orthophotography_50cm_capricorn a fsdf:Source ;
+    dcterms:description "Orthophotography_50cm_Capricorn"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Orthophotography_50cm_Capricorn"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:orthophotography_50cm_centralqld a fsdf:Source ;
+    dcterms:description "Orthophotography_50cm_Central Qld"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Orthophotography_50cm_Central Qld"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:orthophotography_50cm_northqld_south a fsdf:Source ;
+    dcterms:description "Orthophotography_50cm_North Qld_South"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Orthophotography_50cm_North Qld_South"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:orthophotography_50cm_seqld a fsdf:Source ;
+    dcterms:description "Orthophotography_50cm_SE Qld"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Orthophotography_50cm_SE Qld"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:orthophotography_50cm_widebay a fsdf:Source ;
+    dcterms:description "Orthophotography_50cm_Wide Bay"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Orthophotography_50cm_Wide Bay"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:orthophotography_60cm_8063bartlefrere a fsdf:Source ;
+    dcterms:description "Orthophotography_60cm_8063 Bartle Frere"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Orthophotography_60cm_8063 Bartle Frere"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:orthophotography_60cm_8064cairns a fsdf:Source ;
+    dcterms:description "Orthophotography_60cm_8064 Cairns"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Orthophotography_60cm_8064 Cairns"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:orthophotography_60cm_8554harrybrandt a fsdf:Source ;
+    dcterms:description "Orthophotography_60cm_8554 Harrybrandt"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Orthophotography_60cm_8554 Harrybrandt"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:orthophotography_60cm_8755mackay a fsdf:Source ;
+    dcterms:description "Orthophotography_60cm_8755 Mackay"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Orthophotography_60cm_8755 Mackay"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:orthophotography_60cm_8951ridgelands a fsdf:Source ;
+    dcterms:description "Orthophotography_60cm_8951 Ridgelands"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Orthophotography_60cm_8951 Ridgelands"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:orthophotography_60cm_9051rockhampton a fsdf:Source ;
+    dcterms:description "Orthophotography_60cm_9051 Rockhampton"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Orthophotography_60cm_9051 Rockhampton"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:orthophotography_60cm_9150gladstone a fsdf:Source ;
+    dcterms:description "Orthophotography_60cm_9150 Gladstone"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Orthophotography_60cm_9150 Gladstone"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:orthophotography_60cm_9242toowoomba a fsdf:Source ;
+    dcterms:description "Orthophotography_60cm_9242 Toowoomba"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Orthophotography_60cm_9242 Toowoomba"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:orthophotography_60cm_9244kingaroy a fsdf:Source ;
+    dcterms:description "Orthophotography_60cm_9244 Kingaroy"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Orthophotography_60cm_9244 Kingaroy"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:orthophotography_60cm_9343esk a fsdf:Source ;
+    dcterms:description "Orthophotography_60cm_9343 Esk"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Orthophotography_60cm_9343 Esk"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:orthophotography_60cm_9442ipswich a fsdf:Source ;
+    dcterms:description "Orthophotography_60cm_9442 Ipswich"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Orthophotography_60cm_9442 Ipswich"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:orthophotography_60cm_9443caboolture a fsdf:Source ;
+    dcterms:description "Orthophotography_60cm_9443 Caboolture"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Orthophotography_60cm_9443 Caboolture"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:orthophotography_60cm_9446maryborough a fsdf:Source ;
+    dcterms:description "Orthophotography_60cm_9446 Maryborough"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Orthophotography_60cm_9446 Maryborough"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:orthophotography_60cm_9541murwillumbah a fsdf:Source ;
+    dcterms:description "Orthophotography_60cm_9541 Murwillumbah"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Orthophotography_60cm_9541 Murwillumbah"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:orthophotography_60cm_9542beenleigh a fsdf:Source ;
+    dcterms:description "Orthophotography_60cm_9542 Beenleigh"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Orthophotography_60cm_9542 Beenleigh"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:orthophotography_60cm_9543brisbane a fsdf:Source ;
+    dcterms:description "Orthophotography_60cm_9543 Brisbane"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Orthophotography_60cm_9543 Brisbane"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:orthophotography_60cm_9544caloundra a fsdf:Source ;
+    dcterms:description "Orthophotography_60cm_9544 Caloundra"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Orthophotography_60cm_9544 Caloundra"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:orthophotography_60cm_9545lagunabay a fsdf:Source ;
+    dcterms:description "Orthophotography_60cm_9545 Laguna Bay"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Orthophotography_60cm_9545 Laguna Bay"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:orthophotography_60cm_umagicobamaga a fsdf:Source ;
+    dcterms:description "Orthophotography_60cm_Umagico Bamaga"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Orthophotography_60cm_Umagico Bamaga"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:orthophotography_6pt25cm_stanthorpe a fsdf:Source ;
+    dcterms:description "Orthophotography_6pt25cm_Stanthorpe"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Orthophotography_6pt25cm_Stanthorpe"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:orthophotography_6pt25cm_wallangarra a fsdf:Source ;
+    dcterms:description "Orthophotography_6pt25cm_Wallangarra"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Orthophotography_6pt25cm_Wallangarra"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:parkridgechildcarewebsite a fsdf:Source ;
+    dcterms:description "Park Ridge Child Care Website"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Park Ridge Child Care Website"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:perthenergywebsite a fsdf:Source ;
+    dcterms:description "Perth Energy Website"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Perth Energy Website"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:perthzoowebsite a fsdf:Source ;
+    dcterms:description "Perth Zoo Website"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Perth Zoo Website"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:pointsofinterestupdateprogram a fsdf:Source ;
+    dcterms:description "Points of Interest Update Program"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Points of Interest Update Program"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:powerlinkwebsite a fsdf:Source ;
+    dcterms:description "Powerlink Website"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Powerlink Website"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:private_hospitals_august_2019.shp a fsdf:Source ;
+    dcterms:description "Private_Hospitals_August_2019.shp"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Private_Hospitals_August_2019.shp"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:public_hospitals_2017-18.shp a fsdf:Source ;
+    dcterms:description "Public_Hospitals_2017-18.shp"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Public_Hospitals_2017-18.shp"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:qld_125000topographicdata_806423cairns a fsdf:Source ;
+    dcterms:description "Qld_1:25000 Topographic Data_806423 Cairns"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Qld_1:25000 Topographic Data_806423 Cairns"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:qld_125000topographicdata_944724herveybay a fsdf:Source ;
+    dcterms:description "Qld_1:25000 Topographic Data_944724 Hervey Bay"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Qld_1:25000 Topographic Data_944724 Hervey Bay"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:qld_depteducationtrainingandemployment a fsdf:Source ;
+    dcterms:description "Qld_Dept Education,Training and Employment"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Qld_Dept Education,Training and Employment"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:qldgovernment_fieldcheck a fsdf:Source ;
+    dcterms:description "Qld Government_Field Check"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Qld Government_Field Check"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:qldgovernmentwebsite a fsdf:Source ;
+    dcterms:description "QLD Government Website"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "QLD Government Website"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:queenvictoriamarketwebsite a fsdf:Source ;
+    dcterms:description "Queen Victoria Market Website"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Queen Victoria Market Website"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:riotintoandhancockprospectingopennewmineathopedownswebsite a fsdf:Source ;
+    dcterms:description "Rio Tinto and Hancock Prospecting open new mine at Hope Downs Website"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Rio Tinto and Hancock Prospecting open new mine at Hope Downs Website"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:riotintositereport a fsdf:Source ;
+    dcterms:description "Rio Tinto Site Report"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Rio Tinto Site Report"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:riotintowebsite a fsdf:Source ;
+    dcterms:description "Rio Tinto Website"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Rio Tinto Website"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:ruralfireservice a fsdf:Source ;
+    dcterms:description "Rural Fire Service"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Rural Fire Service"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:ses.nsw.gov.au a fsdf:Source ;
+    dcterms:description "http://ses.nsw.gov.au"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "http://ses.nsw.gov.au"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:sitawebsite a fsdf:Source ;
+    dcterms:description "SITA Website"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "SITA Website"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:spotsatelliteimagery_2pt5m_allora a fsdf:Source ;
+    dcterms:description "Spot Satellite Imagery_2pt5m_Allora"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Spot Satellite Imagery_2pt5m_Allora"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:spotsatelliteimagery_2pt5m_anakie a fsdf:Source ;
+    dcterms:description "Spot Satellite Imagery_2pt5m_Anakie"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Spot Satellite Imagery_2pt5m_Anakie"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:spotsatelliteimagery_2pt5m_arcadia a fsdf:Source ;
+    dcterms:description "Spot Satellite Imagery_2pt5m_Arcadia"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Spot Satellite Imagery_2pt5m_Arcadia"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:spotsatelliteimagery_2pt5m_auburn a fsdf:Source ;
+    dcterms:description "Spot Satellite Imagery_2pt5m_Auburn"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Spot Satellite Imagery_2pt5m_Auburn"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:spotsatelliteimagery_2pt5m_banana a fsdf:Source ;
+    dcterms:description "Spot Satellite Imagery_2pt5m_Banana"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Spot Satellite Imagery_2pt5m_Banana"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:spotsatelliteimagery_2pt5m_bauhinia a fsdf:Source ;
+    dcterms:description "Spot Satellite Imagery_2pt5m_Bauhinia"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Spot Satellite Imagery_2pt5m_Bauhinia"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:spotsatelliteimagery_2pt5m_bidgel a fsdf:Source ;
+    dcterms:description "Spot Satellite Imagery_2pt5m_Bidgel"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Spot Satellite Imagery_2pt5m_Bidgel"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:spotsatelliteimagery_2pt5m_biloela a fsdf:Source ;
+    dcterms:description "Spot Satellite Imagery_2pt5m_Biloela"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Spot Satellite Imagery_2pt5m_Biloela"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:spotsatelliteimagery_2pt5m_bombandy a fsdf:Source ;
+    dcterms:description "Spot Satellite Imagery_2pt5m_Bombandy"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Spot Satellite Imagery_2pt5m_Bombandy"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:spotsatelliteimagery_2pt5m_boondooma a fsdf:Source ;
+    dcterms:description "Spot Satellite Imagery_2pt5m_Boondooma"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Spot Satellite Imagery_2pt5m_Boondooma"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:spotsatelliteimagery_2pt5m_bungaban a fsdf:Source ;
+    dcterms:description "Spot Satellite Imagery_2pt5m_Bungaban"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Spot Satellite Imagery_2pt5m_Bungaban"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:spotsatelliteimagery_2pt5m_bungunya a fsdf:Source ;
+    dcterms:description "Spot Satellite Imagery_2pt5m_Bungunya"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Spot Satellite Imagery_2pt5m_Bungunya"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:spotsatelliteimagery_2pt5m_camerondowns a fsdf:Source ;
+    dcterms:description "Spot Satellite Imagery_2pt5m_Cameron Downs"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Spot Satellite Imagery_2pt5m_Cameron Downs"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:spotsatelliteimagery_2pt5m_capella a fsdf:Source ;
+    dcterms:description "Spot Satellite Imagery_2pt5m_Capella"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Spot Satellite Imagery_2pt5m_Capella"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:spotsatelliteimagery_2pt5m_charterstowers a fsdf:Source ;
+    dcterms:description "Spot Satellite Imagery_2pt5m_Charters Towers"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Spot Satellite Imagery_2pt5m_Charters Towers"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:spotsatelliteimagery_2pt5m_collinsville a fsdf:Source ;
+    dcterms:description "Spot Satellite Imagery_2pt5m_Collinsville"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Spot Satellite Imagery_2pt5m_Collinsville"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:spotsatelliteimagery_2pt5m_comet a fsdf:Source ;
+    dcterms:description "Spot Satellite Imagery_2pt5m_Comet"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Spot Satellite Imagery_2pt5m_Comet"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:spotsatelliteimagery_2pt5m_condamine a fsdf:Source ;
+    dcterms:description "Spot Satellite Imagery_2pt5m_Condamine"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Spot Satellite Imagery_2pt5m_Condamine"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:spotsatelliteimagery_2pt5m_conjuboy a fsdf:Source ;
+    dcterms:description "Spot Satellite Imagery_2pt5m_Conjuboy"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Spot Satellite Imagery_2pt5m_Conjuboy"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:spotsatelliteimagery_2pt5m_dingo a fsdf:Source ;
+    dcterms:description "Spot Satellite Imagery_2pt5m_Dingo"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Spot Satellite Imagery_2pt5m_Dingo"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:spotsatelliteimagery_2pt5m_duaringa a fsdf:Source ;
+    dcterms:description "Spot Satellite Imagery_2pt5m_Duaringa"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Spot Satellite Imagery_2pt5m_Duaringa"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:spotsatelliteimagery_2pt5m_emerald a fsdf:Source ;
+    dcterms:description "Spot Satellite Imagery_2pt5m_Emerald"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Spot Satellite Imagery_2pt5m_Emerald"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:spotsatelliteimagery_2pt5m_fitzroybasin a fsdf:Source ;
+    dcterms:description "Spot Satellite Imagery_2pt5m_Fitzroy Basin"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Spot Satellite Imagery_2pt5m_Fitzroy Basin"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:spotsatelliteimagery_2pt5m_flinton a fsdf:Source ;
+    dcterms:description "Spot Satellite Imagery_2pt5m_Flinton"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Spot Satellite Imagery_2pt5m_Flinton"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:spotsatelliteimagery_2pt5m_guluguba a fsdf:Source ;
+    dcterms:description "Spot Satellite Imagery_2pt5m_Guluguba"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Spot Satellite Imagery_2pt5m_Guluguba"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:spotsatelliteimagery_2pt5m_harrybrandt a fsdf:Source ;
+    dcterms:description "Spot Satellite Imagery_2pt5m_Harrybrandt"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Spot Satellite Imagery_2pt5m_Harrybrandt"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:spotsatelliteimagery_2pt5m_hillalong a fsdf:Source ;
+    dcterms:description "Spot Satellite Imagery_2pt5m_Hillalong"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Spot Satellite Imagery_2pt5m_Hillalong"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:spotsatelliteimagery_2pt5m_homestead a fsdf:Source ;
+    dcterms:description "Spot Satellite Imagery_2pt5m_Homestead"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Spot Satellite Imagery_2pt5m_Homestead"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:spotsatelliteimagery_2pt5m_hornetbank a fsdf:Source ;
+    dcterms:description "Spot Satellite Imagery_2pt5m_Hornet Bank"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Spot Satellite Imagery_2pt5m_Hornet Bank"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:spotsatelliteimagery_2pt5m_hughenden a fsdf:Source ;
+    dcterms:description "Spot Satellite Imagery_2pt5m_Hughenden"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Spot Satellite Imagery_2pt5m_Hughenden"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:spotsatelliteimagery_2pt5m_jandowae a fsdf:Source ;
+    dcterms:description "Spot Satellite Imagery_2pt5m_Jandowae"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Spot Satellite Imagery_2pt5m_Jandowae"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:spotsatelliteimagery_2pt5m_kilcummin a fsdf:Source ;
+    dcterms:description "Spot Satellite Imagery_2pt5m_Kilcummin"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Spot Satellite Imagery_2pt5m_Kilcummin"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:spotsatelliteimagery_2pt5m_monteagle a fsdf:Source ;
+    dcterms:description "Spot Satellite Imagery_2pt5m_Monteagle"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Spot Satellite Imagery_2pt5m_Monteagle"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:spotsatelliteimagery_2pt5m_monto a fsdf:Source ;
+    dcterms:description "Spot Satellite Imagery_2pt5m_Monto"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Spot Satellite Imagery_2pt5m_Monto"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:spotsatelliteimagery_2pt5m_moonie a fsdf:Source ;
+    dcterms:description "Spot Satellite Imagery_2pt5m_Moonie"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Spot Satellite Imagery_2pt5m_Moonie"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:spotsatelliteimagery_2pt5m_mountbluffkin a fsdf:Source ;
+    dcterms:description "Spot Satellite Imagery_2pt5m_Mount Bluffkin"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Spot Satellite Imagery_2pt5m_Mount Bluffkin"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:spotsatelliteimagery_2pt5m_mountperry a fsdf:Source ;
+    dcterms:description "Spot Satellite Imagery_2pt5m_Mount Perry"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Spot Satellite Imagery_2pt5m_Mount Perry"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:spotsatelliteimagery_2pt5m_mountsurprise a fsdf:Source ;
+    dcterms:description "Spot Satellite Imagery_2pt5m_Mount Surprise"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Spot Satellite Imagery_2pt5m_Mount Surprise"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:spotsatelliteimagery_2pt5m_muckadilla a fsdf:Source ;
+    dcterms:description "Spot Satellite Imagery_2pt5m_Muckadilla"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Spot Satellite Imagery_2pt5m_Muckadilla"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:spotsatelliteimagery_2pt5m_mundubbera a fsdf:Source ;
+    dcterms:description "Spot Satellite Imagery_2pt5m_Mundubbera"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Spot Satellite Imagery_2pt5m_Mundubbera"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:spotsatelliteimagery_2pt5m_orallo a fsdf:Source ;
+    dcterms:description "Spot Satellite Imagery_2pt5m_Orallo"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Spot Satellite Imagery_2pt5m_Orallo"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:spotsatelliteimagery_2pt5m_pentland a fsdf:Source ;
+    dcterms:description "Spot Satellite Imagery_2pt5m_Pentland"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Spot Satellite Imagery_2pt5m_Pentland"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:spotsatelliteimagery_2pt5m_prairie a fsdf:Source ;
+    dcterms:description "Spot Satellite Imagery_2pt5m_Prairie"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Spot Satellite Imagery_2pt5m_Prairie"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:spotsatelliteimagery_2pt5m_proserpine a fsdf:Source ;
+    dcterms:description "Spot Satellite Imagery_2pt5m_Proserpine"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Spot Satellite Imagery_2pt5m_Proserpine"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:spotsatelliteimagery_2pt5m_saintgeorge a fsdf:Source ;
+    dcterms:description "Spot Satellite Imagery_2pt5m_Saint George"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Spot Satellite Imagery_2pt5m_Saint George"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:spotsatelliteimagery_2pt5m_seqld_burnett_mary a fsdf:Source ;
+    dcterms:description "Spot Satellite Imagery_2pt5m_SE Qld_Burnett_Mary"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Spot Satellite Imagery_2pt5m_SE Qld_Burnett_Mary"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:spotsatelliteimagery_2pt5m_springsure a fsdf:Source ;
+    dcterms:description "Spot Satellite Imagery_2pt5m_Springsure"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Spot Satellite Imagery_2pt5m_Springsure"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:spotsatelliteimagery_2pt5m_stanthorpe a fsdf:Source ;
+    dcterms:description "Spot Satellite Imagery_2pt5m_Stanthorpe"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Spot Satellite Imagery_2pt5m_Stanthorpe"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:spotsatelliteimagery_2pt5m_tara a fsdf:Source ;
+    dcterms:description "Spot Satellite Imagery_2pt5m_Tara"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Spot Satellite Imagery_2pt5m_Tara"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:spotsatelliteimagery_2pt5m_taroom a fsdf:Source ;
+    dcterms:description "Spot Satellite Imagery_2pt5m_Taroom"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Spot Satellite Imagery_2pt5m_Taroom"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:spotsatelliteimagery_2pt5m_warwick a fsdf:Source ;
+    dcterms:description "Spot Satellite Imagery_2pt5m_Warwick"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Spot Satellite Imagery_2pt5m_Warwick"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:spotsatelliteimagery_2pt5m_windeyershill a fsdf:Source ;
+    dcterms:description "Spot Satellite Imagery_2pt5m_Windeyers Hill"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Spot Satellite Imagery_2pt5m_Windeyers Hill"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:spotsatelliteimagery_2pt5m_wyaga a fsdf:Source ;
+    dcterms:description "Spot Satellite Imagery_2pt5m_Wyaga"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Spot Satellite Imagery_2pt5m_Wyaga"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:standardtopographiccaptureprogram a fsdf:Source ;
+    dcterms:description "Standard Topographic Capture Program"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Standard Topographic Capture Program"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:stanwellwebsite a fsdf:Source ;
+    dcterms:description "Stanwell Website"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Stanwell Website"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:transaltawebsite a fsdf:Source ;
+    dcterms:description "TransAlta Website"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "TransAlta Website"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:transgrid a fsdf:Source ;
+    dcterms:description "TransGrid"@en,
+        "Transgrid"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "TransGrid"@en,
+        "Transgrid"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:transgridannualreport2011 a fsdf:Source ;
+    dcterms:description "Transgrid Annual Report 2011"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Transgrid Annual Report 2011"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:tullysugarwebsite a fsdf:Source ;
+    dcterms:description "Tully Sugar Website"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Tully Sugar Website"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:universityofqueenslandwebsite a fsdf:Source ;
+    dcterms:description "University of Queensland Website"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "University of Queensland Website"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:verveenergy a fsdf:Source ;
+    dcterms:description "Verve Energy"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Verve Energy"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:verveenergywebsite a fsdf:Source ;
+    dcterms:description "Verve Energy Website"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Verve Energy Website"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:vervewebsite a fsdf:Source ;
+    dcterms:description "Verve Website"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Verve Website"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:wadeptcommercewebsite a fsdf:Source ;
+    dcterms:description "WA Dept Commerce Website"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "WA Dept Commerce Website"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:waeconomicregulationauthority a fsdf:Source ;
+    dcterms:description "WA Economic Regulation Authority"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "WA Economic Regulation Authority"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:waeconomicregulationauthoritywebsite a fsdf:Source ;
+    dcterms:description "WA Economic Regulation Authority Website"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "WA Economic Regulation Authority Website"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:waepawebsite a fsdf:Source ;
+    dcterms:description "WA EPA Website"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "WA EPA Website"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:wafinancewebsite a fsdf:Source ;
+    dcterms:description "WA Finance website"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "WA Finance website"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:wagovernment-midwestdevelopmentcommission a fsdf:Source ;
+    dcterms:description "WA Government - Mid West Development Commission"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "WA Government - Mid West Development Commission"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:wastjohnambulance a fsdf:Source ;
+    dcterms:description "WA St John Ambulance"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "WA St John Ambulance"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:watercorporationwebsite a fsdf:Source ;
+    dcterms:description "Water Corporation Website"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Water Corporation Website"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:westaustralianplanningcommission a fsdf:Source ;
+    dcterms:description "West Australian Planning Commission"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "West Australian Planning Commission"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:westernaustraliadistributionsconnectionsmanual2011 a fsdf:Source ;
+    dcterms:description "Western Australia Distributions Connections Manual 2011"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Western Australia Distributions Connections Manual 2011"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:westerndiv.captureprogram a fsdf:Source ;
+    dcterms:description "Western Div. Capture  Program"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Western Div. Capture  Program"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:westernpower2011annualplanningreport a fsdf:Source ;
+    dcterms:description "Western Power 2011 Annual Planning Report"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Western Power 2011 Annual Planning Report"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:westernpowermediarelease a fsdf:Source ;
+    dcterms:description "Western Power Media Release"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Western Power Media Release"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:westernpowerwebsite a fsdf:Source ;
+    dcterms:description "Western Power Website"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Western Power Website"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:whereiswebsite a fsdf:Source ;
+    dcterms:description "Whereis Website"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Whereis Website"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:wikipedia a fsdf:Source ;
+    dcterms:description "Wikipedia"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Wikipedia"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:winsladewebsite a fsdf:Source ;
+    dcterms:description "Winslade Website"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Winslade Website"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:www.afp.gov.au a fsdf:Source ;
+    dcterms:description "www.afp.gov.au"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "www.afp.gov.au"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:www.cfs.sa.gov.au a fsdf:Source ;
+    dcterms:description "http://www.cfs.sa.gov.au"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "http://www.cfs.sa.gov.au"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:www.finance.wa.gov.au a fsdf:Source ;
+    dcterms:description "https://www.finance.wa.gov.au"@en,
+        "www.finance.wa.gov.au"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "https://www.finance.wa.gov.au"@en,
+        "www.finance.wa.gov.au"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:www.mfs.sa.gov.au a fsdf:Source ;
+    dcterms:description "http://www.mfs.sa.gov.au"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "http://www.mfs.sa.gov.au"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:www.police.sa.gov.au a fsdf:Source ;
+    dcterms:description "http://www.police.sa.gov.au"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "http://www.police.sa.gov.au"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:www.saambulance.com.au a fsdf:Source ;
+    dcterms:description "http://www.saambulance.com.au"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "http://www.saambulance.com.au"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:www.ses.sa.gov.au a fsdf:Source ;
+    dcterms:description "http://www.ses.sa.gov.au"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "http://www.ses.sa.gov.au"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:www.stjohnsa.com.au a fsdf:Source ;
+    dcterms:description "http://www.stjohnsa.com.au"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "http://www.stjohnsa.com.au"@en ;
+    rdfs:isDefinedBy dg: .
+
+source:yourcitywebsite a fsdf:Source ;
+    dcterms:description "Your City Website"@en ;
+    dcterms:isPartOf dg: ;
+    dcterms:title "Your City Website"@en ;
+    rdfs:isDefinedBy dg: .
+
+dg: a owl:Ontology ;
     dcterms:created "2021-07-27"^^xsd:date ;
+    dcterms:creator <https://linked.data.gov.au/org/ga> ;
+    dcterms:description "This data graph lists all of the sources of information given for entries in the various other SDF datasets, such as web pages, direct agency contact etc."@en ;
+    dcterms:hasPart source:2009transmissionanddistributionannualreport,
+        source:acengineeringwebsite,
+        source:actemergencyservicesagency,
+        source:actewagl,
+        source:actgovtdataintegrationprogram,
+        source:activeactivitieswebsite,
+        source:aemo-australianenergymarketoperators2012,
+        source:aemo-australianenergymarketoperators2013,
+        source:aemo-australianenergymarketoperators2015,
+        source:aemo-australianenergymarketoperators2016,
+        source:aemo-australianenergymarketoperators2019,
+        source:aemo_esoo2011chapter4.pdf,
+        source:aemogeneratorlist,
+        source:aged_care_services_oct_2019.shp,
+        source:aglwebsite,
+        source:airservicesaustralia,
+        source:albanywindfarm.pdf,
+        source:albertwaterwaysccwebsite,
+        source:alcoaelectricitygenerationlicence14.pdf,
+        source:alicesolarcitywebsite,
+        source:alintaenergywebsite,
+        source:alintawebsiteenergywisewinter2007,
+        source:alossatelliteimagery_2pt5m_northqldzone54,
+        source:alossatelliteimagery_2pt5m_westqld,
+        source:ambulancensw,
+        source:ambulanceserviceofnsw,
+        source:anaecowebsite,
+        source:anglogoldashantiwebsite,
+        source:apagroup,
+        source:argylediamondswebsite,
+        source:atcopowerwebsite,
+        source:aussiewebwebsite,
+        source:australianpapersustainabilityreport2010,
+        source:barrickwebsite,
+        source:benowachildrenscentreswebsite,
+        source:boardofstudiesnsw,
+        source:callideoxyfuelprojectwebsite,
+        source:careforkidswebsite,
+        source:catalogue.data.wa.gov.au-dataset-dfes-stations,
+        source:catalogue.data.wa.gov.au-dataset-wa-police-stations,
+        source:childersolarfarm,
+        source:citicpacificminingwebsite,
+        source:cityofcockburnwebsite,
+        source:citywestcabletunnelsubmissionsreport,
+        source:cleaneenergycouncilwebsite,
+        source:cleanenergycouncilwebsite,
+        source:cloncurrynon-networkoptionsreport,
+        source:cloncurrynon-networkoptionsreportpage6,
+        source:contactpowerwebsite,
+        source:contractpowerwebsite,
+        source:csirowebsite,
+        source:data.qld.gov.au,
+        source:data.vic.gov.au,
+        source:departmentofeducationandcommunitiesnsw,
+        source:departmentofprimaryindustries,
+        source:dpipwe,
+        source:echildcarewebsite,
+        source:electranetwebsite,
+        source:electricity-generation-map,
+        source:energydevelopmentswebsite,
+        source:energynewsbulletinwebsite,
+        source:ergonenergywebsite,
+        source:esriworldimagery,
+        source:essentialenergy,
+        source:firerescuensw,
+        source:fortesqueminewebsite,
+        source:ga2009powerstationsdatabase,
+        source:ga_1:250000topographicdata_sg5615brisbane,
+        source:ga_1:250000topographicdata_sh563tweedheads,
+        source:ga_fieldcheck,
+        source:ga_nationaltopographicinfocoordinitiative,
+        source:gascoynedevelopmentcommissionwebsite,
+        source:globalenergyobservatory,
+        source:grasmerewindfarmwebsite,
+        source:horizonpower,
+        source:horizonpowerwebsite,
+        source:hydrotasmaniawebsite,
+        source:infrastructurecapitalgroupwebsite,
+        source:integralenergy,
+        source:ipplc-australian-assets.pdf,
+        source:landandpropertyinformation-nsw,
+        source:landfillgasandpowerwebsite,
+        source:landgate-wa,
+        source:landgatepublicwebsite,
+        source:leightoncontractorswebsite,
+        source:lmsgenerationwebsite,
+        source:localcouncil,
+        source:metriconstadiumwebsite,
+        source:mitez-northerngaspipelineimpactstudyreport2016,
+        source:mychildwebsite,
+        source:nationaldirectorywebsite,
+        source:northernterritorypolicefireemergencyservices,
+        source:northernterritoryutilitiescommissionpowerandwatercorporation2011,
+        source:northernterritoryutilitiescommissionpowerandwatercorporation2012,
+        source:northernterritoryutilitiescommissionpowerandwatercorporation2016,
+        source:northernterritoryutilitiescommissionpowersystemreview2009-10,
+        source:northwestinterconnectedsystemwebsite,
+        source:nswlandandpropertyinformation,
+        source:nswpoliceforce,
+        source:ntfireandrescue,
+        source:ntpowerandwatercorp,
+        source:ntutilitescommissionpowersystemreview,
+        source:officeoftherenewableenergyregulator,
+        source:orthophotography_10cm_allora,
+        source:orthophotography_10cm_bell,
+        source:orthophotography_10cm_brigalow,
+        source:orthophotography_10cm_brisbane,
+        source:orthophotography_10cm_chinchilla,
+        source:orthophotography_10cm_condamine,
+        source:orthophotography_10cm_dalby,
+        source:orthophotography_10cm_drillham,
+        source:orthophotography_10cm_dulacca,
+        source:orthophotography_10cm_glenmorgan,
+        source:orthophotography_10cm_herveybay,
+        source:orthophotography_10cm_ipswich,
+        source:orthophotography_10cm_jandowae,
+        source:orthophotography_10cm_kaimkillenbun,
+        source:orthophotography_10cm_killarney,
+        source:orthophotography_10cm_maryborough,
+        source:orthophotography_10cm_meandarra,
+        source:orthophotography_10cm_miles,
+        source:orthophotography_10cm_mitchell,
+        source:orthophotography_10cm_mountmorgan,
+        source:orthophotography_10cm_rockhampton,
+        source:orthophotography_10cm_sunshinecoast,
+        source:orthophotography_10cm_tara,
+        source:orthophotography_10cm_tiaro,
+        source:orthophotography_10cm_torbanlea,
+        source:orthophotography_10cm_wandoan,
+        source:orthophotography_10cm_warra,
+        source:orthophotography_10cm_warwick,
+        source:orthophotography_10cm_yeppoon,
+        source:orthophotography_12pt5cm_crowsnest,
+        source:orthophotography_12pt5cm_goombungee,
+        source:orthophotography_12pt5cm_logan,
+        source:orthophotography_12pt5cm_millmerran,
+        source:orthophotography_12pt5cm_pittsworth,
+        source:orthophotography_12pt5cm_toowoomba,
+        source:orthophotography_15cm_abercorn,
+        source:orthophotography_15cm_aratula,
+        source:orthophotography_15cm_babinda,
+        source:orthophotography_15cm_baralaba,
+        source:orthophotography_15cm_biloela,
+        source:orthophotography_15cm_bluff,
+        source:orthophotography_15cm_brisbane,
+        source:orthophotography_15cm_cairns,
+        source:orthophotography_15cm_charleville,
+        source:orthophotography_15cm_clermont,
+        source:orthophotography_15cm_cooktown,
+        source:orthophotography_15cm_coominya,
+        source:orthophotography_15cm_dajarra,
+        source:orthophotography_15cm_dysart,
+        source:orthophotography_15cm_eidsvold,
+        source:orthophotography_15cm_eromanga,
+        source:orthophotography_15cm_esk,
+        source:orthophotography_15cm_fernvale,
+        source:orthophotography_15cm_gayndah,
+        source:orthophotography_15cm_gladstone,
+        source:orthophotography_15cm_goldcoast,
+        source:orthophotography_15cm_goomeri,
+        source:orthophotography_15cm_goondiwindi,
+        source:orthophotography_15cm_goovigen,
+        source:orthophotography_15cm_gympie,
+        source:orthophotography_15cm_harrisville,
+        source:orthophotography_15cm_inglewood,
+        source:orthophotography_15cm_injune,
+        source:orthophotography_15cm_ipswich,
+        source:orthophotography_15cm_jambin,
+        source:orthophotography_15cm_kalbar,
+        source:orthophotography_15cm_kilcoy,
+        source:orthophotography_15cm_kooralbyn,
+        source:orthophotography_15cm_leyburn,
+        source:orthophotography_15cm_lowood,
+        source:orthophotography_15cm_monto,
+        source:orthophotography_15cm_moranbah,
+        source:orthophotography_15cm_moretonbayurban,
+        source:orthophotography_15cm_morven,
+        source:orthophotography_15cm_mountalford,
+        source:orthophotography_15cm_moura,
+        source:orthophotography_15cm_mttamborine,
+        source:orthophotography_15cm_muckadilla,
+        source:orthophotography_15cm_mundubbera,
+        source:orthophotography_15cm_mungallala,
+        source:orthophotography_15cm_nebo,
+        source:orthophotography_15cm_peakcrossing,
+        source:orthophotography_15cm_portdouglas,
+        source:orthophotography_15cm_rainbowbeach,
+        source:orthophotography_15cm_rathdowney,
+        source:orthophotography_15cm_richmond,
+        source:orthophotography_15cm_rolleston,
+        source:orthophotography_15cm_roma,
+        source:orthophotography_15cm_saintgeorge,
+        source:orthophotography_15cm_surat,
+        source:orthophotography_15cm_talwood,
+        source:orthophotography_15cm_taroom,
+        source:orthophotography_15cm_texas,
+        source:orthophotography_15cm_thallon,
+        source:orthophotography_15cm_thangool,
+        source:orthophotography_15cm_thargomindah,
+        source:orthophotography_15cm_theodore,
+        source:orthophotography_15cm_tincanbay,
+        source:orthophotography_15cm_toogoolawah,
+        source:orthophotography_15cm_wallumbilla,
+        source:orthophotography_15cm_warrilview,
+        source:orthophotography_15cm_wowan,
+        source:orthophotography_15cm_wujalwujal,
+        source:orthophotography_15cm_yelarbon,
+        source:orthophotography_15cm_yuleba,
+        source:orthophotography_20cm_alpha,
+        source:orthophotography_20cm_amiens,
+        source:orthophotography_20cm_applethorpe,
+        source:orthophotography_20cm_ballandean,
+        source:orthophotography_20cm_boulia,
+        source:orthophotography_20cm_cherbourg,
+        source:orthophotography_20cm_cloncurry,
+        source:orthophotography_20cm_conondale,
+        source:orthophotography_20cm_cottonvale,
+        source:orthophotography_20cm_dalveen,
+        source:orthophotography_20cm_emerald,
+        source:orthophotography_20cm_glenaplin,
+        source:orthophotography_20cm_jericho,
+        source:orthophotography_20cm_jundah,
+        source:orthophotography_20cm_karara,
+        source:orthophotography_20cm_kenilworth,
+        source:orthophotography_20cm_kingaroy,
+        source:orthophotography_20cm_kumbia,
+        source:orthophotography_20cm_maryvale,
+        source:orthophotography_20cm_murgon,
+        source:orthophotography_20cm_muttaburra,
+        source:orthophotography_20cm_proston,
+        source:orthophotography_20cm_tambo,
+        source:orthophotography_20cm_tannymorel,
+        source:orthophotography_20cm_thesummit,
+        source:orthophotography_20cm_tingoora,
+        source:orthophotography_20cm_urandangi,
+        source:orthophotography_20cm_winton,
+        source:orthophotography_20cm_wondai,
+        source:orthophotography_20cm_yangan,
+        source:orthophotography_25cm_burketown,
+        source:orthophotography_25cm_doomadgee,
+        source:orthophotography_25cm_greatpalmisland,
+        source:orthophotography_25cm_kowanyama,
+        source:orthophotography_25cm_normanton,
+        source:orthophotography_25cm_sheepstation,
+        source:orthophotography_25cm_townsville,
+        source:orthophotography_25cm_weipa,
+        source:orthophotography_30cm_moretonbayrural,
+        source:orthophotography_40cm_9348bundaberg,
+        source:orthophotography_40cm_9447pialba,
+        source:orthophotography_50cm_capricorn,
+        source:orthophotography_50cm_centralqld,
+        source:orthophotography_50cm_northqld_south,
+        source:orthophotography_50cm_seqld,
+        source:orthophotography_50cm_widebay,
+        source:orthophotography_60cm_8063bartlefrere,
+        source:orthophotography_60cm_8064cairns,
+        source:orthophotography_60cm_8554harrybrandt,
+        source:orthophotography_60cm_8755mackay,
+        source:orthophotography_60cm_8951ridgelands,
+        source:orthophotography_60cm_9051rockhampton,
+        source:orthophotography_60cm_9150gladstone,
+        source:orthophotography_60cm_9242toowoomba,
+        source:orthophotography_60cm_9244kingaroy,
+        source:orthophotography_60cm_9343esk,
+        source:orthophotography_60cm_9442ipswich,
+        source:orthophotography_60cm_9443caboolture,
+        source:orthophotography_60cm_9446maryborough,
+        source:orthophotography_60cm_9541murwillumbah,
+        source:orthophotography_60cm_9542beenleigh,
+        source:orthophotography_60cm_9543brisbane,
+        source:orthophotography_60cm_9544caloundra,
+        source:orthophotography_60cm_9545lagunabay,
+        source:orthophotography_60cm_umagicobamaga,
+        source:orthophotography_6pt25cm_stanthorpe,
+        source:orthophotography_6pt25cm_wallangarra,
+        source:parkridgechildcarewebsite,
+        source:perthenergywebsite,
+        source:perthzoowebsite,
+        source:pointsofinterestupdateprogram,
+        source:powerlinkwebsite,
+        source:private_hospitals_august_2019.shp,
+        source:public_hospitals_2017-18.shp,
+        source:qld_125000topographicdata_806423cairns,
+        source:qld_125000topographicdata_944724herveybay,
+        source:qld_depteducationtrainingandemployment,
+        source:qldgovernment_fieldcheck,
+        source:qldgovernmentwebsite,
+        source:queenvictoriamarketwebsite,
+        source:riotintoandhancockprospectingopennewmineathopedownswebsite,
+        source:riotintositereport,
+        source:riotintowebsite,
+        source:ruralfireservice,
+        source:ses.nsw.gov.au,
+        source:sitawebsite,
+        source:spotsatelliteimagery_2pt5m_allora,
+        source:spotsatelliteimagery_2pt5m_anakie,
+        source:spotsatelliteimagery_2pt5m_arcadia,
+        source:spotsatelliteimagery_2pt5m_auburn,
+        source:spotsatelliteimagery_2pt5m_banana,
+        source:spotsatelliteimagery_2pt5m_bauhinia,
+        source:spotsatelliteimagery_2pt5m_bidgel,
+        source:spotsatelliteimagery_2pt5m_biloela,
+        source:spotsatelliteimagery_2pt5m_bombandy,
+        source:spotsatelliteimagery_2pt5m_boondooma,
+        source:spotsatelliteimagery_2pt5m_bungaban,
+        source:spotsatelliteimagery_2pt5m_bungunya,
+        source:spotsatelliteimagery_2pt5m_camerondowns,
+        source:spotsatelliteimagery_2pt5m_capella,
+        source:spotsatelliteimagery_2pt5m_charterstowers,
+        source:spotsatelliteimagery_2pt5m_collinsville,
+        source:spotsatelliteimagery_2pt5m_comet,
+        source:spotsatelliteimagery_2pt5m_condamine,
+        source:spotsatelliteimagery_2pt5m_conjuboy,
+        source:spotsatelliteimagery_2pt5m_dingo,
+        source:spotsatelliteimagery_2pt5m_duaringa,
+        source:spotsatelliteimagery_2pt5m_emerald,
+        source:spotsatelliteimagery_2pt5m_fitzroybasin,
+        source:spotsatelliteimagery_2pt5m_flinton,
+        source:spotsatelliteimagery_2pt5m_guluguba,
+        source:spotsatelliteimagery_2pt5m_harrybrandt,
+        source:spotsatelliteimagery_2pt5m_hillalong,
+        source:spotsatelliteimagery_2pt5m_homestead,
+        source:spotsatelliteimagery_2pt5m_hornetbank,
+        source:spotsatelliteimagery_2pt5m_hughenden,
+        source:spotsatelliteimagery_2pt5m_jandowae,
+        source:spotsatelliteimagery_2pt5m_kilcummin,
+        source:spotsatelliteimagery_2pt5m_monteagle,
+        source:spotsatelliteimagery_2pt5m_monto,
+        source:spotsatelliteimagery_2pt5m_moonie,
+        source:spotsatelliteimagery_2pt5m_mountbluffkin,
+        source:spotsatelliteimagery_2pt5m_mountperry,
+        source:spotsatelliteimagery_2pt5m_mountsurprise,
+        source:spotsatelliteimagery_2pt5m_muckadilla,
+        source:spotsatelliteimagery_2pt5m_mundubbera,
+        source:spotsatelliteimagery_2pt5m_orallo,
+        source:spotsatelliteimagery_2pt5m_pentland,
+        source:spotsatelliteimagery_2pt5m_prairie,
+        source:spotsatelliteimagery_2pt5m_proserpine,
+        source:spotsatelliteimagery_2pt5m_saintgeorge,
+        source:spotsatelliteimagery_2pt5m_seqld_burnett_mary,
+        source:spotsatelliteimagery_2pt5m_springsure,
+        source:spotsatelliteimagery_2pt5m_stanthorpe,
+        source:spotsatelliteimagery_2pt5m_tara,
+        source:spotsatelliteimagery_2pt5m_taroom,
+        source:spotsatelliteimagery_2pt5m_warwick,
+        source:spotsatelliteimagery_2pt5m_windeyershill,
+        source:spotsatelliteimagery_2pt5m_wyaga,
+        source:standardtopographiccaptureprogram,
+        source:stanwellwebsite,
+        source:transaltawebsite,
+        source:transgrid,
+        source:transgridannualreport2011,
+        source:tullysugarwebsite,
+        source:universityofqueenslandwebsite,
+        source:verveenergy,
+        source:verveenergywebsite,
+        source:vervewebsite,
+        source:wadeptcommercewebsite,
+        source:waeconomicregulationauthority,
+        source:waeconomicregulationauthoritywebsite,
+        source:waepawebsite,
+        source:wafinancewebsite,
+        source:wagovernment-midwestdevelopmentcommission,
+        source:wastjohnambulance,
+        source:watercorporationwebsite,
+        source:westaustralianplanningcommission,
+        source:westernaustraliadistributionsconnectionsmanual2011,
+        source:westerndiv.captureprogram,
+        source:westernpower2011annualplanningreport,
+        source:westernpowermediarelease,
+        source:westernpowerwebsite,
+        source:whereiswebsite,
+        source:wikipedia,
+        source:winsladewebsite,
+        source:www.afp.gov.au,
+        source:www.cfs.sa.gov.au,
+        source:www.finance.wa.gov.au,
+        source:www.mfs.sa.gov.au,
+        source:www.police.sa.gov.au,
+        source:www.saambulance.com.au,
+        source:www.ses.sa.gov.au,
+        source:www.stjohnsa.com.au,
+        source:yourcitywebsite ;
+    dcterms:identifier "sources"^^xsd:token ;
+    dcterms:license <http://purl.org/NET/rdflicense/cc-by4.0> ;
     dcterms:modified "2021-07-27"^^xsd:date ;
     dcterms:provenance "Created for the Loc-I DR Project"@en ;
-    dcterms:description "This data graph lists all of the sources of information given for entries in the various other SDF datasets, such as web pages, direct agency contact etc."@en ;
-    owl:versionInfo "1.0"^^xsd:string ;
-    dcterms:hasPart 
-        source:wind ;
-.
+    dcterms:publisher <https://linked.data.gov.au/org/icsm> ;
+    dcterms:title "FSDF Sources"@en ;
+    owl:versionInfo "1.0"^^xsd:string .
 
-source:wind
-    a fsdf:Source ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/dataset/fsdf/sources> ;
-    dcterms:description "Wind used to generate power, usually wind turbines"@en ;
-    dcterms:title "Wind"@en ;
-.
