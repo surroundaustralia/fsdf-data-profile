@@ -1,0 +1,37 @@
+# add Source class to FSDF Ontology
+# Populate this taxonomy from data
+
+# baseURI: https://linked.data.gov.au/dataset/fsdf/sources
+# imports: https://linked.data.gov.au/def/fsdf
+# prefix: source
+
+@prefix dg: <https://linked.data.gov.au/dataset/fsdf/sources> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix fsdf: <https://linked.data.gov.au/def/fsdf#> .
+@prefix source: <https://linked.data.gov.au/def/fsdf/themes/sources/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://linked.data.gov.au/dataset/fsdf/sources>
+    a owl:Ontology ;
+    dcterms:title "FSDF Sources"@en ;
+    dcterms:identifier "sources"^^xsd:token ;
+    dcterms:creator <https://linked.data.gov.au/org/ga> ;
+    dcterms:publisher <https://linked.data.gov.au/org/icsm> ;
+    dcterms:created "2021-07-27"^^xsd:date ;
+    dcterms:modified "2021-07-27"^^xsd:date ;
+    dcterms:provenance "Created for the Loc-I DR Project"@en ;
+    dcterms:description "This data graph lists all of the sources of information given for entries in the various other SDF datasets, such as web pages, direct agency contact etc."@en ;
+    owl:versionInfo "1.0"^^xsd:string ;
+    dcterms:hasPart 
+        source:wind ;
+.
+
+source:wind
+    a fsdf:Source ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/dataset/fsdf/sources> ;
+    dcterms:description "Wind used to generate power, usually wind turbines"@en ;
+    dcterms:title "Wind"@en ;
+.

@@ -12,8 +12,9 @@
 <https://linked.data.gov.au/dataset/fsdf/feature-property-relations> 
     a owl:Ontology ;
     owl:imports <https://linked.data.gov.au/def/fsdf> ;
+    dcterms:token "fpr"^^xsd:token
     skos:definition "This Data Graph contains associations between classes of geospatial Feature and the expected observable Properties of them, of relevance to the FSDF project"@en ;
-    skos:prefLabel "FSDF Feature Property Relations"@en ;
+    dcterms:title "FSDF Feature Property Relations"@en ;
 .
 
 obsp:ratedVoltage fsdf:likelyPropertyOfFeatureWithTheme themes:electrical-infrastructure .

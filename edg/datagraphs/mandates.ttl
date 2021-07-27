@@ -2,6 +2,7 @@
 # imports: https://linked.data.gov.au/def/fsdf
 # prefix: mandates
 
+@prefix dg: <https://linked.data.gov.au/dataset/fsdf/mandates> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix fsdf: <https://linked.data.gov.au/def/fsdf#> .
 @prefix jurisdictions: <https://linked.data.gov.au/dataset/fsdf/jurisdictions/> .
@@ -9,26 +10,37 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://linked.data.gov.au/def/fsdf-mandates>
+<https://linked.data.gov.au/dataset/fsdf/mandates>
   a owl:Ontology ;
-  skos:prefLabel "FSDF Mandates"@en ;
-  skos:definition "This Data Graph contains instances of the class Mandate, as defined by the [FSDF Ontology](https://linked.data.gov.au/def/fsdf)."@en ;
+  dcterms:title "FSDF Mandates"@en ;
+  dcterms:identifier "mandates"^^xsd:token ;
+  dcterms:description "This Data Graph contains instances of the class Mandate, as defined by the [FSDF Ontology](https://linked.data.gov.au/def/fsdf)."@en ;
+  dcterms:creator <https://linked.data.gov.au/org/ga> ;
+  dcterms:publisher <https://linked.data.gov.au/org/icsm> ;
+  dcterms:created "2021-06-08"^^xsd:date ;
+  dcterms:modified "2021-07-27"^^xsd:date ;    
   owl:imports dcterms: ;
   owl:imports <https://linked.data.gov.au/def/fsdf> ;
+  dcterms:hasPart 
+    mandates:clp-1994 ,
+    mandates:alra-1976 ,
+    mandates:asa-1995 ;
 .
 mandates:clp-1994
   a fsdf:Mandate ;
+  rdfs:isDefinedBy dg: ;
+  dcterms:isPartOf dg: ;
   dcterms:description "A Bill to establish a system of integrated management and protection for catchments, to establish a framework for controlling noxious weeds and pest animals, to repeal the Soil Conservation and Land Utilization Act 1958 and the Vermin and Noxious Weeds Act 1958, to amend various other Acts and for other purposes."@en ;
   dcterms:title "Catchment and Land Protection Act 1994"@en ;
-  skos:scopeNote "Repeals the Soil Conservation and Land Utilization Act 1958"@en ;
   dcterms:source "http://www.austlii.edu.au/cgi-bin/viewdoc/au/legis/vic/consol_act/calpa1994267/notes.html"^^xsd:anyURI ;
   fsdf:responsibleAuthority jurisdictions:vic ;
 .
 mandates:alra-1976
   a fsdf:Mandate ;
+  rdfs:isDefinedBy dg: ;
+  dcterms:isPartOf dg: ;
   dcterms:description "This Act may be cited as the Aboriginal Land Rights (Northern Territory) Act 1976"@en ;
   dcterms:title "Aboriginal Land Rights (Northern Territory) Act 1976"@en ;
   dcterms:source "http://www.austlii.edu.au/au/legis/cth/consol_act/alrta1976444/"^^xsd:anyURI ;
@@ -36,6 +48,8 @@ mandates:alra-1976
 .
 mandates:asa-1995
   a fsdf:Mandate ;
+  rdfs:isDefinedBy dg: ;
+  dcterms:isPartOf dg: ;
   dcterms:description """1)  AA has the following functions:
  (a)  providing services and facilities:
           (i)  for the purpose of Australia or another country giving effect to the Chicago convention; or

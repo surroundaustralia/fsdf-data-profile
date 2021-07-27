@@ -1,0 +1,146 @@
+# baseURI: https://linked.data.gov.au/def/fsdf/dataset-shapes
+# prefix: dsh
+
+@prefix dsh: <https://linked.data.gov.au/def/fsdf/dataset-shapes/> .
+@prefix agencies: <https://linked.data.gov.au/dataset/fsdf/agencies/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix fsdf: <https://linked.data.gov.au/def/fsdf#> .
+@prefix jurisdictions: <https://linked.data.gov.au/dataset/fsdf/jurisdictions> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sdo: <https://schema.org/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+
+dsh:
+    a owl:Ontology ;
+    skos:prefLabel "FSDF Datagraph Shapes"@en;
+    skos:definition "This is a collection of SHACL Shapes used to validate FSDF instances of Datagraph."@en;
+    dcterms:creator <https://linked.data.gov.au/org/ga> ;
+    dcterms:publisher <https://linked.data.gov.au/org/icsm> ;
+    dcterms:created "2021-06-08"^^xsd:date ;
+    dcterms:modified "2021-07-27"^^xsd:date ;  
+.
+
+
+dsh:Requirement-D-title
+	a sh:NodeShape ;
+	sh:targetClass owl:Ontology ;
+    sh:message "Requirement D-title: Each Dataset _MUST_ have one and only one English title which is an English text literal, indicated using the `dcterms:title` predicate"@en ;
+    sh:property [
+        sh:path dcterms:title ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype rdf:langString ;
+        sh:languageIn ("en") ;
+    ]
+.
+
+dsh:Requirement-D-desc
+	a sh:NodeShape ;
+	sh:targetClass owl:Ontology ;
+    sh:message "Requirement D-desc: Each Dataset _MUST_ have one and only one English description which is an English text literal, indicated using the `dcterms:description` predicate"@en ;
+    sh:property [
+        sh:path dcterms:description ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype rdf:langString ;
+        sh:languageIn ("en") ;
+    ]
+.
+
+dsh:Requirement-D-id
+	a sh:NodeShape ;
+	sh:targetClass owl:Ontology ;
+    sh:message "Requirement D-id: Each Dataset _MUST_ have one and only one identifier, an `xsd:token`, indicated using the `dcterms:identifier` predicate. Note: this identifier _MUST_ be unique among Loc-I Datasets. This uniqueness is not testable in SHACL."@en ;
+    sh:property [
+        sh:path dcterms:identifier ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:token ;
+    ]
+.
+
+dsh:Requirement-D-created
+	a sh:NodeShape ;
+	sh:targetClass owl:Ontology ;
+    sh:message "Requirement D-created: Each Dataset _MUST_ have one and only one created date, an `xsd:date`, `xsd:dateTime` or `xsd:dateTimeStamp` value, indicated using the `dcterms:created` predicate"@en ;
+    sh:property [
+        sh:path dcterms:created ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:or (
+            [ sh:datatype xsd:dateTime ]
+            [ sh:datatype xsd:date ]
+            [ sh:datatype xsd:dateTimeStamp ]
+        ) ;
+    ]
+.
+
+dsh:Requirement-D-modified
+	a sh:NodeShape ;
+	sh:targetClass owl:Ontology ;
+    sh:message "Requirement D-modified: Each Dataset _MUST_ have one and only one modified date, an `xsd:date`, `xsd:dateTime` or `xsd:dateTimeStamp` value, indicated using the `dcterms:modified` predicate"@en ;
+    sh:property [
+        sh:path dcterms:modified ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:or (
+            [ sh:datatype xsd:dateTime ]
+            [ sh:datatype xsd:date ]
+            [ sh:datatype xsd:dateTimeStamp ]
+        ) ;
+    ]
+.
+
+# agents
+dsh:Requirement-D-creator
+	a sh:NodeShape ;
+    sh:targetClass owl:Ontology ;
+	sh:property [
+		sh:path dcterms:creator ;
+        sh:minCount 1 ;
+		sh:description "Requirement D-creator: Each Dataset _MUST_ indicate one or more creator agents with the dcterms:publisher predicate typed as an `sdo:Person`, `sdo:Organization` or `sdo:GovernmentOrganization`"@en ;
+        sh:or (
+            [ sh:class sdo:GovernmentOrganization ]
+            [ sh:class sdo:Organization ]
+            [ sh:class sdo:Person ]
+        ) ;
+	] ;
+.   
+
+dsh:Requirement-D-publisher
+	a sh:NodeShape ;
+    sh:targetClass owl:Ontology ;
+	sh:property [
+		sh:path dcterms:publisher ;
+		sh:description "Requirement D-publisher: Each Dataset _MUST_ indicate at least one publisher agent with the `dcterms:publisher` predicate typed as an `sdo:Organization` or `sdo:GovernmentOrganization`, that is registered by the AGLDWG within their Organisations register"@en ;
+        sh:minCount 1 ;
+        sh:nodeKind sh:IRI ;
+        sh:node [
+            sh:property [
+                sh:hasValue <https://linked.data.gov.au/org/> ;
+                sh:minCount 1 ;
+                sh:maxCount 1 ;
+                sh:nodeKind sh:IRI ;
+                sh:path reg:register
+            ] ;
+        ]     
+	] ;
+.
+
+dsh:Requirement-D-part
+	a sh:NodeShape ;
+    sh:targetClass owl:Ontology ;
+	sh:property [
+		sh:path dcterms:hasPart ;
+		sh:description "Requirement D-part: Each Dataset _MUST_ indicate at least one part with the `dcterms:publisher` predicate."@en ;
+        sh:minCount 1 ;  
+	] ;
+.

@@ -2,6 +2,7 @@
 # imports: https://linked.data.gov.au/def/fsdf
 # prefix: datasets
 
+@prefix dg: <https://linked.data.gov.au/dataset/fsdf/datasets> .
 @prefix agencies: <https://linked.data.gov.au/dataset/fsdf/agencies/> .
 @prefix datasets: <https://linked.data.gov.au/dataset/fsdf/datasets/> .
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
@@ -12,18 +13,27 @@
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix themes: <https://linked.data.gov.au/def/fsdf-themes/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://linked.data.gov.au/dataset/fsdf/datasets>
   a owl:Ontology ;
-  skos:prefLabel "FSDF Datasets"@en;
-  skos:definition "This Data Graph contains instances of the class Dataset, as defined by the [FSDF Ontology](https://linked.data.gov.au/def/fsdf)"@en;
+  dcterms:title "FSDF Datasets"@en;
+  dcterms:identifier "datasets"^^xsd:token ;
+  dcterms:description "This Data Graph contains instances of the class Dataset, as defined by the [FSDF Ontology](https://linked.data.gov.au/def/fsdf)"@en;
+  dcterms:creator <https://linked.data.gov.au/org/ga> ;
+  dcterms:publisher <https://linked.data.gov.au/org/icsm> ;
+  dcterms:created "2021-06-08"^^xsd:date ;
+  dcterms:modified "2021-07-27"^^xsd:date ;  
   owl:imports <https://linked.data.gov.au/def/fsdf> ;
+  dcterms:hasPart
+    datasets:native-title-determination-outcomes-data ,
+    datasets:native-title-determination-outcomes ;
 .
 datasets:native-title-determination-outcomes-data
   a fsdf:Dataset ;
+  rdfs:isDefinedBy dg: ;
+  dcterms:isPartOf dg: ;
   dcterms:title "Native Title Determination Outcomes Data"@en ;
   dcterms:description "Determination area showing categorisation of the existence or otherwise of native title for portions of the area. The native title outcomes depicted include: Native Title exists (exclusive), Native Title exists (non-exclusive), Native Title does not exist and Native Title extinguished. The areas shown according to this classification are based on the best information available to the Tribunal at the date of determination, and should be considered indicative only. The Tribunal is not able to map all native title outcome areas included in determinations."@en ;
   dcat:theme themes:native-title-boundaries ;
@@ -42,6 +52,8 @@ datasets:native-title-determination-outcomes-data
 
 datasets:native-title-determination-outcomes
   a fsdf:Dataset ;
+  rdfs:isDefinedBy dg: ;
+  dcterms:isPartOf dg: ;
   dcterms:title "Native Title Determination Outcomes"@en ;
   dcterms:description "Determination area showing categorisation of the existence or otherwise of native title for portions of the area. The native title outcomes depicted include: Native Title exists (exclusive), Native Title exists (non-exclusive), Native Title does not exist and Native Title extinguished. The areas shown according to this classification are based on the best information available to the Tribunal at the date of determination, and should be considered indicative only. The Tribunal is not able to map all native title outcome areas included in determinations."@en ;
   dcat:theme themes:land-parcel-and-property ;

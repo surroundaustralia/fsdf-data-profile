@@ -2,6 +2,8 @@
 # imports: https://linked.data.gov.au/def/fsdf
 # prefix: agencies
 
+@prefix dg: <https://linked.data.gov.au/dataset/fsdf/agencies> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix agencies: <https://linked.data.gov.au/dataset/fsdf/agencies/> .
 @prefix fsdf: <https://linked.data.gov.au/def/fsdf#> .
 @prefix jurisdictions: <https://linked.data.gov.au/dataset/fsdf/jurisdictions> .
@@ -10,17 +12,52 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sdo: <https://schema.org/> .
-@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://linked.data.gov.au/dataset/fsdf/agencies>
   a owl:Ontology ;
-  skos:prefLabel "FSDF Agencies"@en;
-  skos:definition "This Data Graph contains instances of the class Agency, as defined by the [FSDF Ontology](https://linked.data.gov.au/def/fsdf)"@en;
+  dcterms:title "FSDF Agencies"@en ;
+  dcterms:identifier "agencies"^^xsd:token ;
+  dcterms:description "This Data Graph contains instances of the class Agency, as defined by the [FSDF Ontology](https://linked.data.gov.au/def/fsdf)"@en;
+  dcterms:creator <https://linked.data.gov.au/org/ga> ;
+  dcterms:publisher <https://linked.data.gov.au/org/icsm> ;
+  dcterms:created "2021-06-08"^^xsd:date ;
+  dcterms:modified "2021-07-27"^^xsd:date ;  
   owl:imports <https://linked.data.gov.au/def/fsdf> ;
+  dcterms:hasPart 
+    agencies:nntt ,
+    agencies:aad ,
+    agencies:bom ,
+    agencies:aemo ,
+    agencies:wapc ,
+    agencies:rt ,
+    agencies:ee ,
+    agencies:mitez ,
+    agencies:enet ,
+    agencies:ntuc ,
+    agencies:wp ,
+    agencies:pwc ,
+    agencies:ie ,
+    agencies:hp ,
+    agencies:tg ,
+    agencies:ve ,
+    agencies:ewi ,
+    agencies:actewagl ,
+    agencies:lg ,
+    agencies:nswlapi ,
+    agencies:stargroup ,
+    agencies:ergon ,
+    agencies:ht ,
+    agencies:ga ,
+    agencies:dnrm ,
+    agencies:delwp ,
+    agencies:lt ,
+    agencies:doh ;
 .
-agencies:national-native-title-tribunal
+agencies:nntt
   a fsdf:Agency ;
+  rdfs:isDefinedBy dg: ;
+  dcterms:isPartOf dg: ;
   sdo:name "National Native Title Tribunal"@en ;
   sdo:description """The National Native Title Tribunal (‘the Tribunal’) is an independent agency established by the Native Title Act 1993 (Cth) (‘the Act’).
 The Tribunal comprises a President and Members, who are appointed by the Governor General under the Act to make decisions, conduct inquiries, reviews and mediations, and assist various parties with native title applications, and Indigenous land use agreements (‘ILUAs’).
@@ -33,6 +70,8 @@ The Tribunal is supported by the Native Title Registrar, also appointed by the G
 
 agencies:aad
   a fsdf:Agency ;
+  rdfs:isDefinedBy dg: ;
+  dcterms:isPartOf dg: ;
   sdo:name "Australian Antarctic Division"@en ;
   sdo:description """The Australian Antarctic Division, based in Hobart, Tasmania, is a Division of the of the Australian Government’s Department of the Environment and Energy.
 
@@ -45,6 +84,8 @@ We do this by leading, coordinating and delivering the Australian Antarctic Prog
 
 agencies:bom
   a fsdf:Agency ;
+  rdfs:isDefinedBy dg: ;
+  dcterms:isPartOf dg: ;
   sdo:name "Bureau of Meteorology"@en ;
   sdo:description """The Bureau of Meteorology is Australia's national weather, climate and water agency. Its expertise and services assist Australians in dealing with the harsh realities of their natural environment, including drought, floods, fires, storms, tsunami and tropical cyclones. Through regular forecasts, warnings, monitoring and advice spanning the Australian region and Antarctic territory, the Bureau provides one of the most fundamental and widely used services of government.
 
@@ -55,127 +96,177 @@ The Bureau contributes to national social, economic, cultural and environmental 
 
 agencies:aemo
   a fsdf:Agency ;
+  rdfs:isDefinedBy dg: ;
+  dcterms:isPartOf dg: ;
   sdo:name "Australian Energy Market Operator"@en ;
   sdo:alternateName "AEMO"@en ;
 .
 
 agencies:wapc
   a fsdf:Agency ;
+  rdfs:isDefinedBy dg: ;
+  dcterms:isPartOf dg: ;
   sdo:name "West Australian Planning Commission"@en ;
   sdo:alternateName "WAPC"@en ;
 .
 
 agencies:rt
   a fsdf:Agency ;
+  rdfs:isDefinedBy dg: ;
+  dcterms:isPartOf dg: ;
   sdo:name "Rio Tinto"@en ;
 .
 
 agencies:ee
   a fsdf:Agency ;
+  rdfs:isDefinedBy dg: ;
+  dcterms:isPartOf dg: ;
   sdo:name "Essential Energy"@en ;
 .
 
 agencies:mitez
   a fsdf:Agency ;
+  rdfs:isDefinedBy dg: ;
+  dcterms:isPartOf dg: ;
   sdo:name "Mount Isa to Townsville Economic Development Zone"@en ;
   sdo:alternateName "MITEZ"@en ;
 .
 
 agencies:enet
   a fsdf:Agency ;
+  rdfs:isDefinedBy dg: ;
+  dcterms:isPartOf dg: ;
   sdo:name "ElectraNet"@en ;
 .
 
 agencies:ntuc
   a fsdf:Agency ;
+  rdfs:isDefinedBy dg: ;
+  dcterms:isPartOf dg: ;
   sdo:name "Northern Territory Utilities Commission"@en ;
 .
 
 agencies:wp
   a fsdf:Agency ;
+  rdfs:isDefinedBy dg: ;
+  dcterms:isPartOf dg: ;
   sdo:name "Western Power"@en ;
 .
 
 agencies:pwc
   a fsdf:Agency ;
+  rdfs:isDefinedBy dg: ;
+  dcterms:isPartOf dg: ;
   sdo:name "Power and Water Corporation"@en ;
 .
 
 agencies:ie
   a fsdf:Agency ;
+  rdfs:isDefinedBy dg: ;
+  dcterms:isPartOf dg: ;
   sdo:name "Integral Energy"@en ;
 
 .
 agencies:hp
   a fsdf:Agency ;
+  rdfs:isDefinedBy dg: ;
+  dcterms:isPartOf dg: ;
   sdo:name "Horizon Power"@en ;
 .
 
 agencies:tg
   a fsdf:Agency ;
+  rdfs:isDefinedBy dg: ;
+  dcterms:isPartOf dg: ;
   sdo:name "TransGrid"@en ;
 .
 
 agencies:ve
   a fsdf:Agency ;
+  rdfs:isDefinedBy dg: ;
+  dcterms:isPartOf dg: ;
   sdo:name "Verve Energy"@en ;
 .
 
 agencies:ewi
   a fsdf:Agency ;
+  rdfs:isDefinedBy dg: ;
+  dcterms:isPartOf dg: ;
   sdo:name "Esri World Imagery"@en ;
 .
 
 agencies:actewagl
   a fsdf:Agency ;
+  rdfs:isDefinedBy dg: ;
+  dcterms:isPartOf dg: ;
   sdo:name "ActewAGL"@en ;
 .
 
 agencies:lg
   a fsdf:Agency ;
+  rdfs:isDefinedBy dg: ;
+  dcterms:isPartOf dg: ;
   sdo:name "Landgate"@en ;
 .
 
 agencies:nswlapi
   a fsdf:Agency ;
+  rdfs:isDefinedBy dg: ;
+  dcterms:isPartOf dg: ;
   sdo:name "NSW Land and Property Information"@en ;
 .
 
 agencies:stargroup
   a fsdf:Agency ;
+  rdfs:isDefinedBy dg: ;
+  dcterms:isPartOf dg: ;
   sdo:name "Star Group"@en ;
 .
 
 agencies:ergon
   a fsdf:Agency ;
+  rdfs:isDefinedBy dg: ;
+  dcterms:isPartOf dg: ;
   sdo:name "Ergon"@en ;
 .
 
-agencies:hydro-tasmania
+agencies:ht
   a fsdf:Agency ;
+  rdfs:isDefinedBy dg: ;
+  dcterms:isPartOf dg: ;
   sdo:name "Hydro Tasmania"@en ;
   sdo:url ""^^xsd:anyURI ;
 .
 
 agencies:ga
   a fsdf:Agency ;
+  rdfs:isDefinedBy dg: ;
+  dcterms:isPartOf dg: ;
   sdo:name "Geoscience Australia" ;
   sdo:url "https://www.ga.gov.au"^^xsd:anyURI ;
   reg:register <https://linked.data.gov.au/org/> ;
 .
 agencies:dnrm
   a fsdf:Agency ;
+  rdfs:isDefinedBy dg: ;
+  dcterms:isPartOf dg: ;
   sdo:name "Department of Natural Resources and Mining" ;
 .
 agencies:delwp
   a fsdf:Agency ;
+  rdfs:isDefinedBy dg: ;
+  dcterms:isPartOf dg: ;
   sdo:name "Department of Environment, Land, Water & Planning" ;
 .
 agencies:lt
   a fsdf:Agency ;
+  rdfs:isDefinedBy dg: ;
+  dcterms:isPartOf dg: ;
   sdo:name "Land Tasmania - Department of Primary Industries, Parks, Water and Environment" ;
 .
 agencies:doh
   a fsdf:Agency ;
+  rdfs:isDefinedBy dg: ;
+  dcterms:isPartOf dg: ;
   sdo:name "Department of Health" ;
 .
