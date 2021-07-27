@@ -105,7 +105,7 @@ fsdf:Jurisdiction
 .
 fsdf:Mandate
   a owl:Class ;
-  rdfs:subClassOf owl:Thing , dcat:Resource , prov:Entity ;
+  rdfs:subClassOf sdo:Legislation ;
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:cardinality "1"^^xsd:nonNegativeInteger ;
