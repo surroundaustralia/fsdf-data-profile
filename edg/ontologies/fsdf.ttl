@@ -232,14 +232,6 @@ fsdf:hasSpatialConfidence
   skos:prefLabel "has spatial confidence"@en ;
 .
 
-fsdf:hasState
-  a owl:ObjectProperty ;
-  rdfs:domain geo:Feature ;
-  rdfs:range asgs:StateOrTerritory ;
-  skos:definition "The State or Territory that this Feature is within"@en ;
-  skos:prefLabel "has state"@en ;
-.
-
 fsdf:hasRelationToGround
   a owl:ObjectProperty ;
   rdfs:domain geo:Feature ;
