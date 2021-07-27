@@ -289,7 +289,10 @@ fsdf:themeOfFeatureWithProperty
   rdfs:range sosa:ObservableProperty ;
   skos:definition "A Feature with this theme has this expected Observable Property"@en ;
   skos:prefLabel "theme of feature with property"@en ;
-  skos:example """""" ;
+  skos:example """# example from the feature-property-relations datagraph
+themes:electrical-infrastructure
+  fsdf:likelyPropertyOfFeatureWithTheme obsp:ratedVoltage ;
+.""" ;
 .
 
 fsdf:likelyPropertyOfFeatureWithTheme
@@ -299,6 +302,10 @@ fsdf:likelyPropertyOfFeatureWithTheme
   rdfs:range fsdf:Theme ;  
   skos:definition "This Observable Property is expected to be of a Feature with this theme"@en ;
   skos:prefLabel "likely property of feature with theme"@en ;
+  skos:example """# example from the feature-property-relations datagraph
+obsp:ratedVoltage 
+  fsdf:likelyPropertyOfFeatureWithTheme themes:electrical-infrastructure ;
+.""" ;
 .
 
 # from SOSA
