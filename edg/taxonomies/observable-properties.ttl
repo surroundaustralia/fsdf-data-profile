@@ -39,10 +39,10 @@ op:ratedVoltage
     skos:topConceptOf cs: ;
 .
 
-op:generationMW
+op:generationCapacity
     a skos:Concept , sosa:ObservableProperty ;
-    skos:prefLabel "Generation Mega Watts"@en ;
-    skos:definition "The rated generation capactiy of a power-infrastructure resource"@en ;
+    skos:prefLabel "Generation Capacity"@en ;
+    skos:definition "The rated generation capactiy of a Power Station"@en ;
     rdfs:isDefinedBy cs: ;
     skos:inScheme cs: ;
     skos:topConceptOf cs: ;
