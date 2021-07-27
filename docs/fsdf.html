@@ -206,9 +206,19 @@ EAfDe6H3Dy6Ll456WEJsRZS630MwCAOI20ei5OBpxse5zcBZw8eS4uPpfIuDiCainIg9umBCU0GZzgLZ
         "@value": "<p>An ontology describing the concepts relevant to the <a href=\"https://www.anzlic.gov.au\">ANZLIC - The Spatial  Information Council</a>s' Foundation Spatial Data Framework (FSDF) project which is \"a common reference for the assembly and maintenance of Australian and New Zealand foundation level spatial data\".</p>\n<p>This contology contains a number of classes relevant to dataset description, management and provenance, such as <code>Dataset</code>, <code>Mandate</code> (laws/policies causing the generation of datasets), <code>Agency</code> (government bodies that own and create datasets) and <code>Jurisdition</code> (government bodies that authority within a domain). Additionally, properties that link these classes, such as <code>affectsAgency</code> (linking a <code>Mandate</code> to an <code>Agency</code>).</p>\n<p>It also contains taxonomies (vocabularies) used to categorise datasets and sub-dataset elements. The main taxonomy is the \"FSDF Themes\" and there are many specialised sub-taxonomies for elements within it, such as \"FSDF Themes - Physcial Infrastructure\".</p>\n<p>Also provided here are common properties for FSDF datasets and their contents, such as <code>hasGroundRelation</code> (relates an infrastructure Feature to the earth's surface) as well as taxonomies for many of these proerties' values.</p>"
       }
     ],
+    "https://schema.org/license": [
+      {
+        "@id": "http://purl.org/NET/rdflicense/cc-by4.0"
+      }
+    ],
     "https://schema.org/name": [
       {
         "@value": "FSDF ontology"
+      }
+    ],
+    "https://schema.org/rights": [
+      {
+        "@value": "&copy; Australian Government (ICSM), 2021"
       }
     ]
   }
@@ -241,12 +251,17 @@ EAfDe6H3Dy6Ll456WEJsRZS630MwCAOI20ei5OBpxse5zcBZw8eS4uPpfIuDiCainIg9umBCU0GZzgLZ
         <dt><a class="proplink" href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/modified">Modified</a></dt>
         <dd>2021-06-10</dd>
         <dt>Version Information</dt>
-        <dd>This 1.0 is an early version of the ontology but is a great departure from the 0.5 version that was published in 2018. This version concentrates on defining the FSDF concepts, not listing all of the FSDF datasets which are listed in a separate data graph within the overall FSDF Knolwedge Graph. This version imports the FSDF common elements ontology.</dd>
+        <dd>This 1.0 is an early version of the ontology but is a great departure from the 0.5 version that was published in 2018. This version concentrates on defining the FSDF concepts, not listing all of the FSDF datasets which are listed in a separate data graph within the overall FSDF Knolwedge Graph. This version imports the FSDF common elements ontology</dd>
         <dt>Version URI</dt>
-        <dd><a href="https://linked.data.gov.au/def/fsdf/1.1">https://linked.data.gov.au/def/fsdf/1.1</a></dd>
+        <dd><a href="https://linked.data.gov.au/def/fsdf/1.1">fsdf:1.1</a></dd>
         <dt>Imports</dt>
         <dd>
-            <a href="https://linked.data.gov.au/def/fsdf/common">https://linked.data.gov.au/def/fsdf/common</a><br/>
+            <a href="https://linked.data.gov.au/def/fsdf/common">fsdf:common</a><br/>
+        </dd>
+        <dt>License &amp; Rights</dt>
+        <dd>
+            <a href="http://purl.org/NET/rdflicense/cc-by4.0">http://purl.org/NET/rdflicense/cc-by4.0</a><br />
+            &copy; Australian Government (ICSM), 2021
         </dd>
         <dt>Ontology RDF</dt>
         <dd><a href="fsdf.ttl">RDF (turtle)</a></dd>
@@ -274,13 +289,15 @@ EAfDe6H3Dy6Ll456WEJsRZS630MwCAOI20ei5OBpxse5zcBZw8eS4uPpfIuDiCainIg9umBCU0GZzgLZ
 <section id="overview">
     <h2>Overview</h2>
     <div class="figure">
-        <img src="fsdf-overview.png" alt="Ontology overview diagram" />
+        <img src="fsdf-overview.png" alt="Overview diagram" /><br />
         <div class="caption"><strong>Figure 1:</strong> Ontology overview</div>
     </div>
 </section>
   <section id="classes">
     <h2>Classes <span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h2>
     <ul class="hlist">
+      <li><a href="http://www.opengis.net/ont/geosparql#Feature">geo:Feature</a></li>
+      <li><a href="http://www.opengis.net/ont/geosparql#FeatureCollection">geo:FeatureCollection</a></li>
       <li><a href="http://www.w3.org/2004/02/skos/core#Concept">skos:Concept</a></li>
       <li><a href="http://www.w3.org/ns/dcat#Dataset">dcat:Dataset</a></li>
       <li><a href="http://www.w3.org/ns/prov#Agent">prov:Agent</a></li>
@@ -290,10 +307,80 @@ EAfDe6H3Dy6Ll456WEJsRZS630MwCAOI20ei5OBpxse5zcBZw8eS4uPpfIuDiCainIg9umBCU0GZzgLZ
       <li><a href="http://www.w3.org/ns/sosa/ObservationCollection">sosa:ObservationCollection</a></li>
       <li><a href="http://www.w3.org/ns/sosa/Result">sosa:Result</a></li>
       <li><a href="#Agency">Agency</a></li>
+      <li><a href="#Fuel">Fuel</a></li>
+      <li><a href="#GroundRelation">Ground Relation</a></li>
       <li><a href="#Jurisdiction">Jurisdiction</a></li>
       <li><a href="#Mandate">Mandate</a></li>
+      <li><a href="#Material">Material</a></li>
+      <li><a href="#ObservableProperty1">Observable Property</a></li>
+      <li><a href="#OperationalStatus">Operational Status</a></li>
+      <li><a href="#PhysicalCondition">Physical Condition</a></li>
+      <li><a href="#Structure">Structure</a></li>
+      <li><a href="#FSDFTheme">FSDF Theme</a></li>
       <li><a href="https://schema.org/Organization">sdo:Organization</a></li>
     </ul>
+    <div class="entity class" id="Feature">
+        <h3>
+          Feature<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#Feature" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://www.opengis.net/ont/geosparql#Feature</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>This class represents the top-level feature type. This class is equivalent to GFI_Feature defined in ISO 19156, and it is superclass of all feature types</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="http://www.w3.org/2002/07/owl#Thing">owl:Thing</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://www.w3.org/ns/prov#Entity">prov:Entity</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In domain of</th>
+                <td>
+                    <a href="#hasoperationalstatus">has operational status</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#GeneratorNumber">Generator Number</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#PrimarySub-fuel">Primary Sub-fuel</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#PrimaryFuel">Primary Fuel</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#featuredataprovenance">feature data provenance</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#EmbeddedNetworkOperator">Embedded Network Operator</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#hasrelationtoground">has relation to ground</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="FeatureCollection">
+        <h3>
+          Feature Collection<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#FeatureCollection" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://www.opengis.net/ont/geosparql#FeatureCollection</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>The class Feature Collection represents any collection of individual Features</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="http://www.w3.org/ns/prov#Entity">prov:Entity</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://www.w3.org/2002/07/owl#Thing">owl:Thing</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
     <div class="entity class" id="Concept">
         <h3>
           Concept<sup title="class" class="sup-c">c</sup>
@@ -313,14 +400,26 @@ EAfDe6H3Dy6Ll456WEJsRZS630MwCAOI20ei5OBpxse5zcBZw8eS4uPpfIuDiCainIg9umBCU0GZzgLZ
             <tr>
                 <th>Description</th>
                 <td>
-                    <p>An idea or notion; a unit of thought.</p>
+                    <p>An idea or notion; a unit of thought</p>
                 </td>
             </tr>
             <tr>
-                <th>In range of</th>
+                <th>Super-classes</th>
                 <td>
-                    <a href="#hasOperationalStatus">has operational status</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="#hasrelationtoground">has relation to ground</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://www.w3.org/2002/07/owl#Thing">owl:Thing</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Sub-classes</th>
+                <td>
+                    <a href="#GroundRelation">Ground Relation</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#ObservableProperty1">Observable Property</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#Structure">Structure</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#Material">Material</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#PhysicalCondition">Physical Condition</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#FSDFTheme">FSDF Theme</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#OperationalStatus">Operational Status</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#Fuel">Fuel</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
         </table>
@@ -338,15 +437,15 @@ EAfDe6H3Dy6Ll456WEJsRZS630MwCAOI20ei5OBpxse5zcBZw8eS4uPpfIuDiCainIg9umBCU0GZzgLZ
             <tr>
                 <th>Description</th>
                 <td>
-                    <p>A collection of data, published or curated by a single agent, and available for access or download in one or more representations.</p>
+                    <p>A collection of data, published or curated by a single agent, and available for access or download in one or more representations</p>
                 </td>
             </tr>
             <tr>
                 <th>Super-classes</th>
                 <td>
+                    <a href="http://www.w3.org/ns/dcat#Resource">dcat:Resource</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="http://www.w3.org/2002/07/owl#Thing">owl:Thing</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="http://www.w3.org/ns/prov#Entity">prov:Entity</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="http://www.w3.org/ns/dcat#Resource">dcat:Resource</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
             <tr>
@@ -370,7 +469,7 @@ EAfDe6H3Dy6Ll456WEJsRZS630MwCAOI20ei5OBpxse5zcBZw8eS4uPpfIuDiCainIg9umBCU0GZzgLZ
             <tr>
                 <th>Description</th>
                 <td>
-                    <p>An agent is something that bears some form of responsibility for an activity taking place, for the existence of an entity, or for another agent's activity.</p>
+                    <p>An agent is something that bears some form of responsibility for an activity taking place, for the existence of an entity, or for another agent's activity</p>
                 </td>
             </tr>
             <tr>
@@ -406,7 +505,13 @@ EAfDe6H3Dy6Ll456WEJsRZS630MwCAOI20ei5OBpxse5zcBZw8eS4uPpfIuDiCainIg9umBCU0GZzgLZ
             <tr>
                 <th>Description</th>
                 <td>
-                    <p>The thing whose property is being estimated or calculated in the course of an Observation to arrive at a Result or whose property is being manipulated by an Actuator, or which is being sampled or transformed in an act of Sampling.</p>
+                    <p>The thing whose property is being estimated or calculated in the course of an Observation to arrive at a Result or whose property is being manipulated by an Actuator, or which is being sampled or transformed in an act of Sampling</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="http://www.w3.org/2002/07/owl#Thing">owl:Thing</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
             <tr>
@@ -442,7 +547,7 @@ EAfDe6H3Dy6Ll456WEJsRZS630MwCAOI20ei5OBpxse5zcBZw8eS4uPpfIuDiCainIg9umBCU0GZzgLZ
             <tr>
                 <th>Description</th>
                 <td>
-                    <p>An observable quality (property, characteristic) of a FeatureOfInterest.</p>
+                    <p>An observable quality (property, characteristic) of a FeatureOfInterest</p>
                 </td>
             </tr>
             <tr>
@@ -452,11 +557,22 @@ EAfDe6H3Dy6Ll456WEJsRZS630MwCAOI20ei5OBpxse5zcBZw8eS4uPpfIuDiCainIg9umBCU0GZzgLZ
                 </td>
             </tr>
             <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="http://www.w3.org/2002/07/owl#Thing">owl:Thing</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In domain of</th>
+                <td>
+                    <a href="#likelypropertyoffeaturewiththeme">likely property of feature with theme</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+            <tr>
                 <th>In range of</th>
                 <td>
+                    <a href="#themeoffeaturewithproperty">theme of feature with property</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="http://www.w3.org/ns/sosa/observedProperty">sosa:observedProperty</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="#hasexpectedobservableproperty">has expected observable property</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="#hasoperationalstatus">has operational status</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
         </table>
@@ -480,7 +596,7 @@ EAfDe6H3Dy6Ll456WEJsRZS630MwCAOI20ei5OBpxse5zcBZw8eS4uPpfIuDiCainIg9umBCU0GZzgLZ
             <tr>
                 <th>Description</th>
                 <td>
-                    <p>Act of carrying out an (Observation) Procedure to estimate or calculate a value of a property of a FeatureOfInterest. Links to a Sensor to describe what made the Observation and how; links to an ObservableProperty to describe what the result is an estimate of, and to a FeatureOfInterest to detail what that property was associated with.</p>
+                    <p>Act of carrying out an (Observation) Procedure to estimate or calculate a value of a property of a FeatureOfInterest. Links to a Sensor to describe what made the Observation and how; links to an ObservableProperty to describe what the result is an estimate of, and to a FeatureOfInterest to detail what that property was associated with</p>
                 </td>
             </tr>
             <tr>
@@ -490,23 +606,35 @@ EAfDe6H3Dy6Ll456WEJsRZS630MwCAOI20ei5OBpxse5zcBZw8eS4uPpfIuDiCainIg9umBCU0GZzgLZ
                 </td>
             </tr>
             <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="http://www.w3.org/2002/07/owl#Thing">owl:Thing</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Sub-classes</th>
+                <td>
+                    <a href="http://www.w3.org/ns/sosa/ObservationCollection">sosa:ObservationCollection</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
                 <th>In domain of</th>
                 <td>
-                    <a href="http://www.w3.org/ns/sosa/hasFeatureOfInterest">sosa:hasFeatureOfInterest</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="http://www.w3.org/ns/sosa/resultTime">sosa:resultTime</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
-                    <a href="http://www.w3.org/ns/sosa/phenomenonTime">sosa:phenomenonTime</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="http://www.w3.org/ns/sosa/hasResult">sosa:hasResult</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="http://www.w3.org/ns/sosa/hasSimpleResult">sosa:hasSimpleResult</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
-                    <a href="http://www.w3.org/ns/sosa/observedProperty">sosa:observedProperty</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://www.w3.org/ns/sosa/phenomenonTime">sosa:phenomenonTime</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://www.w3.org/ns/sosa/resultTime">sosa:resultTime</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
                     <a href="http://www.w3.org/ns/sosa/usedProcedure">sosa:usedProcedure</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://www.w3.org/ns/sosa/observedProperty">sosa:observedProperty</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://www.w3.org/ns/sosa/hasFeatureOfInterest">sosa:hasFeatureOfInterest</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://www.w3.org/ns/sosa/hasResult">sosa:hasResult</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
             <tr>
                 <th>In range of</th>
                 <td>
+                    <a href="http://www.w3.org/ns/sosa/isResultOf">sosa:isResultOf</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="http://www.w3.org/ns/sosa/isFeatureOfInterestOf">sosa:isFeatureOfInterestOf</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="http://www.w3.org/ns/sosa/hasMember">sosa:hasMember</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="http://www.w3.org/ns/sosa/isResultOf">sosa:isResultOf</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
         </table>
@@ -528,39 +656,40 @@ EAfDe6H3Dy6Ll456WEJsRZS630MwCAOI20ei5OBpxse5zcBZw8eS4uPpfIuDiCainIg9umBCU0GZzgLZ
                 </td>
             </tr>
             <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="http://www.w3.org/ns/sosa/Observation">sosa:Observation</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://www.w3.org/2002/07/owl#Thing">owl:Thing</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
                 <th>Restrictions</th>
                 <td>
+                    <a href="http://www.w3.org/ns/sosa/madeBySensor">sosa:madeBySensor</a> <span class="cardinality">max</span> 1<br/>
+                    <a href="http://www.w3.org/ns/ssn/wasOriginatedBy">ssn:wasOriginatedBy</a> <span class="cardinality">only</span> <a href="http://www.w3.org/ns/ssn/Stimulus">ssn:Stimulus</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="http://www.w3.org/ns/sosa/observedProperty">sosa:observedProperty</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">only</span> <a href="http://www.w3.org/ns/sosa/ObservableProperty">sosa:ObservableProperty</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="http://www.w3.org/ns/sosa/phenomenonTime">sosa:phenomenonTime</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1<br/>
-                    <a href="http://www.w3.org/ns/sosa/hasFeatureOfInterest">sosa:hasFeatureOfInterest</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1<br/>
-                    <a href="http://www.w3.org/ns/sosa/madeBySensor">sosa:madeBySensor</a> <span class="cardinality">only</span> <a href="http://www.w3.org/ns/sosa/Sensor">sosa:Sensor</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="http://www.w3.org/ns/sosa/usedProcedure">sosa:usedProcedure</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">only</span> <a href="http://www.w3.org/ns/sosa/Procedure">sosa:Procedure</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="http://www.w3.org/ns/sosa/resultTime">sosa:resultTime</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">max</span> 1<br/>
-                    <a href="http://www.w3.org/ns/sosa/observedProperty">sosa:observedProperty</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1<br/>
-                    <a href="http://www.w3.org/ns/sosa/hasMember">sosa:hasMember</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">min</span> 1<br/>
                     <a href="http://www.w3.org/ns/sosa/hasFeatureOfInterest">sosa:hasFeatureOfInterest</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">only</span> <a href="http://www.w3.org/ns/sosa/FeatureOfInterest">sosa:FeatureOfInterest</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="http://www.w3.org/ns/sosa/hasUltimateFeatureOfInterest">sosa:hasUltimateFeatureOfInterest</a> <span class="cardinality">max</span> 1<br/>
-                    <a href="http://www.w3.org/ns/sosa/usedProcedure">sosa:usedProcedure</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1<br/>
-                    <a href="http://www.w3.org/ns/ssn/wasOriginatedBy">ssn:wasOriginatedBy</a> <span class="cardinality">only</span> <a href="http://www.w3.org/ns/ssn/Stimulus">ssn:Stimulus</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://www.w3.org/ns/sosa/phenomenonTime">sosa:phenomenonTime</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1<br/>
+                    <a href="http://www.w3.org/ns/sosa/hasFeatureOfInterest">sosa:hasFeatureOfInterest</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1<br/>
+                    <a href="http://www.w3.org/ns/sosa/resultTime">sosa:resultTime</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">max</span> 1<br/>
+                    <a href="http://www.w3.org/ns/sosa/observedProperty">sosa:observedProperty</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1<br/>
                     <a href="http://www.w3.org/ns/sosa/hasUltimateFeatureOfInterest">sosa:hasUltimateFeatureOfInterest</a> <span class="cardinality">only</span> <a href="http://www.w3.org/ns/sosa/FeatureOfInterest">sosa:FeatureOfInterest</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="http://www.w3.org/ns/sosa/madeBySensor">sosa:madeBySensor</a> <span class="cardinality">max</span> 1<br/>
+                    <a href="http://www.w3.org/ns/sosa/usedProcedure">sosa:usedProcedure</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1<br/>
+                    <a href="http://www.w3.org/ns/sosa/usedProcedure">sosa:usedProcedure</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">only</span> <a href="http://www.w3.org/ns/sosa/Procedure">sosa:Procedure</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://www.w3.org/ns/sosa/hasMember">sosa:hasMember</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">min</span> 1<br/>
+                    <a href="http://www.w3.org/ns/sosa/madeBySensor">sosa:madeBySensor</a> <span class="cardinality">only</span> <a href="http://www.w3.org/ns/sosa/Sensor">sosa:Sensor</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
             <tr>
                 <th>In domain of</th>
                 <td>
-                    <a href="http://www.w3.org/ns/sosa/hasMember">sosa:hasMember</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="http://www.w3.org/ns/sosa/usedProcedure">sosa:usedProcedure</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="http://www.w3.org/ns/sosa/resultTime">sosa:resultTime</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
                     <a href="http://www.w3.org/ns/sosa/hasFeatureOfInterest">sosa:hasFeatureOfInterest</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="http://www.w3.org/ns/sosa/phenomenonTime">sosa:phenomenonTime</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://www.w3.org/ns/sosa/usedProcedure">sosa:usedProcedure</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="http://www.w3.org/ns/sosa/observedProperty">sosa:observedProperty</a><sup class="sup-op" title="object property">op</sup><br/>
-                </td>
-            </tr>
-            <tr>
-                <th>In range of</th>
-                <td>
+                    <a href="http://www.w3.org/ns/sosa/phenomenonTime">sosa:phenomenonTime</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="http://www.w3.org/ns/sosa/hasMember">sosa:hasMember</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://www.w3.org/ns/sosa/resultTime">sosa:resultTime</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
                 </td>
             </tr>
         </table>
@@ -584,13 +713,19 @@ EAfDe6H3Dy6Ll456WEJsRZS630MwCAOI20ei5OBpxse5zcBZw8eS4uPpfIuDiCainIg9umBCU0GZzgLZ
             <tr>
                 <th>Description</th>
                 <td>
-                    <p>The Result of an Observation, Actuation, or act of Sampling. To store an observation's simple result value one can use the hasSimpleResult property.</p>
+                    <p>The Result of an Observation, Actuation, or act of Sampling. To store an observation's simple result value one can use the hasSimpleResult property</p>
                 </td>
             </tr>
             <tr>
                 <th>Example(s)</th>
                 <td>
                     The value 20 as the height of a certain tree together with the unit, e.g., Meter.<br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="http://www.w3.org/ns/sosa/Sample">sosa:Sample</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
             <tr>
@@ -624,6 +759,16 @@ EAfDe6H3Dy6Ll456WEJsRZS630MwCAOI20ei5OBpxse5zcBZw8eS4uPpfIuDiCainIg9umBCU0GZzgLZ
                 </td>
             </tr>
             <tr>
+                <th>Example(s)</th>
+                <td>
+                    <pre># example from the FSDF datagraph Agencies
+agencies:nntt
+  a fsdf:Agency ;
+  sdo:name "National Native Title Tribunal"@en ;
+.</pre><br/>
+                </td>
+            </tr>
+            <tr>
                 <th>Super-classes</th>
                 <td>
                     <a href="https://schema.org/Organization">sdo:Organization</a><sup class="sup-c" title="class">c</sup><br/>
@@ -632,8 +777,81 @@ EAfDe6H3Dy6Ll456WEJsRZS630MwCAOI20ei5OBpxse5zcBZw8eS4uPpfIuDiCainIg9umBCU0GZzgLZ
             <tr>
                 <th>In range of</th>
                 <td>
-                    <a href="#hascustodian">has custodian</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="#affectsAgency">affects Agency</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#hascustodian">has custodian</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Fuel">
+        <h3>
+          Fuel<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#Fuel" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://linked.data.gov.au/def/fsdf/Fuel</code></td>
+            </tr>
+            <tr>
+                <th>Is Defined By</th>
+                <td>
+                    https://linked.data.gov.au/def/fsdf
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>A type of fuel used by powerstations. May be renewable or non-renewable. All instances of these are contained within the Fuels taxonomy within the FSDF Knowledge Graph</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="http://www.w3.org/2004/02/skos/core#Concept">skos:Concept</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In range of</th>
+                <td>
+                    <a href="#PrimarySub-fuel">Primary Sub-fuel</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#PrimaryFuel">Primary Fuel</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="GroundRelation">
+        <h3>
+          Ground Relation<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#GroundRelation" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://linked.data.gov.au/def/fsdf/GroundRelation</code></td>
+            </tr>
+            <tr>
+                <th>Is Defined By</th>
+                <td>
+                    https://linked.data.gov.au/def/fsdf
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>The relations of geospatial Feature to the earth's surface. All instances of these are contained within the Ground Relations taxonomy within the FSDF Knowledge Graph</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="http://www.w3.org/2004/02/skos/core#Concept">skos:Concept</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In range of</th>
+                <td>
+                    <a href="#hasrelationtoground">has relation to ground</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
         </table>
@@ -651,14 +869,14 @@ EAfDe6H3Dy6Ll456WEJsRZS630MwCAOI20ei5OBpxse5zcBZw8eS4uPpfIuDiCainIg9umBCU0GZzgLZ
             <tr>
                 <th>Description</th>
                 <td>
-                    <p>A Jurisdiction is a Government Organization that has authority within a domain. The specific domains considered by the FSDF Programme are the Australian Commonwealth (Federal), Australian States and Territories and the Commercial sector.</p>
+                    <p>A Jurisdiction is a Government Organization that has authority within a domain. The specific domains considered by the FSDF Programme are the Australian Commonwealth (Federal), Australian States and Territories and the Commercial sector</p>
                 </td>
             </tr>
             <tr>
                 <th>Super-classes</th>
                 <td>
-                    <a href="http://purl.org/dc/terms/Jurisdiction">dcterms:Jurisdiction</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="https://schema.org/Organization">sdo:Organization</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://purl.org/dc/terms/Jurisdiction">dcterms:Jurisdiction</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
             <tr>
@@ -682,15 +900,27 @@ EAfDe6H3Dy6Ll456WEJsRZS630MwCAOI20ei5OBpxse5zcBZw8eS4uPpfIuDiCainIg9umBCU0GZzgLZ
             <tr>
                 <th>Description</th>
                 <td>
-                    <p>An FSDF Mandate is an Australian Commonwealth or State &amp; Territory legislation thatassigns responsibility for FSDF data or operations to an FSDF Agency. An FSDF Mandate is represented as a specialised form of DCAT Resource which ensures that a DCAT-style catalogue of instances of FSDF Mandates can be made.</p>
+                    <p>An FSDF Mandate is an Australian Commonwealth or State &amp; Territory legislation thatassigns responsibility for FSDF data or operations to an FSDF Agency. An FSDF Mandate is represented as a specialised form of DCAT Resource which ensures that a DCAT-style catalogue of instances of FSDF Mandates can be made</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Example(s)</th>
+                <td>
+                    <pre># example from the FSDF datagraph Mandates
+# Here the Mandate is a law (an Act) that was enacted by Victoria
+# This Act comples the collection of certain natural-resource datasets by DELWP
+mandates:clp-1994
+  a fsdf:Mandate ;
+  dcterms:title "Catchment and Land Protection Act 1994"@en ;
+  fsdf:responsibleAuthority jurisdictions:vic ;
+  fsdf:affectsAgency agencies:delwp ;
+.</pre><br/>
                 </td>
             </tr>
             <tr>
                 <th>Super-classes</th>
                 <td>
-                    <a href="http://www.w3.org/ns/dcat#Resource">dcat:Resource</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="http://www.w3.org/ns/prov#Entity">prov:Entity</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="http://www.w3.org/2002/07/owl#Thing">owl:Thing</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://schema.org/Legislation">sdo:Legislation</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
             <tr>
@@ -702,8 +932,206 @@ EAfDe6H3Dy6Ll456WEJsRZS630MwCAOI20ei5OBpxse5zcBZw8eS4uPpfIuDiCainIg9umBCU0GZzgLZ
             <tr>
                 <th>In domain of</th>
                 <td>
-                    <a href="#affectsAgency">affects Agency</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="#responsibleauthority">responsible authority</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#affectsAgency">affects Agency</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Material">
+        <h3>
+          Material<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#Material" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://linked.data.gov.au/def/fsdf/Material</code></td>
+            </tr>
+            <tr>
+                <th>Is Defined By</th>
+                <td>
+                    https://linked.data.gov.au/def/fsdf
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>Types of material used to construct buildings and facilities in various FSDF datasets. All instances of these are contained within the Materials taxonomy within the FSDF Knowledge Graph</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="http://www.w3.org/2004/02/skos/core#Concept">skos:Concept</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="ObservableProperty1">
+        <h3>
+          Observable Property<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#ObservableProperty1" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://linked.data.gov.au/def/fsdf/ObservableProperty</code></td>
+            </tr>
+            <tr>
+                <th>Is Defined By</th>
+                <td>
+                    https://linked.data.gov.au/def/fsdf
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>Properties of Features that may be observed. All instances of these are contained within the Observable Properties taxonomy within the FSDF Knowledge Graph</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="http://www.w3.org/2004/02/skos/core#Concept">skos:Concept</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="OperationalStatus">
+        <h3>
+          Operational Status<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#OperationalStatus" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://linked.data.gov.au/def/fsdf/OperationalStatus</code></td>
+            </tr>
+            <tr>
+                <th>Is Defined By</th>
+                <td>
+                    https://linked.data.gov.au/def/fsdf
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>The status of the operations of FSDF infrastructure assets (Features). All instances of these are contained within the Operational Statuses taxonomy within the FSDF Knowledge Graph</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="http://www.w3.org/2004/02/skos/core#Concept">skos:Concept</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In range of</th>
+                <td>
+                    <a href="#hasoperationalstatus">has operational status</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="PhysicalCondition">
+        <h3>
+          Physical Condition<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#PhysicalCondition" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://linked.data.gov.au/def/fsdf/PhysicalCondition</code></td>
+            </tr>
+            <tr>
+                <th>Is Defined By</th>
+                <td>
+                    https://linked.data.gov.au/def/fsdf
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>The types of physical condition that buildings and facilities are known to be in, in various FSDF datasets. All instances of these are contained within the Physical Conditions taxonomy within the FSDF Knowledge Graph</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="http://www.w3.org/2004/02/skos/core#Concept">skos:Concept</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Structure">
+        <h3>
+          Structure<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#Structure" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://linked.data.gov.au/def/fsdf/Structure</code></td>
+            </tr>
+            <tr>
+                <th>Is Defined By</th>
+                <td>
+                    https://linked.data.gov.au/def/fsdf
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>The types of structure that buildings and facilities may have, in various FSDF datasets. All instances of these are contained within the Physical Conditions taxonomy within the FSDF Knowledge Graph</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="http://www.w3.org/2004/02/skos/core#Concept">skos:Concept</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="FSDFTheme">
+        <h3>
+          FSDF Theme<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#FSDFTheme" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://linked.data.gov.au/def/fsdf/Theme</code></td>
+            </tr>
+            <tr>
+                <th>Is Defined By</th>
+                <td>
+                    https://linked.data.gov.au/def/fsdf
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>A skos:Concept taken from the FSDF programme's controlled list of 'Themes'. All instnaces are contained within the FSDF Themese taxonomy, and sub-taxonomies of it, all within the FSDF Knowledge Graph</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="http://www.w3.org/2004/02/skos/core#Concept">skos:Concept</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In domain of</th>
+                <td>
+                    <a href="#themeoffeaturewithproperty">theme of feature with property</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In range of</th>
+                <td>
+                    <a href="#likelypropertyoffeaturewiththeme">likely property of feature with theme</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
         </table>
@@ -721,7 +1149,7 @@ EAfDe6H3Dy6Ll456WEJsRZS630MwCAOI20ei5OBpxse5zcBZw8eS4uPpfIuDiCainIg9umBCU0GZzgLZ
             <tr>
                 <th>Description</th>
                 <td>
-                    <p>An organization such as a government agency, a school, NGO, corporation, club, or even a whole government.</p>
+                    <p>An organization such as a government agency, a school, NGO, corporation, club, or even a whole government</p>
                 </td>
             </tr>
             <tr>
@@ -733,15 +1161,15 @@ EAfDe6H3Dy6Ll456WEJsRZS630MwCAOI20ei5OBpxse5zcBZw8eS4uPpfIuDiCainIg9umBCU0GZzgLZ
             <tr>
                 <th>Sub-classes</th>
                 <td>
-                    <a href="#Agency">Agency</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#Jurisdiction">Jurisdiction</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#Agency">Agency</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
             <tr>
                 <th>Members</th>
                 <td>
-                    <a href="https://linked.data.gov.au/org/anzlic">https://linked.data.gov.au/org/anzlic</a><br/>
                     <a href="https://linked.data.gov.au/org/surround">https://linked.data.gov.au/org/surround</a><br/>
+                    <a href="https://linked.data.gov.au/org/anzlic">https://linked.data.gov.au/org/anzlic</a><br/>
                 </td>
             </tr>
         </table>
@@ -751,7 +1179,7 @@ EAfDe6H3Dy6Ll456WEJsRZS630MwCAOI20ei5OBpxse5zcBZw8eS4uPpfIuDiCainIg9umBCU0GZzgLZ
     <h2>Object Properties <span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h2>
     <ul class="hlist">
         <li><a href="#hasfeatureofinterest">has feature of interest</a></li>
-        <li><a href="#memberobservation">member observation</a></li>
+        <li><a href="#hasmember">has member</a></li>
         <li><a href="#hasresult">has result</a></li>
         <li><a href="#isfeatureofinterestof">is feature of interest of</a></li>
         <li><a href="#isresultof">is result of</a></li>
@@ -759,15 +1187,18 @@ EAfDe6H3Dy6Ll456WEJsRZS630MwCAOI20ei5OBpxse5zcBZw8eS4uPpfIuDiCainIg9umBCU0GZzgLZ
         <li><a href="#phenomenontime">phenomenon time</a></li>
         <li><a href="#usedprocedure">used procedure</a></li>
         <li><a href="#affectsAgency">affects Agency</a></li>
-        <li><a href="#hasoperationalstatus">has operational status</a></li>
+        <li><a href="#featuredataprovenance">feature data provenance</a></li>
         <li><a href="#hascustodian">has custodian</a></li>
-        <li><a href="#hasexpectedobservableproperty">has expected observable property</a></li>
+        <li><a href="#EmbeddedNetworkOperator">Embedded Network Operator</a></li>
+        <li><a href="#GeneratorNumber">Generator Number</a></li>
         <li><a href="#hasjurisdiction">has jurisdiction</a></li>
-        <li><a href="#hasOperationalStatus">has operational status</a></li>
+        <li><a href="#hasoperationalstatus">has operational status</a></li>
+        <li><a href="#PrimaryFuel">Primary Fuel</a></li>
+        <li><a href="#PrimarySub-fuel">Primary Sub-fuel</a></li>
         <li><a href="#hasrelationtoground">has relation to ground</a></li>
         <li><a href="#responsibleauthority">responsible authority</a></li>
-        <li><a href="#hasstate">has state</a></li>
-        <li><a href="#isexpectedtobeobservablepropertyof">is expected to be observable property of</a></li>
+        <li><a href="#likelypropertyoffeaturewiththeme">likely property of feature with theme</a></li>
+        <li><a href="#themeoffeaturewithproperty">theme of feature with property</a></li>
     </ul>
     <div class="entity property" id="hasfeatureofinterest">
         <h3>has feature of interest<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
@@ -787,7 +1218,7 @@ EAfDe6H3Dy6Ll456WEJsRZS630MwCAOI20ei5OBpxse5zcBZw8eS4uPpfIuDiCainIg9umBCU0GZzgLZ
             <tr>
                 <th>Description</th>
                 <td>
-                    <p>A relation between an Observation and the entity whose quality was observed, or between an Actuation and the entity whose property was modified, or between an act of Sampling and the entity that was sampled.</p>
+                    <p>A relation between an Observation and the entity whose quality was observed, or between an Actuation and the entity whose property was modified, or between an act of Sampling and the entity that was sampled</p>
                 </td>
             </tr>
             <tr>
@@ -805,24 +1236,23 @@ EAfDe6H3Dy6Ll456WEJsRZS630MwCAOI20ei5OBpxse5zcBZw8eS4uPpfIuDiCainIg9umBCU0GZzgLZ
             <tr>
                 <th>Domain(s)</th>
                 <td>
-                    <a href="http://www.w3.org/ns/sosa/Sampling">sosa:Sampling</a><sup class="sup-c" title="class">c</sup>
+                    <a href="http://www.w3.org/ns/sosa/ObservationCollection">sosa:ObservationCollection</a><sup class="sup-c" title="class">c</sup>
                     <a href="http://www.w3.org/ns/sosa/Actuation">sosa:Actuation</a><sup class="sup-c" title="class">c</sup>
                     <a href="http://www.w3.org/ns/sosa/Observation">sosa:Observation</a><sup class="sup-c" title="class">c</sup>
-                    <a href="http://www.w3.org/ns/sosa/ObservationCollection">sosa:ObservationCollection</a><sup class="sup-c" title="class">c</sup>
+                    <a href="http://www.w3.org/ns/sosa/Sampling">sosa:Sampling</a><sup class="sup-c" title="class">c</sup>
                 </td>
             </tr>
             <tr>
                 <th>Range(s)</th>
                 <td>
-                    <a href="http://www.w3.org/ns/sosa/Sample">sosa:Sample</a><sup class="sup-c" title="class">c</sup>
                     <a href="http://www.w3.org/ns/sosa/FeatureOfInterest">sosa:FeatureOfInterest</a><sup class="sup-c" title="class">c</sup>
                 </td>
             </tr>
         </table>
     </div>
-    <div class="entity property" id="memberobservation">
-        <h3>member observation<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
-            <a href="#memberobservation" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+    <div class="entity property" id="hasmember">
+        <h3>has member<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#hasmember" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
         </h3>
         <table>
             <tr>
@@ -851,9 +1281,6 @@ EAfDe6H3Dy6Ll456WEJsRZS630MwCAOI20ei5OBpxse5zcBZw8eS4uPpfIuDiCainIg9umBCU0GZzgLZ
                 <th>Range(s)</th>
                 <td>
                     <a href="http://www.w3.org/ns/sosa/Observation">sosa:Observation</a><sup class="sup-c" title="class">c</sup>
-                    <a href="http://www.w3.org/ns/sosa/ObservationCollection">sosa:ObservationCollection</a><sup class="sup-c" title="class">c</sup>
-                    http://www.w3.org/ns/sosa/Observation
-                    http://www.w3.org/ns/sosa/ObservationCollection
                 </td>
             </tr>
         </table>
@@ -876,7 +1303,7 @@ EAfDe6H3Dy6Ll456WEJsRZS630MwCAOI20ei5OBpxse5zcBZw8eS4uPpfIuDiCainIg9umBCU0GZzgLZ
             <tr>
                 <th>Description</th>
                 <td>
-                    <p>Relation linking an Observation or Actuation or act of Sampling and a Result or Sample.</p>
+                    <p>Relation linking an Observation or Actuation or act of Sampling and a Result or Sample</p>
                 </td>
             </tr>
             <tr>
@@ -888,16 +1315,16 @@ EAfDe6H3Dy6Ll456WEJsRZS630MwCAOI20ei5OBpxse5zcBZw8eS4uPpfIuDiCainIg9umBCU0GZzgLZ
             <tr>
                 <th>Domain(s)</th>
                 <td>
-                    <a href="http://www.w3.org/ns/sosa/Observation">sosa:Observation</a><sup class="sup-c" title="class">c</sup>
                     <a href="http://www.w3.org/ns/sosa/Actuation">sosa:Actuation</a><sup class="sup-c" title="class">c</sup>
                     <a href="http://www.w3.org/ns/sosa/Sampling">sosa:Sampling</a><sup class="sup-c" title="class">c</sup>
+                    <a href="http://www.w3.org/ns/sosa/Observation">sosa:Observation</a><sup class="sup-c" title="class">c</sup>
                 </td>
             </tr>
             <tr>
                 <th>Range(s)</th>
                 <td>
-                    <a href="http://www.w3.org/ns/sosa/Sample">sosa:Sample</a><sup class="sup-c" title="class">c</sup>
                     <a href="http://www.w3.org/ns/sosa/Result">sosa:Result</a><sup class="sup-c" title="class">c</sup>
+                    <a href="http://www.w3.org/ns/sosa/Sample">sosa:Sample</a><sup class="sup-c" title="class">c</sup>
                 </td>
             </tr>
         </table>
@@ -920,7 +1347,7 @@ EAfDe6H3Dy6Ll456WEJsRZS630MwCAOI20ei5OBpxse5zcBZw8eS4uPpfIuDiCainIg9umBCU0GZzgLZ
             <tr>
                 <th>Description</th>
                 <td>
-                    <p>A relation between a FeatureOfInterest and an Observation about it, an Actuation acting on it, or an act of Sampling that sampled it.</p>
+                    <p>A relation between a FeatureOfInterest and an Observation about it, an Actuation acting on it, or an act of Sampling that sampled it</p>
                 </td>
             </tr>
             <tr>
@@ -932,16 +1359,16 @@ EAfDe6H3Dy6Ll456WEJsRZS630MwCAOI20ei5OBpxse5zcBZw8eS4uPpfIuDiCainIg9umBCU0GZzgLZ
             <tr>
                 <th>Domain(s)</th>
                 <td>
-                    <a href="http://www.w3.org/ns/sosa/FeatureOfInterest">sosa:FeatureOfInterest</a><sup class="sup-c" title="class">c</sup>
                     <a href="http://www.w3.org/ns/sosa/Sample">sosa:Sample</a><sup class="sup-c" title="class">c</sup>
+                    <a href="http://www.w3.org/ns/sosa/FeatureOfInterest">sosa:FeatureOfInterest</a><sup class="sup-c" title="class">c</sup>
                 </td>
             </tr>
             <tr>
                 <th>Range(s)</th>
                 <td>
-                    <a href="http://www.w3.org/ns/sosa/Observation">sosa:Observation</a><sup class="sup-c" title="class">c</sup>
                     <a href="http://www.w3.org/ns/sosa/Sampling">sosa:Sampling</a><sup class="sup-c" title="class">c</sup>
                     <a href="http://www.w3.org/ns/sosa/Actuation">sosa:Actuation</a><sup class="sup-c" title="class">c</sup>
+                    <a href="http://www.w3.org/ns/sosa/Observation">sosa:Observation</a><sup class="sup-c" title="class">c</sup>
                 </td>
             </tr>
         </table>
@@ -964,7 +1391,7 @@ EAfDe6H3Dy6Ll456WEJsRZS630MwCAOI20ei5OBpxse5zcBZw8eS4uPpfIuDiCainIg9umBCU0GZzgLZ
             <tr>
                 <th>Description</th>
                 <td>
-                    <p>Relation linking a Result to the Observation or Actuation or act of Sampling that created or caused it.</p>
+                    <p>Relation linking a Result to the Observation or Actuation or act of Sampling that created or caused it</p>
                 </td>
             </tr>
             <tr>
@@ -976,8 +1403,8 @@ EAfDe6H3Dy6Ll456WEJsRZS630MwCAOI20ei5OBpxse5zcBZw8eS4uPpfIuDiCainIg9umBCU0GZzgLZ
             <tr>
                 <th>Domain(s)</th>
                 <td>
-                    <a href="http://www.w3.org/ns/sosa/Sample">sosa:Sample</a><sup class="sup-c" title="class">c</sup>
                     <a href="http://www.w3.org/ns/sosa/Result">sosa:Result</a><sup class="sup-c" title="class">c</sup>
+                    <a href="http://www.w3.org/ns/sosa/Sample">sosa:Sample</a><sup class="sup-c" title="class">c</sup>
                 </td>
             </tr>
             <tr>
@@ -1008,14 +1435,14 @@ EAfDe6H3Dy6Ll456WEJsRZS630MwCAOI20ei5OBpxse5zcBZw8eS4uPpfIuDiCainIg9umBCU0GZzgLZ
             <tr>
                 <th>Description</th>
                 <td>
-                    <p>Relation linking an Observation to the property that was observed. The ObservableProperty should be a property of the FeatureOfInterest (linked by hasFeatureOfInterest) of this Observation.</p>
+                    <p>Relation linking an Observation to the property that was observed. The ObservableProperty should be a property of the FeatureOfInterest (linked by hasFeatureOfInterest) of this Observation</p>
                 </td>
             </tr>
             <tr>
                 <th>Domain(s)</th>
                 <td>
-                    <a href="http://www.w3.org/ns/sosa/Observation">sosa:Observation</a><sup class="sup-c" title="class">c</sup>
                     <a href="http://www.w3.org/ns/sosa/ObservationCollection">sosa:ObservationCollection</a><sup class="sup-c" title="class">c</sup>
+                    <a href="http://www.w3.org/ns/sosa/Observation">sosa:Observation</a><sup class="sup-c" title="class">c</sup>
                 </td>
             </tr>
             <tr>
@@ -1044,7 +1471,7 @@ EAfDe6H3Dy6Ll456WEJsRZS630MwCAOI20ei5OBpxse5zcBZw8eS4uPpfIuDiCainIg9umBCU0GZzgLZ
             <tr>
                 <th>Description</th>
                 <td>
-                    <p>The time that the Result of an Observation, Actuation or Sampling applies to the FeatureOfInterest. Not necessarily the same as the resultTime. May be an Interval or an Instant, or some other compound TemporalEntity.</p>
+                    <p>The time that the Result of an Observation, Actuation or Sampling applies to the FeatureOfInterest. Not necessarily the same as the resultTime. May be an Interval or an Instant, or some other compound TemporalEntity</p>
                 </td>
             </tr>
             <tr>
@@ -1082,15 +1509,15 @@ EAfDe6H3Dy6Ll456WEJsRZS630MwCAOI20ei5OBpxse5zcBZw8eS4uPpfIuDiCainIg9umBCU0GZzgLZ
             <tr>
                 <th>Description</th>
                 <td>
-                    <p>A relation to link to a re-usable Procedure used in making an Observation, an Actuation, or a Sample, typically through a Sensor, Actuator or Sampler.</p>
+                    <p>A relation to link to a re-usable Procedure used in making an Observation, an Actuation, or a Sample, typically through a Sensor, Actuator or Sampler</p>
                 </td>
             </tr>
             <tr>
                 <th>Domain(s)</th>
                 <td>
-                    <a href="http://www.w3.org/ns/sosa/ObservationCollection">sosa:ObservationCollection</a><sup class="sup-c" title="class">c</sup>
-                    <a href="http://www.w3.org/ns/sosa/Sampling">sosa:Sampling</a><sup class="sup-c" title="class">c</sup>
                     <a href="http://www.w3.org/ns/sosa/Actuation">sosa:Actuation</a><sup class="sup-c" title="class">c</sup>
+                    <a href="http://www.w3.org/ns/sosa/Sampling">sosa:Sampling</a><sup class="sup-c" title="class">c</sup>
+                    <a href="http://www.w3.org/ns/sosa/ObservationCollection">sosa:ObservationCollection</a><sup class="sup-c" title="class">c</sup>
                     <a href="http://www.w3.org/ns/sosa/Observation">sosa:Observation</a><sup class="sup-c" title="class">c</sup>
                 </td>
             </tr>
@@ -1118,6 +1545,16 @@ EAfDe6H3Dy6Ll456WEJsRZS630MwCAOI20ei5OBpxse5zcBZw8eS4uPpfIuDiCainIg9umBCU0GZzgLZ
                 </td>
             </tr>
             <tr>
+                <th>Example(s)</th>
+                <td>
+                    <pre># example from the FSDF datagraph Mandates
+# Here a particular Mandate affects a particular Agency
+mandates:clp-1994
+  fsdf:affectsAgency agencies:delwp ;
+.</pre><br/>
+                </td>
+            </tr>
+            <tr>
                 <th>Domain(s)</th>
                 <td>
                     <a href="#Mandate">Mandate</a><sup class="sup-c" title="class">c</sup>
@@ -1126,36 +1563,30 @@ EAfDe6H3Dy6Ll456WEJsRZS630MwCAOI20ei5OBpxse5zcBZw8eS4uPpfIuDiCainIg9umBCU0GZzgLZ
             <tr>
                 <th>Range(s)</th>
                 <td>
-                    <a href="https://linked.data.gov.au/def/fsdf/Agency">https://linked.data.gov.au/def/fsdf/Agency</a><sup class="sup-c" title="class">c</sup>
+                    <a href="https://linked.data.gov.au/def/fsdf/Agency">fsdf:Agency</a><sup class="sup-c" title="class">c</sup>
                 </td>
             </tr>
         </table>
     </div>
-    <div class="entity property" id="hasoperationalstatus">
-        <h3>has operational status<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
-            <a href="#hasoperationalstatus" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+    <div class="entity property" id="featuredataprovenance">
+        <h3>feature data provenance<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#featuredataprovenance" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
         </h3>
         <table>
             <tr>
                 <th>URI</th>
-                <td><code>https://linked.data.gov.au/def/fsdf/featureObservation</code></td>
+                <td><code>https://linked.data.gov.au/def/fsdf/featureDataProvenance</code></td>
             </tr>
             <tr>
                 <th>Description</th>
                 <td>
-                    <p>The mode of physical operation of the feature</p>
+                    <p>The provenance (source from which, and date) that feature data was received</p>
                 </td>
             </tr>
             <tr>
                 <th>Domain(s)</th>
                 <td>
                     <a href="http://www.opengis.net/ont/geosparql#Feature">geo:Feature</a><sup class="sup-c" title="class">c</sup>
-                </td>
-            </tr>
-            <tr>
-                <th>Range(s)</th>
-                <td>
-                    <a href="http://www.w3.org/ns/sosa/ObservableProperty">sosa:ObservableProperty</a><sup class="sup-c" title="class">c</sup>
                 </td>
             </tr>
         </table>
@@ -1191,24 +1622,24 @@ EAfDe6H3Dy6Ll456WEJsRZS630MwCAOI20ei5OBpxse5zcBZw8eS4uPpfIuDiCainIg9umBCU0GZzgLZ
             <tr>
                 <th>Range(s)</th>
                 <td>
-                    <a href="https://linked.data.gov.au/def/fsdf/Agency">https://linked.data.gov.au/def/fsdf/Agency</a><sup class="sup-c" title="class">c</sup>
+                    <a href="https://linked.data.gov.au/def/fsdf/Agency">fsdf:Agency</a><sup class="sup-c" title="class">c</sup>
                 </td>
             </tr>
         </table>
     </div>
-    <div class="entity property" id="hasexpectedobservableproperty">
-        <h3>has expected observable property<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
-            <a href="#hasexpectedobservableproperty" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+    <div class="entity property" id="EmbeddedNetworkOperator">
+        <h3>Embedded Network Operator<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#EmbeddedNetworkOperator" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
         </h3>
         <table>
             <tr>
                 <th>URI</th>
-                <td><code>https://linked.data.gov.au/def/fsdf/hasExpectedObservableProperty</code></td>
+                <td><code>https://linked.data.gov.au/def/fsdf/hasEmbeddedNetworkOperator</code></td>
             </tr>
             <tr>
                 <th>Description</th>
                 <td>
-                    <p>The Feature has an expected Observable Property</p>
+                    <p>The embedded network operator identifier for electricity generation infrastructure</p>
                 </td>
             </tr>
             <tr>
@@ -1220,7 +1651,36 @@ EAfDe6H3Dy6Ll456WEJsRZS630MwCAOI20ei5OBpxse5zcBZw8eS4uPpfIuDiCainIg9umBCU0GZzgLZ
             <tr>
                 <th>Range(s)</th>
                 <td>
-                    <a href="http://www.w3.org/ns/sosa/ObservableProperty">sosa:ObservableProperty</a><sup class="sup-c" title="class">c</sup>
+                    <a href="http://www.w3.org/2000/01/rdf-schema#Literal">rdfs:Literal</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="GeneratorNumber">
+        <h3>Generator Number<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#GeneratorNumber" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://linked.data.gov.au/def/fsdf/hasGeneratorNumber</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>The generator number for electricity generation infrastructure</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="http://www.opengis.net/ont/geosparql#Feature">geo:Feature</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://www.w3.org/2001/XMLSchema#integer">xsd:integer</a><sup class="sup-c" title="class">c</sup>
                 </td>
             </tr>
         </table>
@@ -1250,14 +1710,14 @@ EAfDe6H3Dy6Ll456WEJsRZS630MwCAOI20ei5OBpxse5zcBZw8eS4uPpfIuDiCainIg9umBCU0GZzgLZ
             <tr>
                 <th>Range(s)</th>
                 <td>
-                    <a href="https://linked.data.gov.au/def/fsdf/Jurisdiction">https://linked.data.gov.au/def/fsdf/Jurisdiction</a><sup class="sup-c" title="class">c</sup>
+                    <a href="https://linked.data.gov.au/def/fsdf/Jurisdiction">fsdf:Jurisdiction</a><sup class="sup-c" title="class">c</sup>
                 </td>
             </tr>
         </table>
     </div>
-    <div class="entity property" id="hasOperationalStatus">
+    <div class="entity property" id="hasoperationalstatus">
         <h3>has operational status<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
-            <a href="#hasOperationalStatus" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+            <a href="#hasoperationalstatus" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
         </h3>
         <table>
             <tr>
@@ -1279,7 +1739,65 @@ EAfDe6H3Dy6Ll456WEJsRZS630MwCAOI20ei5OBpxse5zcBZw8eS4uPpfIuDiCainIg9umBCU0GZzgLZ
             <tr>
                 <th>Range(s)</th>
                 <td>
-                    <a href="http://www.w3.org/2004/02/skos/core#Concept">skos:Concept</a><sup class="sup-c" title="class">c</sup>
+                    <a href="https://linked.data.gov.au/def/fsdf/OperationalStatus">fsdf:OperationalStatus</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="PrimaryFuel">
+        <h3>Primary Fuel<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#PrimaryFuel" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://linked.data.gov.au/def/fsdf/hasPrimaryFuel</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>The primary fuel type used by a generator</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="http://www.opengis.net/ont/geosparql#Feature">geo:Feature</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://linked.data.gov.au/def/fsdf/Fuel">fsdf:Fuel</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="PrimarySub-fuel">
+        <h3>Primary Sub-fuel<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#PrimarySub-fuel" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://linked.data.gov.au/def/fsdf/hasPrimarySubFuel</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>The primary sub-fuel type used by a generator</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="http://www.opengis.net/ont/geosparql#Feature">geo:Feature</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://linked.data.gov.au/def/fsdf/Fuel">fsdf:Fuel</a><sup class="sup-c" title="class">c</sup>
                 </td>
             </tr>
         </table>
@@ -1308,7 +1826,7 @@ EAfDe6H3Dy6Ll456WEJsRZS630MwCAOI20ei5OBpxse5zcBZw8eS4uPpfIuDiCainIg9umBCU0GZzgLZ
             <tr>
                 <th>Range(s)</th>
                 <td>
-                    <a href="http://www.w3.org/2004/02/skos/core#Concept">skos:Concept</a><sup class="sup-c" title="class">c</sup>
+                    <a href="https://linked.data.gov.au/def/fsdf/GroundRelation">fsdf:GroundRelation</a><sup class="sup-c" title="class">c</sup>
                 </td>
             </tr>
         </table>
@@ -1321,6 +1839,12 @@ EAfDe6H3Dy6Ll456WEJsRZS630MwCAOI20ei5OBpxse5zcBZw8eS4uPpfIuDiCainIg9umBCU0GZzgLZ
             <tr>
                 <th>URI</th>
                 <td><code>https://linked.data.gov.au/def/fsdf/hasResponsibleAuthority</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>The authority responsible for a Mandate</p>
+                </td>
             </tr>
             <tr>
                 <th>Domain(s)</th>
@@ -1337,54 +1861,84 @@ EAfDe6H3Dy6Ll456WEJsRZS630MwCAOI20ei5OBpxse5zcBZw8eS4uPpfIuDiCainIg9umBCU0GZzgLZ
             </tr>
         </table>
     </div>
-    <div class="entity property" id="hasstate">
-        <h3>has state<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
-            <a href="#hasstate" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+    <div class="entity property" id="likelypropertyoffeaturewiththeme">
+        <h3>likely property of feature with theme<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#likelypropertyoffeaturewiththeme" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
         </h3>
         <table>
             <tr>
                 <th>URI</th>
-                <td><code>https://linked.data.gov.au/def/fsdf/hasState</code></td>
+                <td><code>https://linked.data.gov.au/def/fsdf/likelyPropertyOfFeatureWithTheme</code></td>
             </tr>
             <tr>
                 <th>Description</th>
                 <td>
-                    <p>The State or Territory that this Feature is within</p>
+                    <p>This Observable Property is expected to be of a Feature with this theme</p>
                 </td>
             </tr>
             <tr>
-                <th>Domain(s)</th>
+                <th>Example(s)</th>
                 <td>
-                    <a href="http://www.opengis.net/ont/geosparql#Feature">geo:Feature</a><sup class="sup-c" title="class">c</sup>
-                </td>
-            </tr>
-            <tr>
-                <th>Range(s)</th>
-                <td>
-                    <a href="https://linked.data.gov.au/def/asgs#StateOrTerritory">asgs:StateOrTerritory</a><sup class="sup-c" title="class">c</sup>
-                </td>
-            </tr>
-        </table>
-    </div>
-    <div class="entity property" id="isexpectedtobeobservablepropertyof">
-        <h3>is expected to be observable property of<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
-            <a href="#isexpectedtobeobservablepropertyof" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
-        </h3>
-        <table>
-            <tr>
-                <th>URI</th>
-                <td><code>https://linked.data.gov.au/def/fsdf/isExpectedToBeObservablePropertyOf</code></td>
-            </tr>
-            <tr>
-                <th>Description</th>
-                <td>
-                    <p>The Observable Property is expected to be of a Feature</p>
+                    <pre># example from the feature-property-relations datagraph
+obsp:ratedVoltage 
+  fsdf:likelyPropertyOfFeatureWithTheme themes:electrical-infrastructure ;
+.</pre><br/>
                 </td>
             </tr>
             <tr>
                 <th>Inverse properties</th>
                 <td>
-                    <a href="#hasexpectedobservableproperty">has expected observable property</a><sup class="sup-op" title="object property">op</sup>
+                    <a href="https://linked.data.gov.au/def/fsdf/hasExpectedObservableProperty">fsdf:hasExpectedObservableProperty</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="http://www.w3.org/ns/sosa/ObservableProperty">sosa:ObservableProperty</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://linked.data.gov.au/def/fsdf/Theme">fsdf:Theme</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="themeoffeaturewithproperty">
+        <h3>theme of feature with property<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#themeoffeaturewithproperty" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://linked.data.gov.au/def/fsdf/themeOfFeatureWithProperty</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>A Feature with this theme has this expected Observable Property</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Example(s)</th>
+                <td>
+                    <pre># example from the feature-property-relations datagraph
+themes:electrical-infrastructure
+  fsdf:likelyPropertyOfFeatureWithTheme obsp:ratedVoltage ;
+.</pre><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#FSDFTheme">FSDF Theme</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://www.w3.org/ns/sosa/ObservableProperty">sosa:ObservableProperty</a><sup class="sup-c" title="class">c</sup>
                 </td>
             </tr>
         </table>
@@ -1396,7 +1950,6 @@ EAfDe6H3Dy6Ll456WEJsRZS630MwCAOI20ei5OBpxse5zcBZw8eS4uPpfIuDiCainIg9umBCU0GZzgLZ
     <ul class="hlist">
         <li><a href="#hassimpleresult">has simple result</a></li>
         <li><a href="#resulttime">result time</a></li>
-        <li><a href="#hasspatialconfidence">has spatial confidence</a></li>
     </ul>
     <div class="entity property" id="hassimpleresult">
         <h3>has simple result<sup title="datatype property" class="sup-dp">dp</sup><span style="float:right; margin-right:10px; font-size:smaller;">
@@ -1416,7 +1969,7 @@ EAfDe6H3Dy6Ll456WEJsRZS630MwCAOI20ei5OBpxse5zcBZw8eS4uPpfIuDiCainIg9umBCU0GZzgLZ
             <tr>
                 <th>Description</th>
                 <td>
-                    <p>The simple value of an Observation or Actuation or act of Sampling.</p>
+                    <p>The simple value of an Observation or Actuation or act of Sampling</p>
                 </td>
             </tr>
             <tr>
@@ -1428,8 +1981,8 @@ EAfDe6H3Dy6Ll456WEJsRZS630MwCAOI20ei5OBpxse5zcBZw8eS4uPpfIuDiCainIg9umBCU0GZzgLZ
             <tr>
                 <th>Domain(s)</th>
                 <td>
-                    <a href="http://www.w3.org/ns/sosa/Actuation">sosa:Actuation</a><sup class="sup-c" title="class">c</sup>
                     <a href="http://www.w3.org/ns/sosa/Observation">sosa:Observation</a><sup class="sup-c" title="class">c</sup>
+                    <a href="http://www.w3.org/ns/sosa/Actuation">sosa:Actuation</a><sup class="sup-c" title="class">c</sup>
                     <a href="http://www.w3.org/ns/sosa/Sampling">sosa:Sampling</a><sup class="sup-c" title="class">c</sup>
                 </td>
             </tr>
@@ -1453,7 +2006,7 @@ EAfDe6H3Dy6Ll456WEJsRZS630MwCAOI20ei5OBpxse5zcBZw8eS4uPpfIuDiCainIg9umBCU0GZzgLZ
             <tr>
                 <th>Description</th>
                 <td>
-                    <p>The result time is the instant of time when the Observation, Actuation or Sampling activity was completed.</p>
+                    <p>The result time is the instant of time when the Observation, Actuation or Sampling activity was completed</p>
                 </td>
             </tr>
             <tr>
@@ -1473,35 +2026,6 @@ EAfDe6H3Dy6Ll456WEJsRZS630MwCAOI20ei5OBpxse5zcBZw8eS4uPpfIuDiCainIg9umBCU0GZzgLZ
             </tr>
         </table>
     </div>
-    <div class="entity property" id="hasspatialconfidence">
-        <h3>has spatial confidence<sup title="datatype property" class="sup-dp">dp</sup><span style="float:right; margin-right:10px; font-size:smaller;">
-            <a href="#hasspatialconfidence" title="fragment link to here">#</a>&nbsp;<a href="#datatypeproperties" title="Datatype Properties Index">DPs</a></span>
-        </h3>
-        <table>
-            <tr>
-                <th>URI</th>
-                <td><code>https://linked.data.gov.au/def/fsdf/hasSpatialConfidence</code></td>
-            </tr>
-            <tr>
-                <th>Description</th>
-                <td>
-                    <p>??????</p>
-                </td>
-            </tr>
-            <tr>
-                <th>Domain(s)</th>
-                <td>
-                    <a href="http://www.opengis.net/ont/geosparql#Feature">geo:Feature</a><sup class="sup-c" title="class">c</sup>
-                </td>
-            </tr>
-            <tr>
-                <th>Range(s)</th>
-                <td>
-                    <a href="http://www.w3.org/2001/XMLSchema#float">xsd:float</a><sup class="sup-c" title="class">c</sup>
-                </td>
-            </tr>
-        </table>
-    </div>
 </section>
 
   
@@ -1516,6 +2040,8 @@ EAfDe6H3Dy6Ll456WEJsRZS630MwCAOI20ei5OBpxse5zcBZw8eS4uPpfIuDiCainIg9umBCU0GZzgLZ
         <dd><code>http://www.w3.org/ns/dcat#</code></dd>
         <dt>dcterms</dt>
         <dd><code>http://purl.org/dc/terms/</code></dd>
+        <dt>fsdf</dt>
+        <dd><code>https://linked.data.gov.au/def/fsdf/</code></dd>
         <dt>geo</dt>
         <dd><code>http://www.opengis.net/ont/geosparql#</code></dd>
         <dt>jurisdictions</dt>
