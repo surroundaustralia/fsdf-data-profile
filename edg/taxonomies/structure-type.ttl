@@ -2,3 +2,38 @@
 # 	standrd PV - from Power Stations
 # 	solar
 #	
+
+# baseURI: https://linked.data.gov.au/def/fsdf/structuretypes
+# prefix: structure
+
+@prefix cs: <https://linked.data.gov.au/def/fsdf/structuretypes> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix structure: <https://linked.data.gov.au/def/fsdf/structuretypes/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+cs:
+    a owl:Ontology , skos:ConceptScheme ;
+    skos:prefLabel "FSDF Structure Types" ;
+    dcterms:creator <https://linked.data.gov.au/org/ga> ;
+    dcterms:publisher <https://linked.data.gov.au/org/icsm> ;
+    dcterms:created "2021-07-27"^^xsd:date ;
+    dcterms:modified "2021-07-27"^^xsd:date ;
+    dcterms:provenance "Created for the Loc-I DR Project"@en ;
+    skos:definition "This vocabulary lists types of structure that buildings and facilities may have, in various FSDF datasets"@en ;
+    owl:versionInfo "1.0"^^xsd:string ;
+    skos:hasTopConcept
+    	structure:wind ;
+.
+
+structure:wind
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Wind used to generate power, usually wind turbines"@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Wind"@en ;
+    skos:topConceptOf cs: ;
+.

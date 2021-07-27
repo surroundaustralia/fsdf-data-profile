@@ -1,7 +1,7 @@
 # baseURI: https://linked.data.gov.au/def/fsdf/operational-statuses
 # prefix: opstatus
 
-@prefix cs: <https://linked.data.gov.au/def/fsdf/themes/physical-infrastructure-cs> .
+@prefix cs: <https://linked.data.gov.au/def/fsdf/physical-infrastructure-cs> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .

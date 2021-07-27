@@ -1,9 +1,9 @@
 # baseURI: https://linked.data.gov.au/def/fsdf/ground-relations
 # prefix: ground
 
-@prefix cs: <https://linked.data.gov.au/def/fsdf/themes/ground-relations> .
+@prefix cs: <https://linked.data.gov.au/def/fsdf/ground-relations> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix ground: <https://linked.data.gov.au/def/fsdf/themes/ground-relations/> .
+@prefix ground: <https://linked.data.gov.au/def/fsdf/ground-relations/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -18,8 +18,8 @@ cs:
     dcterms:publisher <https://linked.data.gov.au/org/icsm> ;
     dcterms:created "2021-06-08"^^xsd:date ;
     dcterms:modified "2021-06-08"^^xsd:date ;
-    dcterms:provenance "Created for the Loc-I DR Project" ;
-    skos:definition "This vocabulary lists relations of geospatial Feature to the earth's surface" ;
+    dcterms:provenance "Created for the Loc-I DR Project"@en ;
+    skos:definition "This vocabulary lists relations of geospatial Feature to the earth's surface"@en ;
     owl:versionInfo "1.0"^^xsd:string ;
     skos:hasTopConcept
     	ground:aboveGround ,

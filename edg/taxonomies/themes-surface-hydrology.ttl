@@ -37,8 +37,7 @@ themes:floods
     a skos:Concept ;
     skos:prefLabel "Floods"@en ;
     skos:definition "Floods, flooding, including freshwater and coastal"@en ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/fsdf/themes> ;
+    rdfs:isDefinedBy cs: ;
     skos:inScheme cs: ;
-    skos:broader <https://linked.data.gov.au/def/fsdf/themes/surface-hydrology> ;
+    skos:broader themes:surface-hydrology ;
 .
-
