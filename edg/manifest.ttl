@@ -17,7 +17,7 @@
   a owl:Ontology ;
   swa:defaultNamespace "https://data.surroundaustralia.com/manifest/fsdf/register/"^^xsd:anyURI ;
   teamwork:newInstancesUserCannotModifyURI false ;
-  rdfs:comment "This Manifest contains a list of all the assets within the FSDF KG" ;
+  rdfs:comment "This Manifest contains a list of all the assets within the FSDF KG"@en ;
   rdfs:label "FSDF KG"@en ;
   owl:imports <https://data.surroundaustralia.com/def/standards-baseline> ;
   sopbl:purpose "The FSDF KG Product"@en ;
@@ -56,7 +56,7 @@ register:fpr
   a sopbl:ManagedGraph ;
   dcterms:provenance "Authoratitive version, generated here from non-RDF source data"@en ;
   teamwork:rootClass owl:Thing ;
-  rdfs:comment "Associations between classes of geospatial Feature and the expected observable Properties of them, of relevance to the FSDF project"@en ;
+  rdfs:comment "Associations between classes of geospatial Feature and the expected observable Properties of them, of relevance to the Loc-I DR Project"@en ;
   rdfs:label "FSDF Feature Property Relations"@en ;
   sopbl:edgType <http://teamwork.topbraidlive.org/datagraph/datagraphprojects#ProjectType> ;
   sopbl:include "https://data.surroundaustralia.com/platform/shapes/comment-from"^^xsd:anyURI ;
@@ -114,7 +114,7 @@ register:observable-properties
 .
 register:ont
   a sopbl:ManagedGraph ;
-  dcterms:provenance "Built for the FSDF Project"@en ;
+  dcterms:provenance "Built for the Loc-I DR Project"@en ;
   rdfs:comment "This copy of the FSDF Ontology is unchanged from the source but changes may occur to improve the dataset"@en ;
   rdfs:label "FSDF Ontology"@en ;
   sopbl:edgType <http://teamwork.topbraidlive.org/ontologyprojects#ProjectType> ;
@@ -126,7 +126,39 @@ register:ont
   sopbl:module "FSDF" ;
   sopbl:proxy "https://linked.data.gov.au/def/fsdf"^^xsd:anyURI ;
   sopbl:purpose "The FSDF KG Product"@en ;
-  sopbl:repository "https://github.com/GeoscienceAustralia/fsdf-ont"^^xsd:anyURI ;
+  sopbl:repository "https://github.com/GeoscienceAustralia/fsdf-kg"^^xsd:anyURI ;
+.
+register:common
+  a sopbl:ManagedGraph ;
+  dcterms:provenance "Built by CSIRO & GA prior to Loc-I DR"@en ;
+  rdfs:comment "This Common Ontology was imported into theis FSDF KG from previous CSIRO & GA work"@en ;
+  rdfs:label "FSDF common elements ontology"@en ;
+  sopbl:edgType <http://teamwork.topbraidlive.org/ontologyprojects#ProjectType> ;
+  sopbl:include "https://data.surroundaustralia.com/platform/shapes/classing-basic"^^xsd:anyURI ;
+  sopbl:include "https://data.surroundaustralia.com/platform/shapes/comment-from"^^xsd:anyURI ;
+  sopbl:include "https://data.surroundaustralia.com/platform/shapes/label-from"^^xsd:anyURI ;
+  sopbl:include "https://linked.data.gov.au/def/fsdf.shapes"^^xsd:anyURI ;
+  sopbl:localCopyPath "ontologies/common.ttl" ;
+  sopbl:module "FSDF" ;
+  sopbl:proxy "https://linked.data.gov.au/def/fsdf/common"^^xsd:anyURI ;
+  sopbl:purpose "The FSDF KG Product"@en ;
+  sopbl:repository "https://github.com/GeoscienceAustralia/fsdf-kg"^^xsd:anyURI ;
+.
+register:network
+  a sopbl:ManagedGraph ;
+  dcterms:provenance "Built by CSIRO & GA prior to Loc-I DR"@en ;
+  rdfs:comment "This Network Ontology was imported into theis FSDF KG from previous CSIRO & GA work"@en ;
+  rdfs:label "FSDF Network Ontology"@en ;
+  sopbl:edgType <http://teamwork.topbraidlive.org/ontologyprojects#ProjectType> ;
+  sopbl:include "https://data.surroundaustralia.com/platform/shapes/classing-basic"^^xsd:anyURI ;
+  sopbl:include "https://data.surroundaustralia.com/platform/shapes/comment-from"^^xsd:anyURI ;
+  sopbl:include "https://data.surroundaustralia.com/platform/shapes/label-from"^^xsd:anyURI ;
+  sopbl:include "https://linked.data.gov.au/def/fsdf.shapes"^^xsd:anyURI ;
+  sopbl:localCopyPath "ontologies/network.ttl" ;
+  sopbl:module "FSDF" ;
+  sopbl:proxy "https://linked.data.gov.au/def/fsdf/network"^^xsd:anyURI ;
+  sopbl:purpose "The FSDF KG Product"@en ;
+  sopbl:repository "https://github.com/GeoscienceAustralia/fsdf-kg"^^xsd:anyURI ;
 .
 register:themes
   a sopbl:ManagedGraph ;

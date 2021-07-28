@@ -26,7 +26,7 @@
   dcterms:rights "(c) Australian Government (ICSM), 2021" ;
   dcterms:modified "2021-07-27"^^xsd:date ;
   skos:prefLabel "FSDF common elements ontology"@en ;
-  sdo:codeRepository "https://github.com/GeoscienceAustralia/FSDF"^^xsd:anyURI ;
+  sdo:codeRepository "https://github.com/GeoscienceAustralia/FSDF-KG"^^xsd:anyURI ;
   skos:changeNote "NC 2021-07-27: changed rdfs:labels to skos:prefLabels, as per AGOP profile. Changed license crom CC0 to CC-BY-4 as per govt regs"@en
 .
 common:ContactDetails

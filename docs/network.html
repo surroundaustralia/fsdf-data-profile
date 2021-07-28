@@ -1,0 +1,1831 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>FSDF Network ontology</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAC40lEQVRYhe2UT0hUQRzHp6Iss1B3VZKIDbbdfW9mnoi4f3zzjkJQeOgS0SEIb1EWBGGlLLu460zQPQM1unUIIjA6rfpm6ZAhHjoIRVQUFUlEbG+euTsdXG1d3VL3bVD4g+9h+L35fT/8fvN7ADgY9aHY5fpIvK82HO9ysu66wxWOzbkjcekKx0a2ALYA/n2AGi3a6ArFezcidziecQygNhhrcUficjP6PwBqtGijKxy/thnVBePHywYoDsFhl53GV8SEcsTx4usCMLUewTVpc23BNvEzm6Neyf1+KcG2vwqwUjgrOJq2JmHftwmkVBRGTvncFodnbI7vChO/FRznCmHsNM7aHM9Yk7Df5iqsLMw9sMNOK2g+jS4IEz0UJv4iuJZb2RltWnB4UZqH6ioGAgAAGe5vtiZhtzDx7OoRadLmeM7m6IRjhnLMW2Vx1bA5GhAmnhIcz6/xNj4Ujsky8UspwfayjDPjsF2Y6L7N8Vzx/BfP+KPg6LbgSqd8DnfJW2CnbaLhfH5ephpqygJYvQU4Z3P82TLRsDDhUTnmrSq+Y3N0Mg+Xldy/zwEAnLMWZ3pHpNExmfLs/t0dOdVcbT0JeKxUwFP2VljjqiE47Jp53LTXNxhsUZjerTByXWX6VZWRs/4bIQ2ACv+UAomgDzLCISNZxAxZKMhIDjLy1JfsaK+I+eGBUBNk5E2x8RogX/PdcDZUqieWTSh5D6nOVKqfhoycUmlHFFIyu5RXqf7AcQDISCpv/tqbMBqK883RtmpISRoxQyJKPgGn3wNk5NEigDFa6hslqV/Kj+FdBQD0bshIDlKSLlVcoWQo36UhR80BAMB73lulMn0EMpJTqD6qJiOt3mho/8GbkT2BZNgDB/V+RI0fkOrT3kRIVQbaDizJm2hdNbINBxwk5xAj3yEjuV9rZ1iIkgxixkLBA83mz8uCjLwoGwAx0vOnFSy5mtR4VTaAQvVORMnwZgSpzkrV/QmdE2tKe46+MQAAAABJRU5ErkJggg==">
+    <link rel="icon" type="image/png" sizes="16x16" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABhklEQVQ4jbWPzStEURjG3yQLirlGKUnKFO45Z+SjmXvnnmthQcpCoVhYmD/AwmJiI3OvZuZc2U3UlKU0/gAslMw9JgvhHxAr2fko7r0jHSsl+TgbTz2Lt5731/MASEiJW9ONml2QyX6rsGalmnT74v8BDf12hxJfpV8d1uwNKUBYszabdFv84L8B9X0rESVmmUup2fme0cVhJWaZHw4NWL1Sew
+EAfDe6H3Dy6Ll456WEJsRZS630MwCAOI20ei5OBpxse5zcBZw8eS4uPpfIuDiCainIg9umBCU0GZzgLZ9Hn31OgoATL+CkLDGB5H1OKj4nFd/FBxUXJ0UZNb4edw/6nLyJXaj5FeCVyPLNIVmYK8TG1IwWb16L1gEACAFV90ftoT8bdOX0EeyY99gxBXZMgRz6qGb1KantAACI0UvE6F5XJqEjpsdURouI0Vt5gGOUkUNnPu7ObGIIMfNaGqDmjDRi9FZldF1lRgYzeqUyeoiY4ag5Iy3RgOYRM8+/M2bG8efsO4hGrpmJseyMAAAAAElFTkSuQmCC">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    
+    <style>
+        #pylode {
+            position: fixed;
+            top: 130px;
+            left: -60px;
+            font-size: small;
+            transform: rotate(-90deg);
+            color: grey;
+        }
+        #pylode a {
+            font-size: 2em;
+            font-weight: bold;
+            text-decoration: none;
+            color: #005A9C;
+        }
+        #pylode a:hover {
+            color: #333;
+        }
+
+        .cardinality {
+            font-style: italic;
+            color: #aa00aa;
+        }
+
+        dt {
+            font-weight: bold;
+            padding: 5px 0 5px 0;
+        }
+
+        ul.hlist {
+            list-style-type: none;
+            border: 1px solid navy;
+            padding:5px;
+            background-color: #F4FFFF;
+        }
+
+        ul.hierarchy {
+            border: 1px solid navy;
+            padding: 5px 25px 5px 25px;
+            background-color: #F4FFFF;
+        }
+
+
+        ul.hlist li {
+            display: inline;
+            margin-right: 10px;
+        }
+
+        .entity {
+            border: 1px solid navy;
+            margin:5px 0 5px 0;
+            padding: 5px;
+        }
+
+        .entity th {
+            width: 150px;
+            vertical-align: top;
+        }
+
+        .entity th,
+        .entity td {
+            padding-bottom: 20px;
+        }
+
+        .entity table th {
+            text-align: left;
+        }
+
+        section#overview img {
+            max-width: 1000px;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            text-align: left
+        }
+        h1, h2, h3 {
+            color: #005A9C; background: white
+        }
+        h1 {
+            font: 170% sans-serif;
+            line-height: 110%;
+        }
+        h2 {
+            font: 140% sans-serif;
+            margin-top:40px;
+        }
+        h3 {
+            font: 120% sans-serif;
+            margin-top: 3px;
+            padding-bottom: 5px;
+            border-bottom: 1px solid navy;
+        }
+        h4 { font: bold 100% sans-serif }
+        h5 { font: italic 100% sans-serif }
+        h6 { font: small-caps 100% sans-serif }
+
+
+        body {
+            padding: 2em 70px 2em 70px;
+            margin: 0;
+            font-family: sans-serif;
+            color: black;
+            background: white;
+            background-position: top left;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            text-align: justify;
+        }
+
+        section {
+            max-width: 1500px;
+        }
+
+        .figure {
+            margin-bottom: 20px;
+        }
+
+        :link { color: #00C; background: transparent }
+        :visited { color: #609; background: transparent }
+        a:active { color: #C00; background: transparent }
+
+        .sup-c,
+        .sup-op,
+        .sup-fp,
+        .sup-dp,
+        .sup-ap,
+        .sup-p,
+        .sup-ni,
+        .sup-con,
+        .sup-col {
+            cursor:help;
+            margin-left: 3px;
+        }
+
+        .sup-c {
+            color:orange;
+        }
+
+        .sup-op {
+            color:navy;
+        }
+
+        .sup-fp {
+            color:lightskyblue;
+        }
+
+        .sup-dp {
+            color:green;
+        }
+
+        .sup-ap {
+            color:darkred;
+        }
+
+        .sup-p {
+            color:black;
+        }
+
+        .sup-ni {
+            color:brown;
+        }
+
+        .sup-con {
+            color:orange;
+        }
+
+        .sup-col {
+            color:darkred;
+        }
+
+        code {
+            font-size: large;
+            color: darkred;
+        }
+
+        /* less prominent links for properties */
+        .proplink {
+            color: #336;
+            text-decoration: none;
+        }
+    </style>
+    
+    <script type="application/ld+json">
+      [
+  {
+    "@id": "https://linked.data.gov.au/def/fsdf/network",
+    "@type": [
+      "https://schema.org/DefinedTermSet"
+    ],
+    "https://schema.org/codeRepository": [
+      {
+        "@id": "https://github.com/GeoscienceAustralia/FSDF-KG"
+      }
+    ],
+    "https://schema.org/description": [
+      {
+        "@value": "<p>Generic network ontology for FSDF. To be used as the basis for FSDF network models, including Roads, Railways, Hydrology, Pipelines, Air transport, Powerlines. </p>\n<p>Adapted from http://inspire.ec.europa.eu/ont/net.</p>"
+      }
+    ],
+    "https://schema.org/license": [
+      {
+        "@id": "http://purl.org/NET/rdflicense/cc-by4.0"
+      }
+    ],
+    "https://schema.org/name": [
+      {
+        "@value": "FSDF Network ontology"
+      }
+    ],
+    "https://schema.org/rights": [
+      {
+        "@value": "&copy; Australian Government (ICSM), 2021"
+      }
+    ]
+  }
+]
+    </script>
+</head>
+<body>
+  <div id="pylode">made by <a href="http://github.com/rdflib/pyLODE">
+    <span style="color:#329545;">p</span><span style="color:#f9cb33;">y</span>LODE</a>
+    <span style="font-size:smaller;">2.10.0</span>
+  </div>
+  <h1>FSDF Network ontology</h1>
+<section id="metadata">
+    <h2 style="display:none;">Metadata</h2>
+    <dl>
+        <dt>URI</dt>
+        <dd><code>https://linked.data.gov.au/def/fsdf/network</code></dd>
+        <dt><a class="proplink" href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/publisher">Publisher</a>(s)</dt>
+        <dd>
+            
+    None<br/>
+        </dd>
+        <dt><a class="proplink" href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/creator">Creator</a>(s)</dt>
+        <dd>
+            
+    <a href="https://orcid.org/0000-0002-3884-3420">Simon J D Cox</a>
+    <a href="">
+  <svg width="15px" height="15px" viewBox="0 0 72 72" version="1.1"
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Orcid logo</title>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="hero" transform="translate(-924.000000, -72.000000)" fill-rule="nonzero">
+            <g id="Group-4">
+                <g id="vector_iD_icon" transform="translate(924.000000, 72.000000)">
+                    <path d="M72,36 C72,55.884375 55.884375,72 36,72 C16.115625,72 0,55.884375 0,36 C0,16.115625 16.115625,0 36,0 C55.884375,0 72,16.115625 72,36 Z" id="Path" fill="#A6CE39"></path>
+                    <g id="Group" transform="translate(18.868966, 12.910345)" fill="#FFFFFF">
+                        <polygon id="Path" points="5.03734929 39.1250878 0.695429861 39.1250878 0.695429861 9.14431787 5.03734929 9.14431787 5.03734929 22.6930505 5.03734929 39.1250878"></polygon>
+                        <path d="M11.409257,9.14431787 L23.1380784,9.14431787 C34.303014,9.14431787 39.2088191,17.0664074 39.2088191,24.1486995 C39.2088191,31.846843 33.1470485,39.1530811 23.1944669,39.1530811 L11.409257,39.1530811 L11.409257,9.14431787 Z M15.7511765,35.2620194 L22.6587756,35.2620194 C32.49858,35.2620194 34.7541226,27.8438084 34.7541226,24.1486995 C34.7541226,18.1301509 30.8915059,13.0353795 22.4332213,13.0353795 L15.7511765,13.0353795 L15.7511765,35.2620194 Z" id="Shape"></path>
+                        <path d="M5.71401206,2.90182329 C5.71401206,4.441452 4.44526937,5.72914146 2.86638958,5.72914146 C1.28750978,5.72914146 0.0187670918,4.441452 0.0187670918,2.90182329 C0.0187670918,1.33420133 1.28750978,0.0745051096 2.86638958,0.0745051096 C4.44526937,0.0745051096 5.71401206,1.36219458 5.71401206,2.90182329 Z" id="Path"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+  </svg>
+</a><br/>
+        </dd>
+        <dt><a class="proplink" href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/contributor">Contributor</a>(s)</dt>
+        <dd>
+            
+    <a href="https://orcid.org/0000-0002-4643-7289">Irina Bastrakova</a>
+    <a href="">
+  <svg width="15px" height="15px" viewBox="0 0 72 72" version="1.1"
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Orcid logo</title>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="hero" transform="translate(-924.000000, -72.000000)" fill-rule="nonzero">
+            <g id="Group-4">
+                <g id="vector_iD_icon" transform="translate(924.000000, 72.000000)">
+                    <path d="M72,36 C72,55.884375 55.884375,72 36,72 C16.115625,72 0,55.884375 0,36 C0,16.115625 16.115625,0 36,0 C55.884375,0 72,16.115625 72,36 Z" id="Path" fill="#A6CE39"></path>
+                    <g id="Group" transform="translate(18.868966, 12.910345)" fill="#FFFFFF">
+                        <polygon id="Path" points="5.03734929 39.1250878 0.695429861 39.1250878 0.695429861 9.14431787 5.03734929 9.14431787 5.03734929 22.6930505 5.03734929 39.1250878"></polygon>
+                        <path d="M11.409257,9.14431787 L23.1380784,9.14431787 C34.303014,9.14431787 39.2088191,17.0664074 39.2088191,24.1486995 C39.2088191,31.846843 33.1470485,39.1530811 23.1944669,39.1530811 L11.409257,39.1530811 L11.409257,9.14431787 Z M15.7511765,35.2620194 L22.6587756,35.2620194 C32.49858,35.2620194 34.7541226,27.8438084 34.7541226,24.1486995 C34.7541226,18.1301509 30.8915059,13.0353795 22.4332213,13.0353795 L15.7511765,13.0353795 L15.7511765,35.2620194 Z" id="Shape"></path>
+                        <path d="M5.71401206,2.90182329 C5.71401206,4.441452 4.44526937,5.72914146 2.86638958,5.72914146 C1.28750978,5.72914146 0.0187670918,4.441452 0.0187670918,2.90182329 C0.0187670918,1.33420133 1.28750978,0.0745051096 2.86638958,0.0745051096 C4.44526937,0.0745051096 5.71401206,1.36219458 5.71401206,2.90182329 Z" id="Path"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+  </svg>
+</a><br/>
+        </dd>
+        <dt><a class="proplink" href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/created">Created</a></dt>
+        <dd>2020-11-30</dd>
+        <dt><a class="proplink" href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/modified">Modified</a></dt>
+        <dd>2021-07-28</dd>
+        <dt>Imports</dt>
+        <dd>
+            <a href="http://purl.org/dc/terms/">dcterms:</a><br/>
+            <a href="http://www.opengis.net/ont/geosparql">http://www.opengis.net/ont/geosparql</a><br/>
+            <a href="http://www.opengis.net/ont/sf">http://www.opengis.net/ont/sf</a><br/>
+            <a href="http://www.w3.org/2004/02/skos/core">http://www.w3.org/2004/02/skos/core</a><br/>
+            <a href="https://linked.data.gov.au/def/fsdf/common">https://linked.data.gov.au/def/fsdf/common</a><br/>
+        </dd>
+        <dt>License &amp; Rights</dt>
+        <dd>
+            <a href="http://purl.org/NET/rdflicense/cc-by4.0">http://purl.org/NET/rdflicense/cc-by4.0</a><br />
+            &copy; Australian Government (ICSM), 2021
+        </dd>
+        <dt>Source</dt>
+        <dd><a href="https://raw.githubusercontent.com/inspire-eu-rdf/inspire-rdf-vocabularies/master/net/net.ttl">https://raw.githubusercontent.com/inspire-eu-rdf/inspire-rdf-vocabularies/master/net/net.ttl</a></dd>
+        <dt>Ontology RDF</dt>
+        <dd><a href="network.ttl">RDF (turtle)</a></dd>
+        <dt>Code Repository</dt>
+        <dd><a href="https://github.com/GeoscienceAustralia/FSDF-KG">https://github.com/GeoscienceAustralia/FSDF-KG</a></dd>
+    </dl>
+    <h2>Description</h2>
+    <div id="description">
+        <p>Generic network ontology for FSDF. To be used as the basis for FSDF network models, including Roads, Railways, Hydrology, Pipelines, Air transport, Powerlines. </p>
+<p>Adapted from http://inspire.ec.europa.eu/ont/net.</p>
+    </div>
+</section>
+<section id="toc">
+    <h2>Table of Contents</h2>
+    <ol>
+        <li><a href="#classes">Classes</a></li>
+        <li><a href="#objectproperties">Object Properties</a></li>
+        <li><a href="#datatypeproperties">Datatype Properties</a></li>
+        <li><a href="#namespaces">Namespaces</a></li>
+        <li><a href="#legend">Legend</a></li>
+    </ol>
+</section>
+<section id="overview">
+    <h2>Overview</h2>
+    <div class="figure">
+        <img src="FSDF-net-ontology.png" alt="Network ontology overview" />
+        <div class="caption"><strong>Figure 1:</strong> Ontology overview</div>
+    </div>
+</section>
+  <section id="classes">
+    <h2>Classes <span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h2>
+    <ul class="hlist">
+      <li><a href="#Connectiontype">Connection type</a></li>
+      <li><a href="#Crossreference">Cross reference</a></li>
+      <li><a href="#Directedlink">Directed link</a></li>
+      <li><a href="#Direction">Direction</a></li>
+      <li><a href="#Generalisedlink">Generalised link</a></li>
+      <li><a href="#Gradeseparatedcrossing">Grade separated crossing</a></li>
+      <li><a href="#Link">Link</a></li>
+      <li><a href="#Linkreference">Link reference</a></li>
+      <li><a href="#Linksequence">Link sequence</a></li>
+      <li><a href="#Linkset">Link set</a></li>
+      <li><a href="#Network">Network</a></li>
+      <li><a href="#Networkarea">Network area</a></li>
+      <li><a href="#Networkconnection">Network connection</a></li>
+      <li><a href="#Networkelement">Network element</a></li>
+      <li><a href="#Networkproperty">Network property</a></li>
+      <li><a href="#Networkreference">Network reference</a></li>
+      <li><a href="#Node">Node</a></li>
+      <li><a href="#Simplelinearreference">Simple linear reference</a></li>
+      <li><a href="#Simplepointreference">Simple point reference</a></li>
+    </ul>
+    <div class="entity class" id="Connectiontype">
+        <h3>
+          Connection type<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#Connectiontype" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://linked.data.gov.au/def/fsdf/network#ConnectionType</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>The different kinds of connection</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="http://www.w3.org/2004/02/skos/core#Concept">skos:Concept</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In range of</th>
+                <td>
+                    <a href="#connectiontype">connection type</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Crossreference">
+        <h3>
+          Cross reference<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#Crossreference" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://linked.data.gov.au/def/fsdf/network#CrossReference</code></td>
+            </tr>
+            <tr>
+                <th>Source</th>
+                <td>
+                    <a href="http://inspire.ec.europa.eu/featureconcept/CrossReference">http://inspire.ec.europa.eu/featureconcept/CrossReference</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>The cross reference may represent the case where two elements are different representations of the same spatial object.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Restrictions</th>
+                <td>
+                    <a href="#element">element</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">exactly</span> 2<br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Directedlink">
+        <h3>
+          Directed link<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#Directedlink" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://linked.data.gov.au/def/fsdf/network#DirectedLink</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>A link either in its positive or negative direction.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Restrictions</th>
+                <td>
+                    <a href="#link">link</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">only</span> <a href="#Link">Link</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#link">link</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">exactly</span> 1<br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In domain of</th>
+                <td>
+                    <a href="#consistentlinkdirection?">consistent link direction?</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Direction">
+        <h3>
+          Direction<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#Direction" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://linked.data.gov.au/def/fsdf/network#Direction</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>The way something is orientated</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="http://www.w3.org/2004/02/skos/core#Concept">skos:Concept</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In range of</th>
+                <td>
+                    <a href="#applicabledirection">applicable direction</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Generalisedlink">
+        <h3>
+          Generalised link<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#Generalisedlink" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://linked.data.gov.au/def/fsdf/network#GeneralisedLink</code></td>
+            </tr>
+            <tr>
+                <th>Source</th>
+                <td>
+                    <a href="http://inspire.ec.europa.eu/featureconcept/GeneralisedLink">http://inspire.ec.europa.eu/featureconcept/GeneralisedLink</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>Abstract base type representing a linear network element that may be used as a target in linear referencing.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="#Networkelement">Network element</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Sub-classes</th>
+                <td>
+                    <a href="#Linksequence">Link sequence</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#Link">Link</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In range of</th>
+                <td>
+                    <a href="#link">link</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Gradeseparatedcrossing">
+        <h3>
+          Grade separated crossing<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#Gradeseparatedcrossing" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://linked.data.gov.au/def/fsdf/network#GradeSeparatedCrossing</code></td>
+            </tr>
+            <tr>
+                <th>Source</th>
+                <td>
+                    <a href="http://inspire.ec.europa.eu/featureconcept/GradeSeparatedCrossing">http://inspire.ec.europa.eu/featureconcept/GradeSeparatedCrossing</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>NOTE 1 In most cases, the number of elements will be two.</p>
+<p>NOTE 2 In the normal case this is when elements intersect in the x/y-plane when the z coordinate is not present or is not accurate enough.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="#Networkelement">Network element</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Restrictions</th>
+                <td>
+                    <a href="#element">element</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">only</span> <a href="#Link">Link</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#element">element</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">min</span> 2<br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Link">
+        <h3>
+          Link<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#Link" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://linked.data.gov.au/def/fsdf/network#Link</code></td>
+            </tr>
+            <tr>
+                <th>Source</th>
+                <td>
+                    <a href="http://inspire.ec.europa.eu/featureconcept/Link">http://inspire.ec.europa.eu/featureconcept/Link</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>Curvilinear network element that connects two positions and represents a homogeneous path in the network. The connected positions may be represented as nodes.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="#Generalisedlink">Generalised link</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Restrictions</th>
+                <td>
+                    <a href="#fictitiouscentreline?">fictitious centreline?</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">min</span> 0<br/>
+                    <a href="#startnode">start node</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">only</span> <a href="#Node">Node</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#endnode">end node</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">only</span> <a href="#Node">Node</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#centrelinegeometry">centreline geometry</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">some</span> <a href="http://www.opengis.net/ont/sf#LineString">sf:LineString</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In domain of</th>
+                <td>
+                    <a href="#startnode">start node</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#fictitiouscentreline?">fictitious centreline?</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="#centrelinegeometry">centreline geometry</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#endnode">end node</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In range of</th>
+                <td>
+                    <a href="#spokestart">spoke start</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#spokeend">spoke end</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Linkreference">
+        <h3>
+          Link reference<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#Linkreference" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://linked.data.gov.au/def/fsdf/network#LinkReference</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>A network reference to a linear network element.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="#Networkreference">Network reference</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Sub-classes</th>
+                <td>
+                    <a href="#Simplepointreference">Simple point reference</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#Simplelinearreference">Simple linear reference</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In domain of</th>
+                <td>
+                    <a href="#applicabledirection">applicable direction</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Linksequence">
+        <h3>
+          Link sequence<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#Linksequence" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://linked.data.gov.au/def/fsdf/network#LinkSequence</code></td>
+            </tr>
+            <tr>
+                <th>Source</th>
+                <td>
+                    <a href="http://inspire.ec.europa.eu/featureconcept/LinkSequence">http://inspire.ec.europa.eu/featureconcept/LinkSequence</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>A network element which represents a continuous path in the network without any branches. The element has a defined beginning and end and every position on the link sequence is identifiable with one single parameter such as length.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="#Generalisedlink">Generalised link</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Restrictions</th>
+                <td>
+                    <a href="#link">link</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">min</span> 1<br/>
+                    <a href="#link">link</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">only</span> <a href="#Directedlink">Directed link</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Linkset">
+        <h3>
+          Link set<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#Linkset" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://linked.data.gov.au/def/fsdf/network#LinkSet</code></td>
+            </tr>
+            <tr>
+                <th>Source</th>
+                <td>
+                    <a href="http://inspire.ec.europa.eu/featureconcept/LinkSet">http://inspire.ec.europa.eu/featureconcept/LinkSet</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>NOTE This spatial object type supports the aggregation of links to form objects with branches, loops, parallel sequences of links, gaps, etc.</p>
+<p>EXAMPLE A dual carriageway road, as a collection of the two link sequences that represent each carriageway.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="#Networkelement">Network element</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Restrictions</th>
+                <td>
+                    <a href="#link">link</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">only</span> <a href="#Generalisedlink">Generalised link</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#link">link</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">min</span> 1<br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Network">
+        <h3>
+          Network<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#Network" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://linked.data.gov.au/def/fsdf/network#Network</code></td>
+            </tr>
+            <tr>
+                <th>Source</th>
+                <td>
+                    <a href="http://inspire.ec.europa.eu/featureconcept/Network">http://inspire.ec.europa.eu/featureconcept/Network</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>The reason for collecting certain elements in a certain network may vary (e.g. connected elements for the same mode of transport)</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="http://www.opengis.net/ont/geosparql#Feature">geo:Feature</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Restrictions</th>
+                <td>
+                    <a href="#geographicalname">geographical name</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">min</span> 0<br/>
+                    <a href="#element">element</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">min</span> 0<br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In range of</th>
+                <td>
+                    <a href="#innetwork">in network</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Networkarea">
+        <h3>
+          Network area<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#Networkarea" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://linked.data.gov.au/def/fsdf/network#NetworkArea</code></td>
+            </tr>
+            <tr>
+                <th>Source</th>
+                <td>
+                    <a href="http://inspire.ec.europa.eu/featureconcept/NetworkArea">http://inspire.ec.europa.eu/featureconcept/NetworkArea</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>A 2-dimensional element in a network.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="#Networkelement">Network element</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Restrictions</th>
+                <td>
+                    <a href="#geometry">geometry</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">some</span> <a href="http://www.opengis.net/ont/sf#Polygon">sf:Polygon</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Networkconnection">
+        <h3>
+          Network connection<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#Networkconnection" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://linked.data.gov.au/def/fsdf/network#NetworkConnection</code></td>
+            </tr>
+            <tr>
+                <th>Source</th>
+                <td>
+                    <a href="http://inspire.ec.europa.eu/featureconcept/NetworkConnection">http://inspire.ec.europa.eu/featureconcept/NetworkConnection</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>Represents a logical connection between two or more network elements in different networks.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="#Networkelement">Network element</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Restrictions</th>
+                <td>
+                    <a href="#connectiontype">connection type</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">exactly</span> 1<br/>
+                    <a href="#element">element</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">min</span> 2<br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In domain of</th>
+                <td>
+                    <a href="#connectiontype">connection type</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Networkelement">
+        <h3>
+          Network element<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#Networkelement" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://linked.data.gov.au/def/fsdf/network#NetworkElement</code></td>
+            </tr>
+            <tr>
+                <th>Source</th>
+                <td>
+                    <a href="http://inspire.ec.europa.eu/featureconcept/NetworkElement">http://inspire.ec.europa.eu/featureconcept/NetworkElement</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>Abstract base type representing an element in a network. Every element in a network provides some function that is of interest in the network.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="http://www.opengis.net/ont/geosparql#Feature">geo:Feature</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Restrictions</th>
+                <td>
+                    <a href="https://linked.data.gov.au/def/fsdf/common#identifier">common:identifier</a> <span class="cardinality">max</span> 1<br/>
+                    <a href="#innetwork">in network</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">min</span> 1<br/>
+                    <a href="https://linked.data.gov.au/def/fsdf/common#recordTime">common:recordTime</a> <span class="cardinality">max</span> 1<br/>
+                    <a href="https://linked.data.gov.au/def/fsdf/common#validTime">common:validTime</a> <span class="cardinality">max</span> 1<br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Sub-classes</th>
+                <td>
+                    <a href="#Networkarea">Network area</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#Linkset">Link set</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#Generalisedlink">Generalised link</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#Node">Node</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#Networkconnection">Network connection</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#Gradeseparatedcrossing">Grade separated crossing</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In domain of</th>
+                <td>
+                    <a href="#innetwork">in network</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In range of</th>
+                <td>
+                    <a href="#element">element</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Networkproperty">
+        <h3>
+          Network property<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#Networkproperty" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://linked.data.gov.au/def/fsdf/network#NetworkProperty</code></td>
+            </tr>
+            <tr>
+                <th>Source</th>
+                <td>
+                    <a href="http://inspire.ec.europa.eu/featureconcept/NetworkProperty">http://inspire.ec.europa.eu/featureconcept/NetworkProperty</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>In the simplest case (NetworkReference), the network property applies to the whole network element. In the case of a Link, the spatial reference may be restricted to part of the Link by using a linear reference. ISO/TC 211 is currently in the early stages of developing a standard for Linear Referencing (ISO 19148). A simple mechanism to express linear references is provided in this version of the network model; it is expected that the model will be extended once ISO 19148 is stable. The current simple model requires for all linear references two expressions representing a distance from the start of the Link along its curve geometry. The network property applies to the part of the Link between fromPosition and toPosition.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>In domain of</th>
+                <td>
+                    <a href="#networkreference">network reference</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Networkreference">
+        <h3>
+          Network reference<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#Networkreference" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://linked.data.gov.au/def/fsdf/network#NetworkReference</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>A reference to a network element.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Sub-classes</th>
+                <td>
+                    <a href="#Linkreference">Link reference</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In range of</th>
+                <td>
+                    <a href="#networkreference">network reference</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Node">
+        <h3>
+          Node<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#Node" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://linked.data.gov.au/def/fsdf/network#Node</code></td>
+            </tr>
+            <tr>
+                <th>Source</th>
+                <td>
+                    <a href="http://inspire.ec.europa.eu/featureconcept/Node">http://inspire.ec.europa.eu/featureconcept/Node</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>NOTE if a topological representation of the network is used the road node is either a topological connection between two or more links or the termination of a ink. If a geometric representation of the network is used road nodes are represented by points or alternatively another geometric shape. [EuroRoadS]</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="#Networkelement">Network element</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Restrictions</th>
+                <td>
+                    <a href="#geometry">geometry</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">some</span> <a href="http://www.opengis.net/ont/sf#Point">sf:Point</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#spokeend">spoke end</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">only</span> <a href="#Link">Link</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#spokestart">spoke start</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">only</span> <a href="#Link">Link</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In domain of</th>
+                <td>
+                    <a href="#spokestart">spoke start</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#spokeend">spoke end</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In range of</th>
+                <td>
+                    <a href="#startnode">start node</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#endnode">end node</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Simplelinearreference">
+        <h3>
+          Simple linear reference<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#Simplelinearreference" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://linked.data.gov.au/def/fsdf/network#SimpleLinearReference</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>A network reference that is restricted to part of a linear network element. The part is the part of the network element between fromPosition and toPosition.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="#Linkreference">Link reference</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In domain of</th>
+                <td>
+                    <a href="#startposition">start position</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="#endposition">end position</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Simplepointreference">
+        <h3>
+          Simple point reference<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#Simplepointreference" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://linked.data.gov.au/def/fsdf/network#SimplePointReference</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>Linear reference targets must be linear network elements: /<em>Linear reference targets must be linear network elements. That is, if linear referencing is used or direction is relevant, the target of the network reference shall be a link or a link sequence.</em>/
+inv: element.oclIsKindOf(GeneralisedLink)</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="#Linkreference">Link reference</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In domain of</th>
+                <td>
+                    <a href="#atposition">at position</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+</section>
+<section id="objectproperties">
+    <h2>Object Properties <span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h2>
+    <ul class="hlist">
+        <li><a href="#applicabledirection">applicable direction</a></li>
+        <li><a href="#centrelinegeometry">centreline geometry</a></li>
+        <li><a href="#element">element</a></li>
+        <li><a href="#endnode">end node</a></li>
+        <li><a href="#geographicalname">geographical name</a></li>
+        <li><a href="#geometry">geometry</a></li>
+        <li><a href="#innetwork">in network</a></li>
+        <li><a href="#link">link</a></li>
+        <li><a href="#networkreference">network reference</a></li>
+        <li><a href="#spokeend">spoke end</a></li>
+        <li><a href="#spokestart">spoke start</a></li>
+        <li><a href="#startnode">start node</a></li>
+        <li><a href="#connectiontype">connection type</a></li>
+    </ul>
+    <div class="entity property" id="applicabledirection">
+        <h3>applicable direction<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#applicabledirection" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://linked.data.gov.au/def/fsdf/network#applicableDirection</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>The directions of the generalised link to which the reference applies.</p>
+<p>In cases where a property does not apply <i>to</i> a direction along a link, but represents a phenomenon <i>along</i> a link, &ldquo;inDirection&rdquo; refers to the right side in the direction of the link.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Equivalent properties</th>
+                <td>
+                    <a href="http://inspire.ec.europa.eu/ont/net#LinkReference.applicableDirection">http://inspire.ec.europa.eu/ont/net#LinkReference.applicableDirection</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#Linkreference">Link reference</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://linked.data.gov.au/def/fsdf/network#Direction">https://linked.data.gov.au/def/fsdf/network#Direction</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="centrelinegeometry">
+        <h3>centreline geometry<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#centrelinegeometry" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://linked.data.gov.au/def/fsdf/network#centrelineGeometry</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>The geometry that represents the centreline of the link.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="http://www.opengis.net/ont/geosparql#hasGeometry">geo:hasGeometry</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Equivalent properties</th>
+                <td>
+                    <a href="http://inspire.ec.europa.eu/ont/net#Link.centrelineGeometry">http://inspire.ec.europa.eu/ont/net#Link.centrelineGeometry</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#Link">Link</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://www.opengis.net/ont/sf#LineString">sf:LineString</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="element">
+        <h3>element<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#element" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://linked.data.gov.au/def/fsdf/network#element</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>Network elements in different networks</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Equivalent properties</th>
+                <td>
+                    <a href="http://inspire.ec.europa.eu/ont/net#NetworkConnection.element">http://inspire.ec.europa.eu/ont/net#NetworkConnection.element</a>
+                    <a href="http://inspire.ec.europa.eu/ont/net#Network.elements">http://inspire.ec.europa.eu/ont/net#Network.elements</a>
+                    <a href="http://inspire.ec.europa.eu/ont/net#CrossReference.element">http://inspire.ec.europa.eu/ont/net#CrossReference.element</a>
+                    <a href="http://inspire.ec.europa.eu/ont/net#NetworkReference.element">http://inspire.ec.europa.eu/ont/net#NetworkReference.element</a>
+                    <a href="http://inspire.ec.europa.eu/ont/net#GradeSeparatedCrossing.element">http://inspire.ec.europa.eu/ont/net#GradeSeparatedCrossing.element</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    (<a href="#Crossreference">Cross reference</a><sup class="sup-c" title="class">c</sup> or <a href="#Networkreference">Network reference</a><sup class="sup-c" title="class">c</sup> or <a href="#Network">Network</a><sup class="sup-c" title="class">c</sup> or <a href="#Networkconnection">Network connection</a><sup class="sup-c" title="class">c</sup> or <a href="#Gradeseparatedcrossing">Grade separated crossing</a><sup class="sup-c" title="class">c</sup>)
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://linked.data.gov.au/def/fsdf/network#NetworkElement">https://linked.data.gov.au/def/fsdf/network#NetworkElement</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="endnode">
+        <h3>end node<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#endnode" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://linked.data.gov.au/def/fsdf/network#endNode</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>The optional end node for this link. The end node may be the same instance as the start node.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Equivalent properties</th>
+                <td>
+                    <a href="http://inspire.ec.europa.eu/ont/net#Link.endNode">http://inspire.ec.europa.eu/ont/net#Link.endNode</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#Link">Link</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://linked.data.gov.au/def/fsdf/network#Node">https://linked.data.gov.au/def/fsdf/network#Node</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="geographicalname">
+        <h3>geographical name<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#geographicalname" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://linked.data.gov.au/def/fsdf/network#geographicalName</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>Geographical name for this network.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Scope Notes</th>
+                <td>
+                    <p>Usually a pn:PlaceName</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Equivalent properties</th>
+                <td>
+                    <a href="http://inspire.ec.europa.eu/ont/net#Network.geographicalName">http://inspire.ec.europa.eu/ont/net#Network.geographicalName</a>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="geometry">
+        <h3>geometry<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#geometry" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://linked.data.gov.au/def/fsdf/network#geometry</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>The location of the node.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="http://www.opengis.net/ont/geosparql#hasGeometry">geo:hasGeometry</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Equivalent properties</th>
+                <td>
+                    <a href="http://inspire.ec.europa.eu/ont/net#Node.geometry">http://inspire.ec.europa.eu/ont/net#Node.geometry</a>
+                    <a href="http://inspire.ec.europa.eu/ont/net#NetworkArea.geometry">http://inspire.ec.europa.eu/ont/net#NetworkArea.geometry</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    (<a href="#Networkarea">Network area</a><sup class="sup-c" title="class">c</sup> or <a href="#Node">Node</a><sup class="sup-c" title="class">c</sup>)
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://www.opengis.net/ont/sf#Geometry">sf:Geometry</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="innetwork">
+        <h3>in network<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#innetwork" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://linked.data.gov.au/def/fsdf/network#inNetwork</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>The networks in which a network element is a member.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Equivalent properties</th>
+                <td>
+                    <a href="http://inspire.ec.europa.eu/ont/net#NetworkElement.inNetwork">http://inspire.ec.europa.eu/ont/net#NetworkElement.inNetwork</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#Networkelement">Network element</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://linked.data.gov.au/def/fsdf/network#Network">https://linked.data.gov.au/def/fsdf/network#Network</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="link">
+        <h3>link<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#link" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://linked.data.gov.au/def/fsdf/network#link</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>The link <em>or</em> The ordered collection of directed links that constitute the link sequence <em>or</em> The set of links and link sequences that constitute the link set</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    (<a href="#Directedlink">Directed link</a><sup class="sup-c" title="class">c</sup> or <a href="#Linksequence">Link sequence</a><sup class="sup-c" title="class">c</sup> or <a href="#Linkset">Link set</a><sup class="sup-c" title="class">c</sup>)
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://linked.data.gov.au/def/fsdf/network#GeneralisedLink">https://linked.data.gov.au/def/fsdf/network#GeneralisedLink</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="networkreference">
+        <h3>network reference<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#networkreference" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://linked.data.gov.au/def/fsdf/network#networkRef</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>Spatial reference of the network-related property.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Equivalent properties</th>
+                <td>
+                    <a href="http://inspire.ec.europa.eu/ont/net#NetworkProperty.networkRef">http://inspire.ec.europa.eu/ont/net#NetworkProperty.networkRef</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#Networkproperty">Network property</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://linked.data.gov.au/def/fsdf/network#NetworkReference">https://linked.data.gov.au/def/fsdf/network#NetworkReference</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="spokeend">
+        <h3>spoke end<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#spokeend" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://linked.data.gov.au/def/fsdf/network#spokeEnd</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>The links that enter the node.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Equivalent properties</th>
+                <td>
+                    <a href="http://inspire.ec.europa.eu/ont/net#Node.spokeEnd">http://inspire.ec.europa.eu/ont/net#Node.spokeEnd</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#Node">Node</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://linked.data.gov.au/def/fsdf/network#Link">https://linked.data.gov.au/def/fsdf/network#Link</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="spokestart">
+        <h3>spoke start<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#spokestart" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://linked.data.gov.au/def/fsdf/network#spokeStart</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>NOTE In the INSPIRE context, this spoke property is to be published when this information is published in current exchange formats of the data set.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Equivalent properties</th>
+                <td>
+                    <a href="http://inspire.ec.europa.eu/ont/net#Node.spokeStart">http://inspire.ec.europa.eu/ont/net#Node.spokeStart</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#Node">Node</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://linked.data.gov.au/def/fsdf/network#Link">https://linked.data.gov.au/def/fsdf/network#Link</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="startnode">
+        <h3>start node<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#startnode" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://linked.data.gov.au/def/fsdf/network#startNode</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>The optional start node for this link.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Equivalent properties</th>
+                <td>
+                    <a href="http://inspire.ec.europa.eu/ont/net#Link.startNode">http://inspire.ec.europa.eu/ont/net#Link.startNode</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#Link">Link</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://linked.data.gov.au/def/fsdf/network#Node">https://linked.data.gov.au/def/fsdf/network#Node</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="connectiontype">
+        <h3>connection type<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#connectiontype" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://linked.data.gov.au/def/fsdf/network#type</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>Categorisation of the network connection.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Equivalent properties</th>
+                <td>
+                    <a href="http://inspire.ec.europa.eu/ont/net#NetworkConnection.type">http://inspire.ec.europa.eu/ont/net#NetworkConnection.type</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#Networkconnection">Network connection</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://linked.data.gov.au/def/fsdf/network#ConnectionType">https://linked.data.gov.au/def/fsdf/network#ConnectionType</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+</section>
+
+<section id="datatypeproperties">
+    <h2>Datatype Properties <span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h2>
+    <ul class="hlist">
+        <li><a href="#atposition">at position</a></li>
+        <li><a href="#consistentlinkdirection?">consistent link direction?</a></li>
+        <li><a href="#fictitiouscentreline?">fictitious centreline?</a></li>
+        <li><a href="#startposition">start position</a></li>
+        <li><a href="#offsetfromcentreline">offset from centreline</a></li>
+        <li><a href="#endposition">end position</a></li>
+    </ul>
+    <div class="entity property" id="atposition">
+        <h3>at position<sup title="datatype property" class="sup-dp">dp</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#atposition" title="fragment link to here">#</a>&nbsp;<a href="#datatypeproperties" title="Datatype Properties Index">DPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://linked.data.gov.au/def/fsdf/network#atPosition</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>Position of the point, expressed as the distance from the start of the linear network element along its curve geometry.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Equivalent properties</th>
+                <td>
+                    <a href="http://inspire.ec.europa.eu/ont/net#SimplePointReference.atPosition">http://inspire.ec.europa.eu/ont/net#SimplePointReference.atPosition</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#Simplepointreference">Simple point reference</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://w3id.org/cdt/ucum">cdt:ucum</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="consistentlinkdirection?">
+        <h3>consistent link direction?<sup title="datatype property" class="sup-dp">dp</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#consistentlinkdirection?" title="fragment link to here">#</a>&nbsp;<a href="#datatypeproperties" title="Datatype Properties Index">DPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://linked.data.gov.au/def/fsdf/network#direction</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>Indicates if the directed link agrees (positive) or disagrees (negative) with the positive direction of the link.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Equivalent properties</th>
+                <td>
+                    <a href="http://inspire.ec.europa.eu/ont/net#DirectedLink.direction">http://inspire.ec.europa.eu/ont/net#DirectedLink.direction</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#Directedlink">Directed link</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://www.w3.org/2001/XMLSchema#boolean">xsd:boolean</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="fictitiouscentreline?">
+        <h3>fictitious centreline?<sup title="datatype property" class="sup-dp">dp</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#fictitiouscentreline?" title="fragment link to here">#</a>&nbsp;<a href="#datatypeproperties" title="Datatype Properties Index">DPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://linked.data.gov.au/def/fsdf/network#fictitious</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>Indicator that the centreline geometry of the link is a straight line with no intermediate control points &ndash; unless the straight line represents the geography in the resolution of the data set appropriately.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Equivalent properties</th>
+                <td>
+                    <a href="http://inspire.ec.europa.eu/ont/net#Link.fictitious">http://inspire.ec.europa.eu/ont/net#Link.fictitious</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#Link">Link</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://www.w3.org/2001/XMLSchema#boolean">xsd:boolean</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="startposition">
+        <h3>start position<sup title="datatype property" class="sup-dp">dp</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#startposition" title="fragment link to here">#</a>&nbsp;<a href="#datatypeproperties" title="Datatype Properties Index">DPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://linked.data.gov.au/def/fsdf/network#fromPosition</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>The start position of the linear element, expressed as the distance from the start of the linear network element along its curve geometry.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Equivalent properties</th>
+                <td>
+                    <a href="http://inspire.ec.europa.eu/ont/net#SimpleLinearReference.fromPosition">http://inspire.ec.europa.eu/ont/net#SimpleLinearReference.fromPosition</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#Simplelinearreference">Simple linear reference</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://w3id.org/cdt/ucum">cdt:ucum</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="offsetfromcentreline">
+        <h3>offset from centreline<sup title="datatype property" class="sup-dp">dp</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#offsetfromcentreline" title="fragment link to here">#</a>&nbsp;<a href="#datatypeproperties" title="Datatype Properties Index">DPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://linked.data.gov.au/def/fsdf/network#offset</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>An offset from the centerline geometry of the generalised link, where applicable; a positive offset is to the right in the direction of the link, a negative offset is to the left.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://w3id.org/cdt/ucum">cdt:ucum</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="endposition">
+        <h3>end position<sup title="datatype property" class="sup-dp">dp</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#endposition" title="fragment link to here">#</a>&nbsp;<a href="#datatypeproperties" title="Datatype Properties Index">DPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://linked.data.gov.au/def/fsdf/network#toPosition</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>The end position of the linear element, expressed as the distance from the start of the linear network element along its curve geometry.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Equivalent properties</th>
+                <td>
+                    <a href="http://inspire.ec.europa.eu/ont/net#SimpleLinearReference.toPosition">http://inspire.ec.europa.eu/ont/net#SimpleLinearReference.toPosition</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#Simplelinearreference">Simple linear reference</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://w3id.org/cdt/ucum">cdt:ucum</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+</section>
+
+  
+  <section id="namespaces">
+    <h2>Namespaces <span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h2>
+    <dl>
+        <dt>default (:)</dt>
+        <dd><code>https://linked.data.gov.au/def/fsdf/network</code></dd>
+        <dt>cdt</dt>
+        <dd><code>https://w3id.org/cdt/</code></dd>
+        <dt>common</dt>
+        <dd><code>https://linked.data.gov.au/def/fsdf/common#</code></dd>
+        <dt>dcat</dt>
+        <dd><code>http://www.w3.org/ns/dcat#</code></dd>
+        <dt>dcterms</dt>
+        <dd><code>http://purl.org/dc/terms/</code></dd>
+        <dt>geo</dt>
+        <dd><code>http://www.opengis.net/ont/geosparql#</code></dd>
+        <dt>owl</dt>
+        <dd><code>http://www.w3.org/2002/07/owl#</code></dd>
+        <dt>prov</dt>
+        <dd><code>http://www.w3.org/ns/prov#</code></dd>
+        <dt>rdf</dt>
+        <dd><code>http://www.w3.org/1999/02/22-rdf-syntax-ns#</code></dd>
+        <dt>rdfs</dt>
+        <dd><code>http://www.w3.org/2000/01/rdf-schema#</code></dd>
+        <dt>sdo</dt>
+        <dd><code>https://schema.org/</code></dd>
+        <dt>sf</dt>
+        <dd><code>http://www.opengis.net/ont/sf#</code></dd>
+        <dt>skos</dt>
+        <dd><code>http://www.w3.org/2004/02/skos/core#</code></dd>
+        <dt>xsd</dt>
+        <dd><code>http://www.w3.org/2001/XMLSchema#</code></dd>
+    </dl>
+</section>
+  <section id="legend">
+      <h2>Legend</h2>
+      <table class="entity">
+          <tr><td><sup class="sup-c" title="Classes">c</sup></td><td>Classes</td></tr>
+          <tr><td><sup class="sup-op" title="Object Properties">op</sup></td><td>Object Properties</td></tr>
+          <tr><td><sup class="sup-fp" title="Functional Properties">fp</sup></td><td>Functional Properties</td></tr>
+          <tr><td><sup class="sup-dp" title="Data Properties">dp</sup></td><td>Data Properties</td></tr>
+          <tr><td><sup class="sup-ap" title="Annotation Properties">dp</sup></td><td>Annotation Properties</td></tr>
+          <tr><td><sup class="sup-p" title="Properties">p</sup></td><td>Properties</td></tr>
+          <tr><td><sup class="sup-ni" title="Named Individuals">ni</sup></td><td>Named Individuals</td></tr>
+      </table>
+  </section>
+</body>
+</html>
