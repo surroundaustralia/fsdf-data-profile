@@ -1,3 +1,5 @@
+_Moved to https://github.com/GeoscienceAustralia/FSDF-KG_
+
 # FSDF Knowledge Graph
 This is the Knowledge Graph for the Foundational Spatial Data Framework (FSDF)'s Linked Data resources. 
 
